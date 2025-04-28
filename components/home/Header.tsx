@@ -1,16 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+// import { useState } from "react";
 import HeaderMenuContent from "../common/header/HeaderMenuContent";
 import Image from "next/image";
 
 const Header = () => {
-  const [navbar, setNavbar] = useState(true);
+  // const [navbar, setNavbar] = useState(true);
+  const navbar = true;
   //dummy usage of setnavbar
-// const abc = setNavbar(false);
-// console.log(abc);
-
+  // const abc = setNavbar(false);
+  // console.log(abc);
 
   // const changeBackground = () => {
   //   if (window.scrollY >= 0) {

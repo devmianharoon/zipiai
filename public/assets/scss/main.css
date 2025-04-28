@@ -1208,11 +1208,7 @@ nav .menu li a:hover {
   color: #e74c3c;
 }
 
-nav button {
-  background: transparent;
-  border: none;
-  outline: none;
-}
+
 
 header.header-nav {
   padding: 0 30px;
