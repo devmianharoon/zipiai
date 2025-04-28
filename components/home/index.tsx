@@ -16,6 +16,7 @@ import {
   fetchZipCode,
 } from "../../store/slices/LocationSlice";
 import TestSpeed from "./TestSpeed";
+import Crusal from "./Crusal";
 
 const Index = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -74,6 +75,7 @@ const Index = () => {
       {/* <!-- Home Design --> */}
       <Hero />
       <TestSpeed />
+      <Crusal />
 
       {/* <!-- Our Footer --> */}
       <section className="footer_one flex justify-center items-center">
