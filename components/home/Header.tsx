@@ -8,8 +8,8 @@ import Image from "next/image";
 const Header = () => {
   const [navbar, setNavbar] = useState(true);
   //dummy usage of setnavbar
-const abc = setNavbar(false);
-console.log(abc);
+// const abc = setNavbar(false);
+// console.log(abc);
 
 
   // const changeBackground = () => {

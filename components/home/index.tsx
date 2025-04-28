@@ -5,7 +5,6 @@ import Footer from "../common/footer/Footer";
 import MobileMenu from "../common/header/MobileMenu";
 import Header from "./Header";
 import Hero from "./Hero";
-
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Cookies from "js-cookie";
@@ -48,17 +47,17 @@ const Index = () => {
     }
   };
 
-  useEffect(() => {
-    const savedZipCode = Cookies.get("user_zipcode");
-    if (savedZipCode) {
-      console.log("Zip code from cookie:", savedZipCode);
-      // Dispatch saved zip code to Redux
-      dispatch(setZipCode(savedZipCode));
-    } else {
-      // If no zip code, get current location and fetch zip code
-      getLocation();
-    }
-  }, [dispatch]);
+  // useEffect(() => {
+  //   const savedZipCode = Cookies.get("user_zipcode");
+  //   if (savedZipCode) {
+  //     console.log("Zip code from cookie:", savedZipCode);
+  //     // Dispatch saved zip code to Redux
+  //     dispatch(setZipCode(savedZipCode));
+  //   } else {
+  //     // If no zip code, get current location and fetch zip code
+  //     getLocation();
+  //   }
+  // }, [dispatch]);
 
   return (
     <>

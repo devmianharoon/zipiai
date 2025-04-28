@@ -21,8 +21,8 @@ const QuestionTiles = ({ questions }: QuestionTilesProps) => {
   const dispatch = useDispatch();
   const router = useRouter();
   const [inputQuestion, setInputQuestion] = useState<string>("");
-  const a = setInputQuestion("hello");
-  console.log(a);
+  // const a = setInputQuestion("hello");
+  // console.log(a);
 
   const handleClick = (question: string) => {
     dispatch(setSelectedQuestion(question));
