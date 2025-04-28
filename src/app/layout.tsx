@@ -1,7 +1,5 @@
 "use client";
 import { ReactNode } from "react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import "./globals.css";
 import { Provider } from "react-redux";
 import { store } from "../../store/store";
@@ -23,7 +21,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Nunito:400,400i,500,600,700&display=swap"
         />
-        <link rel="icon" href="./favicon.ico" />
+        {/* <link rel="icon" href="./favicon.ico" /> */}
       </head>
       <body>
         <Provider store={store}>{children}</Provider>
