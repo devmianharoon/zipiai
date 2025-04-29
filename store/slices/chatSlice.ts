@@ -205,7 +205,7 @@ export const sendChatMessage = createAsyncThunk(
   async ({ content }: { content: string }, { dispatch, rejectWithValue }) => {
     try {
       const payload = { content };
-      const response = await fetch("http://127.0.0.1:8000/call", {
+      const response = await fetch("https://app.demo2.asdev.tech/call", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
