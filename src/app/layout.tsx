@@ -1,5 +1,7 @@
 "use client";
 import { ReactNode } from "react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "./globals.css";
 import { Provider } from "react-redux";
 import { store } from "../../store/store";

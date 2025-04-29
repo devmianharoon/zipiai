@@ -183,7 +183,7 @@ iframe {
 }
 
 a {
-  color: #555555;
+  /* color: #555555; */
   text-decoration: none !important;
   -webkit-font-smoothing: antialiased;
 }
@@ -3056,7 +3056,7 @@ header.header-nav.menu_style_home_five
   background-color: #edeff7;
   border: 1px solid #edeff7;
   border-radius: 25px;
-  color: #555555;
+  /* color: #555555; */
   font-size: 14px;
   height: 45px;
   margin-top: 5px;
@@ -8373,7 +8373,7 @@ header.header-nav.menu_style_home_seven .ace-responsive-menu > li.last {
 }
 
 .footer_social_widget li a {
-  color: #8a99b3;
+  color: #fff;
   font-size: 16px;
   font-family: "FontAwesome";
   line-height: 1.2;
@@ -8443,7 +8443,7 @@ header.header-nav.menu_style_home_seven .ace-responsive-menu > li.last {
 .footer_mailchimp_form .col-auto input.form-control::placeholder,
 .footer_mailchimp_form .col-auto input.form-control:-ms-input-placeholder,
 .footer_mailchimp_form .col-auto input.form-control::-ms-input-placeholder {
-  color: #8a99b3;
+  color: #ffffff;
 }
 
 .footer_mailchimp_form .col-auto button {
@@ -8528,11 +8528,11 @@ header.header-nav.menu_style_home_seven .ace-responsive-menu > li.last {
 }
 
 .footer_one {
-  background-color: #24324a;
+  background-color: rgba(2,95,244,1);
 }
 
 .footer_middle_area {
-  background-color: #1d293e;
+  background-color: rgba(2,95,244,1);
 }
 
 .footer_bottom_area {
@@ -8542,7 +8542,7 @@ header.header-nav.menu_style_home_seven .ace-responsive-menu > li.last {
 .copyright-widget p {
   font-size: 14px;
   font-family: "Nunito";
-  color: #8a99b3;
+  color: #fff;
   line-height: 2.143;
   margin-bottom: 0;
 }
@@ -8611,7 +8611,7 @@ header.header-nav.menu_style_home_seven .ace-responsive-menu > li.last {
 .footer_about_widget p {
   font-size: 14px;
   font-family: "Nunito";
-  color: #8a99b3;
+  color: #fff;
   line-height: 2.143;
   margin-bottom: 0;
 }
@@ -8670,7 +8670,7 @@ header.header-nav.menu_style_home_seven .ace-responsive-menu > li.last {
 .home3 .footer_contact_widget li a,
 .home3 .footer_about_widget p,
 .home3 .footer_menu_widget ul li a {
-  color: #777777;
+  color: #ffffff;
 }
 
 .home6 .footer_about_widget h4,
@@ -8693,7 +8693,7 @@ header.header-nav.menu_style_home_seven .ace-responsive-menu > li.last {
 .footer_contact_widget li a {
   font-size: 14px;
   font-family: "Nunito";
-  color: #8a99b3;
+  color: #fff;
   line-height: 2.429;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -8809,7 +8809,7 @@ header.header-nav.menu_style_home_seven .ace-responsive-menu > li.last {
 .footer_menu_widget ul li a {
   font-size: 14px;
   font-family: "Nunito";
-  color: #8a99b3;
+  color: #fff;
   line-height: 2.143;
 }
 
@@ -15801,9 +15801,9 @@ legend span {
   color: #434343;
 }
 
-.color-black55 {
+/* .color-black55 {
   color: #555555;
-}
+} */
 
 .color-black66 {
   color: #676767;

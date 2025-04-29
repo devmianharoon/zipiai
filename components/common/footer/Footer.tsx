@@ -4,7 +4,7 @@ import SubscribeForm from "./SubscribeForm";
 
 const Footer = () => {
   return (
-    <footer className="flex justify-center gap-30 container mx-auto px-4 py-4 ">
+    <footer className="flex justify-center gap-30 container mx-auto px-4 py-4 text-white ">
       <div className="footer_about_widget">
         <h4>About Site</h4>
         <p>

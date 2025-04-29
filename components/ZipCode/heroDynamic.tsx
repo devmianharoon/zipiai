@@ -1,5 +1,4 @@
 "use client";
-// import Link from "next/link";
 import { RootState } from "../../store/store";
 import { setSelectedQuestion } from "../../store/slices/questionSlice";
 import { useDispatch, useSelector } from "react-redux";
@@ -7,7 +6,7 @@ import { useRouter } from "next/navigation";
 import Searchbtn from "../buttonComp/Searchbtn";
 
 
-export default function Hero() {
+export default function HeroDynamic() {
   const dispatch = useDispatch();
   const router = useRouter();
 
@@ -25,19 +24,12 @@ export default function Hero() {
       <div className="container mx-auto px-4">
         <div className="relative flex flex-wrap">
           <div className="w-full lg:w-full">
-            <div className="home_content ">
-              <h2 className="fz55 ">The Best Internet Near Me</h2>
+            <div className=" ">
+              <h2 className="fz55 "> Show Me The Plans & Prices For Each Provider </h2>
               <div>
                 <div className="rightSection">
                   <div className="inputSection">
-                    {/* <Link
-                      href={`/${zipCode}`}
-                      style={{ borderRadius: "40px" }}
-                      
-                      className="bg-redish text-white py-2.5 px-2.5 w-46 font-[900] text-[18px] border-redish border-2 rounded-md cursor-pointer hover:border-redish hover:bg-white hover:text-redish transition-all duration-300 ease-in-out flex items-center justify-center"
-                    >
-                      {"Submit"}
-                    </Link> */}
+                    
                     <Searchbtn text="Submit" onClick={handleClick}/>
                   </div>
                 </div>

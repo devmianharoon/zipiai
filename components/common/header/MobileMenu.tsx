@@ -1,3 +1,4 @@
+'use client';
 import { useState } from "react";
 import MobileMenuContent from "./MobileMenuContent";
 import Image from "next/image";
