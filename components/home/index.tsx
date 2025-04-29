@@ -47,17 +47,17 @@ const Index = () => {
     }
   };
 
-  // useEffect(() => {
-  //   const savedZipCode = Cookies.get("user_zipcode");
-  //   if (savedZipCode) {
-  //     console.log("Zip code from cookie:", savedZipCode);
-  //     // Dispatch saved zip code to Redux
-  //     dispatch(setZipCode(savedZipCode));
-  //   } else {
-  //     // If no zip code, get current location and fetch zip code
-  //     getLocation();
-  //   }
-  // }, [dispatch]);
+  useEffect(() => {
+    const savedZipCode = Cookies.get("user_zipcode");
+    if (savedZipCode) {
+      console.log("Zip code from cookie:", savedZipCode);
+      // Dispatch saved zip code to Redux
+      dispatch(setZipCode(savedZipCode));
+    } else {
+      // If no zip code, get current location and fetch zip code
+      getLocation();
+    }
+  }, [dispatch]);
 
   return (
     <>
