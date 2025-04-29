@@ -26,7 +26,7 @@ export default function Hero() {
         <div className="relative flex flex-wrap">
           <div className="w-full lg:w-full">
             <div className="home_content ">
-              <h2 className="fz55 ">The Best Internet Near Me</h2>
+              <h2 className="fz55 ">The Best Internet Providers Near Me</h2>
               <div>
                 <div className="rightSection">
                   <div className="inputSection">

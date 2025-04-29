@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import CopyrightFooter from "../../../components/common/footer/CopyrightFooter";
 import Footer from "../../../components/common/footer/Footer";
 import MobileMenu from "../../../components/common/header/MobileMenu";
@@ -9,24 +9,32 @@ import TestSpeed from "../../../components/home/TestSpeed";
 import HeroDynamic from "../../../components/ZipCode/heroDynamic";
 import { useDispatch, useSelector } from "react-redux";
 import { setSelectedQuestion } from "../../../store/slices/questionSlice";
-import { sendChatMessage, setError } from "../../../store/slices/chatSlice";
+import { sendChatMessage } from "../../../store/slices/chatSlice";
 import { RootState, AppDispatch } from "../../../store/store";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import Image from "next/image";
 
-export default function Page({ params }: { params: { slug: string } }) {
-  const { slug } = params;
-  console.log("Zip code from URL:", slug);
+
+  
+  export default function Page() {
+    // const { zipcode } = params;
+    // console.log("Zip code from URL:", zipcode);
 
   const dispatch = useDispatch<AppDispatch>();
-  const selectedQuestion = useSelector((state: RootState) => state.question.selectedQuestion);
-  const { messages, loading, error, parsedData } = useSelector((state: RootState) => state.chat);
+  const selectedQuestion = useSelector(
+    (state: RootState) => state.question.selectedQuestion
+  );
+  const { messages } = useSelector((state: RootState) => state.chat);
   const [questionSent, setQuestionSent] = useState(false);
+  
 
   // Handle selectedQuestion
   useEffect(() => {
-    if (selectedQuestion && typeof selectedQuestion === "string" && !questionSent) {
+    if (
+      selectedQuestion &&
+      typeof selectedQuestion === "string" &&
+      !questionSent
+    ) {
       dispatch(sendChatMessage({ content: selectedQuestion }));
       setQuestionSent(true);
       dispatch(setSelectedQuestion(null));
@@ -39,7 +47,7 @@ export default function Page({ params }: { params: { slug: string } }) {
   }, [selectedQuestion]);
 
   console.log("Messages from Redux:", messages);
-  console.log("Parsed Data from Redux:", parsedData);
+  //   console.log("Parsed Data from Redux:", parsedData);
 
   return (
     <>
@@ -51,38 +59,23 @@ export default function Page({ params }: { params: { slug: string } }) {
 
       {/* <!-- Home Design --> */}
       <HeroDynamic />
-
-      {/* <!-- Chat Interface --> */}
-      {/* <section className="chatbot-container container my-8">
-        <h2 className="text-2xl font-bold mb-4">Chat</h2>
-        <div className="chatbot-messages max-h-96 overflow-y-auto border p-4 rounded">
-          {messages.map((msg, index) => (
-            <div
-              key={index}
-              className={`chatbot-message ${
-                msg.sender === "user" ? "text-right" : "text-left"
-              } my-2`}
-            >
-              <div
-                className={`inline-block p-2 rounded ${
-                  msg.sender === "user" ? "bg-blue-100" : "bg-gray-100"
-                }`}
-              >
-                {msg.sender === "bot" ? (
-                  <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                    {msg.content}
-                  </ReactMarkdown>
-                ) : (
-                  msg.content
-                )}
+      <div id="messages" className="chatbot-messages">
+        {messages
+          .filter((msg) => msg.sender === "bot") // Only include bot messages
+          .map((msg, index) => (
+            <div key={index} className="chatbot-message bot">
+              <div className="chatbot-messageg">
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                  {msg.content}
+                </ReactMarkdown>
               </div>
             </div>
           ))}
-        </div>
-      </section> */}
+      </div>
 
+ 
       {/* <!-- Providers List --> */}
-      {parsedData && parsedData.providers.length > 0 && (
+      {/* {parsedData && parsedData.providers.length > 0 && (
         <section className="providers-section container my-8">
           <h2 className="text-2xl font-bold mb-4">Available Providers</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -105,7 +98,7 @@ export default function Page({ params }: { params: { slug: string } }) {
             ))}
           </div>
         </section>
-      )}
+      )} */}
 
       <TestSpeed />
       <Crusal />

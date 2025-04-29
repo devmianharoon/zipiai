@@ -27,6 +27,8 @@ const Index = () => {
   console.log("Error from Redux:", error);
   console.log("Loading from Redux:", loading);
 
+  
+
   const getLocation = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
@@ -74,6 +76,7 @@ const Index = () => {
       {/* <!-- Home Design --> */}
       <Hero />
       <TestSpeed />
+      
       <Crusal />
 
       {/* <!-- Our Footer --> */}

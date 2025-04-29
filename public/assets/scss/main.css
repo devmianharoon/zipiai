@@ -164,11 +164,11 @@ img {
   max-width: 100%;
 }
 
-p {
+/* p {
   font-size: 14px;
   color: #484848;
   font-weight: 400;
-}
+} */
 
 ul,
 ol {
@@ -324,10 +324,10 @@ h2,
   font-size: 30px;
 }
 
-h3,
+/* h3,
 .h3 {
   font-size: 24px;
-}
+} */
 
 h4,
 .h4 {
@@ -344,7 +344,7 @@ h6,
   font-size: 12px;
 }
 
-p,
+/* p,
 ul,
 ol,
 dl,
@@ -353,7 +353,7 @@ dd,
 blockquote,
 address {
   margin: 0 0 10px;
-}
+} */
 
 .ff-nunito {
   font-family: "Nunito", sans-serif;
@@ -3412,11 +3412,12 @@ header.header-nav.menu_style_home_seven .ace-responsive-menu > li.last {
 /*== Home Css ==*/
 .home_content {
   /* padding: 380px 0 400px; */
-  height: 80vh;
+  height: 50vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: nowrap;
   align-items: center;
+  gap : 20px;
 }
 
 

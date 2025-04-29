@@ -3,6 +3,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import questionSlice from "../store/slices/questionSlice";
 import locationReducer from "../store/slices/LocationSlice";
 import chatReducer from '../store/slices/chatSlice';
+import weatherReducer from '../store/slices/weatherSlice';
 
 
 export const store = configureStore({
@@ -10,7 +11,10 @@ export const store = configureStore({
 
     question: questionSlice,
     location: locationReducer,
-    chat: chatReducer,  },
+    chat: chatReducer,
+    weather: weatherReducer,
+
+    },
  
 });
 

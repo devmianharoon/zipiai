@@ -1,26 +1,45 @@
 "use client";
-import { RootState } from "../../store/store";
-import { setSelectedQuestion } from "../../store/slices/questionSlice";
+import { AppDispatch, RootState } from "../../store/store";
+// import { setSelectedQuestion } from "../../store/slices/questionSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import Searchbtn from "../buttonComp/Searchbtn";
+import { useEffect } from "react";
+import { fetchWeather } from "../../store/slices/weatherSlice";
+import Image from "next/image";
 
 
 export default function HeroDynamic() {
-  const dispatch = useDispatch();
-  const router = useRouter();
-
-
+  const dispatch = useDispatch<AppDispatch>();
+  
+  // const router = useRouter();
   const {  zipCode } = useSelector(
     (state: RootState) => state.location
   );
-  const handleClick = () => {
-    const questionWithZip = `The Best Internet Near Me ${zipCode}.`;
-    dispatch(setSelectedQuestion(questionWithZip));
-    router.push(`/${zipCode}`);
-  };
+  useEffect(() => {
+    if (zipCode) {
+      dispatch(fetchWeather(zipCode));
+    }
+  }, [zipCode]);
+  const weatherState = useSelector((state: RootState) => state.weather);
+  // console.log("Weather data:date", weather?.forecast.forecastday[0].date);
+  // console.log("Weather data:1", weather?.forecast.forecastday[0].day.condition.text);
+  // console.log("Weather data max temp c", weather?.forecast.forecastday[1].day.maxtemp_c);
+  // console.log("Weather data max min c", weather?.forecast.forecastday[1].day.mintemp_c);
+
+
+
+
+
+
+ 
+  // const handleClick = () => {
+  //   const questionWithZip = `The Best Internet Near Me ${zipCode}.`;
+  //   dispatch(setSelectedQuestion(questionWithZip));
+  //   router.push(`/${zipCode}`);
+  // };
   return (
-    <section className="relative bg-cover bg-center bg-no-repeat bg-bluish">
+    <section className="relative h-[50vh] bg-bluish">
       <div className="container mx-auto px-4">
         <div className="relative flex flex-wrap">
           <div className="w-full lg:w-full">
@@ -30,9 +49,60 @@ export default function HeroDynamic() {
                 <div className="rightSection">
                   <div className="inputSection">
                     
-                    <Searchbtn text="Submit" onClick={handleClick}/>
+                    <Searchbtn text="Submit" />
                   </div>
                 </div>
+                {/* weather */}
+                {/* Weather details */}
+                {weatherState.status === "loading" && (
+                  <p className="text-white mt-4">Loading weather data...</p>
+                )}
+                {weatherState.status === "failed" && (
+                  <p className="text-white mt-4">
+                    Error: {weatherState.error || "Failed to fetch weather data"}
+                  </p>
+                )}
+                {weatherState.status === "succeeded" && weatherState.data ? (
+                  weatherState.data.forecast?.forecastday?.length > 0 ? (
+                    <div className="mt-4 text-white flex gap-2.5">
+                    {weatherState.data.forecast.forecastday.map((day, index) => (
+                      <div
+                        key={day.date_epoch || index}
+                        className="flex"
+                      >
+                        <div 
+                        className="flex flex-col items-center text-center"
+                        >
+                          {/* Date at the top */}
+                          <h3 className=" mb-1">{day.date.split('-').slice(1).join('-')}</h3>
+                          {/* Weather icon below date */}
+                          {day.day.condition.icon && (
+                            <Image
+                              src={`https:${day.day.condition.icon}`}
+                              alt={day.day.condition.text}
+                              width={48}
+                              height={48}
+                              className="mb-1"
+                            />
+                          )}
+                          {/* Condition text below icon */}
+                          <p className="text-sm mb-1 text-white">{day.day.condition.text}</p>
+                          {/* Max and min temperatures below condition */}
+                          <p className="text-sm text-white">
+                            {day.day.maxtemp_f}°F : {day.day.mintemp_f}°F
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  ) : (
+                    <p className="text-white mt-4">No forecast data available</p>
+                  )
+                ) : (
+                  weatherState.status === "succeeded" && (
+                    <p className="text-white mt-4">No weather data available</p>
+                  )
+                )}
               </div>
               <div className="absolute bottom-0 right-0">
                 <h1 className="text-[44px] text-white m-0">Moving ?</h1>

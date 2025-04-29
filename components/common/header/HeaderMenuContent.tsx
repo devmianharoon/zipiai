@@ -8,8 +8,7 @@ const HeaderMenuContent = ({ float = "" }) => {
   const pathname = usePathname();
 
   const menuItems = [
-    { name: "Home", path: "/" },
-    { name: "Internet", path: "/internet" },
+    { name: "Home Internet", path: "/home-internet" },
     { name: "Business Internet", path: "/business-internet" },
     { name: "Direct TV", path: "/direct-tv" },
     { name: "Help", path: "/contact" },
