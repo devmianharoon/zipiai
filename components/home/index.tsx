@@ -17,6 +17,8 @@ import {
 import TestSpeed from "./TestSpeed";
 import Crusal from "./Crusal";
 
+// import SingleProvider from "../tileComp/tile";
+
 const Index = () => {
   const dispatch = useDispatch<AppDispatch>();
   const { location, zipCode, error, loading } = useSelector(
@@ -26,8 +28,6 @@ const Index = () => {
   console.log("Zip Code from Redux:", zipCode);
   console.log("Error from Redux:", error);
   console.log("Loading from Redux:", loading);
-
-  
 
   const getLocation = () => {
     if (navigator.geolocation) {
@@ -62,6 +62,8 @@ const Index = () => {
     }
   }, [dispatch]);
 
+
+
   return (
     <>
       {/* <!-- Main Header Nav --> */}
@@ -76,11 +78,11 @@ const Index = () => {
       {/* <!-- Home Design --> */}
       <Hero />
       <TestSpeed />
-      
+
       <Crusal />
 
       {/* <!-- Our Footer --> */}
-      <section className="footer_one flex justify-center items-center">
+      <section className="footer_one flex justify-center items-center bg-bluish pt-[70px] pb-20">
         <div className="container ">
           <div className="row">
             <Footer />
@@ -89,11 +91,13 @@ const Index = () => {
       </section>
 
       {/* <!-- Our Footer Bottom Area --> */}
-      <section className="footer_middle_area flex justify-center items-center">
+      <section className="footer_middle_area flex justify-center items-center bg-bluish py-14">
         <div className="container ">
           <CopyrightFooter />
         </div>
       </section>
+
+      {/* <SingleProvider data={data} /> */}
     </>
   );
 };

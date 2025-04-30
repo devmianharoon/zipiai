@@ -4,10 +4,10 @@ import SubscribeForm from "./SubscribeForm";
 
 const Footer = () => {
   return (
-    <footer className="flex justify-center gap-30 container mx-auto px-4 py-4 text-white ">
-      <div className="footer_about_widget">
-        <h4>About Site</h4>
-        <p>
+    <footer className="flex justify-center gap-30 container mx-auto px-4 py-4 text-white text-[14px] ">
+      <div className="footer_about_widget leading-[2.6]">
+        <h4 className="font-bold text-[18px] mb-6">About Site</h4>
+        <p className="leading-[2]">
           We&apos;re reimagining how you buy, sell and rent. It&apos; s now
           easier to get into a place you love. So let&apos; s do this, together.
         </p>
@@ -15,8 +15,8 @@ const Footer = () => {
 
       {/* End .col */}
 
-      <div className="footer_qlink_widget">
-        <h4>Quick Links</h4>
+      <div className="footer_qlink_widget  pl-16 leading-[2.6] text-[14px]">
+        <h4 className="text-[18px] font-bold">Quick Links</h4>
         <ul className="list-unstyled">
           <li>
             <Link href="/">About Us</Link>
@@ -38,8 +38,8 @@ const Footer = () => {
 
       {/* End .col */}
 
-      <div className="footer_contact_widget">
-        <h4>Contact Us</h4>
+      <div className="footer_contact_widget leading-[2.6] text-[14px]">
+        <h4 className="text-[18px] font-bold">Contact Us</h4>
         <ul className="list-unstyled">
           <li>
             <a href="mailto:info@findhouse.com">info@findhouse.com</a>
@@ -61,12 +61,12 @@ const Footer = () => {
 
       {/* End .col */}
 
-      <div className="footer_social_widget ">
-        <h4>Follow us</h4>
-        <ul className="flex gap-x-4 ">
+      <div className="footer_social_widget leading-[2.6] text-[14px] ">
+        <h4 className="text-[18px] font-bold">Follow us</h4>
+        <ul className="flex gap-x-4 text-primary">
           <Social />
         </ul>
-        <h4 className="pt-8">Subscribe</h4>
+        <h4 className="pt-8 text-[18px] font-bold ">Subscribe</h4>
         <SubscribeForm />
       </div>
     </footer>

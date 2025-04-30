@@ -14,7 +14,7 @@ import Searchbtn from "../buttonComp/Searchbtn";
 const QuestionTiles = () => {
   // console.log(questions);
 
-  // const dispatch = useDispatch();  
+  // const dispatch = useDispatch();
   // const router = useRouter();
   // const [inputQuestion, setInputQuestion] = useState<string>("");
   // const a = setInputQuestion("hello");
@@ -48,7 +48,7 @@ const QuestionTiles = () => {
       <div className="rightSection">
         <div className="inputSection">
           {/* onClick={() => handleClick(inputQuestion)} */}
-          <Searchbtn text="Submit" />
+          <Searchbtn  text="Submit" />
         </div>
       </div>
     </div>

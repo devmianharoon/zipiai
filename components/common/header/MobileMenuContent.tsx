@@ -307,7 +307,9 @@ const MobileMenuContent: FC<MobileMenuContentProps> = ({ toggleMenu }) => {
   return (
     <>
       <div className="sidebar-header">
-        <Link href="/" className="sidebar-header-inner">
+        <Link
+          href="/"
+          className="sidebar-header-inner flex items-center gap-2 px-2 py-2 ">
           <Image
             width={40}
             height={45}

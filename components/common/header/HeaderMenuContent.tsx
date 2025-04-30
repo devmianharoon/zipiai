@@ -10,14 +10,14 @@ const HeaderMenuContent = ({ float = "" }) => {
   const menuItems = [
     { name: "Home Internet", path: "/home-internet" },
     { name: "Business Internet", path: "/business-internet" },
-    { name: "DirecTV", path: "/directv" },
+    { name: "DirecTV", path: "/direct-tv" },
     { name: "Help", path: "/contact" },
   ];
 
   return (
     <ul
       id="respMenu"
-      className="ace-responsive-menu text-right d-lg-block d-none"
+      className="hidden md:flex gap-6 text-navtext text-[16px] justify-center items-center "
       data-menu-style="horizontal">
       {menuItems.map((item, index) => (
         <li key={index}>

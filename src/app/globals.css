@@ -14,6 +14,9 @@
   --color-bluish: #0a6bde;
   --color-navy: #24324a;
   --color-darknavy: #1d293e;
+  --color-navtext: rgb(72, 72, 72);
+  --color-primary: white;
+  --color-finputbg: rgb(53, 71, 101);
 }
 
 @media (prefers-color-scheme: dark) {

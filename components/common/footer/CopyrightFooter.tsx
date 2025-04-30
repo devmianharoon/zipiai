@@ -11,10 +11,10 @@ const CopyrightFooter = () => {
   ];
 
   return (
-    <div className="flex justify-between items-center">
+    <div className="flex justify-between items-center text-[14px]">
       <div className="">
         <div className="footer_menu_widget">
-          <ul className="flex">
+          <ul className="flex gap-6">
             {menuItems.map((item) => (
               <li className="list-inline-item" key={item.id}>
                 <Link href={item.routeLink}>{item.name}</Link>
@@ -25,7 +25,7 @@ const CopyrightFooter = () => {
       </div>
       {/* End .col */}
 
-      <div className="col-lg-6 col-xl-6">
+      <div className="">
         <div className="copyright-widget text-end">
           <p>
             &copy; {new Date().getFullYear()} by{" "}

@@ -11,14 +11,16 @@ const SubscribeForm = () => {
         <div className="col-auto">
           <input
             type="email"
-            className="form-control mb-2"
+            className="form-control mb-2 bg-finputbg py-1 text-[16px] pl-6 rounded-[30px] outline-none"
             id="inlineFormInput"
             placeholder="Your email"
           />
         </div>
 
         <div className="col-auto ms-2">
-          <button type="submit" className="btn btn-primary mb-2">
+          <button
+            type="submit"
+            className="btn btn-primary mb-2 bg-finputbg h-12 w-12 rounded-full ">
             <i className="fa fa-angle-right"></i>
           </button>
         </div>
