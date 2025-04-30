@@ -77,6 +77,8 @@ const Index = () => {
 
       {/* <!-- Home Design --> */}
       <Hero />
+            {/* <SingleProvider data={data} /> */}
+
       <TestSpeed />
 
       <Crusal />
@@ -97,7 +99,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* <SingleProvider data={data} /> */}
     </>
   );
 };

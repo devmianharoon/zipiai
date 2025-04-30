@@ -178,110 +178,205 @@
 // // Export reducer
 // export default chatSlice.reducer;
 // store/slices/chatSlice.ts
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+// import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-interface ChatMessage {
-  sender: "bot";
-  content: string;
+// interface ChatMessage {
+//   sender: "bot";
+//   content: string;
+// }
+
+// interface ChatState {
+//   messages: ChatMessage[];
+//   loading: boolean;
+//   error: string | null;
+// }
+
+// const initialState: ChatState = {
+//   messages: [
+    
+//   ],
+//   loading: false,
+//   error: null,
+// };
+
+// // Async thunk to send chat message and stream bot response
+// export const sendChatMessage = createAsyncThunk(
+//   "chat/sendChatMessage",
+//   async ({ content }: { content: string }, { dispatch, rejectWithValue }) => {
+//     try {
+//       const payload = { content };
+//       const response = await fetch("http://127.0.0.1:8000/call", {
+//         method: "POST",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify(payload),
+//       });
+
+//       if (!response.ok) {
+//         const errorData = await response.json().catch(() => ({}));
+//         throw new Error(
+//           `Streaming response failed: ${response.status} ${response.statusText} - ${
+//             errorData.detail || "Unknown error"
+//           }`
+//         );
+//       }
+
+//       if (!response.body) {
+//         throw new Error("No response body received.");
+//       }
+
+//       // Start a new bot message
+//       dispatch(chatSlice.actions.appendBotMessage({ sender: "bot", content: "" }));
+
+//       const reader = response.body.getReader();
+//       const decoder = new TextDecoder("utf-8");
+
+//       while (true) {
+//         const { value, done } = await reader.read();
+//         if (done) break;
+//         const chunk = decoder.decode(value || new Uint8Array(), { stream: true });
+//         if (chunk) {
+//           // Append chunk to the last bot message
+//           dispatch(chatSlice.actions.updateLastBotMessage(chunk));
+//         }
+//       }
+
+//       return null; // No return value needed since updates are handled via actions
+//     } catch (err ) {
+//       return rejectWithValue(err as string);
+//     }
+//   }
+// );
+
+// const chatSlice = createSlice({
+//   name: "chat",
+//   initialState,
+//   reducers: {
+//     setError: (state, action) => {
+//       state.error = action.payload;
+//     },
+//     appendBotMessage: (state, action) => {
+//       state.messages.push(action.payload);
+//     },
+//     updateLastBotMessage: (state, action) => {
+//       const lastMessage = state.messages[state.messages.length - 1];
+//       if (lastMessage && lastMessage.sender === "bot") {
+//         lastMessage.content += action.payload; // Append chunk to existing content
+//       }
+//     },
+//   },
+//   extraReducers: (builder) => {
+//     builder
+//       .addCase(sendChatMessage.pending, (state) => {
+//         state.loading = true;
+//         state.error = null;
+//       })
+//       .addCase(sendChatMessage.fulfilled, (state) => {
+//         state.loading = false;
+//       })
+//       .addCase(sendChatMessage.rejected, (state, action) => {
+//         state.loading = false;
+//         state.error = action.payload as string;
+//       });
+//   },
+// });
+
+// export const { setError, appendBotMessage, updateLastBotMessage } =
+//   chatSlice.actions;
+// export default chatSlice.reducer;
+import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
+
+// Define the shape of a single provider
+interface Provider {
+  ProviderName: string;
+  logo: string;
+  contact: string;
+  Plans_Starting_At: string;
+  Speeds_Up_To: string;
+  Connection_Type: string;
+  available: string;
+  feactures: string; // Note: 'feactures' is as per API response
 }
 
-interface ChatState {
-  messages: ChatMessage[];
+// Define the shape of the API response
+interface ProviderData {
+  providers: Provider[];
+}
+
+// Define the state shape
+interface ProvidersState {
+  data: ProviderData | null;
   loading: boolean;
   error: string | null;
 }
 
-const initialState: ChatState = {
-  messages: [
-    
-  ],
+const initialState: ProvidersState = {
+  data: null,
   loading: false,
   error: null,
 };
 
-// Async thunk to send chat message and stream bot response
-export const sendChatMessage = createAsyncThunk(
-  "chat/sendChatMessage",
-  async ({ content }: { content: string }, { dispatch, rejectWithValue }) => {
+// Async thunk to fetch providers from the API using fetch with query parameter
+export const fetchProviders = createAsyncThunk<
+  ProviderData,
+  string,
+  { rejectValue: string }
+>(
+  'providers/fetchProviders',
+  async (content: string, { rejectWithValue }) => {
     try {
-      const payload = { content };
-      const response = await fetch("http://127.0.0.1:8000/call", {
-        method: "POST",
+      // Encode the content string to handle special characters in the query parameter
+      const url = `https://app.demo2.asdev.tech/providers?content=${encodeURIComponent(content)}`;
+      const response = await fetch(url, {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
-        body: JSON.stringify(payload),
       });
 
       if (!response.ok) {
-        const errorData = await response.json().catch(() => ({}));
-        throw new Error(
-          `Streaming response failed: ${response.status} ${response.statusText} - ${
-            errorData.detail || "Unknown error"
-          }`
-        );
+        const errorData = await response.json();
+        throw new Error(errorData.detail?.[0]?.msg || 'Failed to fetch providers');
       }
 
-      if (!response.body) {
-        throw new Error("No response body received.");
-      }
-
-      // Start a new bot message
-      dispatch(chatSlice.actions.appendBotMessage({ sender: "bot", content: "" }));
-
-      const reader = response.body.getReader();
-      const decoder = new TextDecoder("utf-8");
-
-      while (true) {
-        const { value, done } = await reader.read();
-        if (done) break;
-        const chunk = decoder.decode(value || new Uint8Array(), { stream: true });
-        if (chunk) {
-          // Append chunk to the last bot message
-          dispatch(chatSlice.actions.updateLastBotMessage(chunk));
-        }
-      }
-
-      return null; // No return value needed since updates are handled via actions
-    } catch (err ) {
-      return rejectWithValue(err as string);
+      const data: ProviderData = await response.json();
+      return data;
+    } catch (error: any) {
+      return rejectWithValue(error.message || 'Failed to fetch providers');
     }
   }
 );
 
-const chatSlice = createSlice({
-  name: "chat",
+// Create the slice
+const providersSlice = createSlice({
+  name: 'providers',
   initialState,
   reducers: {
-    setError: (state, action) => {
-      state.error = action.payload;
-    },
-    appendBotMessage: (state, action) => {
-      state.messages.push(action.payload);
-    },
-    updateLastBotMessage: (state, action) => {
-      const lastMessage = state.messages[state.messages.length - 1];
-      if (lastMessage && lastMessage.sender === "bot") {
-        lastMessage.content += action.payload; // Append chunk to existing content
-      }
+    clearProviders: (state) => {
+      state.data = null;
+      state.error = null;
     },
   },
   extraReducers: (builder) => {
     builder
-      .addCase(sendChatMessage.pending, (state) => {
+      .addCase(fetchProviders.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
-      .addCase(sendChatMessage.fulfilled, (state) => {
+      .addCase(fetchProviders.fulfilled, (state, action: PayloadAction<ProviderData>) => {
         state.loading = false;
+        state.data = action.payload;
       })
-      .addCase(sendChatMessage.rejected, (state, action) => {
+      .addCase(fetchProviders.rejected, (state, action: PayloadAction<string | undefined>) => {
         state.loading = false;
-        state.error = action.payload as string;
+        state.error = action.payload || 'An error occurred';
       });
   },
 });
 
-export const { setError, appendBotMessage, updateLastBotMessage } =
-  chatSlice.actions;
-export default chatSlice.reducer;
+// Export actions
+export const { clearProviders } = providersSlice.actions;
+
+// Export reducer
+export default providersSlice.reducer;

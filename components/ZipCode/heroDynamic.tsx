@@ -34,14 +34,13 @@ export default function HeroDynamic() {
       <div className="container mx-auto px-4">
         <div className="relative flex flex-wrap">
           <div className="w-full lg:w-full">
-            <div className=" flex justify-center  gap-4">
-              <h2 className="fz55 text-[30px] font-bold ">
-                {" "}
+            <div className=" flex flex-col  gap-12 justify-center items-center">
+              <h2 className="fz55 text-[30px] font-bold text-white ">
                 Show Me The Plans & Prices For Each Provider{" "}
               </h2>
-              <div>
+              {/* <div> */}
                 <div className="rightSection">
-                  <div className="inputSection">
+                  <div className="flex justify-center">
                     <Searchbtn text="Submit" />
                   </div>
                 </div>
@@ -100,7 +99,7 @@ export default function HeroDynamic() {
                     <p className="text-white mt-4">No weather data available</p>
                   )
                 )}
-              </div>
+              {/* </div> */}
             </div>
           </div>
         </div>

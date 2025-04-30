@@ -1,5 +1,4 @@
 "use client";
-import { useEffect, useState } from "react";
 import CopyrightFooter from "../../../components/common/footer/CopyrightFooter";
 import Footer from "../../../components/common/footer/Footer";
 import MobileMenu from "../../../components/common/header/MobileMenu";
@@ -7,45 +6,109 @@ import Crusal from "../../../components/home/Crusal";
 import Header from "../../../components/home/Header";
 import TestSpeed from "../../../components/home/TestSpeed";
 import HeroDynamic from "../../../components/ZipCode/heroDynamic";
-import { useDispatch, useSelector } from "react-redux";
-import { setSelectedQuestion } from "../../../store/slices/questionSlice";
-import { sendChatMessage } from "../../../store/slices/chatSlice";
-import { RootState, AppDispatch } from "../../../store/store";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-
+import {  useSelector } from "react-redux";
+// import { setSelectedQuestion } from "../../../store/slices/questionSlice";
+// import { sendChatMessage } from "../../../store/slices/chatSlice";
+import { RootState } from "../../../store/store";
+// import ReactMarkdown from "react-markdown";
+// import remarkGfm from "remark-gfm";
+import SingleProvider from "../../../components/tileComp/tile";
+interface BroadbandProvider {
+  available: string;
+  Connection_Type: string;
+  // ProviderDetailPage: string;
+  ProviderName: string;
+  contact: string;
+  Speeds_Up_To: string;
+  Plans_Starting_At: string;
+  // ProviderViewPlans: string;
+  logo: string;
+  feactures: string;
+}
 export default function Page() {
   // const { zipcode } = params;
   // console.log("Zip code from URL:", zipcode);
 
-  const dispatch = useDispatch<AppDispatch>();
+  //   const dispatch = useDispatch<AppDispatch>();
   const selectedQuestion = useSelector(
     (state: RootState) => state.question.selectedQuestion
   );
-  const { messages } = useSelector((state: RootState) => state.chat);
-  const [questionSent, setQuestionSent] = useState(false);
+  console.log("Selected Question from Redux:", selectedQuestion);
+  const { data, loading, error } = useSelector(
+    (state: RootState) => state.chat
+  );
+  console.log("Messages from data:", data);
+  console.log("Loading from Redux:", loading);
+  console.log("Error from Redux:", error);
+  // console.log("Providers from Redux:", providers);
 
-  // Handle selectedQuestion
-  useEffect(() => {
-    if (
-      selectedQuestion &&
-      typeof selectedQuestion === "string" &&
-      !questionSent
-    ) {
-      dispatch(sendChatMessage({ content: selectedQuestion }));
-      setQuestionSent(true);
-      dispatch(setSelectedQuestion(null));
-    }
-  }, [selectedQuestion, dispatch]);
+  //   const data = useSelector((state: RootState) => state.chat.providers);
+  //   const [questionSent, setQuestionSent] = useState(false);
 
-  // Reset questionSent when selectedQuestion changes
-  useEffect(() => {
-    setQuestionSent(false);
-  }, [selectedQuestion]);
+  //   // Handle selectedQuestion
+  //   useEffect(() => {
+  //     if (
+  //       selectedQuestion &&
+  //       typeof selectedQuestion === "string" &&
+  //       !questionSent
+  //     ) {
+  //       dispatch(sendChatMessage({ content: selectedQuestion }));
+  //       setQuestionSent(true);
+  //       dispatch(setSelectedQuestion(null));
+  //     }
+  //   }, [selectedQuestion, dispatch]);
 
-  console.log("Messages from Redux:", messages);
+  //   // Reset questionSent when selectedQuestion changes
+  //   useEffect(() => {
+  //     setQuestionSent(false);
+  //   }, [selectedQuestion]);
+
+  //   console.log("Messages from Redux:", data);
   //   console.log("Parsed Data from Redux:", parsedData);
 
+  //   const shouldRenderProviders = Array.isArray(data) && data.length > 0;
+//   const test = [
+//     {
+//       "ProviderName": "Verizon Fios",
+//       "logo": "verizon_fios.png",
+//       "contact": "888 564 5552",
+//       "Plans_Starting_At": "$49.99/month",
+//       "Speeds_Up_To": "2.3 Gbps",
+//       "Connection_Type": "Fiber",
+//       "available": "85.3% coverage in NYC",
+//       "feactures": "Symmetrical upload and download speeds; no equipment fees; no contract required; free Netflix and Max for 12 months or an Xbox gaming bundle with select plans."
+//     },
+//     {
+//       "ProviderName": "Spectrum",
+//       "logo": "spectrum.png",
+//       "contact": "888 564 5552",
+//       "Plans_Starting_At": "$49.99/month",
+//       "Speeds_Up_To": "1 Gbps",
+//       "Connection_Type": "Cable",
+//       "available": "82.7% coverage in NYC",
+//       "feactures": "No-contract plans; free modem; antivirus software; TV and mobile bundles; unlimited mobile line included; Advanced WiFi with certain bundles; Disney+ & ESPN+ with Spectrum TV."
+//     },
+//     {
+//       "ProviderName": "HughesNet",
+//       "logo": "hughesnet.png",
+//       "contact": "888 564 5552",
+//       "Plans_Starting_At": "$49.99/month",
+//       "Speeds_Up_To": "100 Mbps",
+//       "Connection_Type": "Satellite",
+//       "available": "100% coverage in NYC",
+//       "feactures": "Fusion plans combining satellite and wireless technology for low-latency gaming and streaming; free Wi-Fi 6 modem included; 24-month contract required."
+//     },
+//     {
+//       "ProviderName": "Viasat",
+//       "logo": "viasat.png",
+//       "contact": "888 564 5552",
+//       "Plans_Starting_At": "$49.99/month",
+//       "Speeds_Up_To": "150 Mbps",
+//       "Connection_Type": "Satellite",
+//       "available": "100% coverage in NYC",
+//       "feactures": "Built for rural areas without access to DSL, cable, or fiber lines; multiple plans with multiple speeds to meet any lifestyle and budget; free standard installation on all new orders."
+//     }
+//   ]
   return (
     <>
       {/* <!-- Main Header Nav --> */}
@@ -56,7 +119,33 @@ export default function Page() {
 
       {/* <!-- Home Design --> */}
       <HeroDynamic />
-     <div className="w-full flex justify-center items-center bg-primary">
+
+      {loading && (
+        <div className="flex justify-center items-center py-10">
+          <p className="text-lg font-medium">Loading providers...</p>
+        </div>
+      )}
+
+      {error && (
+        <div className="flex justify-center items-center py-10 text-red-600">
+          <p className="text-lg font-medium">Error loading data: {error}</p>
+        </div>
+      )}
+
+      {/* {!loading && !error && Array.isArray(data) && data.length > 0 && ( */}
+
+        {/* <div className="provider-list container mx-auto py-6"> */}
+          {data?.providers.map((provider: BroadbandProvider, index: number) => (
+            <div className="p-2" key={index}>
+              <SingleProvider data={provider} />
+            </div>
+          ))}
+        {/* </div> */}
+      {/* )} */}
+
+      {/* <SingleProvider data={data} /> */}
+
+      {/* <div className="w-full flex justify-center items-center bg-primary">
      <div id="messages" className="chatbot-messages  text-black container">
         {messages
           .filter((msg) => msg.sender === "bot") // Only include bot messages
@@ -71,7 +160,7 @@ export default function Page() {
           ))}
       </div>
 
-     </div>
+     </div> */}
       {/* <!-- Providers List --> */}
       {/* {parsedData && parsedData.providers.length > 0 && (
         <section className="providers-section container my-8">
@@ -100,10 +189,8 @@ export default function Page() {
 
       <TestSpeed />
       <Crusal />
-
-      {/* <!-- Our Footer --> */}
-      <section className="footer_one flex justify-center items-center">
-        <div className="container">
+      <section className="footer_one flex justify-center items-center bg-bluish pt-[70px] pb-20">
+        <div className="container ">
           <div className="row">
             <Footer />
           </div>
@@ -111,8 +198,8 @@ export default function Page() {
       </section>
 
       {/* <!-- Our Footer Bottom Area --> */}
-      <section className="footer_middle_area flex justify-center items-center">
-        <div className="container">
+      <section className="footer_middle_area flex justify-center items-center bg-bluish py-14">
+        <div className="container ">
           <CopyrightFooter />
         </div>
       </section>

@@ -1,27 +1,27 @@
 interface BroadbandProvider {
-  ProviderAvailability: string;
-  ProviderConnection: string;
-  ProviderDetailPage: string;
+  available: string;
+  Connection_Type: string;
+  // ProviderDetailPage: string;
   ProviderName: string;
-  ProviderPhone: string;
-  ProviderSpeed: string;
-  ProviderStarts: string;
-  ProviderViewPlans: string;
+  contact: string;
+  Speeds_Up_To: string;
+  Plans_Starting_At: string;
+  // ProviderViewPlans: string;
   logo: string;
+  feactures: string;
 }
 
-
-
+//       "feactures"
 type SingleProviderProps = BroadbandProvider;  // Defining prop type explicitly
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 export default function SingleProvider({ data }: { data: SingleProviderProps }) {
   return (
     <div className="max-w-6xl mx-auto p-6 rounded-xl border border-gray-200 bg-white">
       <div className="grid grid-cols-1 md:grid-cols-4  items-center">
         {/* Logo and Rating Section */}
         <div className="space-y-4">
-          <Image src={`/logos/${data.logo}`} alt={data.ProviderName} width={100} height={100} />
+          <Image src={`/assets/logos/${data.logo}`} alt={data.ProviderName} width={100} height={100} />
           <div className="space-y-1">
             <div className="flex items-center gap-2">
               <span className="text-2xl font-bold">3.4</span>
@@ -35,7 +35,7 @@ export default function SingleProvider({ data }: { data: SingleProviderProps }) 
         <div>
           <h3 className="text-sm font-medium text-gray-600">Plans Starting At</h3>
           <div className="flex items-baseline gap-1">
-            <span className="text-4xl font-bold">{data.ProviderStarts}</span>
+            <span className="text-4xl font-bold">{data.Plans_Starting_At}</span>
           </div>
           <p className="text-xs text-gray-500 mt-1">Prices may vary depending on the plan</p>
         </div>
@@ -44,11 +44,11 @@ export default function SingleProvider({ data }: { data: SingleProviderProps }) 
         <div>
           <h3 className="text-sm font-medium text-gray-600">Speeds Up To</h3>
           <div className="flex items-baseline gap-1">
-            <span className="text-4xl font-bold">{data.ProviderSpeed.split(' ')[0]}</span>
-            <span className="text-2xl font-bold">{data.ProviderSpeed.split(' ')[1]}</span>
+            <span className="text-4xl font-bold">{data.Speeds_Up_To.split(' ')[0]}</span>
+            <span className="text-2xl font-bold">{data.Speeds_Up_To.split(' ')[1]}</span>
           </div>
           <p className="text-xs text-gray-500 mt-1">
-            Ltd. avail/areas. Speeds vary, not g td. Single devices wired speed maximum {parseFloat(data.ProviderSpeed.split(' ')[0]) - 0.3}Gbps.
+            Ltd. avail/areas. Speeds vary, not g td. Single devices wired speed maximum {parseFloat(data.Speeds_Up_To.split(' ')[0]) - 0.3}Gbps.
           </p>
         </div>
 
@@ -57,11 +57,11 @@ export default function SingleProvider({ data }: { data: SingleProviderProps }) 
           <div className="space-y-2">
             <div className="flex justify-between text-sm text-gray-600">
               <span>Connection:</span>
-              <span>{data.ProviderConnection}</span>
+              <span>{data.Connection_Type}</span>
             </div>
             <div className="flex justify-between text-sm text-gray-600">
               <span>Availability:</span>
-              <span>{data.ProviderAvailability}</span>
+              <span>{data.available}</span>
             </div>
           </div>
 
@@ -70,15 +70,16 @@ export default function SingleProvider({ data }: { data: SingleProviderProps }) 
               <span className="inline-block mr-2">⚡</span>
               Over 100 speed tests confirm high speeds for {data.ProviderName} Internet
             </p>
+            <p>{data.feactures}</p>
           </div>
 
           <div className="space-y-2">
-            <Link href={data.ProviderViewPlans} className="w-full bg-rose-500 hover:bg-rose-600 text-center block py-2 rounded">
+            {/* <Link href={data.ProviderViewPlans} className="w-full bg-rose-500 hover:bg-rose-600 text-center block py-2 rounded">
               View Plans
-            </Link>
-            <button className="w-full bg-white text-center py-2 border border-gray-300 rounded">
+            </Link> */}
+            {/* <button className="w-full bg-white text-center py-2 border border-gray-300 rounded">
               {data.ProviderPhone}
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
