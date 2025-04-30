@@ -10,7 +10,7 @@ export const fetchZipCode = createAsyncThunk(
   "location/fetchZipCode",
   async ({ lat, lon }:bkl, { rejectWithValue }) => {
     try {
-      const response = await fetch("https://app.demo2.asdev.tech/coordinates", {
+      const response = await fetch("http://127.0.0.1:8000/coordinates", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

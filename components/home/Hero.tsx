@@ -43,7 +43,7 @@ export default function Hero() {
                 </div>
               </div>
               <div className="absolute bottom-0 right-0">
-                <h1 className="text-[44px] text-white m-0">Moving ?</h1>
+                <h1 className="text-3xl text-white m-0">Moving ?</h1>
                 <input
                   type="text"
                   placeholder="Zip Code"

@@ -17,9 +17,9 @@ export default function HeroDynamic() {
     (state: RootState) => state.location
   );
   useEffect(() => {
-    if (zipCode) {
-      dispatch(fetchWeather(zipCode));
-    }
+    // if (zipCode) {
+      dispatch(fetchWeather("10035"));
+    // }
   }, [zipCode]);
   const weatherState = useSelector((state: RootState) => state.weather);
   // console.log("Weather data:date", weather?.forecast.forecastday[0].date);
@@ -105,7 +105,7 @@ export default function HeroDynamic() {
                 )}
               </div>
               <div className="absolute bottom-0 right-0">
-                <h1 className="text-[44px] text-white m-0">Moving ?</h1>
+                <h1 className="text-3xl text-white m-0">Moving ?</h1>
                 <input
                   type="text"
                   placeholder="Zip Code"

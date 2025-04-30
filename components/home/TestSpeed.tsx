@@ -5,7 +5,7 @@ const TestSpeed = () => {
     <section className="relative bg-cover bg-center bg-no-repeat bg-white color-black">
       <div className="container mx-auto px-4 ">
         <div className="text-center">
-          <h1 className="text-[18px] py-4">
+          <h1 className="text-3xl py-4">
             Time is Precious! Dont let your internet slow you down . Test Your
             Speed!
           </h1>
