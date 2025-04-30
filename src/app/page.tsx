@@ -1,5 +1,5 @@
 import Index from "../../components/home";
-import "../../public/assets/scss/index.scss";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 export const metadata = {
   title: "Home-1 || FindHouse - Real Estate React Template",
@@ -7,8 +7,8 @@ export const metadata = {
 };
 export default function Home() {
   return (
-    <>
+    <main className="overflow-hidden">
       <Index />
-    </>
+    </main>
   );
 }

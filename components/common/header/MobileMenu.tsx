@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { useState } from "react";
 import MobileMenuContent from "./MobileMenuContent";
 import Image from "next/image";
@@ -11,7 +11,7 @@ const MobileMenu = () => {
   };
 
   return (
-    <div className="stylehome1 h0 mega-menu-wrapper">
+    <div className="md:hidden block bg-primary text-navtext py-3.5">
       <div className="mobile-menu">
         <div className="header stylehome1 flex items-center justify-between p-4 relative">
           {/* Left side - Hamburger */}

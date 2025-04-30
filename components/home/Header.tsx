@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const Header = () => {
   // const [navbar, setNavbar] = useState(true);
-  const navbar = true;
+  // const navbar = true;
   //dummy usage of setnavbar
   // const abc = setNavbar(false);
   // console.log(abc);
@@ -25,11 +25,8 @@ const Header = () => {
   // }, []);
 
   return (
-    <header
-      className={`header-nav menu_style_home_one navbar-scrolltofixed stricky main-menu hidden md:block bg-white ${
-        navbar ? "stricky-fixed " : ""
-      }`}>
-      <div className="w-full p-0">
+    <header className={"w-full md:flex justify-center items-center bg-white py-6 hidden "}>
+      <div className="container  p-0 flex justify-between ">
         {/* <!-- Ace Responsive Menu --> */}
 
         <Link href="/" className="navbar_brand float-left hidden md:block">
@@ -40,13 +37,13 @@ const Header = () => {
             src="/assets/images/hyperlogo.png"
             alt="header-logo.png"
           />
-          <Image
+          {/* <Image
             width={120}
             height={65}
             className="logo2 contain"
             src="/assets/images/hyperlogo.png"
             alt="header-logo2.png"
-          />
+          /> */}
           {/* <span>FindHouse</span> */}
         </Link>
         {/* site logo brand */}

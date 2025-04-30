@@ -14,11 +14,9 @@ import { RootState, AppDispatch } from "../../../store/store";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
-
-  
-  export default function Page() {
-    // const { zipcode } = params;
-    // console.log("Zip code from URL:", zipcode);
+export default function Page() {
+  // const { zipcode } = params;
+  // console.log("Zip code from URL:", zipcode);
 
   const dispatch = useDispatch<AppDispatch>();
   const selectedQuestion = useSelector(
@@ -26,7 +24,6 @@ import remarkGfm from "remark-gfm";
   );
   const { messages } = useSelector((state: RootState) => state.chat);
   const [questionSent, setQuestionSent] = useState(false);
-  
 
   // Handle selectedQuestion
   useEffect(() => {
@@ -59,7 +56,8 @@ import remarkGfm from "remark-gfm";
 
       {/* <!-- Home Design --> */}
       <HeroDynamic />
-      <div id="messages" className="chatbot-messages">
+     <div className="w-full flex justify-center items-center bg-primary">
+     <div id="messages" className="chatbot-messages  text-black container">
         {messages
           .filter((msg) => msg.sender === "bot") // Only include bot messages
           .map((msg, index) => (
@@ -73,7 +71,7 @@ import remarkGfm from "remark-gfm";
           ))}
       </div>
 
- 
+     </div>
       {/* <!-- Providers List --> */}
       {/* {parsedData && parsedData.providers.length > 0 && (
         <section className="providers-section container my-8">
