@@ -34,19 +34,8 @@ export default function HeroDynamic() {
       <div className="container mx-auto px-4">
         <div className="relative flex flex-wrap">
           <div className="w-full lg:w-full">
-            <div className=" flex flex-col  gap-12 justify-center items-center">
-              <h2 className="fz55 text-[30px] font-bold text-white ">
-                Show Me The Plans & Prices For Each Provider{" "}
-              </h2>
-              {/* <div> */}
-                <div className="rightSection">
-                  <div className="flex justify-center">
-                    <Searchbtn text="Submit" />
-                  </div>
-                </div>
-                {/* weather */}
-                {/* Weather details */}
-                {weatherState.status === "loading" && (
+            {/* Weather details */}
+            {weatherState.status === "loading" && (
                   <p className="text-white mt-4">Loading weather data...</p>
                 )}
                 {weatherState.status === "failed" && (
@@ -57,7 +46,7 @@ export default function HeroDynamic() {
                 )}
                 {weatherState.status === "succeeded" && weatherState.data ? (
                   weatherState.data.forecast?.forecastday?.length > 0 ? (
-                    <div className="mt-4 text-white flex gap-2.5">
+                    <div className=" text-white flex gap-2.5">
                       {weatherState.data.forecast.forecastday.map(
                         (day, index) => (
                           <div key={day.date_epoch || index} className="flex">
@@ -99,6 +88,19 @@ export default function HeroDynamic() {
                     <p className="text-white mt-4">No weather data available</p>
                   )
                 )}
+            <div className=" flex  gap-12 justify-center items-center">
+              
+              <h2 className="fz55 text-[30px] font-bold text-white ">
+                Show Me The Plans & Prices For Each Provider{" "}
+              </h2>
+              {/* <div> */}
+                <div className="rightSection">
+                  <div className="flex justify-center">
+                    <Searchbtn text="Submit" />
+                  </div>
+                </div>
+                {/* weather */}
+                
               {/* </div> */}
             </div>
           </div>

@@ -9,6 +9,7 @@ interface BroadbandProvider {
   // ProviderViewPlans: string;
   logo: string;
   feactures: string;
+  
 }
 
 //       "feactures"
@@ -77,9 +78,11 @@ export default function SingleProvider({ data }: { data: SingleProviderProps }) 
             {/* <Link href={data.ProviderViewPlans} className="w-full bg-rose-500 hover:bg-rose-600 text-center block py-2 rounded">
               View Plans
             </Link> */}
-            {/* <button className="w-full bg-white text-center py-2 border border-gray-300 rounded">
-              {data.ProviderPhone}
-            </button> */}
+            <button className="w-full bg-white text-center font-[700] text-[16px] py-2 border border-gray-300 rounded hover:bg-redish hover:text-white "  onClick={() => window.open(`tel:${data.contact}`)}
+            >
+              {/* {data.ProviderPhone} */}
+              Connect With Sales Agent
+            </button>
           </div>
         </div>
       </div>
