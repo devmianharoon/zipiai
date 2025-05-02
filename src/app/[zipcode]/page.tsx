@@ -15,6 +15,7 @@ import { RootState } from "../../../store/store";
 import SingleProvider from "../../../components/tileComp/tile";
 import InternetComparison from "../../../components/ZipCode/table";
 import { Provider } from "../../../data/types/responsetype";
+import InternetComparisonSimple from "../../../components/ZipCode/InternetComparison";
 
 export default function Page() {
   // const { zipcode } = params;
@@ -137,6 +138,9 @@ export default function Page() {
         {/* </div> */}
       {/* )} */}
       {data && <InternetComparison data={data} />}
+      {data &&  <InternetComparisonSimple />}
+
+      
 
       {/* <SingleProvider data={data} /> */}
 

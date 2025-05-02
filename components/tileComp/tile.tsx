@@ -25,7 +25,7 @@ export default function SingleProvider({ data }: { data: Provider }) {
               {data.Plans_Starting_At}
             </span>
           </div>
-          <p className="text-xs text-gray-500 mt-1">
+          <p className="text-xs text-gray-500 mb-3">
             Prices may vary depending on the plan
           </p>
           <h3 className="text-xs font-bold text-gray-600  ">Speeds Up To</h3>
@@ -38,19 +38,19 @@ export default function SingleProvider({ data }: { data: Provider }) {
             </span>
           </div>
           <div className="space-y-2">
-            <div className="flex align-center justify-between ">
+            <div className="flex align-center gap-2.5 mt-3 ">
               <div className="text-xs font-extrabold  text-gray-600">
                 Connection:
               </div>
-              <div className="text-[20px] font-bold  text-black">
+              <div className="text-xs   text-black">
                 {data.Connection_Type}
               </div>
             </div>
-            <div className="flex    align-center justify-between">
+            <div className="flex    align-center gap-2.5">
               <div className="text-xs font-extrabold text-gray-600">
                 Availability:
               </div>
-              <div className="text-[20px]  font-bold text-black">
+              <div className="text-xs   text-black">
                 {data.available}
               </div>
             </div>
