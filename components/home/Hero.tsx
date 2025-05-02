@@ -17,7 +17,7 @@ export default function Hero() {
     const questionWithZip = `The Best Internet Near Me ${zipCode}.`;
 
     dispatch(setSelectedQuestion(questionWithZip));
-    dispatch(fetchProviders(questionWithZip) );
+    dispatch(fetchProviders(questionWithZip));
     // dispatch()
     router.push(`/${zipCode}`);
   };
@@ -27,7 +27,7 @@ export default function Hero() {
         <div className="relative flex flex-wrap">
           <div className="w-full lg:w-full">
             <div className="home_content h-[50vh] flex justify-center items-center flex-nowrap gap-5">
-              <h2 className="fz55 text-[44px] text-primary font-bold">
+              <h2 className="fz55 text-[44px] text-primary font-bold ">
                 The Best Internet Providers Near Me
               </h2>
               <div>
@@ -43,17 +43,22 @@ export default function Hero() {
                     </Link> */}
                     {/* onClick={handleClick} this was in button causin    error*/}
 
-                    <Searchbtn text="Submit" onClick={handleClick}/>
+                    <Searchbtn
+                      text="Submit"
+                      onClick={handleClick}
+                      wclass="w-46"
+                    />
                   </div>
                 </div>
               </div>
-              <div className="absolute bottom-0 right-0">
+              <div className="absolute bottom-0 left-0 flex gap-5">
                 <h1 className="text-[30px] text-primary m-0">Moving ?</h1>
                 <input
                   type="text"
                   placeholder="Zip Code"
                   className="py-[10px] px-[20px] rounded-lg outline-none border-none  bg-primary placeholder:text-navtext text-navtext"
                 />
+                <Searchbtn text={"Submit"} wclass="w-26" />
               </div>
             </div>
           </div>
