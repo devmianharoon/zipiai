@@ -36,15 +36,14 @@ export default function HeroDynamic() {
           <div className="w-full lg:w-full">
             {/* Weather details */}
             {weatherState.status === "loading" && (
-                  <p className="text-white mt-4">Loading weather data...</p>
-                )}
-                {weatherState.status === "failed" && (
-                  <p className="text-white mt-4">
-                    Error:{" "}
-                    {weatherState.error || "Failed to fetch weather data"}
-                  </p>
-                )}
-                {weatherState.status === "succeeded" && weatherState.data ? (
+              <p className="text-white mt-4">Loading weather data...</p>
+            )}
+            {weatherState.status === "failed" && (
+              <p className="text-white mt-4">
+                Error: {weatherState.error || "Failed to fetch weather data"}
+              </p>
+            )}
+            {weatherState.status === "succeeded" && weatherState.data ? (
                   weatherState.data.forecast?.forecastday?.length > 0 ? (
                     <div className=" text-white flex flex-col gap-2.5">
                       {weatherState.data.forecast.forecastday.map(
@@ -74,43 +73,44 @@ export default function HeroDynamic() {
                           </div>
                         )
                       )}
-                    </div>
-                  ) : (
-                    <p className="text-white mt-4">
-                      No forecast data available
-                    </p>
-                  )
-                ) : (
-                  weatherState.status === "succeeded" && (
-                    <p className="text-white mt-4">No weather data available</p>
-                  )
-                )}
+                </div>
+              ) : (
+                <p className="text-white mt-4">No forecast data available</p>
+              )
+            ) : (
+              weatherState.status === "succeeded" && (
+                <p className="text-white mt-4">No weather data available</p>
+              )
+            )}
             <div className=" flex  gap-12 justify-center items-center">
-              
               <h2 className="fz55 text-[30px] font-bold text-white ">
                 Show Me The Plans & Prices For Each Provider{" "}
               </h2>
               {/* <div> */}
-                <div className="rightSection">
-                  <div className="flex justify-center">
-                    <Searchbtn text="Submit" />
-                  </div>
+              <div className="rightSection">
+                <div className="flex justify-center">
+                  <Searchbtn text="Submit" wclass="w-46" />
                 </div>
-                {/* weather */}
-                
+              </div>
+              {/* weather */}
+
               {/* </div> */}
             </div>
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 right-0 py-10 px-10">
+      <div className="absolute bottom-0 left-0 py-10 px-10 flex gap-5">
         <h1 className="text-[30px] font-bold text-primary m-0">Moving ?</h1>
         <input
           type="text"
           placeholder="Zip Code"
           className="py-[10px] px-[20px] rounded-lg outline-none border-none  bg-primary placeholder:text-navtext text-navtext"
         />
+        <Searchbtn text={"Submit"} wclass="w-26" />
       </div>
     </section>
   );
 }
+
+
+
