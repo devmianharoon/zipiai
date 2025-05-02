@@ -14,9 +14,9 @@ export default function HeroDynamic() {
   // const router = useRouter();
   const { zipCode } = useSelector((state: RootState) => state.location);
   useEffect(() => {
-    // if (zipCode) {
-      dispatch(fetchWeather("10035"));
-    // }
+    if (zipCode) {
+      dispatch(fetchWeather(zipCode));
+    }
   }, [zipCode]);
   const weatherState = useSelector((state: RootState) => state.weather);
   // console.log("Weather data:date", weather?.forecast.forecastday[0].date);
@@ -46,32 +46,29 @@ export default function HeroDynamic() {
                 )}
                 {weatherState.status === "succeeded" && weatherState.data ? (
                   weatherState.data.forecast?.forecastday?.length > 0 ? (
-                    <div className=" text-white flex gap-2.5">
+                    <div className=" text-white flex flex-col gap-2.5">
                       {weatherState.data.forecast.forecastday.map(
                         (day, index) => (
                           <div key={day.date_epoch || index} className="flex">
-                            <div className="flex flex-col items-center text-center">
+                            <div className="flex  items-center text-center">
                               {/* Date at the top */}
                               <h3 className=" mb-1">
-                                {day.date.split("-").slice(1).join("-")}
+                              {new Date(day.date).toLocaleDateString("en-US", { weekday: "short" })}
                               </h3>
                               {/* Weather icon below date */}
                               {day.day.condition.icon && (
                                 <Image
                                   src={`https:${day.day.condition.icon}`}
                                   alt={day.day.condition.text}
-                                  width={48}
-                                  height={48}
+                                  width={40}
+                                  height={40}
                                   className="mb-1"
                                 />
                               )}
-                              {/* Condition text below icon */}
-                              <p className="text-sm mb-1 text-white">
-                                {day.day.condition.text}
-                              </p>
+
                               {/* Max and min temperatures below condition */}
                               <p className="text-sm text-white">
-                                {day.day.maxtemp_f}°F : {day.day.mintemp_f}°F
+                                {day.day.maxtemp_f}° {day.day.mintemp_f}°
                               </p>
                             </div>
                           </div>
