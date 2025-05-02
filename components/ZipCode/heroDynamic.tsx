@@ -45,10 +45,10 @@ export default function HeroDynamic() {
             )}
             {weatherState.status === "succeeded" && weatherState.data ? (
               weatherState.data.forecast?.forecastday?.length > 0 ? (
-                <div className=" text-white flex gap-2.5">
+                <div className=" text-white flex flex-col gap-2.5 mb-6 ">
                   {weatherState.data.forecast.forecastday.map((day, index) => (
-                    <div key={day.date_epoch || index} className="flex">
-                      <div className="flex flex-col items-center text-center">
+                    <div key={day.date_epoch || index} className="flex ">
+                      <div className="flex justify-between border-b  items-center text-center w-[220px]">
                         {/* Date at the top */}
                         <h3 className=" mb-1">
                           {day.date.split("-").slice(1).join("-")}
@@ -64,9 +64,9 @@ export default function HeroDynamic() {
                           />
                         )}
                         {/* Condition text below icon */}
-                        <p className="text-sm mb-1 text-white">
+                        {/* <p className="text-sm mb-1 text-white">
                           {day.day.condition.text}
-                        </p>
+                        </p> */}
                         {/* Max and min temperatures below condition */}
                         <p className="text-sm text-white">
                           {day.day.maxtemp_f}°F : {day.day.mintemp_f}°F

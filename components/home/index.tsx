@@ -16,6 +16,10 @@ import {
 } from "../../store/slices/LocationSlice";
 import TestSpeed from "./TestSpeed";
 import Crusal from "./Crusal";
+import SectionOne from "./SectionOne";
+import SectionTwo from "./SectionTwo";
+import Showcase from "./Showcase";
+import NewsLetter from "./NewsLetter";
 
 // import SingleProvider from "../tileComp/tile";
 
@@ -62,8 +66,6 @@ const Index = () => {
     }
   }, [dispatch]);
 
-
-
   return (
     <>
       {/* <!-- Main Header Nav --> */}
@@ -77,14 +79,17 @@ const Index = () => {
 
       {/* <!-- Home Design --> */}
       <Hero />
-            {/* <SingleProvider data={data} /> */}
+      {/* <SingleProvider data={data} /> */}
 
       <TestSpeed />
 
       <Crusal />
-
+      <SectionOne />
+      <Showcase />
+      <SectionTwo />
+      <NewsLetter />
       {/* <!-- Our Footer --> */}
-      <section className="footer_one flex justify-center items-center bg-bluish pt-[70px] pb-20">
+      <section className="footer_one flex justify-center items-center bg-[#24324a] pt-[70px] ">
         <div className="container ">
           <div className="row">
             <Footer />
@@ -93,12 +98,11 @@ const Index = () => {
       </section>
 
       {/* <!-- Our Footer Bottom Area --> */}
-      <section className="footer_middle_area flex justify-center items-center bg-bluish py-14">
+      <section className="footer_middle_area flex justify-center items-center bg-[#24324a] py-14">
         <div className="container ">
           <CopyrightFooter />
         </div>
       </section>
-
     </>
   );
 };
