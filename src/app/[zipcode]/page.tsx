@@ -13,19 +13,9 @@ import { RootState } from "../../../store/store";
 // import ReactMarkdown from "react-markdown";
 // import remarkGfm from "remark-gfm";
 import SingleProvider from "../../../components/tileComp/tile";
+import InternetComparison from "../../../components/ZipCode/table";
+import { Provider } from "../../../data/types/responsetype";
 
-interface BroadbandProvider {
-  available: string;
-  Connection_Type: string;
-  // ProviderDetailPage: string;
-  ProviderName: string;
-  contact: string;
-  Speeds_Up_To: string;
-  Plans_Starting_At: string;
-  // ProviderViewPlans: string;
-  logo: string;
-  feactures: string;
-}
 export default function Page() {
   // const { zipcode } = params;
   // console.log("Zip code from URL:", zipcode);
@@ -136,13 +126,15 @@ export default function Page() {
       {/* {!loading && !error && Array.isArray(data) && data.length > 0 && ( */}
 
       {/* <div className="provider-list container mx-auto py-6"> */}
-      {data?.providers.map((provider: BroadbandProvider, index: number) => (
+      {data?.providers.map((provider: Provider, index: number) => (
         <div className="p-2" key={index}>
           <SingleProvider data={provider} />
         </div>
       ))}
+
       {/* </div> */}
       {/* )} */}
+      {data && <InternetComparison data={data} />}
 
       {/* <SingleProvider data={data} /> */}
 

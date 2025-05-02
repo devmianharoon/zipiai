@@ -286,40 +286,25 @@
 //   chatSlice.actions;
 // export default chatSlice.reducer;
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
+import { InternetData  , Provider} from "../../data/types/responsetype";
 
-// Define the shape of a single provider
-interface Provider {
-  ProviderName: string;
-  logo: string;
-  contact: string;
-  Plans_Starting_At: string;
-  Speeds_Up_To: string;
-  Connection_Type: string;
-  available: string;
-  feactures: string; // Note: 'feactures' is as per API response
-}
-
-// Define the shape of the API response
-interface ProviderData {
-  providers: Provider[];
-}
-
-// Define the state shape
+// Redux state shape
 interface ProvidersState {
-  data: ProviderData | null;
+  data: InternetData | null;
   loading: boolean;
   error: string | null;
 }
 
+// Initial state
 const initialState: ProvidersState = {
   data: null,
   loading: false,
   error: null,
 };
 
-// Async thunk to fetch providers from the API using fetch with query parameter
+// Async thunk for fetching providers
 export const fetchProviders = createAsyncThunk<
-  ProviderData,
+InternetData,
   string,
   { rejectValue: string }
 >(
@@ -340,7 +325,7 @@ export const fetchProviders = createAsyncThunk<
         throw new Error(errorData.detail?.[0]?.msg || 'Failed to fetch providers');
       }
 
-      const data: ProviderData = await response.json();
+      const data: InternetData = await response.json();
       return data;
     } catch (error: any) {
       return rejectWithValue(error.message || 'Failed to fetch providers');
@@ -348,7 +333,7 @@ export const fetchProviders = createAsyncThunk<
   }
 );
 
-// Create the slice
+// Create slice
 const providersSlice = createSlice({
   name: 'providers',
   initialState,
@@ -364,7 +349,7 @@ const providersSlice = createSlice({
         state.loading = true;
         state.error = null;
       })
-      .addCase(fetchProviders.fulfilled, (state, action: PayloadAction<ProviderData>) => {
+      .addCase(fetchProviders.fulfilled, (state, action: PayloadAction<InternetData>) => {
         state.loading = false;
         state.data = action.payload;
       })
@@ -375,8 +360,6 @@ const providersSlice = createSlice({
   },
 });
 
-// Export actions
+// Export actions and reducer
 export const { clearProviders } = providersSlice.actions;
-
-// Export reducer
 export default providersSlice.reducer;
