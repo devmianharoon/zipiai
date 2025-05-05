@@ -1,24 +1,14 @@
 "use client";
-// import Link from "next/link";
-import { AppDispatch, RootState } from "../../store/store";
-import { setSelectedQuestion } from "../../store/slices/questionSlice";
-import { useDispatch, useSelector } from "react-redux";
+import {  RootState } from "../../store/store";
+import {  useSelector } from "react-redux";
 import { useRouter } from "next/navigation";
 import Searchbtn from "../buttonComp/Searchbtn";
-import { fetchProviders } from "../../store/slices/chatSlice";
-// import { sendChatMessage } from "../../store/slices/chatSlice";
+
 
 export default function Hero() {
-  const dispatch = useDispatch<AppDispatch>();
   const router = useRouter();
-
   const { zipCode } = useSelector((state: RootState) => state.location);
   const handleClick = () => {
-    const questionWithZip = `The Best Internet Near Me ${zipCode}.`;
-
-    dispatch(setSelectedQuestion(questionWithZip));
-    dispatch(fetchProviders(questionWithZip));
-    // dispatch()
     router.push(`/${zipCode}`);
   };
   return (
