@@ -2,7 +2,6 @@
 import CopyrightFooter from "../../../components/common/footer/CopyrightFooter";
 import Footer from "../../../components/common/footer/Footer";
 import MobileMenu from "../../../components/common/header/MobileMenu";
-import Crusal from "../../../components/home/Crusal";
 import Header from "../../../components/home/Header";
 import TestSpeed from "../../../components/home/TestSpeed";
 import HeroDynamic from "../../../components/ZipCode/heroDynamic";
@@ -11,18 +10,20 @@ import { AppDispatch, RootState } from "../../../store/store";
 import SingleProvider from "../../../components/tileComp/tile";
 import InternetComparison from "../../../components/ZipCode/table";
 import { Provider } from "../../../data/types/responsetype";
-import InternetComparisonSimple from "../../../components/ZipCode/InternetComparison";
+// import InternetComparisonSimple from "../../../components/ZipCode/InternetComparison";
 import { useParams } from "next/navigation";
 import ZipBreadcrumb from "../../../components/home/Breadcrumb";
 import { useEffect } from "react";
 import { fetchZipData } from "../../../store/slices/zipSlice";
 import { fetchProvidersByZip } from "../../../store/slices/chatSlice";
+import InternetTypes from "../../../components/ZipCode/InternetComparison";
 
 export default function Page() {
   const params = useParams(); // Get dynamic route parameters as per Next.js docs
   console.log("Dynamic Parameters:", params);
   console.log("Zip code from URL:", params.zipcode);
   const dispatch = useDispatch<AppDispatch>();
+  const zip = useSelector((state: RootState) => state.zip.data);
 
   const selectedQuestion = useSelector(
     (state: RootState) => state.question.selectedQuestion
@@ -41,27 +42,36 @@ export default function Page() {
     if (zipCode) {
       dispatch(fetchZipData(zipCode));
       dispatch(fetchProvidersByZip(zipCode));
-
     }
   }, [dispatch, zipCode]);
+
+  if (loading) {
+    return (
+      <div className="fixed inset-0 flex justify-center items-center bg-white bg-opacity-80 z-50">
+        <div className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+      </div>
+    );
+  }
+
   return (
     <>
       {/* <!-- Main Header Nav --> */}
       <Header />
-      {/* <!-- Breadcrumb --> */}
-      {zipCode && <ZipBreadcrumb zipCode={zipCode} />}
 
       {/* <!-- Mobile Menu --> */}
       <MobileMenu />
 
       {/* <!-- Home Design --> */}
-      <HeroDynamic />
+      <HeroDynamic zipCode={zipCode} />
+      {/* <!-- Breadcrumb --> */}
+      {zipCode && <ZipBreadcrumb zipCode={zipCode} />}
+      {/* Heading  */}
 
-      {loading && (
-        <div className="flex justify-center items-center py-10">
-          <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-        </div>
-      )}
+      <div className="p-5">
+        <h2 className=" text-[30px] font-bold text-black text-center ">
+          Internet Providers in {zip?.city} ZipCode {zipCode}
+        </h2>
+      </div>
 
       {error && (
         <div className="flex justify-center items-center py-10 text-red-600">
@@ -76,10 +86,9 @@ export default function Page() {
       ))}
 
       {data && <InternetComparison data={data} />}
-      {data && <InternetComparisonSimple />}
+      {data && <InternetTypes />}
 
       <TestSpeed />
-      <Crusal />
 
       <section className="footer_one flex justify-center items-center bg-bluish pt-[70px] pb-20">
         <div className="container ">

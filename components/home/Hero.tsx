@@ -3,6 +3,7 @@ import {  RootState } from "../../store/store";
 import {  useSelector } from "react-redux";
 import { useRouter } from "next/navigation";
 import Searchbtn from "../buttonComp/Searchbtn";
+import Moving from "./Moving";
 
 
 export default function Hero() {
@@ -41,15 +42,7 @@ export default function Hero() {
                   </div>
                 </div>
               </div>
-              <div className="absolute bottom-0 left-0 flex gap-5">
-                <h1 className="text-[30px] text-primary m-0">Moving ?</h1>
-                <input
-                  type="text"
-                  placeholder="Zip Code"
-                  className="py-[10px] px-[20px] rounded-lg outline-none border-none  bg-primary placeholder:text-navtext text-navtext"
-                />
-                <Searchbtn text={"Submit"} wclass="w-26" />
-              </div>
+              <Moving/>
             </div>
           </div>
         </div>

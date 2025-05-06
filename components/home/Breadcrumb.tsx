@@ -24,7 +24,7 @@ export default function ZipBreadcrumb({ zipCode }: ZipBreadcrumbProps) {
   }
 
   return (
-    <nav aria-label="Breadcrumb" className="py-4 px-6 bg-gray-100 rounded-lg shadow-sm">
+    <nav aria-label="Breadcrumb" className="py-4 px-6  rounded-lg ">
       <ol className="flex items-center space-x-2 text-sm text-gray-700">
         <li>
           <Link
@@ -37,7 +37,7 @@ export default function ZipBreadcrumb({ zipCode }: ZipBreadcrumbProps) {
         <li>
           <span className="text-gray-400 mx-2">/</span>
         </li>
-        <li>
+        {/* <li>
           <Link
             href={`/county/${encodeURIComponent(data.county)}`}
             className="hover:text-blue-600 transition-colors duration-200"
@@ -47,7 +47,7 @@ export default function ZipBreadcrumb({ zipCode }: ZipBreadcrumbProps) {
         </li>
         <li>
           <span className="text-gray-400 mx-2">/</span>
-        </li>
+        </li> */}
         <li>
           <Link
             href={`/city/${encodeURIComponent(data.city)}`}

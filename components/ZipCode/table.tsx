@@ -60,13 +60,13 @@ export default function InternetComparison(data: Props) {
     //   </div>
     // </div>
     <div className="p-4 max-w-7xl mx-auto">
-      <h2 className="text-2xl font-bold mb-6 text-center">
+      <h2 className="text-2xl font-bold mb-6 ">
         Side By Side Comparison
       </h2>
 
       <div className="overflow-x-auto">
         <table className="w-full text-sm border border-gray-300">
-          <thead className="bg-bluish text-white">
+          <thead className=" text-black font-bold">
             <tr>
               <th className="p-2">Feature</th>
               {/* Hardcoding providers as per the image */}
@@ -154,7 +154,7 @@ export default function InternetComparison(data: Props) {
       </div>
 
       <div className="mt-8 space-y-4">
-        <h2 className="text-2xl font-bold mb-6 text-center">Recommendations</h2>
+        <h2 className="text-2xl font-bold mb-6 ">Recommendations</h2>
         {data.data.Ranks.map((rank) => (
           <div
             key={rank.Rank}
