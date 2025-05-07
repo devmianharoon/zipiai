@@ -13,6 +13,7 @@ export type Provider = {
   contact: string;
   Plans_Starting_At: string;
   Speeds_Up_To: string;
+  max_upload_speed: string;
   Connection_Type: string;
   available: string;
   feactures: string[];

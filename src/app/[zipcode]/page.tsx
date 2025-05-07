@@ -15,8 +15,10 @@ import { useParams } from "next/navigation";
 import ZipBreadcrumb from "../../../components/home/Breadcrumb";
 import { useEffect } from "react";
 import { fetchZipData } from "../../../store/slices/zipSlice";
-import { fetchProvidersByZip } from "../../../store/slices/chatSlice";
+// import { fetchProvidersByZip } from "../../../store/slices/chatSlice";
 import InternetTypes from "../../../components/ZipCode/InternetComparison";
+// import { setSelectedQuestion } from "../../../store/slices/questionSlice";
+import { fetchProviders } from "../../../store/slices/chatSlice";
 
 export default function Page() {
   const params = useParams(); // Get dynamic route parameters as per Next.js docs
@@ -41,7 +43,8 @@ export default function Page() {
   useEffect(() => {
     if (zipCode) {
       dispatch(fetchZipData(zipCode));
-      dispatch(fetchProvidersByZip(zipCode));
+      //   dispatch(fetchProvidersByZip(zipCode));
+      dispatch(fetchProviders("The Best Internet Near Me " + zipCode));
     }
   }, [dispatch, zipCode]);
 
@@ -73,11 +76,11 @@ export default function Page() {
         </h2>
       </div>
 
-      {error && (
+      {/* {error && (
         <div className="flex justify-center items-center py-10 text-red-600">
           <p className="text-lg font-medium">Error loading data: {error}</p>
         </div>
-      )}
+      )} */}
 
       {data?.providers.map((provider: Provider, index: number) => (
         <div className="p-2" key={index}>

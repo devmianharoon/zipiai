@@ -70,10 +70,11 @@ export default function InternetComparison(data: Props) {
             <tr>
               <th className="p-2">Feature</th>
               {/* Hardcoding providers as per the image */}
-              <th className="p-2">Frontier (Fiber)</th>
-              <th className="p-2">Spectrum (Cable)</th>
-              <th className="p-2">HughesNet (Satellite)</th>
-              <th className="p-2">Starlink (Satellite)</th>
+               {data.data.providers.map((provider, index) => (
+                <th key={index} className="p-2">
+                  {`${provider.ProviderName} (${provider.Connection_Type})` }
+                </th>
+              ))}
             </tr>
           </thead>
           <tbody>
@@ -96,14 +97,14 @@ export default function InternetComparison(data: Props) {
               ))}
             </tr>
             {/* Row for Max Upload Speed */}
-            {/* <tr className="text-center border-t">
+            <tr className="text-center border-t">
           <td className="p-2 font-semibold">Max Upload Speed</td>
           {data.data.providers.map((provider, index) => (
             <td key={index} className="p-2">
-              {provider.Max_Upload_Speed || "N/A"} 
+              {provider.max_upload_speed || "N/A"} 
             </td>
           ))}
-        </tr> */}
+        </tr>
             {/* Row for Starting Price */}
             <tr className="text-center border-t">
               <td className="p-2 font-semibold">Starting Price</td>
