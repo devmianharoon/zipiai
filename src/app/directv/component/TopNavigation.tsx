@@ -4,20 +4,17 @@ export default function TopNavigation() {
   const data = [
     {
       image: "/assets/directv.png",
-      text: "DIRECTV via Internet",
+      text: "DirecTV via Internet",
     },
     {
       image: "/assets/directv1.png",
-      text: "DIRECTV via Satellite",
+      text: "DirecTV Satellite",
     },
     {
       image: "/assets/directv2.png",
       text: "Internet",
-    },
-    {
-      image: "/assets/directv3.png",
-      text: "Wireless",
-    },
+    }
+
   ];
 
   return (
