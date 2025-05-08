@@ -35,12 +35,11 @@ export default function HeroDynamic({zipCode}: { zipCode: string }) {
             )}
             {weatherState.status === "succeeded" && weatherState.data ? (
               weatherState.data.forecast?.forecastday?.length > 0 ? (
-                <div className=" text-white flex flex-col gap-1  w-[150px]">
+                <div className=" text-white flex flex-col gap-1  w-[115px]">
                   {weatherState.data.forecast.forecastday.map((day, index) => (
                     <div
                       key={day.date_epoch || index}
-                      className="flex border-b w-[150px] gap-3">
-                      <div className="flex w-auto justify-between items-center text-center">
+                      className={`flex w-[115px] ${index < 2 ? "border-b" : ""}`}>                      <div className="flex w-auto justify-between items-center text-center">
                         {/* Date at the top */}
                         <h3 className=" mb-1">
                           {new Date(day.date).toLocaleDateString("en-US", {
@@ -52,8 +51,8 @@ export default function HeroDynamic({zipCode}: { zipCode: string }) {
                           <Image
                             src={`https:${day.day.condition.icon}`}
                             alt={day.day.condition.text}
-                            width={40}
-                            height={40}
+                            width={20}
+                            height={20}
                             className="mb-1"
                           />
                         )}

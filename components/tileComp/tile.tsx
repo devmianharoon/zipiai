@@ -33,6 +33,13 @@ export default function SingleProvider({ data }: { data: Provider }) {
             <Image src={"/call.svg"} alt="phone" width={25} height={25} />
             Connect With Sales Agent
           </button>
+          <button
+            className="flex justify-center p-2 w-full gap-2 bg-white text-center text-2xl font-bold py-2  mouse-pointer"
+            onClick={() => window.open(`tel:${data.contact}`)}
+          >
+            <Image src={"/call.svg"} alt="phone" width={25} height={25} />
+            {data.contact}
+          </button>
         </div>
 
         {/* Pricing Section */}

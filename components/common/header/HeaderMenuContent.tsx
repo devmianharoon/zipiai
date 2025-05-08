@@ -10,7 +10,7 @@ const HeaderMenuContent = ({ float = "" }) => {
   const menuItems = [
     { name: "Home Internet", path: "/home-internet" },
     { name: "Business Internet", path: "/business-internet" },
-    { name: "DirecTV", path: "/direct-tv" },
+    { name: "DirecTV", path: "/directv" },
     { name: "Help", path: "/contact" },
   ];
 
