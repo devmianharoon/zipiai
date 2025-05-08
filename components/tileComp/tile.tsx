@@ -11,7 +11,6 @@ interface BroadbandProvider {
 }
 
 
-
 type SingleProviderProps = BroadbandProvider;  // Defining prop type explicitly
 import Image from "next/image";
 import Link from "next/link";
