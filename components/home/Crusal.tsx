@@ -4,14 +4,20 @@ import Slider from "react-slick";
 import React from "react";
 import Image from "next/image";
 
-const imgData = [
-  { img: "/assets/logos/1tennessee.png", id: 1 },
-  { img: "/assets/logos/3_rivers_communications.png", id: 2 },
-  { img: "/assets/logos/3_rivers_telephone_cooperative.png", id: 3 },
-  { img: "/assets/logos/4-county_fiber.png", id: 4 },
-  { img: "/assets/logos/4net.png", id: 5 },
-  { img: "/assets/logos/4siwi.png", id: 6 },
-  { img: "/assets/logos/5g-x.png", id: 7 },
+
+const imgData2 = [
+  { img: "/assets/logos/spectrum.png", id: 1 },
+  { img: "/assets/logos/verizon.png", id: 2 },
+  { img: "/assets/logos/hughesnet.png", id: 3 },
+  { img: "/assets/logos/optimum.svg", id: 4 },
+  { img: "/assets/logos/frontier.png", id: 5 },
+  { img: "/assets/logos/at&t.png", id: 6 },
+  { img: "/assets/logos/centurylink.svg", id: 7 },
+  { img: "/assets/logos/Astound_RGB.png", id: 8 },
+  { img: "/assets/logos/Directv_PreferredDealer (Color).png", id: 9 },
+  { img: "/assets/logos/WOW-LOGO(2WHITE)-UPDATED-4-AUG-2021.jpg", id: 10 },
+  { img: "/assets/logos/xfinity.svg", id: 11 },
+  { img: "/assets/logos/windstream.png", id: 12 },
 ];
 
 const Crusal = () => {
@@ -30,10 +36,11 @@ const Crusal = () => {
   return (
     <div className="w-full bg-white flex justify-center items-center">
       <Slider {...settings} className="container mx-auto bg-white">
-        {imgData.map((item) => (
+        {imgData2.map((item) => (
           <div
             key={item.id}
-            className="h-[100px] flex justify-center items-center px-4">
+            className="h-[100px] flex justify-center items-center px-4"
+          >
             <div className="relative h-[75px] w-auto">
               <Image
                 src={item.img}

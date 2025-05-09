@@ -27,10 +27,10 @@ export default function SingleProvider({ data }: { data: Provider }) {
             height={100}
           />
           <button
-            className="flex p-2 w-full gap-2 bg-white text-center font-[700] text-[16px] py-2 border border-gray-300 rounded mouse-pointer"
+            className="flex p-2 w-full justify-center gap-2 bg-white text-center font-[700] text-[16px] py-2 border border-gray-300 rounded mouse-pointer"
             onClick={() => window.open(`tel:${data.contact}`)}
           >
-            <Image src={"/call.svg"} alt="phone" width={25} height={25} />
+            {/* <Image src={"/call.svg"} alt="phone" width={25} height={25} /> */}
             Connect With Sales Agent
           </button>
           <button

@@ -46,5 +46,6 @@ export type Comparison = {
 export type InternetData = {
   providers: Provider[];
   Ranks: Rank[];
-  comparison: Comparison;
+  // comparison: Comparison;
+  other_providers : Provider[];
 };

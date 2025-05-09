@@ -3,7 +3,6 @@ import CopyrightFooter from "../../../components/common/footer/CopyrightFooter";
 import Footer from "../../../components/common/footer/Footer";
 import MobileMenu from "../../../components/common/header/MobileMenu";
 import Header from "../../../components/home/Header";
-import TestSpeed from "../../../components/home/TestSpeed";
 import HeroDynamic from "../../../components/ZipCode/heroDynamic";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../../store/store";
@@ -90,8 +89,17 @@ export default function Page() {
 
       {data && <InternetComparison data={data} />}
       {data && <InternetTypes />}
-
-      <TestSpeed />
+      {/* Other Providers  */}
+      <div>
+        <h2 className=" text-[30px] font-bold text-black text-center pt-10 pb-10">
+          More Internet Providers Near Me
+        </h2>
+        {data?.other_providers.map((provider: Provider, index: number) => (
+        <div className="p-2" key={index}>
+          <SingleProvider data={provider} />
+        </div>
+      ))}
+      </div>
 
       <section className="footer_one flex justify-center items-center bg-bluish pt-[70px] pb-20">
         <div className="container ">
