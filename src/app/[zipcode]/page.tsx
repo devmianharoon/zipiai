@@ -47,13 +47,13 @@ export default function Page() {
     }
   }, [dispatch, zipCode]);
 
-  if (loading) {
-    return (
-      <div className="fixed inset-0 flex justify-center items-center bg-white bg-opacity-80 z-50">
-        <div className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-      </div>
-    );
-  }
+  // if (loading) {
+  //   return (
+  //     <div className="fixed inset-0 flex justify-center items-center bg-white bg-opacity-80 z-50">
+  //       <div className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+  //     </div>
+  //   );
+  // }
 
   return (
     <>
@@ -74,7 +74,11 @@ export default function Page() {
           Internet Providers in {zip?.city} ZipCode {zipCode}
         </h2>
       </div>
-
+      {loading && (
+        <div className="flex justify-center items-center py-10">
+          <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+        </div>
+      )}
       {/* {error && (
         <div className="flex justify-center items-center py-10 text-red-600">
           <p className="text-lg font-medium">Error loading data: {error}</p>
