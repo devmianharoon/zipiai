@@ -16,8 +16,9 @@ import { useEffect } from "react";
 import { fetchZipData } from "../../../store/slices/zipSlice";
 // import { fetchProvidersByZip } from "../../../store/slices/chatSlice";
 import InternetTypes from "../../../components/ZipCode/InternetComparison";
+import { fetchProvidersByZip } from "../../../store/slices/chatSlice";
 // import { setSelectedQuestion } from "../../../store/slices/questionSlice";
-import { fetchProviders } from "../../../store/slices/chatSlice";
+// import { fetchProviders } from "../../../store/slices/chatSlice";
 
 export default function Page() {
   const params = useParams(); // Get dynamic route parameters as per Next.js docs
@@ -42,8 +43,8 @@ export default function Page() {
   useEffect(() => {
     if (zipCode) {
       dispatch(fetchZipData(zipCode));
-      //   dispatch(fetchProvidersByZip(zipCode));
-      dispatch(fetchProviders("The Best Internet Near Me " + zipCode));
+        dispatch(fetchProvidersByZip(zipCode));
+      // dispatch(fetchProviders("The Best Internet Near Me " + zipCode));
     }
   }, [dispatch, zipCode]);
 
