@@ -1,7 +1,7 @@
 "use client";
 
 import { InternetData } from "../../data/types/responsetype";
-
+import Image from "next/image";
 type Props = {
   data: InternetData;
 };
@@ -60,9 +60,7 @@ export default function InternetComparison(data: Props) {
     //   </div>
     // </div>
     <div className="p-4 max-w-7xl mx-auto">
-      <h2 className="text-2xl font-bold mb-6 ">
-        Side By Side Comparison
-      </h2>
+      <h2 className="text-2xl font-bold mb-6 ">Side By Side Comparison</h2>
 
       <div className="overflow-x-auto">
         <table className="w-full text-sm border border-gray-300">
@@ -70,9 +68,9 @@ export default function InternetComparison(data: Props) {
             <tr>
               <th className="p-2">Feature</th>
               {/* Hardcoding providers as per the image */}
-               {data.data.providers.map((provider, index) => (
+              {data.data.providers.map((provider, index) => (
                 <th key={index} className="p-2">
-                  {`${provider.ProviderName} (${provider.Connection_Type})` }
+                  {`${provider.ProviderName} (${provider.Connection_Type})`}
                 </th>
               ))}
             </tr>
@@ -98,13 +96,13 @@ export default function InternetComparison(data: Props) {
             </tr>
             {/* Row for Max Upload Speed */}
             <tr className="text-center border-t">
-          <td className="p-2 font-semibold">Max Upload Speed</td>
-          {data.data.providers.map((provider, index) => (
-            <td key={index} className="p-2">
-              {provider.max_upload_speed || "N/A"} 
-            </td>
-          ))}
-        </tr>
+              <td className="p-2 font-semibold">Max Upload Speed</td>
+              {data.data.providers.map((provider, index) => (
+                <td key={index} className="p-2">
+                  {provider.max_upload_speed || "N/A"}
+                </td>
+              ))}
+            </tr>
             {/* Row for Starting Price */}
             <tr className="text-center border-t">
               <td className="p-2 font-semibold">Starting Price</td>
@@ -155,18 +153,44 @@ export default function InternetComparison(data: Props) {
       </div>
 
       <div className="mt-8 space-y-4">
-        <h2 className="text-2xl font-bold mb-6 ">Recommendations</h2>
-        {data.data.Ranks.map((rank) => (
-          <div
-            key={rank.Rank}
-            className="bg-white shadow p-4 rounded border-l-4 border-blue-500"
-          >
-            <h3 className="font-semibold text-lg">
-              #{rank.Rank} - {rank.ProviderName}
-            </h3>
-            <p className="text-gray-700 mt-1">{rank.Reason}</p>
-          </div>
-        ))}
+        <h2 className="text-2xl font-bold mb-6">Recommendations</h2>
+        {data.data.Ranks.map((rank) => {
+          // Find the provider in data.data.providers to get the logo
+          const provider = data.data.providers.find(
+            (p) => p.ProviderName === rank.ProviderName
+          );
+          const logo = provider?.logo || "default.png"; // Fallback logo if not found
+          const number = provider?.contact || "default.png"; // Fallback logo if not found
+
+
+          return (
+            <div
+              key={rank.Rank}
+              className="bg-white shadow p-4 rounded border-l-4 border-bluish"
+            >
+              <div className="flex gap-5 items-center">
+                <h3 className="font-semibold text-lg flex items-center gap-2">
+                  #{rank.Rank} - {rank.ProviderName}
+                </h3>
+                <Image
+                  src={`/assets/logos/${logo}`} // Adjust the path as needed
+                  alt={`${rank.ProviderName} logo`}
+                  width={20}
+                  height={20}
+                  className="h-5 w-5 " // Adjust size as needed
+                />
+                <button
+                  className="   text-white border-1 border-gray-400 rounded-full p-2 cursor-pointer"
+                  onClick={() => window.open(`tel:${number}`)}
+                >
+                  <Image src="/call.svg" alt="phone" width={20} height={20} />
+              
+                </button>
+              </div>
+              <p className="text-gray-700 mt-1">{rank.Reason}</p>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

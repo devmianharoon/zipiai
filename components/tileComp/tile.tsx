@@ -34,7 +34,7 @@ export default function SingleProvider({ data }: { data: Provider }) {
             Connect With Sales Agent
           </button>
           <button
-            className="flex justify-center p-2 w-full gap-2 bg-white text-center text-2xl font-bold py-2  mouse-pointer"
+            className="flex justify-center p-2 w-full gap-2 bg-white text-center text-2xl font-bold py-2 mouse-pointer"
             onClick={() => window.open(`tel:${data.contact}`)}
           >
             <Image src={"/call.svg"} alt="phone" width={25} height={25} />
@@ -101,7 +101,7 @@ export default function SingleProvider({ data }: { data: Provider }) {
 
           {/* Accordion Section */}
           {isAccordionOpen && (
-            <div className="">
+            <div className="mt-4">
               {data.plans.map((plan, index) => (
                 <div key={index} className="border-b border-gray-200">
                   <button
@@ -121,6 +121,14 @@ export default function SingleProvider({ data }: { data: Provider }) {
                   )}
                 </div>
               ))}
+              {/* Call Now Button */}
+              <button
+                className="w-full mt-4 flex justify-center items-center gap-2 bg-redish text-white font-[700] text-[16px] py-2 rounded"
+                onClick={() => window.open(`tel:${data.contact}`)}
+              >
+                <Image src="/call.svg" alt="phone" width={25} height={25} />
+                Call Now
+              </button>
             </div>
           )}
         </div>

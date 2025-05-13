@@ -39,44 +39,54 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
               <>
                 {/* City, State Heading */}
                 <h2 className="text-white text-xl font-semibold mb-3">
-                  {weatherState.data.location?.name},{weatherState.data.location?.region}{" "}Weather
+                  {weatherState.data.location?.name}, {" "} {weatherState.data.location?.region}
                 </h2>
 
                 {/* Forecast data */}
                 {weatherState.data.forecast?.forecastday?.length > 0 ? (
-                  <div className="text-white flex flex-col gap-1 w-[80px]">
-                    {weatherState.data.forecast.forecastday.map((day, index) => (
-                      <div
-                        key={day.date_epoch || index}
-                        className={`flex w-[80px] ${index < 2 ? "border-b" : ""}`}
-                      >
-                        <div className="flex w-auto justify-between items-center text-center">
-                          {/* Date */}
-                          <h3 className="mb-1">
+                  <div className="overflow-x-auto">
+                  <table className="w-[80px] border-collapse text-white">
+                    {/* <thead>
+                      <tr>
+                        <th className="py-1 px-2 text-center">Day</th>
+                        <th className="py-1 px-2 text-center">Weather</th>
+                        <th className="py-1 px-2 text-center">Temp</th>
+                      </tr>
+                    </thead> */}
+                    <tbody>
+                      {weatherState.data.forecast.forecastday.map((day, index) => (
+                        <tr
+                          key={day.date_epoch || index}
+                          className={`${index < 2 ? "border-b  border-gray-300" : "" }`}
+                        >
+                          {/* Day */}
+                          <td className="py-1 px-2 text-center">
                             {new Date(day.date).toLocaleDateString("en-US", {
                               weekday: "short",
                             })}
-                          </h3>
-
-                          {/* Icon */}
-                          {day.day.condition.icon && (
-                            <Image
-                              src={`https:${day.day.condition.icon}`}
-                              alt={day.day.condition.text}
-                              width={20}
-                              height={20}
-                              className="mb-1"
-                            />
-                          )}
-
-                          {/* Temps */}
-                          <p className="text-sm text-white">
-                            {day.day.avgtemp_f}° 
-                          </p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                          </td>
+              
+                          {/* Weather Icon */}
+                          <td className="py-1 px-2 text-center flex justify-center">
+                            {day.day.condition.icon && (
+                              <Image
+                                src={`https:${day.day.condition.icon}`}
+                                alt={day.day.condition.text}
+                                width={20}
+                                height={20}
+                              />
+                            )}
+                          </td>
+              
+                          {/* Temperature */}
+                          <td className="py-1 px-2 text-center text-sm">
+                            {day.day.avgtemp_f}°
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
                 ) : (
                   <p className="text-white mt-4">No forecast data available</p>
                 )}

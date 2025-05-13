@@ -9,16 +9,13 @@ import { AppDispatch, RootState } from "../../../store/store";
 import SingleProvider from "../../../components/tileComp/tile";
 import InternetComparison from "../../../components/ZipCode/table";
 import { Provider } from "../../../data/types/responsetype";
-// import InternetComparisonSimple from "../../../components/ZipCode/InternetComparison";
 import { useParams } from "next/navigation";
 import ZipBreadcrumb from "../../../components/home/Breadcrumb";
 import { useEffect } from "react";
 import { fetchZipData } from "../../../store/slices/zipSlice";
-// import { fetchProvidersByZip } from "../../../store/slices/chatSlice";
 import InternetTypes from "../../../components/ZipCode/InternetComparison";
 import { fetchProvidersByZip } from "../../../store/slices/chatSlice";
-// import { setSelectedQuestion } from "../../../store/slices/questionSlice";
-// import { fetchProviders } from "../../../store/slices/chatSlice";
+import ProviderComparison from "../../../components/ProviderComparison";
 
 export default function Page() {
   const params = useParams(); // Get dynamic route parameters as per Next.js docs
@@ -34,6 +31,7 @@ export default function Page() {
   const { data, loading, error } = useSelector(
     (state: RootState) => state.chat
   );
+ 
   console.log("Messages from data:", data);
   console.log("Loading from Redux:", loading);
   console.log("Error from Redux:", error);
@@ -43,7 +41,7 @@ export default function Page() {
   useEffect(() => {
     if (zipCode) {
       dispatch(fetchZipData(zipCode));
-        dispatch(fetchProvidersByZip(zipCode));
+      dispatch(fetchProvidersByZip(zipCode));
       // dispatch(fetchProviders("The Best Internet Near Me " + zipCode));
     }
   }, [dispatch, zipCode]);
@@ -100,12 +98,18 @@ export default function Page() {
           More Internet Providers Near Me
         </h2>
         {data?.other_providers.map((provider: Provider, index: number) => (
-        <div className="p-2" key={index}>
-          <SingleProvider data={provider} />
-        </div>
-      ))}
+          <div className="p-2" key={index}>
+            <SingleProvider data={provider} />
+          </div>
+        ))}
       </div>
-
+      {/* Comparison Section */}
+      <div className="p-5">
+        <h2 className=" p-10 text-[30px] font-bold text-black text-center ">
+          Compare Top Providers in Your Area
+        </h2>
+        <ProviderComparison />
+      </div>
       <section className="footer_one flex justify-center items-center bg-bluish pt-[70px] pb-20">
         <div className="container ">
           <div className="row">
