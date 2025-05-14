@@ -8,7 +8,7 @@ const SectionOne = () => {
       <div className="container flex justify-center items-center h-[70vh] gap-14">
         <div className="img-sec w-[50%] relative h-full">
           <Image
-            src="/assets/images/background/13.jpg"
+            src="/assets/images/showcaseone.jpg"
             alt="cover image"
             fill
             style={{ objectFit: "cover" }}
@@ -19,13 +19,13 @@ const SectionOne = () => {
         <div className="text-sec w-[50%]">
           <div className="pb-12">
             <h1 className="text-[30px] text-background font-[600]">
-              Explore Guides and Resources{" "}
+              Stream. Chill. Repeat.{" "}
             </h1>
             <p className="text-background text-[18px]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Perferendis laboriosam eveniet libero, quae vitae praesentium
-              impedit quas. Repellendus culpa, eligendi illo reiciendis ea dolor
-              dolores aspernatur in quos ratione cum.
+              Enjoy cinematic experiences from the comfort of your couch. Our
+              reliable and buffer-free streaming services bring your favorite
+              movies, shows, and live sports to life—perfect for family nights
+              and weekend marathons.
             </p>
           </div>
           <div className="text-right">

@@ -285,88 +285,8 @@
 // export const { setError, appendBotMessage, updateLastBotMessage } =
 //   chatSlice.actions;
 // export default chatSlice.reducer;
-import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
-import { InternetData  , Provider} from "../../data/types/responsetype";
-
-// Redux state shape
-interface ProvidersState {
-  data: InternetData | null;
-  loading: boolean;
-  error: string | null;
-}
-
-// Initial state
-const initialState: ProvidersState = {
-  data: null,
-  loading: false,
-  error: null,
-};
-
-// Async thunk for fetching providers
-export const fetchProviders = createAsyncThunk<
-InternetData,
-  string,
-  { rejectValue: string }
->(
-  'providers/fetchProviders',
-  async (content: string, { rejectWithValue }) => {
-    try {
-      // Encode the content string to handle special characters in the query parameter
-      const url = `https://app.demo2.asdev.tech/providers?content=${encodeURIComponent(content)}`;
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.detail?.[0]?.msg || 'Failed to fetch providers');
-      }
-
-      const data: InternetData = await response.json();
-      return data;
-    } catch (error: any) {
-      return rejectWithValue(error.message || 'Failed to fetch providers');
-    }
-  }
-);
-
-// Create slice
-const providersSlice = createSlice({
-  name: 'providers',
-  initialState,
-  reducers: {
-    clearProviders: (state) => {
-      state.data = null;
-      state.error = null;
-    },
-  },
-  extraReducers: (builder) => {
-    builder
-      .addCase(fetchProviders.pending, (state) => {
-        state.loading = true;
-        state.error = null;
-      })
-      .addCase(fetchProviders.fulfilled, (state, action: PayloadAction<InternetData>) => {
-        state.loading = false;
-        state.data = action.payload;
-      })
-      .addCase(fetchProviders.rejected, (state, action: PayloadAction<string | undefined>) => {
-        state.loading = false;
-        state.error = action.payload || 'An error occurred';
-      });
-  },
-});
-
-// Export actions and reducer
-export const { clearProviders } = providersSlice.actions;
-export default providersSlice.reducer;
-
-
 // import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
-// import { InternetData } from "../../data/types/responsetype";
+// import { InternetData  , Provider} from "../../data/types/responsetype";
 
 // // Redux state shape
 // interface ProvidersState {
@@ -382,24 +302,19 @@ export default providersSlice.reducer;
 //   error: null,
 // };
 
-// // Async thunk for fetching providers by ZIP code
-// export const fetchProvidersByZip = createAsyncThunk<
-//   InternetData,
+// // Async thunk for fetching providers
+// export const fetchProviders = createAsyncThunk<
+// InternetData,
 //   string,
 //   { rejectValue: string }
 // >(
-//   'zipProviders/fetchProvidersByZip',
-//   async (zipCode: string, { rejectWithValue }) => {
+//   'providers/fetchProviders',
+//   async (content: string, { rejectWithValue }) => {
 //     try {
-//       // Validate ZIP code format (5 digits)
-//       if (!/^\d{5}$/.test(zipCode)) {
-//         throw new Error('Invalid ZIP code format');
-//       }
-
-//       // Make GET request to the new endpoint
-//       const url = `https://app.demo2.asdev.tech/providers/by_zip/${zipCode}`;
+//       // Encode the content string to handle special characters in the query parameter
+//       const url = `https://app.demo2.asdev.tech/providers?content=${encodeURIComponent(content)}`;
 //       const response = await fetch(url, {
-//         method: 'GET',
+//         method: 'POST',
 //         headers: {
 //           'Content-Type': 'application/json',
 //         },
@@ -407,7 +322,7 @@ export default providersSlice.reducer;
 
 //       if (!response.ok) {
 //         const errorData = await response.json();
-//         throw new Error(errorData.detail || 'Failed to fetch providers');
+//         throw new Error(errorData.detail?.[0]?.msg || 'Failed to fetch providers');
 //       }
 
 //       const data: InternetData = await response.json();
@@ -419,8 +334,8 @@ export default providersSlice.reducer;
 // );
 
 // // Create slice
-// const zipProvidersSlice = createSlice({
-//   name: 'zipProviders',
+// const providersSlice = createSlice({
+//   name: 'providers',
 //   initialState,
 //   reducers: {
 //     clearProviders: (state) => {
@@ -430,15 +345,15 @@ export default providersSlice.reducer;
 //   },
 //   extraReducers: (builder) => {
 //     builder
-//       .addCase(fetchProvidersByZip.pending, (state) => {
+//       .addCase(fetchProviders.pending, (state) => {
 //         state.loading = true;
 //         state.error = null;
 //       })
-//       .addCase(fetchProvidersByZip.fulfilled, (state, action: PayloadAction<InternetData>) => {
+//       .addCase(fetchProviders.fulfilled, (state, action: PayloadAction<InternetData>) => {
 //         state.loading = false;
 //         state.data = action.payload;
 //       })
-//       .addCase(fetchProvidersByZip.rejected, (state, action: PayloadAction<string | undefined>) => {
+//       .addCase(fetchProviders.rejected, (state, action: PayloadAction<string | undefined>) => {
 //         state.loading = false;
 //         state.error = action.payload || 'An error occurred';
 //       });
@@ -446,5 +361,90 @@ export default providersSlice.reducer;
 // });
 
 // // Export actions and reducer
-// export const { clearProviders } = zipProvidersSlice.actions;
-// export default zipProvidersSlice.reducer;
+// export const { clearProviders } = providersSlice.actions;
+// export default providersSlice.reducer;
+
+
+import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
+import { InternetData } from "../../data/types/responsetype";
+
+// Redux state shape
+interface ProvidersState {
+  data: InternetData | null;
+  loading: boolean;
+  error: string | null;
+}
+
+// Initial state
+const initialState: ProvidersState = {
+  data: null,
+  loading: false,
+  error: null,
+};
+
+// Async thunk for fetching providers by ZIP code
+export const fetchProvidersByZip = createAsyncThunk<
+  InternetData,
+  string,
+  { rejectValue: string }
+>(
+  'zipProviders/fetchProvidersByZip',
+  async (zipCode: string, { rejectWithValue }) => {
+    try {
+      // Validate ZIP code format (5 digits)
+      if (!/^\d{5}$/.test(zipCode)) {
+        throw new Error('Invalid ZIP code format');
+      }
+
+      // Make GET request to the new endpoint
+      const url = `https://app.demo2.asdev.tech/providers/by_zip/${zipCode}`;
+      const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.detail || 'Failed to fetch providers');
+      }
+
+      const data: InternetData = await response.json();
+      return data;
+    } catch (error: any) {
+      return rejectWithValue(error.message || 'Failed to fetch providers');
+    }
+  }
+);
+
+// Create slice
+const zipProvidersSlice = createSlice({
+  name: 'zipProviders',
+  initialState,
+  reducers: {
+    clearProviders: (state) => {
+      state.data = null;
+      state.error = null;
+    },
+  },
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchProvidersByZip.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(fetchProvidersByZip.fulfilled, (state, action: PayloadAction<InternetData>) => {
+        state.loading = false;
+        state.data = action.payload;
+      })
+      .addCase(fetchProvidersByZip.rejected, (state, action: PayloadAction<string | undefined>) => {
+        state.loading = false;
+        state.error = action.payload || 'An error occurred';
+      });
+  },
+});
+
+// Export actions and reducer
+export const { clearProviders } = zipProvidersSlice.actions;
+export default zipProvidersSlice.reducer;

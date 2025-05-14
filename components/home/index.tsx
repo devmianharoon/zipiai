@@ -17,9 +17,10 @@ import {
 import TestSpeed from "./TestSpeed";
 import Crusal from "./Crusal";
 import SectionOne from "./SectionOne";
-import SectionTwo from "./SectionTwo";
-import Showcase from "./Showcase";
+
 import NewsLetter from "./NewsLetter";
+import BannerOne from "./BannerOne";
+import BannerTwo from "./BannerTwo";
 
 // import SingleProvider from "../tileComp/tile";
 
@@ -82,11 +83,17 @@ const Index = () => {
       {/* <SingleProvider data={data} /> */}
 
       <TestSpeed />
-
+      {/*logos crusal */}
       <Crusal />
+      <BannerOne />
+      {/* section one with left image right text  */}
       <SectionOne />
-      <Showcase />
-      <SectionTwo />
+      <BannerTwo />
+      {/*show case cards */}
+      {/* <Showcase /> */}
+      {/* section two with left text right image  */}
+
+      {/* <SectionTwo /> */}
       <NewsLetter />
       {/* <!-- Our Footer --> */}
       <section className="footer_one flex justify-center items-center bg-[#24324a] pt-[70px] ">

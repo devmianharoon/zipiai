@@ -1,16 +1,31 @@
 import CopyrightFooter from "../../../components/common/footer/CopyrightFooter";
 import Footer from "../../../components/common/footer/Footer";
-import MenuNav from "../../../components/directvComp/MenuNav";
 import Header from "../../../components/home/Header";
+import HeroBanner from "./component/HeroBanner";
+import PackagesComparison from "./component/PackagesComparison";
+import ServiceTiles from "./component/ServiceTiles";
+import TopNavigation from "./component/TopNavigation";
 
-const page = () => {
-  return (
-    <>
-      <Header />
-      <MenuNav />
+export default function page() {
+  return <>
+        {/* <!-- Main Header Nav --> */}
+        <Header />
+        {/* <!--Top Buttom --> */}
+        <TopNavigation/>
+        {/* <!-- Hero Banner --> */}
+        <HeroBanner/>
+        {/* <!-- Service Tiles --> */}
+        <ServiceTiles/>
+        {/* <!-- Packages Comaprison --> */}
+        <PackagesComparison/>
 
-      {/* <!-- Our Footer --> */}
-      <section className="footer_one flex justify-center items-center bg-bluish pt-[70px] pb-20">
+
+
+
+
+        {/*  */}
+        {/* Footer */}
+        <section className="footer_one flex justify-center items-center bg-bluish pt-[70px] pb-20">
         <div className="container ">
           <div className="row">
             <Footer />
@@ -24,8 +39,6 @@ const page = () => {
           <CopyrightFooter />
         </div>
       </section>
-    </>
-  );
-};
 
-export default page;
+  </>;
+}

@@ -30,7 +30,7 @@ const products = [
 
 const ProductShowcase = () => {
   return (
-    <section className="w-full h-screen bg-white flex justify-center items-center">
+    <section className="w-full h-screen bg-white flex justify-center items-center ">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap gap-6 justify-center">
           {products.map((product) => (

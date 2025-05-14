@@ -27,11 +27,16 @@ export default function SingleProvider({ data }: { data: Provider }) {
             height={100}
           />
           <button
-            className="flex p-2 w-full gap-2 bg-white text-center font-[700] text-[16px] py-2 border border-gray-300 rounded mouse-pointer"
-            onClick={() => window.open(`tel:${data.contact}`)}
-          >
-            <Image src={"/call.svg"} alt="phone" width={25} height={25} />
+            className="flex p-2 w-full justify-center gap-2 bg-white text-center font-[700] text-[16px] py-2 border border-gray-300 rounded mouse-pointer"
+            onClick={() => window.open(`tel:${data.contact}`)}>
+            {/* <Image src={"/call.svg"} alt="phone" width={25} height={25} /> */}
             Connect With Sales Agent
+          </button>
+          <button
+            className="flex justify-center p-2 w-full gap-2 bg-white text-center text-2xl font-bold py-2 mouse-pointer"
+            onClick={() => window.open(`tel:${data.contact}`)}>
+            <Image src={"/call.svg"} alt="phone" width={25} height={25} />
+            {data.contact}
           </button>
         </div>
 
@@ -86,34 +91,49 @@ export default function SingleProvider({ data }: { data: Provider }) {
           <div className="">
             <button
               onClick={toggleAccordion}
-              className="w-full font-[700] text-[16px] bg-redish text-center block py-2 rounded text-white"
-            >
+              className="w-full font-[700] text-[16px] bg-redish text-center block py-2 rounded text-white">
               View Plans
             </button>
           </div>
 
           {/* Accordion Section */}
           {isAccordionOpen && (
-            <div className="">
+            <div className="mt-4">
               {data.plans.map((plan, index) => (
                 <div key={index} className="border-b border-gray-200">
                   <button
                     onClick={() => handlePlanClick(index)}
-                    className="w-full text-left py-3 px-4 flex justify-between items-center bg-gray-50 hover:bg-gray-100"
-                  >
-                    <span className="font-bold text-gray-700">{plan.plan_name}</span>
+                    className="w-full text-left py-3 px-4 flex justify-between items-center bg-gray-50 hover:bg-gray-100">
+                    <span className="font-bold text-gray-700">
+                      {plan.plan_name}
+                    </span>
                     <span className="text-gray-600">{plan.Price}</span>
                   </button>
                   {selectedPlan === index && (
                     <div className="p-4 bg-white">
-                      <p><strong>Speeds:</strong> {plan.Speeds}</p>
-                      <p><strong>Contract:</strong> {plan.Contract}</p>
-                      <p><strong>Upfront Cost:</strong> {plan.Upfront_Cost}</p>
-                      <p><strong>Extras:</strong> {plan.Extras}</p>
+                      <p>
+                        <strong>Speeds:</strong> {plan.Speeds}
+                      </p>
+                      <p>
+                        <strong>Contract:</strong> {plan.Contract}
+                      </p>
+                      <p>
+                        <strong>Upfront Cost:</strong> {plan.Upfront_Cost}
+                      </p>
+                      <p>
+                        <strong>Extras:</strong> {plan.Extras}
+                      </p>
                     </div>
                   )}
                 </div>
               ))}
+              {/* Call Now Button */}
+              <button
+                className="w-full mt-4 flex justify-center items-center gap-2  text-black font-[700] text-[16px] py-2 cursor-pointer"
+                onClick={() => window.open(`tel:${data.contact}`)}>
+                <Image src="/call.svg" alt="phone" width={25} height={25} />
+                Call Now
+              </button>
             </div>
           )}
         </div>
