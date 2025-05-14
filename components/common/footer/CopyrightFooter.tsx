@@ -11,7 +11,7 @@ const CopyrightFooter = () => {
   ];
 
   return (
-    <div className="flex justify-between items-center text-[14px]">
+    <div className="flex justify-between items-center text-[14px] text-white">
       <div className="">
         <div className="footer_menu_widget">
           <ul className="flex gap-6">

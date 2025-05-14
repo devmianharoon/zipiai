@@ -1,11 +1,10 @@
 import Link from "next/link";
 import Social from "./Social";
-import SubscribeForm from "./SubscribeForm";
 
 const Footer = () => {
   return (
-    <footer className="flex justify-center gap-30 container mx-auto px-4 py-4 text-white text-[14px] ">
-      <div className="footer_about_widget leading-[2.6]">
+    <footer className="grid grid-cols-12 gap-16 container mx-auto px-4 py-4 text-white text-[14px] ">
+      <div className="footer_about_widget leading-[2.6] col-span-5">
         <h4 className="font-bold text-[18px] mb-6">About Site</h4>
         <p className="leading-[2]">
           We&apos;re reimagining how you buy, sell and rent. It&apos; s now
@@ -15,7 +14,7 @@ const Footer = () => {
 
       {/* End .col */}
 
-      <div className="footer_qlink_widget  pl-16 leading-[2.6] text-[14px]">
+      <div className="footer_qlink_widget leading-[2.6] text-[14px] col-span-2">
         <h4 className="text-[18px] font-bold">Quick Links</h4>
         <ul className="list-unstyled">
           <li>
@@ -38,7 +37,7 @@ const Footer = () => {
 
       {/* End .col */}
 
-      <div className="footer_contact_widget leading-[2.6] text-[14px]">
+      <div className="footer_contact_widget leading-[2.6] text-[14px] col-span-2">
         <h4 className="text-[18px] font-bold">Contact Us</h4>
         <ul className="list-unstyled">
           <li>
@@ -61,13 +60,13 @@ const Footer = () => {
 
       {/* End .col */}
 
-      <div className="footer_social_widget leading-[2.6] text-[14px] ">
+      <div className="footer_social_widget leading-[2.6] text-[14px] col-span-3">
         <h4 className="text-[18px] font-bold">Follow us</h4>
         <ul className="flex gap-x-4 text-primary">
           <Social />
         </ul>
-        <h4 className="pt-8 text-[18px] font-bold ">Subscribe</h4>
-        <SubscribeForm />
+
+        {/* <SubscribeForm /> */}
       </div>
     </footer>
   );

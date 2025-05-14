@@ -4,6 +4,7 @@ import questionSlice from "../store/slices/questionSlice";
 import locationReducer from "../store/slices/LocationSlice";
 import chatReducer from '../store/slices/chatSlice';
 import weatherReducer from '../store/slices/weatherSlice';
+import zipReducer from '../store/slices/zipSlice';
 
 
 export const store = configureStore({
@@ -13,6 +14,8 @@ export const store = configureStore({
     location: locationReducer,
     chat: chatReducer,
     weather: weatherReducer,
+    zip: zipReducer,
+
 
     },
  

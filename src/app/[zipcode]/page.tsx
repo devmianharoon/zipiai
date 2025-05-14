@@ -1,50 +1,60 @@
 "use client";
-import { useEffect, useState } from "react";
 import CopyrightFooter from "../../../components/common/footer/CopyrightFooter";
 import Footer from "../../../components/common/footer/Footer";
 import MobileMenu from "../../../components/common/header/MobileMenu";
-import Crusal from "../../../components/home/Crusal";
 import Header from "../../../components/home/Header";
 import TestSpeed from "../../../components/home/TestSpeed";
 import HeroDynamic from "../../../components/ZipCode/heroDynamic";
 import { useDispatch, useSelector } from "react-redux";
-import { setSelectedQuestion } from "../../../store/slices/questionSlice";
-import { sendChatMessage } from "../../../store/slices/chatSlice";
-import { RootState, AppDispatch } from "../../../store/store";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
+import { AppDispatch, RootState } from "../../../store/store";
+import SingleProvider from "../../../components/tileComp/tile";
+import InternetComparison from "../../../components/ZipCode/table";
+import { Provider } from "../../../data/types/responsetype";
+// import InternetComparisonSimple from "../../../components/ZipCode/InternetComparison";
+import { useParams } from "next/navigation";
+import ZipBreadcrumb from "../../../components/home/Breadcrumb";
+import { useEffect } from "react";
+import { fetchZipData } from "../../../store/slices/zipSlice";
+// import { fetchProvidersByZip } from "../../../store/slices/chatSlice";
+import InternetTypes from "../../../components/ZipCode/InternetComparison";
+// import { setSelectedQuestion } from "../../../store/slices/questionSlice";
+import { fetchProviders } from "../../../store/slices/chatSlice";
 
 export default function Page() {
-  // const { zipcode } = params;
-  // console.log("Zip code from URL:", zipcode);
-
+  const params = useParams(); // Get dynamic route parameters as per Next.js docs
+  console.log("Dynamic Parameters:", params);
+  console.log("Zip code from URL:", params.zipcode);
   const dispatch = useDispatch<AppDispatch>();
+  const zip = useSelector((state: RootState) => state.zip.data);
+
   const selectedQuestion = useSelector(
     (state: RootState) => state.question.selectedQuestion
   );
-  const { messages } = useSelector((state: RootState) => state.chat);
-  const [questionSent, setQuestionSent] = useState(false);
-
-  // Handle selectedQuestion
+  console.log("Selected Question from Redux:", selectedQuestion);
+  const { data, loading, error } = useSelector(
+    (state: RootState) => state.chat
+  );
+  console.log("Messages from data:", data);
+  console.log("Loading from Redux:", loading);
+  console.log("Error from Redux:", error);
+  const zipCode = Array.isArray(params.zipcode)
+    ? params.zipcode[0]
+    : params.zipcode || "";
   useEffect(() => {
-    if (
-      selectedQuestion &&
-      typeof selectedQuestion === "string" &&
-      !questionSent
-    ) {
-      dispatch(sendChatMessage({ content: selectedQuestion }));
-      setQuestionSent(true);
-      dispatch(setSelectedQuestion(null));
+    if (zipCode) {
+      dispatch(fetchZipData(zipCode));
+      //   dispatch(fetchProvidersByZip(zipCode));
+      dispatch(fetchProviders("The Best Internet Near Me " + zipCode));
     }
-  }, [selectedQuestion, dispatch]);
+  }, [dispatch, zipCode]);
 
-  // Reset questionSent when selectedQuestion changes
-  useEffect(() => {
-    setQuestionSent(false);
-  }, [selectedQuestion]);
-
-  console.log("Messages from Redux:", messages);
-  //   console.log("Parsed Data from Redux:", parsedData);
+  if (loading) {
+    return (
+      <div className="fixed inset-0 flex justify-center items-center bg-white bg-opacity-80 z-50">
+        <div className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+      </div>
+    );
+  }
 
   return (
     <>
@@ -55,55 +65,36 @@ export default function Page() {
       <MobileMenu />
 
       {/* <!-- Home Design --> */}
-      <HeroDynamic />
-     <div className="w-full flex justify-center items-center bg-primary">
-     <div id="messages" className="chatbot-messages  text-black container">
-        {messages
-          .filter((msg) => msg.sender === "bot") // Only include bot messages
-          .map((msg, index) => (
-            <div key={index} className="chatbot-message bot">
-              <div className="chatbot-messageg">
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                  {msg.content}
-                </ReactMarkdown>
-              </div>
-            </div>
-          ))}
+      <HeroDynamic zipCode={zipCode} />
+      {/* <!-- Breadcrumb --> */}
+      {zipCode && <ZipBreadcrumb zipCode={zipCode} />}
+      {/* Heading  */}
+
+      <div className="p-5">
+        <h2 className=" text-[30px] font-bold text-black text-center ">
+          Internet Providers in {zip?.city} ZipCode {zipCode}
+        </h2>
       </div>
 
-     </div>
-      {/* <!-- Providers List --> */}
-      {/* {parsedData && parsedData.providers.length > 0 && (
-        <section className="providers-section container my-8">
-          <h2 className="text-2xl font-bold mb-4">Available Providers</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {parsedData.providers.map((provider, index) => (
-              <div key={index} className="border p-4 rounded shadow">
-                <h3 className="text-xl font-semibold">{provider.ProviderName}</h3>
-                {provider.logo && (
-                  <Image
-                    src={`/assets/logos/${provider.logo}`}
-                    // src={'/assets/logos/xfinity.svg'}
-                    alt={`${provider.ProviderName} logo`}
-                    className="h-16 my-2"
-                    // layout="fill"
-                    width={100}
-                    height={100}
-                  />
-                )}
-                <p>Contact: {provider.contact}</p>
-              </div>
-            ))}
-          </div>
-        </section>
+      {/* {error && (
+        <div className="flex justify-center items-center py-10 text-red-600">
+          <p className="text-lg font-medium">Error loading data: {error}</p>
+        </div>
       )} */}
 
-      <TestSpeed />
-      <Crusal />
+      {data?.providers.map((provider: Provider, index: number) => (
+        <div className="p-2" key={index}>
+          <SingleProvider data={provider} />
+        </div>
+      ))}
 
-      {/* <!-- Our Footer --> */}
-      <section className="footer_one flex justify-center items-center">
-        <div className="container">
+      {data && <InternetComparison data={data} />}
+      {data && <InternetTypes />}
+
+      <TestSpeed />
+
+      <section className="footer_one flex justify-center items-center bg-bluish pt-[70px] pb-20">
+        <div className="container ">
           <div className="row">
             <Footer />
           </div>
@@ -111,8 +102,8 @@ export default function Page() {
       </section>
 
       {/* <!-- Our Footer Bottom Area --> */}
-      <section className="footer_middle_area flex justify-center items-center">
-        <div className="container">
+      <section className="footer_middle_area flex justify-center items-center bg-bluish py-14">
+        <div className="container ">
           <CopyrightFooter />
         </div>
       </section>
