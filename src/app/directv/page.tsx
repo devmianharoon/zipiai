@@ -7,25 +7,24 @@ import ServiceTiles from "./component/ServiceTiles";
 import TopNavigation from "./component/TopNavigation";
 
 export default function page() {
-  return <>
+  return (
+    <>
+      <main className="bg-white">
         {/* <!-- Main Header Nav --> */}
         <Header />
         {/* <!--Top Buttom --> */}
-        <TopNavigation/>
+        <TopNavigation />
         {/* <!-- Hero Banner --> */}
-        <HeroBanner/>
-        {/* <!-- Service Tiles --> */}
-        <ServiceTiles/>
+        <HeroBanner />
         {/* <!-- Packages Comaprison --> */}
-        <PackagesComparison/>
+        <PackagesComparison />
+        {/* <!-- Service Tiles --> */}
+        <ServiceTiles />
+      </main>
 
-
-
-
-
-        {/*  */}
-        {/* Footer */}
-        <section className="footer_one flex justify-center items-center bg-bluish pt-[70px] pb-20">
+      {/*  */}
+      {/* Footer */}
+      <section className="footer_one flex justify-center items-center bg-bluish pt-[70px] pb-20">
         <div className="container ">
           <div className="row">
             <Footer />
@@ -39,6 +38,6 @@ export default function page() {
           <CopyrightFooter />
         </div>
       </section>
-
-  </>;
+    </>
+  );
 }

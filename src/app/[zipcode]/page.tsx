@@ -69,6 +69,7 @@ export default function Page() {
       {zipCode && <ZipBreadcrumb zipCode={zipCode} />}
       {/* Heading  */}
 
+      <div className="bg-white">
       <div className="p-5">
         <h2 className=" text-[30px] font-bold text-black text-center ">
           Internet Providers in {zip?.city} ZipCode {zipCode}
@@ -116,6 +117,7 @@ export default function Page() {
         </div>
       </div>
 
+      </div>
       {/* Map Section */}
 
       <section className="footer_one flex justify-center items-center bg-bluish pt-[70px] pb-20">

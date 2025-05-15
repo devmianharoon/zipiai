@@ -8,13 +8,12 @@ export default function TopNavigation() {
     },
     {
       image: "/assets/directv1.png",
-      text: "DirecTV Satellite",
+      text: "DirecTV via Satellite",
     },
     {
       image: "/assets/directv2.png",
       text: "Internet",
-    }
-
+    },
   ];
 
   return (
@@ -25,8 +24,7 @@ export default function TopNavigation() {
             return (
               <li
                 className="flex flex-col justify-center items-center gap-1.5 text-white cursor-pointer"
-                key={index}
-              >
+                key={index}>
                 <Image src={e.image} alt={"directv"} height={34} width={34} />
                 <Link href={"/"}>{e.text}</Link>
               </li>

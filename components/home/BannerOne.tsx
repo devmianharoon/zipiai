@@ -16,15 +16,36 @@ const BannerOne = () => {
             is seamless and fun.
           </p>
         </div>
-        <div className="relative w-full h-full">
-          <Image
-            src="/assets/images/bannerOne.png"
-            alt="cover image"
-            width={0}
-            height={0}
-            sizes="100vw"
-            className="w-full h-auto"
-          />
+        <div className=" w-full h-full grid grid-cols-12 ">
+          <div className="col-span-4 relative">
+            {" "}
+            <Image
+              src="/assets/images/bannerOne.png"
+              alt="cover image"
+              width={0}
+              height={0}
+              sizes="100vw"
+              className="w-full h-auto bg-cover"
+            />
+          </div>
+          <div className="col-span-4  relative ">
+            {" "}
+            <Image
+              src="/assets/images/showcaseone.jpg"
+              alt="cover image"
+              fill
+              className="w-full h-auto object-cover"
+            />
+          </div>
+          <div className="col-span-4 relative">
+            {" "}
+            <Image
+              src="/assets/images/bannerTwo.png"
+              alt="cover image"
+              fill
+              className="w-full h-auto object-cover"
+            />
+          </div>
         </div>
       </div>
     </section>

@@ -16,7 +16,7 @@ export default function ZipBreadcrumb({ zipCode }: ZipBreadcrumbProps) {
   }
 
   if (error) {
-    return <div className="text-red-500 text-center py-4">Error: {error}</div>;
+    return <div className="text-red-500 text-center py-4 bg-white">Error: {error}</div>;
   }
 
   if (!data) {

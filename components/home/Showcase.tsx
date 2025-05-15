@@ -30,13 +30,13 @@ const products = [
 
 const ProductShowcase = () => {
   return (
-    <section className="w-full h-screen bg-white flex justify-center items-center ">
+    <section className="w-full py-8 bg-white flex justify-center items-center ">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap gap-6 justify-center">
           {products.map((product) => (
             <div
               key={product.id}
-              className="flex-1 min-w-[280px] max-w-sm bg-white rounded-2xl shadow-md border border-blue-100 p-2 flex flex-col justify-between">
+              className="flex-1 min-w-[280px] max-w-sm bg-white rounded-2xl flex flex-col justify-between">
               <div className="w-full h-[300px] relative rounded-xl overflow-hidden">
                 <Image
                   src={product.image}
@@ -45,7 +45,7 @@ const ProductShowcase = () => {
                   className="object-cover"
                 />
               </div>
-              <div className="p-4">
+              {/* <div className="p-4">
                 <h1 className="text-[24px] font-bold text-gray-900 mb-2 ">
                   {product.title}
                 </h1>
@@ -57,7 +57,7 @@ const ProductShowcase = () => {
                     <ArrowRight size={18} color="white" />
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>

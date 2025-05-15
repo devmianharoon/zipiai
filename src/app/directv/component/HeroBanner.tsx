@@ -3,9 +3,9 @@ export default function HeroBanner() {
     <div className="relative w-full h-[500px] overflow-hidden">
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.5]"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat "
         style={{
-          backgroundImage: "url('/assets/images/directv/banner1.jpeg')",
+          backgroundImage: "url('/assets/images/directv/bg-directv-page.webp')",
           backgroundBlendMode: "overlay",
         }}>
         {/* Overlay with stadium light effect */}

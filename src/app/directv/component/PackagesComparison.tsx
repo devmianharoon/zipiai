@@ -1,12 +1,14 @@
-"use client"
+"use client";
 
-import { useState } from "react"
+import { useState } from "react";
 
 // JSON data for the packages
 const packagesData = {
   toggle: {
     withLocal: "With local channels",
     withoutLocal: "No local channels",
+    channelGuide: "Channel Guide",
+    supportNetworks: "Regional Sport Networks",
     toggleText: "(Toggle to remove local channels and save $12)",
     checkLink: "Check your local channels here",
   },
@@ -50,7 +52,8 @@ const packagesData = {
       cents: ".99",
       period: "/mo.",
       details: "for 24 months + taxes & fees",
-      fullPrice: "($117.98/mo. w/ req'd $10/mo. TV Access Fee & Regional Sports Fee of up to $17.99/mo.)",
+      fullPrice:
+        "($117.98/mo. w/ req'd $10/mo. TV Access Fee & Regional Sports Fee of up to $17.99/mo.)",
       term: "w/24-mo. agmt. Autopay and paperless bill req'd.",
       seeDetails: "See details",
       buttonText: "Select CHOICE",
@@ -85,7 +88,8 @@ const packagesData = {
       cents: ".99",
       period: "/mo.",
       details: "for 24 months + taxes & fees",
-      fullPrice: "($147.98/mo. w/ req'd $10/mo. TV Access Fee & Regional Sports Fee of up to $17.99/mo.)",
+      fullPrice:
+        "($147.98/mo. w/ req'd $10/mo. TV Access Fee & Regional Sports Fee of up to $17.99/mo.)",
       term: "w/24-mo. agmt. Autopay and paperless bill req'd.",
       seeDetails: "See details",
       buttonText: "Select ULTIMATE",
@@ -120,7 +124,8 @@ const packagesData = {
       cents: ".99",
       period: "/mo.",
       details: "for 24 months + taxes & fees",
-      fullPrice: "($192.98/mo. w/ req'd $10/mo. TV Access Fee & Regional Sports Fee of up to $17.99/mo.)",
+      fullPrice:
+        "($192.98/mo. w/ req'd $10/mo. TV Access Fee & Regional Sports Fee of up to $17.99/mo.)",
       term: "w/24-mo. agmt. Autopay and paperless bill req'd.",
       seeDetails: "See details",
       buttonText: "Select PREMIER",
@@ -152,10 +157,10 @@ const packagesData = {
       bgColor: "bg-purple-50",
     },
   ],
-}
+};
 
 export default function PackageComparison() {
-  const [withLocalChannels, setWithLocalChannels] = useState(true)
+  const [withLocalChannels, setWithLocalChannels] = useState(1);
 
   return (
     <div className="w-full max-w-7xl mx-auto px-4 py-12">
@@ -163,16 +168,40 @@ export default function PackageComparison() {
       <div className="flex flex-col items-center mb-8">
         <div className="flex rounded-full border border-gray-300 overflow-hidden mb-2">
           <button
-            className={`px-6 py-2 text-sm font-medium ${withLocalChannels ? "bg-blue-700 text-white" : "bg-white text-gray-700"}`}
-            onClick={() => setWithLocalChannels(true)}
-          >
+            className={`px-6 py-2 text-sm font-medium ${
+              withLocalChannels === 1
+                ? "bg-blue-700 text-white"
+                : "bg-white text-gray-700"
+            }`}
+            onClick={() => setWithLocalChannels(1)}>
             {packagesData.toggle.withLocal}
           </button>
           <button
-            className={`px-6 py-2 text-sm font-medium ${!withLocalChannels ? "bg-blue-700 text-white" : "bg-white text-gray-700"}`}
-            onClick={() => setWithLocalChannels(false)}
-          >
+            className={`px-6 py-2 text-sm font-medium ${
+              withLocalChannels === 2
+                ? "bg-blue-700 text-white"
+                : "bg-white text-gray-700"
+            }`}
+            onClick={() => setWithLocalChannels(2)}>
             {packagesData.toggle.withoutLocal}
+          </button>
+          <button
+            className={`px-6 py-2 text-sm font-medium ${
+              withLocalChannels === 3
+                ? "bg-blue-700 text-white"
+                : "bg-white text-gray-700"
+            }`}
+            onClick={() => setWithLocalChannels(3)}>
+            {packagesData.toggle.channelGuide}
+          </button>
+          <button
+            className={`px-6 py-2 text-sm font-medium ${
+              withLocalChannels === 4
+                ? "bg-blue-700 text-white"
+                : "bg-white text-gray-700"
+            }`}
+            onClick={() => setWithLocalChannels(4)}>
+            {packagesData.toggle.supportNetworks}
           </button>
         </div>
         <div className="text-sm text-gray-700 flex items-center gap-2">
@@ -180,14 +209,18 @@ export default function PackageComparison() {
           <a href="#" className="text-blue-700 font-medium">
             {packagesData.toggle.checkLink}
           </a>
-          <span className="inline-block w-5 h-5 rounded-full border border-gray-400 text-center text-gray-500">i</span>
+          <span className="inline-block w-5 h-5 rounded-full border border-gray-400 text-center text-gray-500">
+            i
+          </span>
         </div>
       </div>
 
       {/* Package Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {packagesData.packages.map((pkg) => (
-          <div key={pkg.id} className="border border-gray-300 rounded-lg overflow-hidden">
+          <div
+            key={pkg.id}
+            className="border border-gray-300 rounded-lg overflow-hidden">
             {/* Header */}
             <div className={`${pkg.color} text-white p-4`}>
               <h3 className="font-bold text-lg">{pkg.name}</h3>
@@ -254,9 +287,10 @@ export default function PackageComparison() {
 
       {/* Disclaimer */}
       <p className="text-xs text-gray-500 mt-6">
-        *New approved residential customers. Device(s) subject to Equipment Lease agmt. Early agmt termination fee
-        applies ($20/mo.) & addl fee(s) may apply if equip. not returned.
+        *New approved residential customers. Device(s) subject to Equipment
+        Lease agmt. Early agmt termination fee applies ($20/mo.) & addl fee(s)
+        may apply if equip. not returned.
       </p>
     </div>
-  )
+  );
 }

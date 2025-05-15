@@ -21,6 +21,7 @@ import SectionOne from "./SectionOne";
 import NewsLetter from "./NewsLetter";
 import BannerOne from "./BannerOne";
 import BannerTwo from "./BannerTwo";
+import Showcase from "./Showcase";
 
 // import SingleProvider from "../tileComp/tile";
 
@@ -85,12 +86,13 @@ const Index = () => {
       <TestSpeed />
       {/*logos crusal */}
       <Crusal />
-      <BannerOne />
+      {/*show case cards */}
+      <Showcase />
+      {/* <BannerOne /> */}
       {/* section one with left image right text  */}
       <SectionOne />
-      <BannerTwo />
-      {/*show case cards */}
-      {/* <Showcase /> */}
+      {/* <BannerTwo /> */}
+
       {/* section two with left text right image  */}
 
       {/* <SectionTwo /> */}

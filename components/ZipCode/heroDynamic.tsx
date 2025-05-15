@@ -19,7 +19,6 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
   const weatherState = useSelector((state: RootState) => state.weather);
   console.log("Weather State:", weatherState);
 
-
   return (
     <section className="relative h-[400px] bg-bluish w-full flex justify-center p-4">
       <div className="container mx-auto px-4">
@@ -47,7 +46,7 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
                 {/* Forecast data */}
                 {weatherState.data.forecast?.forecastday?.length > 0 ? (
                   <div className="overflow-x-auto">
-                    <table className="w-[80px] border-collapse text-white">
+                    <table className="w-auto border-collapse text-white">
                       {/* <thead>
                       <tr>
                         <th className="py-1 px-2 text-center">Day</th>
@@ -81,14 +80,14 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
                                     alt={day.day.condition.text}
                                     width={40}
                                     height={40}
-                                    
                                   />
                                 )}
                               </td>
 
                               {/* Temperature */}
                               <td className="py-1 px-2 text-center text-sm">
-                                {day.day.avgtemp_f}°
+                                <span>{day.day.mintemp_c}°</span> |{" "}
+                                <span>{day.day.mintemp_c}°</span>
                               </td>
                             </tr>
                           )
