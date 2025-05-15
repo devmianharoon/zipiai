@@ -17,13 +17,13 @@ export default function page() {
         <TopNavigation />
         {/* <!-- Hero Banner --> */}
         <HeroBanner />
-
-        {/* <!-- Packages Comaprison --> */}
-        <PackagesComparison />
         {/* <!-- Service Tiles --> */}
         <div className="w-full max-w-7xl mx-auto px-4 py-12">
           <ServiceTiles />
         </div>
+
+        {/* <!-- Packages Comaprison --> */}
+        <PackagesComparison />
 
         {/* <!-- Service Tiles --> */}
         <div className="w-full max-w-7xl mx-auto px-4 py-12">
