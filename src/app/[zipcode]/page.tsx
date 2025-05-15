@@ -17,6 +17,7 @@ import InternetTypes from "../../../components/ZipCode/InternetComparison";
 import { fetchProvidersByZip } from "../../../store/slices/chatSlice";
 import ProviderComparison from "../../../components/ProviderComparison";
 import MapComponent from "./component/Map";
+import NearByCities from "../../../components/NeabyCIties";
 
 export default function Page() {
   const params = useParams(); // Get dynamic route parameters as per Next.js docs
@@ -112,8 +113,12 @@ export default function Page() {
         <ProviderComparison />
 
         <div className="w-full max-w-6xl mx-auto px-4  py-3.5">
-          <MapComponent />
+          <MapComponent zipcode={zipCode} />
         </div>
+        <h2 className=" p-10 text-[30px] font-bold text-black text-center ">
+          Internet Providers in NearBy Cities
+        </h2>
+        <NearByCities />
       </div>
 
       {/* Map Section */}
