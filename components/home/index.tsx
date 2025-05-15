@@ -19,8 +19,7 @@ import Crusal from "./Crusal";
 import SectionOne from "./SectionOne";
 
 import NewsLetter from "./NewsLetter";
-import BannerOne from "./BannerOne";
-import BannerTwo from "./BannerTwo";
+
 import Showcase from "./Showcase";
 
 // import SingleProvider from "../tileComp/tile";

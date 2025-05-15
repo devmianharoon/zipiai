@@ -4,6 +4,7 @@ import Header from "../../../components/home/Header";
 import HeroBanner from "./component/HeroBanner";
 import PackagesComparison from "./component/PackagesComparison";
 import ServiceTiles from "./component/ServiceTiles";
+import ServiceTylesTop from "./component/ServiceTylesTop";
 import TopNavigation from "./component/TopNavigation";
 
 export default function page() {
@@ -16,10 +17,19 @@ export default function page() {
         <TopNavigation />
         {/* <!-- Hero Banner --> */}
         <HeroBanner />
+
         {/* <!-- Packages Comaprison --> */}
         <PackagesComparison />
         {/* <!-- Service Tiles --> */}
-        <ServiceTiles />
+        <div className="w-full max-w-7xl mx-auto px-4 py-12">
+          <ServiceTiles />
+        </div>
+
+        {/* <!-- Service Tiles --> */}
+        <div className="w-full max-w-7xl mx-auto px-4 py-12">
+          <ServiceTylesTop />
+          <ServiceTiles />
+        </div>
       </main>
 
       {/*  */}

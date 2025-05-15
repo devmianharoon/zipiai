@@ -1,27 +1,27 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+
 import React from "react";
 
 const products = [
   {
     id: 1,
-    image: "/assets/images/background/13.jpg",
+    image: "/assets/images/1.png",
     title: "Lorem ipsum dolor sit amet, consectetur",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet odio nibh, laoreet malesuada elit luctus vel. Nunc rutrum faucibus mi in molestie.",
   },
   {
     id: 2,
-    image: "/assets/images/background/13.jpg",
+    image: "/assets/images/2.jpg",
     title: "Lorem ipsum dolor sit amet, consectetur",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet odio nibh, laoreet malesuada elit luctus vel. Nunc rutrum faucibus mi in molestie.",
   },
   {
     id: 3,
-    image: "/assets/images/background/13.jpg",
+    image: "/assets/images/3.jpg",
     title: "Lorem ipsum dolor sit amet, consectetur",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet odio nibh, laoreet malesuada elit luctus vel. Nunc rutrum faucibus mi in molestie.",
@@ -36,8 +36,8 @@ const ProductShowcase = () => {
           {products.map((product) => (
             <div
               key={product.id}
-              className="flex-1 min-w-[280px] max-w-sm bg-white rounded-2xl flex flex-col justify-between">
-              <div className="w-full h-[300px] relative rounded-xl overflow-hidden">
+              className="flex-1 w-[300px]  bg-white rounded-2xl flex flex-col justify-between">
+              <div className="w-[400px] h-[300px] relative rounded-xl overflow-hidden">
                 <Image
                   src={product.image}
                   alt={product.title}
