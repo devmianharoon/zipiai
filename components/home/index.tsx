@@ -93,7 +93,14 @@ const Index = () => {
       {/* <BannerTwo /> */}
 
       {/* section two with left text right image  */}
-
+      {/* <!-- Placeholder Section --> */}
+      <div className="w-full max-w-6xl mx-auto px-4 mb-10 ">
+        <div className="bg-blue-50 rounded-lg p-6 w-auto h-[300px] ">
+          <div className="flex flex-col items-center justify-center h-full">
+            <h2 className="text-2xl font-semibold text-black">Placeholder</h2>
+          </div>
+        </div>
+      </div>
       {/* <SectionTwo /> */}
       <NewsLetter />
       {/* <!-- Our Footer --> */}

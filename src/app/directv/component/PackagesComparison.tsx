@@ -1,8 +1,14 @@
 "use client";
 
 import { useState } from "react";
+// import Image from "next/image";
+import jsondata from "./../../../../data/directv.json";
+// type Channel = {
+//   channel: string;
+//   number: string;
+//   logo: string;
+// };
 
-// JSON data for the packages
 const packagesData = {
   toggle: {
     withLocal: "With local channels",
@@ -31,14 +37,8 @@ const packagesData = {
           text: "165+ channels, including essentials like AMC, CNN, Disney Channel, ESPN & ESPN2, Nickelodeon & more.",
           link: "See channel lineup",
         },
-        {
-          icon: "check",
-          text: "Local channels included, where available",
-        },
-        {
-          icon: "check",
-          text: "Special offer for premium networks",
-        },
+        { icon: "check", text: "Local channels included, where available" },
+        { icon: "check", text: "Special offer for premium networks" },
       ],
       compareLink: "Compare packages",
       color: "bg-blue-800",
@@ -63,18 +63,12 @@ const packagesData = {
           text: "200+ channels, get channels in ENTERTAINMENT, plus specialty sports: ACC Network, Big Ten Network, MLB Network, NBA TV, SEC Network & more.",
           link: "See channel lineup",
         },
-        {
-          icon: "check",
-          text: "Local channels included, where available",
-        },
+        { icon: "check", text: "Local channels included, where available" },
         {
           icon: "check",
           text: "Regional Sports Networks for watching your local teams",
         },
-        {
-          icon: "check",
-          text: "Special offer for premium networks",
-        },
+        { icon: "check", text: "Special offer for premium networks" },
       ],
       compareLink: "Compare packages",
       color: "bg-orange-700",
@@ -99,18 +93,12 @@ const packagesData = {
           text: "270+ channels, everything in CHOICE™, plus more sports & movies: CBS Sports Network, Discovery Family, FX Movie Channel, NHL Network, STARZ Encore.",
           link: "See channel lineup",
         },
-        {
-          icon: "check",
-          text: "Local channels included, where available",
-        },
+        { icon: "check", text: "Local channels included, where available" },
         {
           icon: "check",
           text: "Regional Sports Networks for watching your local teams",
         },
-        {
-          icon: "check",
-          text: "Special offer for premium networks",
-        },
+        { icon: "check", text: "Special offer for premium networks" },
       ],
       compareLink: "Compare packages",
       color: "bg-blue-900",
@@ -135,14 +123,8 @@ const packagesData = {
           text: "340+ channels, everything in ULTIMATE, plus the top-rated premium networks: HBO Max®, Paramount+ with SHOWTIME, STARZ®, and Cinemax®.",
           link: "See channel lineup",
         },
-        {
-          icon: "check",
-          text: "Premium networks included",
-        },
-        {
-          icon: "check",
-          text: "Local channels included, where available",
-        },
+        { icon: "check", text: "Premium networks included" },
+        { icon: "check", text: "Local channels included, where available" },
         {
           icon: "check",
           text: "Regional Sports Networks for watching your local teams",
@@ -157,6 +139,22 @@ const packagesData = {
       bgColor: "bg-purple-50",
     },
   ],
+  tableData: {
+    channelGuide: [
+      { channel: "ESPN", number: "206", logo: "/assets/nbc.png" },
+      { channel: "NBC Sports", number: "220", logo: "/assets/nbc.png" },
+      { channel: "MLB Network", number: "213", logo: "/assets/nbc.png" },
+    ],
+    regionalSportNetworks: [
+      {
+        channel: "FanDuel Sports Network",
+        number: "684",
+        logo: "/assets/nbc.png",
+      },
+      { channel: "NBC Sports Boston", number: "630", logo: "/assets/nbc.png" },
+      { channel: "Spectrum SportsNet", number: "691", logo: "/assets/nbc.png" },
+    ],
+  },
 };
 
 export default function PackageComparison() {
@@ -164,45 +162,22 @@ export default function PackageComparison() {
 
   return (
     <div className="w-full max-w-7xl mx-auto px-4 py-12">
-      {/* Channel Toggle */}
+      {/* Toggle Buttons */}
       <div className="flex flex-col items-center mb-8">
         <div className="flex rounded-full border border-gray-300 overflow-hidden mb-2">
-          <button
-            className={`px-6 py-2 text-sm font-medium ${
-              withLocalChannels === 1
-                ? "bg-blue-700 text-white"
-                : "bg-white text-gray-700"
-            }`}
-            onClick={() => setWithLocalChannels(1)}>
-            {packagesData.toggle.withLocal}
-          </button>
-          <button
-            className={`px-6 py-2 text-sm font-medium ${
-              withLocalChannels === 2
-                ? "bg-blue-700 text-white"
-                : "bg-white text-gray-700"
-            }`}
-            onClick={() => setWithLocalChannels(2)}>
-            {packagesData.toggle.withoutLocal}
-          </button>
-          <button
-            className={`px-6 py-2 text-sm font-medium ${
-              withLocalChannels === 3
-                ? "bg-blue-700 text-white"
-                : "bg-white text-gray-700"
-            }`}
-            onClick={() => setWithLocalChannels(3)}>
-            {packagesData.toggle.channelGuide}
-          </button>
-          <button
-            className={`px-6 py-2 text-sm font-medium ${
-              withLocalChannels === 4
-                ? "bg-blue-700 text-white"
-                : "bg-white text-gray-700"
-            }`}
-            onClick={() => setWithLocalChannels(4)}>
-            {packagesData.toggle.supportNetworks}
-          </button>
+          {[1, 2, 3, 4].map((val) => (
+            <button
+              key={val}
+              className={`px-6 py-2 text-sm font-medium ${
+                withLocalChannels === val
+                  ? "bg-blue-700 text-white"
+                  : "bg-white text-gray-700"
+              }`}
+              onClick={() => setWithLocalChannels(val)}
+            >
+              {Object.values(packagesData.toggle)[val - 1]}
+            </button>
+          ))}
         </div>
         <div className="text-sm text-gray-700 flex items-center gap-2">
           <span>{packagesData.toggle.toggleText}</span>
@@ -215,82 +190,86 @@ export default function PackageComparison() {
         </div>
       </div>
 
-      {/* Package Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        {packagesData.packages.map((pkg) => (
-          <div
-            key={pkg.id}
-            className="border border-gray-300 rounded-lg overflow-hidden">
-            {/* Header */}
-            <div className={`${pkg.color} text-white p-4`}>
-              <h3 className="font-bold text-lg">{pkg.name}</h3>
-            </div>
+      {/* Channel Grid View */}
+      {(withLocalChannels === 3 || withLocalChannels === 4) && (
+        <div className="mb-8">
+          <h3 className="text-lg font-bold mb-4">
+            {withLocalChannels === 3
+              ? "Channel Guide"
+              : "Regional Sport Networks"}
+          </h3>
 
-            {/* Content */}
-            <div className={`${pkg.bgColor} p-4 h-full flex flex-col`}>
-              <p className="text-gray-800 font-medium mb-4">{pkg.tagline}</p>
-
-              {/* Price */}
-              <div className="mb-4">
-                <div className="flex items-baseline">
-                  <span className="text-4xl font-bold">{pkg.price}</span>
-                  <span className="text-xl">
-                    {pkg.cents}
-                    {pkg.period}
-                  </span>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            {(withLocalChannels === 3
+              ? jsondata["10001"].local
+              : jsondata["10001"].rsn
+            ).map((entry: string, index: number) => {
+              const [channel, number] = entry.split("/");
+              return (
+                <div
+                  key={index}
+                  className="flex flex-col items-center bg-gray-50 rounded-lg p-4 shadow-sm"
+                >
+                  {/* <div className="w-20 h-20 relative mb-2">
+                    <Image
+                      src={`/logos/${channel}.png`} // e.g., logos/CW.png
+                      alt={`${channel} logo`}
+                      fill
+                      className="object-contain"
+                    />
+                  </div> */}
+                  <h3 className="text-2xl font-medium text-center">{channel}</h3>
+                  <p className="text-xl text-gray-500 mt-1">Ch No : {number}</p>
                 </div>
-                <p className="text-sm text-gray-600">{pkg.details}</p>
-                <p className="text-sm text-gray-600">{pkg.fullPrice}</p>
-                <p className="text-sm text-gray-600">
-                  {pkg.term}{" "}
-                  <a href="#" className="text-blue-700">
-                    {pkg.seeDetails}
-                  </a>
-                </p>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {/* Package Cards */}
+      {(withLocalChannels === 1 || withLocalChannels === 2) && (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {packagesData.packages.map((pkg) => (
+            <div
+              key={pkg.id}
+              className={`p-6 rounded-lg shadow-md ${pkg.bgColor} border`}
+            >
+              <h2 className="text-lg font-bold mb-2">{pkg.name}</h2>
+              <p className="text-sm text-gray-700 mb-2">{pkg.tagline}</p>
+              <div className="text-2xl font-bold mb-1">
+                {pkg.price}
+                <span className="text-sm align-top">{pkg.cents}</span>
               </div>
-
-              {/* Divider */}
-              <hr className="my-4 border-gray-300" />
-
-              {/* Button */}
-              <button className="w-full py-2 px-4 bg-[#0a2540] hover:bg-[#0a2540]/90 text-white font-medium rounded-md transition-colors mb-4">
-                {pkg.buttonText}
-              </button>
-
-              {/* Features */}
-              <ul className="space-y-3 mb-4">
-                {pkg.features.map((feature, index) => (
-                  <li key={index} className="flex items-start gap-2">
-                    <span className="text-green-600 font-bold">✓</span>
-                    <div>
-                      <span>{feature.text}</span>
-                      {feature.link && (
-                        <a href="#" className="block text-blue-700 text-sm">
-                          {feature.link}
-                        </a>
-                      )}
-                    </div>
+              <p className="text-xs text-gray-600 mb-1">{pkg.period}</p>
+              <p className="text-xs text-gray-500 mb-2">{pkg.details}</p>
+              <p className="text-xs text-gray-400 italic mb-4">
+                {pkg.fullPrice}
+              </p>
+              <ul className="text-sm mb-4 list-disc list-inside">
+                {pkg.features.map((feature, idx) => (
+                  <li key={idx}>
+                    {feature.text}
+                    {feature.link && (
+                      <a
+                        href="#"
+                        className="ml-1 text-blue-600 underline text-xs"
+                      >
+                        {feature.link}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
-
-              {/* Compare Link */}
-              <div className="mt-auto">
-                <a href="#" className="text-blue-700 text-sm">
-                  {pkg.compareLink}
-                </a>
-              </div>
+              <button
+                className={`w-full py-2 rounded text-white font-semibold ${pkg.color}`}
+              >
+                {pkg.buttonText}
+              </button>
             </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Disclaimer */}
-      <p className="text-xs text-gray-500 mt-6">
-        *New approved residential customers. Device(s) subject to Equipment
-        Lease agmt. Early agmt termination fee applies ($20/mo.) & addl fee(s)
-        may apply if equip. not returned.
-      </p>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

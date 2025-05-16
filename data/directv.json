@@ -1,0 +1,341 @@
+{
+  "10001": {
+    "price": "17.99",
+    "rsn": ["MSG/634", "MSG Sportsnet/635"],
+    "local": [
+      "CW/11",
+      "FOX/5",
+      "Independent/55",
+      "MyNetworkTV/9",
+      "PBS/13",
+      "PBS/49",
+      "Telemundo/47",
+      "UniMas/68",
+      "Univision/41"
+    ]
+  },
+  "10035": {
+    "price": "17.99",
+    "rsn": ["MSG/634", "MSG Sportsnet/635", "SNY/639", "YES NETWORK/631"],
+    "local": [
+      "ABC/7",
+      "CBS/2",
+      "CW/11",
+      "FOX/5",
+      "Independent/55",
+      "MyNetworkTV/9",
+      "PBS/13",
+      "PBS/49",
+      "Telemundo/47",
+      "UniMas/68",
+      "Univision/41"
+    ]
+  },
+  "60611": {
+    "price": "17.99",
+    "rsn": ["Chicago Sports Network/681", "Marquee Sports Network/664"],
+    "local": [
+      "ABC/undefined",
+      "CBS/2",
+      "FOX/32",
+      "Independent/9",
+      "MyNetworkTV/50",
+      "NBC/5",
+      "PBS/56",
+      "PBS/11",
+      "Telemundo/44",
+      "UniMas/60"
+    ]
+  },
+  "80202": {
+    "price": "13.99",
+    "rsn": ["Altitude/681", "MLB Colorado Rockies/683"],
+    "local": [
+      "ABC/7",
+      "CBS/4",
+      "CW/2",
+      "FOX/31",
+      "MyNetworkTV/20",
+      "PBS/12",
+      "PBS/6",
+      "Telemundo/25"
+    ]
+  },
+  "90210": {
+    "price": "17.99",
+    "rsn": [
+      "FanDuel Sports Network SoCal/693",
+      "FanDuel Sports Network West/692",
+      "Spectrum SportsNet/691",
+      "SportsNet LA/690"
+    ],
+    "local": [
+      "ABC/7",
+      "CBS/2",
+      "CW/5",
+      "FOX/11",
+      "MyNetworkTV/20",
+      "PBS/12",
+      "PBS/6",
+      "Telemundo/25"
+    ]
+  },
+  "30303": {
+    "price": "15.99",
+    "rsn": [
+      "FanDuel Sports Network South/646",
+      "FanDuel Sports Network Southeas/649"
+    ],
+    "local": [
+      "ABC/2",
+      "CBS/46",
+      "CW/17",
+      "FOX/5",
+      "PBS/8",
+      "NBC/11",
+      "Independent/69"
+    ]
+  },
+  "77001": {
+    "price": "15.99",
+    "rsn": [
+      "FanDuel Sports Network Oklahoma/675",
+      "FanDuel Sports Network Southwest/676",
+      "Space City Home Network/674",
+      "Texas Rangers/677"
+    ],
+    "local": [
+      "ABC/13",
+      "CBS/11",
+      "CW/39",
+      "FOX/26",
+      "PBS/8",
+      "NBC/2",
+      "Independent/69",
+      "MyNetworkTV/20",
+      "Telemundo/47",
+      "UniMas/67"
+    ]
+  },
+  "94102": {
+    "price": "17.99",
+    "rsn": ["NBC Sports Bay Area/696", "NBC Sports California/698"],
+    "local": [
+      "ABC/7",
+      "CBS/5",
+      "CW/4",
+      "FOX/2",
+      "PBS/9",
+      "PBS/22",
+      "NBC/11",
+      "Independent/44",
+      "MyNetworkTV/20",
+      "Telemundo/48",
+      "UniMas/66",
+      "Univision/14"
+    ]
+  },
+  "20001": {
+    "price": "13.99",
+    "rsn": ["MASN/640", "Monumental Sports Network/642"],
+    "local": [
+      "ABC/7",
+      "CBS/9",
+      "CW/50",
+      "FOX/5",
+      "Independent/25",
+      "MyNetworkTV/20",
+      "PBS/32",
+      "PBS/22",
+      "NBC/4",
+      "Telemundo/406",
+      "Univision/14"
+    ]
+  },
+  "48226": {
+    "price": "7.99",
+    "rsn": ["FanDuel Sports Network Detroit/663"],
+    "local": [
+      "ABC/7",
+      "CBS/62",
+      "FOX/2",
+      "Independent/50",
+      "MyNetworkTV/20",
+      "NBC/4",
+      "Telemundo East/undefined"
+    ]
+  },
+  "55401": {
+    "price": "7.99",
+    "rsn": [
+      "FanDuel Sports Network North/668",
+      "FanDuel Sports Network Wisconsin/669",
+      "MLB Minnesota Twins/668"
+    ],
+    "local": [
+      "ABC/5",
+      "CBS/4",
+      "CW/23",
+      "FOX/9",
+      "PBS/10",
+      "PBS/2",
+      "PBS22",
+      "MyNetworkTV/29",
+      "NBC/11",
+      "Telemundo East/undefined"
+    ]
+  },
+  "27701": {
+    "price": "9.99",
+    "rsn": ["FanDuel Sports Network South/646", "MASN/640"],
+    "local": [
+      "ABC/11",
+      "CBS/17",
+      "CW/22",
+      "FOX/50",
+      "PBS/4",
+      "Independent/50",
+      "MyNetworkTV/28",
+      "NBC/5",
+      "Telemundo/406",
+      "UniMas/26",
+      "Univision/61"
+    ]
+  },
+  "78701": {
+    "price": "11.99",
+    "rsn": [
+      "FanDuel Sports Network Oklahoma/675",
+      "FanDuel Sports Network Southwest/676",
+      "Space City Home Network/674",
+      "Texas Rangers/677"
+    ],
+    "local": ["ABC/24", "CBS/42", "CW/54", "FOX/7", "NBC/36", "Univision /62"]
+  },
+  "11201": {
+    "price": "17.99",
+    "rsn": ["MSG/634", "MSG Sportsnet/635", "SNY/639", "YES NETWORK/631"],
+    "local": [
+      "ABC/7",
+      "CBS/2",
+      "CW/11",
+      "FOX/5",
+      "Independent/55",
+      "MyNetworkTV/9",
+      "NBC/4",
+      "PBS/50",
+      "PBS/13"
+    ]
+  },
+  "98101": {
+    "price": "11.99",
+    "rsn": ["NBA Portland Trail Blazers/688", "ROOT SPORTS Northwest/687"],
+    "local": [
+      "ABC/4",
+      "CBS/7",
+      "CW/51",
+      "FOX/13",
+      "Independent/11",
+      "Independent/16",
+      "MyNetworkTV/22",
+      "NBC/5",
+      "PBS/28",
+      "PBS/9",
+      "Telemundo/51",
+      "UniMas/69",
+      "Univision/23"
+    ]
+  },
+  "33139": {
+    "price": "15.99",
+    "rsn": [
+      "FanDuel Sports Network Florida/654",
+      "FanDuel Sports Network Sun/653"
+    ],
+    "local": [
+      "ABC/10",
+      "CBS/4",
+      "FOX/7",
+      "Independent/39",
+      "Independent/33",
+      "MyNetworkTV/20",
+      "NBC/6",
+      "PBS/2",
+      "PBS/17"
+    ]
+  },
+  "63101": {
+    "price": "9.99",
+    "rsn": ["FanDuel Sports Network Midwest/671"],
+    "local": [
+      "ABC/30",
+      "CBS/4",
+      "CW/11",
+      "FOX/2",
+      "PBS/9",
+      "NBC/5",
+      "Telemundo East/undefined"
+    ]
+  },
+  "85001": {
+    "price": "5.99",
+    "rsn": ["MLB Arizona Diamondbacks/686"],
+    "local": [
+      "ABC/15",
+      "CBS/5",
+      "CW/7",
+      "FOX/10",
+      "PBS/4",
+      "Independent/3",
+      "Independent/32",
+      "Independent/61",
+      "MyNetworkTV/45",
+      "NBC/12",
+      "PBS/8",
+      "Telemundo/39",
+      "Univision/61"
+    ]
+  },
+  "43215": {
+    "price": "13.99",
+    "rsn": [
+      "FanDuel Sports Network Cincinnati/661",
+      "FanDuel Sports Network Ohio/660",
+      "MLB Cleveland Guardians/662",
+      "SportsNet Pittsburgh/659"
+    ],
+    "local": [
+      "ABC/6",
+      "CBS/10",
+      "FOX/9",
+      "PBS/34",
+      "PBS/20",
+      "NBC/4",
+      "Telemundo/406",
+      "UniMas/26",
+      "Univision/61"
+    ]
+  },
+  "19103": {
+    "price": "Applied at checkout",
+    "rsn": [
+      "FanDuel Sports Network Cincinnati/661",
+      "FanDuel Sports Network Ohio/660",
+      "MLB Cleveland Guardians/662",
+      "SportsNet Pittsburgh/659"
+    ],
+    "local": [
+      "ABC/11",
+      "CBS/17",
+      "CW/22",
+      "FOX/50",
+      "PBS/4",
+      "Independent/50",
+      "MyNetworkTV/28",
+      "NBC/5",
+      "Telemundo/406",
+      "UniMas/26",
+      "Univision/61"
+    ]
+  }
+}
