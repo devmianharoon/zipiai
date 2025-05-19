@@ -30,10 +30,10 @@ const CopyrightFooter = () => {
           <p>
             &copy; {new Date().getFullYear()} by{" "}
             <a
-              href="https://themeforest.net/user/ib-themes"
+              href="https://asdevtech.com/"
               target="_blank"
               rel="noreferrer">
-              ib-themes
+              Asdev Tech
             </a>
             . All rights reserved.
           </p>

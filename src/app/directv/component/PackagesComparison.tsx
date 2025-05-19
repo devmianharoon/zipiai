@@ -1,20 +1,16 @@
 "use client";
 
 import { useState } from "react";
-// import Image from "next/image";
 import jsondata from "./../../../../data/directv.json";
-// type Channel = {
-//   channel: string;
-//   number: string;
-//   logo: string;
-// };
+import channeldata from "./../../../../data/channels_data_via_internet.json";
+import ChannelTable from "./ChannelTable";
 
 const packagesData = {
   toggle: {
-    withLocal: "With local channels",
-    withoutLocal: "No local channels",
-    channelGuide: "Channel Guide",
-    supportNetworks: "Regional Sport Networks",
+    withLocal: "Packages",
+    withoutLocal: "Local Channels ",
+    supportNetworks: "Regional Sports ",
+    channelGuide: "Full Channel Guide",
     toggleText: "(Toggle to remove local channels and save $12)",
     checkLink: "Check your local channels here",
   },
@@ -139,24 +135,14 @@ const packagesData = {
       bgColor: "bg-purple-50",
     },
   ],
-  tableData: {
-    channelGuide: [
-      { channel: "ESPN", number: "206", logo: "/assets/nbc.png" },
-      { channel: "NBC Sports", number: "220", logo: "/assets/nbc.png" },
-      { channel: "MLB Network", number: "213", logo: "/assets/nbc.png" },
-    ],
-    regionalSportNetworks: [
-      {
-        channel: "FanDuel Sports Network",
-        number: "684",
-        logo: "/assets/nbc.png",
-      },
-      { channel: "NBC Sports Boston", number: "630", logo: "/assets/nbc.png" },
-      { channel: "Spectrum SportsNet", number: "691", logo: "/assets/nbc.png" },
-    ],
-  },
-};
 
+};
+const packageNames = [
+  "ENTERTAINMENT",
+  "CHOICE",
+  "ULTIMATE",
+  "PREMIER",
+];
 export default function PackageComparison() {
   const [withLocalChannels, setWithLocalChannels] = useState(1);
 
@@ -190,8 +176,8 @@ export default function PackageComparison() {
         </div>
       </div>
 
-      {/* Channel Grid View */}
-      {(withLocalChannels === 3 || withLocalChannels === 4) && (
+       {/* Channel Guide (ChannelTable) or Regional Sports (Grid) */}
+       {(withLocalChannels === 3 || withLocalChannels === 4) && (
         <div className="mb-8">
           <h3 className="text-lg font-bold mb-4">
             {withLocalChannels === 3
@@ -199,31 +185,31 @@ export default function PackageComparison() {
               : "Regional Sport Networks"}
           </h3>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-            {(withLocalChannels === 3
-              ? jsondata["10001"].local
-              : jsondata["10001"].rsn
-            ).map((entry: string, index: number) => {
-              const [channel, number] = entry.split("/");
-              return (
-                <div
-                  key={index}
-                  className="flex flex-col items-center bg-gray-50 rounded-lg p-4 shadow-sm"
-                >
-                  {/* <div className="w-20 h-20 relative mb-2">
-                    <Image
-                      src={`/logos/${channel}.png`} // e.g., logos/CW.png
-                      alt={`${channel} logo`}
-                      fill
-                      className="object-contain"
-                    />
-                  </div> */}
-                  <h3 className="text-2xl font-medium text-center">{channel}</h3>
-                  <p className="text-xl text-gray-500 mt-1">Ch No : {number}</p>
-                </div>
-              );
-            })}
-          </div>
+          {withLocalChannels === 3 ? (
+           <div className="h-[700px] w-auto overflow-x-auto">
+             <ChannelTable
+              channels={channeldata}
+              packages={packageNames}
+            />
+           </div>
+          ) : (
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+              {jsondata["10001"].rsn.map((entry: string, index: number) => {
+                const [channel, number] = entry.split("/");
+                return (
+                  <div
+                    key={index}
+                    className="flex flex-col items-center bg-gray-50 rounded-lg p-4 shadow-sm"
+                  >
+                    <h3 className="text-2xl font-medium text-center">
+                      {channel}
+                    </h3>
+                    <p className="text-xl text-gray-500 mt-1">Ch No: {number}</p>
+                  </div>
+                );
+              })}
+            </div>
+          )}
         </div>
       )}
 

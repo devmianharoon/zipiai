@@ -1,0 +1,272 @@
+[
+    {
+      "name": "TV Land",
+      "channelNumber": 304,
+      "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "TV One",
+      "channelNumber": 328,
+      "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "UniMás",
+      "channelNumber": 408,
+      "packages": ["ÓPTIMO MÁS"]
+    },
+    {
+      "name": "Universal Kids",
+      "channelNumber": 295,
+      "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "UNIVERSO",
+      "channelNumber": 410,
+      "packages": ["ÓPTIMO MÁS"]
+    },
+    {
+      "name": "Univision (Este)",
+      "channelNumber": 402,
+      "packages": ["ÓPTIMO MÁS"]
+    },
+    {
+      "name": "UnXplained Zone",
+      "channelNumber": 4491,
+      "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "UPTV",
+      "channelNumber": 338,
+      "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "USA Network",
+      "channelNumber": 242,
+      "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "Crime & Investigation",
+      "channelNumber": 571,
+      "packages": ["MOVIES EXTRA PACK"]
+    },
+    {
+      "name": "Hallmark Family",
+      "channelNumber": 564,
+      "packages": ["MOVIES EXTRA PACK"]
+    },
+    {
+      "name": "Hallmark Mystery",
+      "channelNumber": 565,
+      "packages": ["MOVIES EXTRA PACK"]
+    },
+    {
+      "name": "HDNet Movies",
+      "channelNumber": 566,
+      "packages": ["MOVIES EXTRA PACK"]
+    },
+    {
+      "name": "INSP",
+      "channelNumber": 364,
+      "packages": ["MOVIES EXTRA PACK"]
+    },
+    {
+      "name": "MTV Live",
+      "channelNumber": 572,
+      "packages": ["MOVIES EXTRA PACK"]
+    },
+    {
+      "name": "ShortsTV",
+      "channelNumber": 573,
+      "packages": ["MOVIES EXTRA PACK"]
+    },
+    {
+      "name": "Smithsonian Channel",
+      "channelNumber": 570,
+      "packages": ["MOVIES EXTRA PACK"]
+    },
+    {
+      "name": "Sony Movies",
+      "channelNumber": 568,
+      "packages": ["MOVIES EXTRA PACK"]
+    },
+    {
+      "name": "MGM+",
+      "channelNumber": 558,
+      "packages": ["MGM+ ADD-ON"]
+    },
+    {
+      "name": "MGM+ Hits",
+      "channelNumber": 559,
+      "packages": ["MGM+ ADD-ON"]
+    },
+    {
+      "name": "MGM+ MARQUEE",
+      "channelNumber": 560,
+      "packages": ["MGM+ ADD-ON"]
+    },
+    {
+      "name": "Altitude Sports",
+      "channelNumber": 681,
+      "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "Chicago Sports Network",
+      "channelNumber": 665,
+      "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "FanDuel Sports Cincinnati",
+      "channelNumber": 661,
+      "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "FanDuel Sports Detroit",
+      "channelNumber": 663,
+      "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "FanDuel Sports Florida",
+      "channelNumber": 654,
+      "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "FanDuel Sports Great Lakes",
+      "channelNumber": 662,
+      "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "FanDuel Sports Midwest",
+      "channelNumber": 671,
+      "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "FanDuel Sports North",
+      "channelNumber": 668,
+      "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "FanDuel Sports Ohio",
+      "channelNumber": 660,
+      "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "FanDuel Sports Oklahoma",
+      "channelNumber": 675,
+      "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "FanDuel Sports SoCal",
+      "channelNumber": 693,
+      "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "FanDuel Sports South",
+      "channelNumber": 646,
+      "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "FanDuel Sports Southeast",
+      "channelNumber": 649,
+      "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "FanDuel Sports Southwest",
+      "channelNumber": 676,
+      "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "FanDuel Sports Sun",
+      "channelNumber": 653,
+      "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "FanDuel Sports West",
+      "channelNumber": 692,
+      "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "FanDuel Sports Wisconsin",
+      "channelNumber": 669,
+      "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "Marquee Sports Network",
+      "channelNumber": 664,
+      "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "MASN",
+      "channelNumber": 640,
+      "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "Monumental Sports Network",
+      "channelNumber": 642,
+      "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "MSG",
+      "channelNumber": 634,
+      "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "MSG Sportsnet",
+      "channelNumber": 635,
+      "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "NBC Sports Bay Area",
+      "channelNumber": 696,
+      "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "NBC Sports Boston",
+      "channelNumber": 630,
+      "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "NBC Sports California",
+      "channelNumber": 698,
+      "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "NESN",
+      "channelNumber": 628,
+      "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "ROOT SPORTS Northwest",
+      "channelNumber": 687,
+      "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "SNY",
+      "channelNumber": 639,
+      "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "Space City Home Network",
+      "channelNumber": 674,
+      "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "Spectrum SportsNet",
+      "channelNumber": 691,
+      "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "Spectrum SportsNet LA",
+      "channelNumber": 690,
+      "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "SportsNet Pittsburgh",
+      "channelNumber": 659,
+      "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    },
+    {
+      "name": "YES Network",
+      "channelNumber": 631,
+      "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    }
+  ]
