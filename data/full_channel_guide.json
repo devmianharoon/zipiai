@@ -1,0 +1,643 @@
+[
+  { "name": "5StarMAX", "channelNumber": "520", "packages": ["PREMIER"] },
+  {
+    "name": "A&E",
+    "channelNumber": "265",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "ACC Digital Network",
+    "channelNumber": "4151",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "ACC Network",
+    "channelNumber": "612",
+    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "AccuWeather",
+    "channelNumber": "361",
+    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  { "name": "ActionMAX", "channelNumber": "519", "packages": ["PREMIER"] },
+  { "name": "Alien Nation", "channelNumber": "4490", "packages": ["PREMIER"] },
+  {
+    "name": "AMC",
+    "channelNumber": "254",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "American Heroes name",
+    "channelNumber": "287",
+    "packages": ["ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "America's Test Kitchen",
+    "channelNumber": "4357",
+    "packages": ["PREMIER"]
+  },
+  {
+    "name": "Anger Management",
+    "channelNumber": "4321",
+    "packages": ["PREMIER"]
+  },
+  {
+    "name": "Animal Planet",
+    "channelNumber": "282",
+    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Are We There Yet",
+    "channelNumber": "4322",
+    "packages": ["PREMIER"]
+  },
+  {
+    "name": "Aspire",
+    "channelNumber": "381",
+    "packages": ["ULTIMATE", "PREMIER"]
+  },
+  { "name": "Ax Men", "channelNumber": "4264", "packages": ["PREMIER"] },
+  {
+    "name": "AXS TV",
+    "channelNumber": "340",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "BabyFirst HD",
+    "channelNumber": "293",
+    "packages": ["ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "BBC America",
+    "channelNumber": "264",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "BBC News",
+    "channelNumber": "346",
+    "packages": ["ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "BET",
+    "channelNumber": "329",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "BET Her",
+    "channelNumber": "330",
+    "packages": ["ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Big Ten Network",
+    "channelNumber": "610",
+    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Big 12",
+    "channelNumber": "4152",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Bloomberg TV",
+    "channelNumber": "353",
+    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  { "name": "Bob Ross name", "channelNumber": "4219", "packages": ["PREMIER"] },
+  {
+    "name": "Boomerang",
+    "channelNumber": "298",
+    "packages": ["ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "BOUNCE TV",
+    "channelNumber": "82",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Bravo",
+    "channelNumber": "237",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  { "name": "Buzzr", "channelNumber": "4335", "packages": ["PREMIER"] },
+  {
+    "name": "Cartoon Network East",
+    "channelNumber": "296",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "CBS Sports Network",
+    "channelNumber": "221",
+    "packages": ["ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Cheddar News",
+    "channelNumber": "354",
+    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  { "name": "Cinemax East", "channelNumber": "515", "packages": ["PREMIER"] },
+  {
+    "name": "CleoTV",
+    "channelNumber": "341",
+    "packages": ["ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "CMT",
+    "channelNumber": "327",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "CNBC",
+    "channelNumber": "355",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "CNBC World",
+    "channelNumber": "357",
+    "packages": ["ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "CNN",
+    "channelNumber": "202",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "CNN En Español",
+    "channelNumber": "419",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "CNNi",
+    "channelNumber": "358",
+    "packages": ["ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Cold Case Files",
+    "channelNumber": "4271",
+    "packages": ["PREMIER"]
+  },
+  {
+    "name": "Comedy Central",
+    "channelNumber": "249",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Comedy Dynamics",
+    "channelNumber": "4305",
+    "packages": ["PREMIER"]
+  },
+
+  {
+    "name": "FOX Business Network",
+    "channelNumber": "359",
+    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "FOX News Channel",
+    "channelNumber": "360",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  { "name": "FOX Soul", "channelNumber": "4401", "packages": ["PREMIER"] },
+  {
+    "name": "FOX Sports 1",
+    "channelNumber": "219",
+    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "FOX Sports 2",
+    "channelNumber": "618",
+    "packages": ["ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "FOX Weather",
+    "channelNumber": "363",
+    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Freeform",
+    "channelNumber": "311",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  { "name": "FUEL TV", "channelNumber": "4110", "packages": ["PREMIER"] },
+  {
+    "name": "Fuse",
+    "channelNumber": "339",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "FX",
+    "channelNumber": "248",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "FX Movie Channel",
+    "channelNumber": "258",
+    "packages": ["ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "FXX",
+    "channelNumber": "259",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "fyi,",
+    "channelNumber": "266",
+    "packages": ["ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Galavisión",
+    "channelNumber": "404",
+    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Game Show Network",
+    "channelNumber": "233",
+    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "GET",
+    "channelNumber": "83",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Golf Channel",
+    "channelNumber": "218",
+    "packages": ["ULTIMATE", "PREMIER"]
+  },
+  { "name": "GoTraveler", "channelNumber": "4388", "packages": ["PREMIER"] },
+  {
+    "name": "Great American Adventures",
+    "channelNumber": "4388",
+    "packages": ["PREMIER"]
+  },
+  {
+    "name": "Great American Family",
+    "channelNumber": "326",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "GRIT",
+    "channelNumber": "81",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Hallmark Channel",
+    "channelNumber": "312",
+    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Hallmark Mystery",
+    "channelNumber": "565",
+    "packages": ["ULTIMATE", "PREMIER"]
+  },
+  { "name": "HBO 2 East", "channelNumber": "502", "packages": ["PREMIER"] },
+  {
+    "name": "HBO Comedy East HD",
+    "channelNumber": "506",
+    "packages": ["PREMIER"]
+  },
+  { "name": "HBO East", "channelNumber": "501", "packages": ["PREMIER"] },
+  {
+    "name": "HBO Family East",
+    "channelNumber": "507",
+    "packages": ["PREMIER"]
+  },
+  { "name": "HBO Latino", "channelNumber": "511", "packages": ["PREMIER"] },
+  {
+    "name": "HBO Signature East HD",
+    "channelNumber": "503",
+    "packages": ["PREMIER"]
+  },
+  {
+    "name": "HBO Zone East HD",
+    "channelNumber": "509",
+    "packages": ["PREMIER"]
+  },
+  {
+    "name": "HerSphere",
+    "channelNumber": "4209",
+    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Heroes & Icons (H&I)",
+    "channelNumber": "385",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "HGTV",
+    "channelNumber": "229",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  { "name": "Hipstr", "channelNumber": "4545", "packages": ["PREMIER"] },
+  {
+    "name": "History Channel",
+    "channelNumber": "269",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "History & Warfare Now",
+    "channelNumber": "4486",
+    "packages": ["PREMIER"]
+  },
+  {
+    "name": "HLN",
+    "channelNumber": "204",
+    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Horror by Alter",
+    "channelNumber": "4221",
+    "packages": ["PREMIER"]
+  },
+  {
+    "name": "HSN",
+    "channelNumber": "240",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Ice Road Truckers",
+    "channelNumber": "4263",
+    "packages": ["PREMIER"]
+  },
+  {
+    "name": "IFC",
+    "channelNumber": "333",
+    "packages": ["ULTIMATE", "PREMIER"]
+  },
+  { "name": "INFAST", "channelNumber": "4382", "packages": ["PREMIER"] },
+  {
+    "name": "Investigation Discovery",
+    "channelNumber": "285",
+    "packages": ["ULTIMATE", "PREMIER"]
+  },
+
+  {
+    "name": "TV Land",
+    "channelNumber": "304",
+    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "TV One (HD only)",
+    "channelNumber": "328",
+    "packages": ["ENTERTAINMENT", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "UniMás",
+    "channelNumber": "408",
+    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Universal Kids",
+    "channelNumber": "295",
+    "packages": ["ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "UNIVERSO",
+    "channelNumber": "410",
+    "packages": ["ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Univision (Este)",
+    "channelNumber": "402",
+    "packages": ["ENTERTAINMENT", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "UnXplained Zone",
+    "channelNumber": "4491",
+    "packages": ["ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "UPTV",
+    "channelNumber": "338",
+    "packages": ["ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "USA Network",
+    "channelNumber": "242",
+    "packages": ["ENTERTAINMENT", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "VH1",
+    "channelNumber": "335",
+    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "VICE",
+    "channelNumber": "271",
+    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Waypoint TV",
+    "channelNumber": "4175",
+    "packages": ["ENTERTAINMENT", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "WE tv",
+    "channelNumber": "260",
+    "packages": ["ENTERTAINMENT", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Weather Channel",
+    "channelNumber": "362",
+    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Women’s Sports Network",
+    "channelNumber": "4125",
+    "packages": ["ENTERTAINMENT", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Yahoo Finance",
+    "channelNumber": "4021",
+    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Yu-Gi-Oh!",
+    "channelNumber": "4449",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+
+  {
+    "name": "INWONDER",
+    "channelNumber": "4329",
+    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "ION East HD",
+    "channelNumber": "305",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  { "name": "Jamie Oliver", "channelNumber": "4361", "packages": ["PREMIER"] },
+  {
+    "name": "Jewelry TV",
+    "channelNumber": "72",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Joel Osteen",
+    "channelNumber": "4418",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Justice Central",
+    "channelNumber": "383",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Let's Make a Deal",
+    "channelNumber": "4337",
+    "packages": ["PREMIER"]
+  },
+  {
+    "name": "Lifetime",
+    "channelNumber": "252",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "LMN",
+    "channelNumber": "253",
+    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Logo HD",
+    "channelNumber": "272",
+    "packages": ["ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Love Nature",
+    "channelNumber": "4470",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "MagellanTV Now",
+    "channelNumber": "4482",
+    "packages": ["PREMIER"]
+  },
+  {
+    "name": "Magnolia Network",
+    "channelNumber": "230",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "MAVTV",
+    "channelNumber": "214",
+    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  { "name": "MAX Latino", "channelNumber": "523", "packages": ["PREMIER"] },
+  { "name": "MeatEater", "channelNumber": "4370", "packages": ["PREMIER"] },
+  {
+    "name": "Merit Street",
+    "channelNumber": "306",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "MeTV",
+    "channelNumber": "77",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "MLB Network",
+    "channelNumber": "213",
+    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Modern Marvels",
+    "channelNumber": "4480",
+    "packages": ["PREMIER"]
+  },
+  { "name": "MoreMAX", "channelNumber": "517", "packages": ["PREMIER"] },
+  {
+    "name": "MotorTrend",
+    "channelNumber": "281",
+    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Movie Favorites by Lifetime",
+    "channelNumber": "4504",
+    "packages": ["PREMIER"]
+  },
+  { "name": "MovieMAX", "channelNumber": "521", "packages": ["PREMIER"] },
+  { "name": "MovieSphere", "channelNumber": "4501", "packages": ["PREMIER"] },
+  {
+    "name": "MSNBC",
+    "channelNumber": "356",
+    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "MTV",
+    "channelNumber": "331",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "MTV2",
+    "channelNumber": "332",
+    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "MTV Classic",
+    "channelNumber": "336",
+    "packages": ["ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Nat Geo WILD",
+    "channelNumber": "283",
+    "packages": ["ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "National Geographic Channel",
+    "channelNumber": "276",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "NBA TV",
+    "channelNumber": "216",
+    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Newsmax",
+    "channelNumber": "349",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "NewsNation",
+    "channelNumber": "307",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "NFL Network",
+    "channelNumber": "212",
+    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "NHL Network",
+    "channelNumber": "215",
+    "packages": ["ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Nick Jr.",
+    "channelNumber": "301",
+    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Nickelodeon East",
+    "channelNumber": "299",
+    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "Nicktoons",
+    "channelNumber": "302",
+    "packages": ["ULTIMATE", "PREMIER"]
+  },
+  { "name": "Nosey", "channelNumber": "4255", "packages": ["PREMIER"] },
+  { "name": "Origin Sports", "channelNumber": "4120", "packages": ["PREMIER"] },
+  {
+    "name": "Ovation",
+    "channelNumber": "274",
+    "packages": ["ULTIMATE", "PREMIER"]
+  },
+  {
+    "name": "OWN",
+    "channelNumber": "279",
+    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+  }
+]
