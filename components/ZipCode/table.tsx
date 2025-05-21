@@ -165,10 +165,11 @@ export default function InternetComparison(data: Props) {
           return (
             <div
               key={rank.Rank}
-              className="bg-white shadow p-4 rounded border-l-4 border-bluish">
-              <div className="flex gap-5 items-center">
-                <h3 className="font-semibold text-lg flex items-center gap-2">
-                  #{rank.Rank} - {rank.ProviderName}
+              className="bg-white shadow p-4 rounded border-l-4 border-bluish flex gap-5">
+              <div className="flex gap-2 items-center flex-col">
+                <div className="flex items-center justify-between gap-4">
+                  <h3 className="font-semibold text-lg ">
+                  #{rank.Rank} 
                 </h3>
                 <div className="relative w-auto h-full">
                   <Image
@@ -180,13 +181,15 @@ export default function InternetComparison(data: Props) {
                     className="w-full h-[22px]"
                   />
                 </div>
+                </div>
                 <button
-                  className="   text-white border-1 rounded-full p-2 cursor-pointer"
+                  className="flex gap-4   text-white border-1 rounded-full p-2 cursor-pointer"
                   onClick={() => window.open(`tel:${number}`)}>
                   <Image src="/call.svg" alt="phone" width={20} height={20} />
+                  <span className="text-black">{number}</span>
                 </button>
               </div>
-              <p className="text-gray-700 mt-1">{rank.Reason}</p>
+              <p className="text-gray-700 flex items-center ">{rank.Reason}</p>
             </div>
           );
         })}

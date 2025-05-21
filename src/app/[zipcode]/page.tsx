@@ -73,7 +73,7 @@ export default function Page() {
       <div className="bg-white">
       <div className="p-5">
         <h2 className=" text-[30px] font-bold text-black text-center ">
-          Internet Providers in {zip?.city} ZipCode {zipCode}
+          Internet Providers in {zip?.city} {zip?.state} {zipCode}
         </h2>
       </div>
       {loading && (

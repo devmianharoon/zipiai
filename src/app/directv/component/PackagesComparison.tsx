@@ -224,7 +224,7 @@ export default function PackageComparison() {
                     ? "Reginal Sports Networks"
                     : "Full Channel Guide"}
               </h3>
-              {withLocalChannels === 2 && (
+              {withLocalChannels === 3 && (
                 <h3 className="text-lg font-bold mb-4">
                   Price <span>17/$</span>
                 </h3>

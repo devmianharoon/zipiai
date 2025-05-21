@@ -86,8 +86,8 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
 
                               {/* Temperature */}
                               <td className="py-1 px-2 text-center text-sm">
-                                <span>{day.day.mintemp_f}°</span> |{" "}
-                                <span>{day.day.maxtemp_f}°</span>
+                                <span>{day.day.maxtemp_f}°</span> |{" "}
+                                <span>{day.day.mintemp_f}°</span>
                               </td>
                             </tr>
                           )
