@@ -168,9 +168,9 @@ export default function InternetComparison(data: Props) {
               className="bg-white shadow p-4 rounded border-l-4 border-bluish flex gap-5">
               <div className="flex gap-2 items-center flex-col">
                 <div className="flex items-center justify-between gap-4">
-                  <h3 className="font-semibold text-lg ">
+                  {/* <h3 className="font-semibold text-lg ">
                   #{rank.Rank} 
-                </h3>
+                </h3> */}
                 <div className="relative w-auto h-full">
                   <Image
                     src={`/assets/logos/${logo}`} // Adjust the path as needed
@@ -185,10 +185,13 @@ export default function InternetComparison(data: Props) {
                 <button
                   className="flex gap-4   text-white border-1 rounded-full p-2 cursor-pointer"
                   onClick={() => window.open(`tel:${number}`)}>
-                  <Image src="/call.svg" alt="phone" width={20} height={20} />
-                  <span className="text-black">{number}</span>
+                  <Image src="/call.svg" alt="phone" width={15} height={15} />
+                  <span className="text-black text-center">{number}</span>
                 </button>
               </div>
+               <h3 className="font-semibold text-lg flex items-center">
+                  #{rank.Rank} 
+                </h3>
               <p className="text-gray-700 flex items-center ">{rank.Reason}</p>
             </div>
           );

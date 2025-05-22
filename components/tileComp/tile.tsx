@@ -114,7 +114,7 @@ export default function SingleProvider({ data }: { data: Provider }) {
                       <p>
                         <strong>Speeds:</strong> {plan.Speeds}
                       </p>
-                      <p>
+                      {/* <p>
                         <strong>Contract:</strong> {plan.Contract}
                       </p>
                       <p>
@@ -122,7 +122,7 @@ export default function SingleProvider({ data }: { data: Provider }) {
                       </p>
                       <p>
                         <strong>Extras:</strong> {plan.Extras}
-                      </p>
+                      </p> */}
                     </div>
                   )}
                 </div>

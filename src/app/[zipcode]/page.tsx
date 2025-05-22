@@ -34,7 +34,7 @@ export default function Page() {
     (state: RootState) => state.chat
   );
 
-  console.log("Messages from data:", data);
+  console.log("Messages from data in page :", data);
   console.log("Loading from Redux:", loading);
   console.log("Error from Redux:", error);
   const zipCode = Array.isArray(params.zipcode)
