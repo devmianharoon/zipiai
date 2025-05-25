@@ -135,48 +135,48 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { Provider } from "../../data/types/responsetype";
 
-interface Plan {
-  plan_name: string;
-  Price: string;
-  Speeds: string;
-  Contract?: string;
-  "Upfront Cost"?: string;
-  Extras?: string;
-}
+// interface Plan {
+//   plan_name: string;
+//   Price: string;
+//   Speeds: string;
+//   Contract?: string;
+//   "Upfront Cost"?: string;
+//   Extras?: string;
+// }
 
 export default function SingleProvider({ data }: { data: Provider }) {
   const [isAccordionOpen, setIsAccordionOpen] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState<number | null>(null);
-  const [customPlans, setCustomPlans] = useState<Plan[] | null>(null);
+  // const [customPlans, setCustomPlans] = useState<Plan[] | null>(null);
 
-  useEffect(() => {
-    const fetchCustomPlans = async () => {
-      try {
-        const response = await fetch(
-          `https://app.demo2.asdev.tech/pricing_plans/company/${encodeURIComponent(
-            data.ProviderName
-          )}`
-        );
-        const result = await response.json();
+  // useEffect(() => {
+  //   const fetchCustomPlans = async () => {
+  //     try {
+  //       const response = await fetch(
+  //         `https://app.demo2.asdev.tech/pricing_plans/company/${encodeURIComponent(
+  //           data.ProviderName
+  //         )}`
+  //       );
+  //       const result = await response.json();
 
-        const fetchedPlans = Array.isArray(result) ? result : result?.plans;
+  //       const fetchedPlans = Array.isArray(result) ? result : result?.plans;
 
-        if (Array.isArray(fetchedPlans) && fetchedPlans.length > 0) {
-          setCustomPlans(fetchedPlans);
-        } else {
-          setCustomPlans(null);
-        }
-      } catch (error) {
-        console.error("Error fetching custom plans:", error);
-        setCustomPlans(null);
-      }
-    };
+  //       if (Array.isArray(fetchedPlans) && fetchedPlans.length > 0) {
+  //         setCustomPlans(fetchedPlans);
+  //       } else {
+  //         setCustomPlans(null);
+  //       }
+  //     } catch (error) {
+  //       console.error("Error fetching custom plans:", error);
+  //       setCustomPlans(null);
+  //     }
+  //   };
 
-    fetchCustomPlans();
-  }, [data.ProviderName]);
+  //   fetchCustomPlans();
+  // }, [data.ProviderName]);
 
   const toggleAccordion = () => {
     setIsAccordionOpen(!isAccordionOpen);
@@ -187,8 +187,8 @@ export default function SingleProvider({ data }: { data: Provider }) {
     setSelectedPlan(selectedPlan === index ? null : index);
   };
 
-  const plansToDisplay =
-    customPlans && customPlans.length > 0 ? customPlans : data.plans;
+  // const plansToDisplay =
+  //   customPlans && customPlans.length > 0 ? customPlans : data.plans;
 
   return (
     <div className="max-w-6xl mx-auto p-6 rounded-xl border border-gray-200 bg-white">
@@ -253,9 +253,9 @@ export default function SingleProvider({ data }: { data: Provider }) {
 
         {/* Features Section */}
         <div className="self-baseline p-2.5">
-          <h3 className="text-2xl font-bold text-gray-600">Features</h3>
+          <h3 className="text-2xl font-bold text-gray-600">Feactures</h3>
           <ul className="list-disc list-inside text-black space-y-1">
-            {data.feactures.map((feature, index) => (
+            {data.features.map((feature, index) => (
               <li key={index}>{feature}</li>
             ))}
           </ul>
@@ -272,7 +272,7 @@ export default function SingleProvider({ data }: { data: Provider }) {
           </div>
           {isAccordionOpen && (
             <div className="mt-4">
-              {plansToDisplay.map((plan, index) => (
+              {data.plans.map((plan, index) => (
                 <div key={index} className="border-b border-gray-200">
                   <button
                     onClick={() => handlePlanClick(index)}

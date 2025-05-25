@@ -16,7 +16,7 @@ export type Provider = {
   max_upload_speed: string;
   Connection_Type: string;
   available: string;
-  feactures: string[];
+  features: string[];
   "Data Caps": string;
   Contract: string;
   "Best For": string;
