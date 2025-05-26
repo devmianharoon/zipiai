@@ -1,0 +1,114 @@
+[
+  {
+    "name": "YouTube TV",
+    "logo": "/assets/logos/youtube-tv-logo.svg",
+    "description": "Live TV streaming with 100+ channels, unlimited DVR, and no cable box required.",
+    "features": [
+      "100+ live channels including sports, news, and entertainment",
+      "Unlimited DVR with 9-month storage",
+      "Stream on 3 devices simultaneously",
+      "Works on smart TVs, mobile devices, tablets, and browsers",
+      "Available nationwide (with some regional channel variations)"
+    ],
+    "price": {
+      "amount": "$82.99/month",
+      "trial": "10-day free trial available"
+    }
+  },
+  {
+    "name": "Sling TV",
+    "logo": "/assets/logos/logo-sling-rebrand.svg",
+    "description": "Affordable live TV streaming with customizable channel packages and no long-term contracts.",
+    "features": [
+      "40+ channels in base Orange or Blue packages",
+      "Cloud DVR with 50 hours (upgradable to 200 hours for a fee)",
+      "Stream on 1-3 devices depending on plan (Orange: 1, Blue: 3)",
+      "Works on smart TVs, mobile devices, Roku, Fire TV, and more",
+      "Local channels like ABC, Fox, and NBC in select markets"
+    ],
+    "price": {
+      "amount": "$46/month (base Orange or Blue package)",
+      "trial": "7-day free trial available in some cases"
+    }
+  },
+  {
+    "name": "Hulu + Live TV",
+    "logo": "/assets/logos/hulu-tv.png",
+    "description": "Live TV streaming combined with Hulu’s on-demand library, including sports, news, and entertainment.",
+    "features": [
+      "85+ live channels including sports, news, and entertainment",
+      "Unlimited DVR with 9-month storage",
+      "Stream on 2 devices simultaneously",
+      "Works on smart TVs, mobile devices, tablets, and browsers",
+      "Includes Disney+ and ESPN+ with base plan"
+    ],
+    "price": {
+      "amount": "$83/month",
+      "trial": "3-day free trial available"
+    }
+  },
+  {
+    "name": "FuboTV",
+    "logo": "/assets/logos/fubo.svg",
+    "description": "Sports-focused live TV streaming with a wide selection of channels and 4K streaming options.",
+    "features": [
+      "213+ channels in base Essential plan",
+      "Unlimited DVR with 1000 hours of storage",
+      "Stream on up to 10 devices at home, 3 on the go",
+      "Works on smart TVs, Amazon Fire TV, Roku, Apple TV, and more",
+      "Strong sports coverage, including NFL, NBA, and MLB (missing Warner Bros. Discovery channels)"
+    ],
+    "price": {
+      "amount": "$84.99/month (Essential plan)",
+      "trial": "7-day free trial available"
+    }
+  },
+  {
+    "name": "DirecTV",
+    "logo": "/assets/logos/Directv_PreferredDealer (Color).png",
+    "description": "Live TV streaming with extensive channel lineups and strong regional sports network coverage.",
+    "features": [
+      "75+ channels in base Entertainment package",
+      "Unlimited cloud DVR (with 9-month storage)",
+      "Stream on unlimited devices at home, 3 on the go",
+      "Works on smart TVs, mobile devices, Roku, and Fire TV",
+      "Nearly 250 PBS stations and regional sports networks available"
+    ],
+    "price": {
+      "amount": "$87/month (Entertainment package)",
+      "trial": "7-day free trial available in some cases"
+    }
+  },
+  {
+    "name": "Xfinity Cable TV",
+    "logo": "/assets/logos/xfinity.svg",
+    "description": "Traditional cable TV service with a variety of channel packages and on-demand content.",
+    "features": [
+      "125+ channels in base Choice TV package",
+      "X1 DVR with up to 300 hours of storage (varies by plan)",
+      "Stream on multiple devices via Xfinity Stream app",
+      "Works on Xfinity X1 boxes, smart TVs, and mobile devices",
+      "Local channels and regional sports networks included"
+    ],
+    "price": {
+      "amount": "$20-$80/month (varies by package and region)",
+      "trial": "No free trial typically offered"
+    }
+  },
+  {
+    "name": "Spectrum TV",
+    "logo": "/assets/logos/spectrum.png",
+    "description": "Cable TV service with flexible channel packages and no long-term contracts.",
+    "features": [
+      "125+ channels in base Spectrum TV Select package",
+      "Cloud DVR with up to 50 hours (upgradable for a fee)",
+      "Stream on multiple devices via Spectrum TV app",
+      "Works on smart TVs, mobile devices, and Spectrum receivers",
+      "Local channels and select regional sports networks included"
+    ],
+    "price": {
+      "amount": "$59.99-$79.99/month (varies by package and region)",
+      "trial": "No free trial typically offered"
+    }
+  }
+]

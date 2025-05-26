@@ -8,6 +8,12 @@ import ServiceTylesTop from "./component/ServiceTylesTop";
 import TopNavigation from "./component/TopNavigation";
 
 export default function page() {
+  const data = {
+    title: "Bundle and Save, DirecTV Now",
+    subtitle: "Beam it or Stream it",
+    description:
+      "Choose a DirecTV Package, Call Now for Special Offers",
+  };
   return (
     <>
       <main className="bg-white">
@@ -16,7 +22,7 @@ export default function page() {
         {/* <!--Top Buttom --> */}
         <TopNavigation />
         {/* <!-- Hero Banner --> */}
-        <HeroBanner />
+        <HeroBanner data={data}/>
         {/* <!-- Service Tiles --> */}
         <div className="w-full max-w-7xl mx-auto px-4 py-12">
           <ServiceTiles />

@@ -9,7 +9,7 @@ import Moving from "../home/Moving";
 
 export default function HeroDynamic({ zipCode }: { zipCode: string }) {
   const dispatch = useDispatch<AppDispatch>();
-
+  const zip = useSelector((state: RootState) => state.zip.data);
   useEffect(() => {
     if (zipCode) {
       dispatch(fetchWeather(zipCode));
@@ -61,7 +61,8 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
                               key={day.date_epoch || index}
                               className={`${
                                 index < 2 ? "border-b  border-gray-300" : ""
-                              }`}>
+                              }`}
+                            >
                               {/* Day */}
                               <td className="py-1 px-2 text-center">
                                 {new Date(day.date).toLocaleDateString(
@@ -107,8 +108,8 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
 
             {/* Static Section Below */}
             <div className="flex gap-12 justify-center items-center mt-6">
-              <h2 className="fz55 text-[30px] font-bold text-white">
-                Show Me Other Providers
+              <h2 className="fz55 text-[30px] font-bold text-white ">
+                Internet Providers in {zip?.city} {zip?.state} {zipCode}
               </h2>
               <div className="rightSection">
                 <div className="flex justify-center">
