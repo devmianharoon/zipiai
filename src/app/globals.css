@@ -1,32 +1,58 @@
-@import "tailwindcss";
+ @import "tailwindcss";
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-black: #0C0A1D;
+  --color-white: #FFFFFF;
+  --color-red: #FF4140;
+  --color-blue: #0B8BDD;
+  --color-silver: #BAB0B8;
+  --color-gradient-start: #0B8BDD;
+  --color-gradient-end: #065A77;
 }
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-
-  --color-redish: #ff5a5f;
-  --color-bluish: #0a6bde;
-  --color-navy: #24324a;
-  --color-darknavy: #1d293e;
-  --color-navtext: rgb(72, 72, 72);
-  --color-primary: white;
-  --color-finputbg: rgb(53, 71, 101);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@font-face {
+font-family: "SF UI Display";
+src: url('/assets/fonts/SF-UI-Display-Regular.ttf') format('truetype');}
+@layer base {
+  h1 {
+    @apply  font-semibold;
+    font-size: 48px;
+    line-height: 100%;
+    letter-spacing: -2%;
+    color: var(--color-black);
   }
-}
+  h2 {
+    @apply  font-medium;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: -2%;
+    color: var(--color-black);
+  }
+  h3 {
+    @apply  font-medium;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: -2%;
+    color: var(--color-black);
+  }
+  p {
+    @apply  font-medium;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-black);
+  }
+  .p-tight {
+    @apply  font-medium;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--color-black);
+  }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: "Nunito", sans-serif; 
+  .stroke-2 {
+    border: 2px solid var(--color-blue);
+  }
+
+  .gradient-overlay {
+    background-image: linear-gradient(90deg, var(--color-gradient-start), var(--color-gradient-end));
+  }
 }

@@ -74,6 +74,7 @@ const Index = () => {
 
       {/* <!--  Mobile Menu --> */}
       <MobileMenu />
+      <h1 className="flex font-fs">hi </h1>
 
       {/* <!-- Modal --> */}
       {/* <PopupSignInUp /> */}
