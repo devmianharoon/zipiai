@@ -16,6 +16,10 @@ const config: Config = {
       colors: {
         dark: "#047857",
       },
+      // fontFamily: {
+      //   sf: ["SF UI Display", "Helvetica", "Arial", "sans-serif"],
+      //   poppins: ["Poppins", "sans-serif"],
+      // },
     },
   },
   plugins: [],
