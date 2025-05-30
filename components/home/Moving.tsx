@@ -1,4 +1,4 @@
-'use client";'
+'use client";';
 import { useRouter } from "next/navigation";
 import Searchbtn from "../buttonComp/Searchbtn";
 import { useState } from "react";
@@ -20,17 +20,26 @@ export default function Moving() {
   };
 
   return (
-    <div className="absolute bottom-0 left-0 py-10 px-10 flex gap-5">
-      <h1 className="text-[30px] font-bold text-primary m-0">Moving ?</h1>
-      <input
-        type="text"
-        placeholder="Zip Code"
-        className="py-[10px] px-[20px] rounded-lg outline-none border-none bg-primary placeholder:text-navtext text-navtext"
-        value={zipCode}
-        onChange={(e) => setZipCode(e.target.value)}
-        onKeyDown={handleKeyDown}
-      />
-      <Searchbtn text={"Submit"} wclass="w-26" onClick={handleClick} />
+    <div className="absolute bottom-0 left-0 h-[130px] w-[428px] box-border px-[22px] py-[22px]  bg-redish rounded-[12px]">
+      <h1 className="text-[20px] font-[500] text-primary text-center pb-[10px]">
+        Moving ? Check for providers.
+      </h1>
+      <div className="flex gap-[15px]">
+        <input
+          type="text"
+          placeholder="Enter zip code"
+          className="py-[10px] px-[20px] w-[230px] rounded-[80px] outline-none border-none bg-primary placeholder:text-navtext text-navtext"
+          value={zipCode}
+          onChange={(e) => setZipCode(e.target.value)}
+          onKeyDown={handleKeyDown}
+        />
+        <Searchbtn
+          text={"Submit"}
+          wclass="w-[140px]"
+          onClick={handleClick}
+          bgColor="bg-black"
+        />
+      </div>
     </div>
   );
 }

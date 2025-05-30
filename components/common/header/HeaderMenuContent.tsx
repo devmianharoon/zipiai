@@ -8,16 +8,16 @@ const HeaderMenuContent = ({ float = "" }) => {
   const pathname = usePathname();
 
   const menuItems = [
-    { name: "Home Internet", path: "/home-internet" },
-    { name: "Business Internet", path: "/business-internet" },
-    { name: "DirecTV", path: "/directv" },
-    { name: "Help", path: "/contact" },
+    { name: "About us", path: "/home-internet" },
+    { name: "Personal Internet", path: "/business-internet" },
+    { name: "Commercial Internet", path: "/contact" },
+    { name: "Direct TV", path: "/directv" },
   ];
 
   return (
     <ul
       id="respMenu"
-      className="hidden md:flex gap-6 text-navtext text-[16px] justify-center items-center "
+      className="hidden md:flex gap-10 text-navtext text-[16px] justify-center items-center "
       data-menu-style="horizontal">
       {menuItems.map((item, index) => (
         <li key={index}>
@@ -29,9 +29,9 @@ const HeaderMenuContent = ({ float = "" }) => {
         </li>
       ))}
 
-      <li className={`list-inline-item add_listing ${float}`}>
+      {/* <li className={`list-inline-item add_listing ${float}`}>
         <Searchbtn text="Check my Speed" />
-      </li>
+      </li> */}
     </ul>
   );
 };

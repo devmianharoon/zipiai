@@ -4,6 +4,7 @@ import Link from "next/link";
 // import { useState } from "react";
 import HeaderMenuContent from "../common/header/HeaderMenuContent";
 import Image from "next/image";
+import Searchbtn from "../buttonComp/Searchbtn";
 
 const Header = () => {
   // const [navbar, setNavbar] = useState(true);
@@ -25,14 +26,14 @@ const Header = () => {
   // }, []);
 
   return (
-    <header className={"w-full md:flex justify-center items-center bg-white py-6 hidden "}>
-      <div className="container  p-0 flex justify-between ">
+    <header className={"w-full md:flex justify-center items-center bg-white h-[60px] hidden "}>
+      <div className="container  lg:px-12 flex justify-between items-center ">
         {/* <!-- Ace Responsive Menu --> */}
 
         <Link href="/" className="navbar_brand float-left hidden md:block">
           <Image
-            width={120}
-            height={65}
+            width={112}
+            height={40}
             className="logo1 contain"
             src="/assets/images/hyperlogo.png"
             alt="header-logo.png"
@@ -51,6 +52,10 @@ const Header = () => {
         <nav>
           <HeaderMenuContent />
         </nav>
+
+        <div className="hidden md:flex">
+          <Searchbtn text="Speed test"  bgColor="bg-redish" wclass="120px"/>
+        </div>
         {/* End .navbar */}
       </div>
     </header>
