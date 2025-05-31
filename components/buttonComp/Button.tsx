@@ -4,12 +4,13 @@ import React from "react";
 interface btn {
   href: string;
   text: string;
+  class?: string;
 }
 
 const Button = (props: btn) => {
   return (
     <Link href={props.href}>
-      <span className="dn-lg"> {props.text}</span>
+      <span className={`${props.class}`}> {props.text}</span>
     </Link>
   );
 };

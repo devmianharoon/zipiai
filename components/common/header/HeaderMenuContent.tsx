@@ -2,9 +2,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import Searchbtn from "../../buttonComp/Searchbtn";
+// import Searchbtn from "../../buttonComp/Searchbtn";
 
-const HeaderMenuContent = ({ float = "" }) => {
+const HeaderMenuContent = () => {
   const pathname = usePathname();
 
   const menuItems = [

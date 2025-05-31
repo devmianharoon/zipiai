@@ -47,7 +47,12 @@ src: url('/assets/fonts/SF-UI-Display-Regular.ttf') format('truetype');}
     line-height: 24px;
     color: var(--color-black);
   }
-
+.p-large {
+    @apply  font-medium;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--color-black);
+  }
   .stroke-2 {
     border: 2px solid var(--color-blue);
   }

@@ -26,20 +26,24 @@ const Crusal = () => {
     speed: 5000,
     cssEase: "linear",
     infinite: true,
-    slidesToShow: 6,
+    slidesToShow: 7,
     slidesToScroll: 1,
     arrows: false,
     pauseOnHover: false,
   };
 
   return (
-    <div className="w-full bg-white flex justify-center items-center">
-      <Slider {...settings} className="container mx-auto bg-white">
+    <div className="w-full bg-white  text-center py-4">
+      <p className="py-8 p-large">
+        Hundreds of awards and 8,000+ satisfied customers
+      </p>
+
+      <Slider {...settings} className="w-full mx-auto bg-white">
         {imgData2.map((item) => (
           <div
             key={item.id}
             className="h-[80px] flex justify-center items-center px-2">
-            <div className="relative h-[35px] w-auto">
+            <div className="relative h-[40px] w-auto">
               <Image
                 src={item.img}
                 alt="logo"

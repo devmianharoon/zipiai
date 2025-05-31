@@ -14,13 +14,17 @@ import {
   setLocationError,
   fetchZipCode,
 } from "../../store/slices/LocationSlice";
-import TestSpeed from "./TestSpeed";
+
 import Crusal from "./Crusal";
-import SectionOne from "./SectionOne";
 
-import NewsLetter from "./NewsLetter";
+// import NewsLetter from "./NewsLetter";
 
-import Showcase from "./Showcase";
+import Whyus from "./Whyus";
+
+import BannerThree from "./BannerThree";
+import OfferSec from "./OfferSec";
+import Blogs from "./Blogs";
+import Experience from "./Experience";
 
 // import SingleProvider from "../tileComp/tile";
 
@@ -74,7 +78,6 @@ const Index = () => {
 
       {/* <!--  Mobile Menu --> */}
       <MobileMenu />
-      <h1 className="flex font-fs">hi </h1>
 
       {/* <!-- Modal --> */}
       {/* <PopupSignInUp /> */}
@@ -83,27 +86,44 @@ const Index = () => {
       <Hero />
       {/* <SingleProvider data={data} /> */}
 
-      <TestSpeed />
+      <Whyus />
+
+      {/* <TestSpeed /> */}
       {/*logos crusal */}
       <Crusal />
+
+      <OfferSec />
+
+      <BannerThree
+        data={{
+          title: "Stream. Chill. Repeat.",
+
+          description:
+            "Enjoy cinematic experiences from the comfort of your couch. Our reliable and buffer-free streaming services bring your favorite movies, shows, and live sports to life—perfect for family nights and weekend marathons.",
+        }}
+      />
+
+      <Blogs/>
+      <Experience/>
+
       {/*show case cards */}
-      <Showcase />
+      {/* <Showcase /> */}
       {/* <BannerOne /> */}
       {/* section one with left image right text  */}
-      <SectionOne />
+      {/* <SectionOne /> */}
       {/* <BannerTwo /> */}
 
       {/* section two with left text right image  */}
       {/* <!-- Placeholder Section --> */}
-      <div className="w-full max-w-6xl mx-auto px-4 mb-10 ">
+      {/* <div className="w-full max-w-6xl mx-auto px-4 mb-10 ">
         <div className="bg-blue-50 rounded-lg p-6 w-auto h-[300px] ">
           <div className="flex flex-col items-center justify-center h-full">
             <h2 className="text-2xl font-semibold text-black">Placeholder</h2>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* <SectionTwo /> */}
-      <NewsLetter />
+      {/* <NewsLetter /> */}
       {/* <!-- Our Footer --> */}
       <section className="footer_one flex justify-center items-center bg-bluish pt-[70px] ">
         <div className="container ">

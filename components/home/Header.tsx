@@ -26,7 +26,10 @@ const Header = () => {
   // }, []);
 
   return (
-    <header className={"w-full md:flex justify-center items-center bg-white h-[60px] hidden "}>
+    <header
+      className={
+        "w-full md:flex justify-center items-center bg-white h-[60px] hidden "
+      }>
       <div className="container  lg:px-12 flex justify-between items-center ">
         {/* <!-- Ace Responsive Menu --> */}
 
@@ -53,8 +56,13 @@ const Header = () => {
           <HeaderMenuContent />
         </nav>
 
-        <div className="hidden md:flex">
-          <Searchbtn text="Speed test"  bgColor="bg-redish" wclass="120px"/>
+        <div className="hidden md:flex md:justify-center md:items-center gap-3">
+          <Searchbtn
+            text="Speed test"
+            bgColor="bg-[var(--color-blue)]"
+            wclass="120px"
+          />
+          <Image src={"/assets/images/headericon.png"} alt={"header icon"} height={20} width={20}/>
         </div>
         {/* End .navbar */}
       </div>

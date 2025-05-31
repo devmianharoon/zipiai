@@ -3,6 +3,8 @@ import { useRouter } from "next/navigation";
 import Searchbtn from "../buttonComp/Searchbtn";
 import { useState } from "react";
 
+import Image from "next/image";
+
 export default function Moving() {
   const router = useRouter();
   const [zipCode, setZipCode] = useState("");
@@ -20,21 +22,40 @@ export default function Moving() {
   };
 
   return (
-    <div className="absolute bottom-0 left-0 h-[130px] w-[428px] box-border px-[22px] py-[22px]  bg-redish rounded-[12px]">
-      <h1 className="text-[20px] font-[500] text-primary text-center pb-[10px]">
+    <div className="absolute bottom-0 left-0 h-[130px] w-[428px] box-border px-[22px] py-[22px]  bg-[var(--color-red)] rounded-[12px] text-[var(--color-white)]">
+      <h1 className="text-[20px] font-[500] text-center pb-[10px] text-[var(--color-white)]">
         Moving ? Check for providers.
       </h1>
-      <div className="flex gap-[15px]">
-        <input
-          type="text"
-          placeholder="Enter zip code"
-          className="py-[10px] px-[20px] w-[230px] rounded-[80px] outline-none border-none bg-primary placeholder:text-navtext text-navtext"
-          value={zipCode}
-          onChange={(e) => setZipCode(e.target.value)}
-          onKeyDown={handleKeyDown}
-        />
+      <div className="flex gap-[15px] justify-between items-center">
+        <div className="relative">
+          <input
+            type="text"
+            placeholder="Enter zip code"
+            className="py-[10px] px-[20px] w-[230px] rounded-[80px] outline-none border-none bg-primary placeholder:text-[var(--color-silver)]  bg-[var(--color-white)] text-[var(--color-silver)]"
+            value={zipCode}
+            onChange={(e) => setZipCode(e.target.value)}
+            onKeyDown={handleKeyDown}
+          />
+          <Image
+            src={"/assets/images/icons/search.png"}
+            alt="hh"
+            height={20}
+            width={20}
+            className="absolute right-4 top-[22px] transform -translate-y-1/2 text-[var(--color-silver)] text-sm"
+          />
+        </div>
         <Searchbtn
-          text={"Submit"}
+          text={
+            <span className="flex items-center justify-center gap-2">
+              <Image
+                src={"/assets/images/icons/globe.png"}
+                alt="icon"
+                height={18}
+                width={18}
+              />
+              Submit
+            </span>
+          }
           wclass="w-[140px]"
           onClick={handleClick}
           bgColor="bg-black"
