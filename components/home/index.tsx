@@ -125,17 +125,17 @@ const Index = () => {
       {/* <SectionTwo /> */}
       {/* <NewsLetter /> */}
       {/* <!-- Our Footer --> */}
-      <section className="footer_one flex justify-center items-center bg-bluish pt-[70px] ">
-        <div className="container ">
-          <div className="row">
+      <section className="footer_one w-full flex justify-center items-center  bg-bluish pt-[270px] bg-[rgba(11,107,221,0.1)]">
+        <div className="container flex justify-center items-center">
+     
             <Footer />
-          </div>
+  
         </div>
       </section>
 
       {/* <!-- Our Footer Bottom Area --> */}
-      <section className="footer_middle_area flex justify-center items-center bg-bluish py-14">
-        <div className="container ">
+      <section className="footer_middle_area flex justify-center items-center bg-[rgba(11,107,221,0.1)]  py-10">
+        <div className="container flex justify-center items-center">
           <CopyrightFooter />
         </div>
       </section>

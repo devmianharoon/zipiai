@@ -1,72 +1,172 @@
 import Link from "next/link";
 import Social from "./Social";
+import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+
+import {
+  faPhone,
+  faEnvelope,
+  faLocationDot,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
   return (
-    <footer className="grid grid-cols-12 gap-16 container mx-auto px-4 py-4 text-white text-[14px] ">
-      <div className="footer_about_widget leading-[2.6] col-span-5">
-        <h4 className="font-bold text-[18px] mb-6">About Site</h4>
-        <p className="leading-[2]">
-          We&apos;re reimagining how you buy, sell and rent. It&apos; s now
-          easier to get into a place you love. So let&apos; s do this, together.
-        </p>
-      </div>
-
-      {/* End .col */}
-
-      <div className="footer_qlink_widget leading-[2.6] text-[14px] col-span-2">
-        <h4 className="text-[18px] font-bold">Quick Links</h4>
-        <ul className="list-unstyled">
-          <li>
-            <Link href="/">About Us</Link>
-          </li>
-          <li>
-            <Link href="/">Terms & Conditions</Link>
-          </li>
-          <li>
-            <Link href="/">User&apos; s Guide</Link>
-          </li>
-          <li>
-            <Link href="/">Support Center</Link>
-          </li>
-          <li>
-            <Link href="/">Press Info</Link>
-          </li>
-        </ul>
-      </div>
-
-      {/* End .col */}
-
-      <div className="footer_contact_widget leading-[2.6] text-[14px] col-span-2">
-        <h4 className="text-[18px] font-bold">Contact Us</h4>
-        <ul className="list-unstyled">
-          <li>
-            <a href="mailto:info@findhouse.com">info@findhouse.com</a>
-          </li>
-          <li>
-            <a href="#">Collins Street West, Victoria</a>
-          </li>
-          <li>
-            <a href="#">8007, Australia.</a>
-          </li>
-          <li>
-            <a href="tel:+4733378901">+1 246-345-0699</a>
-          </li>
-          <li>
-            <a href="tel:+4733378901">+1 246-345-0695</a>
-          </li>
-        </ul>
-      </div>
-
-      {/* End .col */}
-
-      <div className="footer_social_widget leading-[2.6] text-[14px] col-span-3">
-        <h4 className="text-[18px] font-bold">Follow us</h4>
+    <footer className="w-[1408px] ">
+      <div className="w-full flex justify-between items-center py-4 border-b border-[var(--color-silver)]">
+        <Image
+          src={"/assets/images/hyperg1.png"}
+          alt={"image"}
+          height={57}
+          width={160}
+        />
         <ul className="flex gap-x-4 text-primary">
           <Social />
         </ul>
+      </div>
 
-        {/* <SubscribeForm /> */}
+      <div className="flex justify-between py-6">
+        <div className="footer_qlink_widget leading-[2.6] text-[14px] ">
+          <h4 className="text-[20px] font-semibold text-[var(--color-blue)]">
+            Quick Links
+          </h4>
+          <ul className="list-unstyled">
+            <li>
+              <Link href="/">Home </Link>
+            </li>
+            <li>
+              <Link href="/">About Us</Link>
+            </li>
+            <li>
+              <Link href="/">Request a demo</Link>
+            </li>
+            <li>
+              <Link href="/">Solutions</Link>
+            </li>
+            <li>
+              <Link href="/">Products</Link>
+            </li>
+            <li>
+              <Link href="/">Support</Link>
+            </li>
+            <li>
+              <Link href="/">Contact us</Link>
+            </li>
+            <li>
+              <Link href="/">Pricing</Link>
+            </li>
+          </ul>
+        </div>
+
+        <div className="footer_qlink_widget leading-[2.6] text-[14px] col-span-2">
+          <h4 className="text-[20px] font-semibold text-[var(--color-blue)]">
+            Products
+          </h4>
+          <ul className="list-unstyled">
+            <li>
+              <Link href="/">Cable internet</Link>
+            </li>
+            <li>
+              <Link href="/">Satellite internet</Link>
+            </li>
+            <li>
+              <Link href="/">Fiber optics</Link>
+            </li>
+          </ul>
+        </div>
+
+        <div className="footer_qlink_widget leading-[2.6] text-[14px] col-span-2">
+          <h4 className="text-[20px] font-semibold text-[var(--color-blue)]">
+            Resources
+          </h4>
+          <ul className="list-unstyled">
+            <li>
+              <Link href="/">Blog</Link>
+            </li>
+            <li>
+              <Link href="/">User guide</Link>
+            </li>
+            <li>
+              <Link href="/">Support</Link>
+            </li>
+            <li>
+              <Link href="/">Press info</Link>
+            </li>
+          </ul>
+        </div>
+
+        {/* End .col */}
+
+        <div className="footer_contact_widget leading-[2.6] text-[14px] col-span-2">
+          <h4 className="text-[20px] font-semibold text-[var(--color-blue)]">
+            Contact
+          </h4>
+          <ul className="list-unstyled">
+            <li>
+              <a href="tel:+4733378901">
+                <FontAwesomeIcon
+                  icon={faPhone}
+                  className="text-[var(--color-blue)] pr-2"
+                />
+                <span> +1 246-345-0699</span>
+              </a>
+            </li>
+            <li>
+              <a href="tel:+4733378901">
+                <FontAwesomeIcon
+                  icon={faPhone}
+                  className="text-[var(--color-blue)] pr-2"
+                />{" "}
+                <span> +1 246-345-0695</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:info@findhouse.com">
+                <FontAwesomeIcon
+                  icon={faEnvelope}
+                  className="text-[var(--color-blue)] pr-2"
+                />{" "}
+                <span>info@findhouse.com</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                {" "}
+                <FontAwesomeIcon
+                  icon={faLocationDot}
+                  className="text-[var(--color-blue)] pr-2"
+                />{" "}
+                <span>Collins Street West, Victoria</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div className="footer_social_widget leading-[2.6] text-[14px] w-[444px]">
+          <h4 className="text-[20px] font-semibold text-[var(--color-blue)]">
+            Sign up Newsletter
+          </h4>
+
+          <ul>
+            <li>
+              <p className="">
+                Subscribe to our newsletter for the latest broadband deals,
+                tips, and exclusive updates.
+              </p>
+            </li>
+            <li className="py-6 relative ">
+              <input
+                type="email"
+                placeholder="Enter email adress"
+                className="w-full rounded-[32px] h-[60px] box-border placeholder:text-[var(--color-silver)] border border-[var(--color-silver)] px-6"
+              />
+              <button className="absolute right-2 bg-[var(--color-blue)] h-[44px] w-[44px] text-[var(--color-white)] rounded-[50%] top-8 cursor-pointer">
+                <FontAwesomeIcon icon={faChevronRight} />
+              </button>
+            </li>
+          </ul>
+          {/* <SubscribeForm /> */}
+        </div>
       </div>
     </footer>
   );
