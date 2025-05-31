@@ -7,9 +7,11 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 
 // ✅ Set default Leaflet icons
-delete (L.Icon.Default.prototype as Partial<{ _getIconUrl?: () => string }>)._getIconUrl;
+delete (L.Icon.Default.prototype as Partial<{ _getIconUrl?: () => string }>)
+  ._getIconUrl;
 L.Icon.Default.mergeOptions({
-  iconRetinaUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
+  iconRetinaUrl:
+    "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
   iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
   shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
 });
@@ -56,8 +58,12 @@ interface MapComponentProps {
 
 const MapComponent = ({ zipcode }: MapComponentProps) => {
   const [providers, setProviders] = useState<Provider[]>([]);
-  const [selectedProviderId, setSelectedProviderId] = useState<number | null>(null);
-  const [mapCenter, setMapCenter] = useState<[number, number]>([40.7128, -74.006]); // Default to NYC
+  const [selectedProviderId, setSelectedProviderId] = useState<number | null>(
+    null
+  );
+  const [mapCenter, setMapCenter] = useState<[number, number]>([
+    40.7128, -74.006,
+  ]); // Default to NYC
 
   const { data } = useSelector((state: RootState) => state.chat);
 
@@ -115,44 +121,15 @@ const MapComponent = ({ zipcode }: MapComponentProps) => {
     }
   }, [selectedProviderId]);
 
-  const selectedProvider = providers.find((p) => p.providerID === selectedProviderId);
+  const selectedProvider = providers.find(
+    (p) => p.providerID === selectedProviderId
+  );
 
   return (
-    <div className="p-4">
+    <div className="">
       {providers.length > 0 ? (
-        <div className="flex flex-col md:flex-row gap-4">
-          {/* Left Side: List of Stores */}
-          <div className="w-full md:w-1/3 space-y-4">
-            <div className="flex items-center justify-between mb-4">
-              <h2 className="text-xl font-semibold">Places</h2>
-              <select
-                onChange={(e) => setSelectedProviderId(Number(e.target.value))}
-                value={selectedProviderId ?? ""}
-                className="p-2 border border-gray-300 rounded"
-              >
-                {providers.map((provider) => (
-                  <option key={provider.providerID} value={provider.providerID}>
-                    {provider.providerName}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            {selectedProvider?.stores.map((store, index) => (
-              <div
-                key={index}
-                className="border rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow"
-              >
-                <h3 className="text-lg font-semibold">{store.name}</h3>
-                <p className="text-gray-600">
-                  {store.address}, {store.cityName}, {store.stateAbbr} {store.zip}
-                </p>
-              </div>
-            ))}
-          </div>
-
+        <div className="w-full px-[21px] rounded-xl lg:max-w-6xl">
           {/* Right Side: Map */}
-          <div className="w-full md:w-2/3">
             <MapContainer
               center={mapCenter}
               zoom={12}
@@ -167,7 +144,8 @@ const MapComponent = ({ zipcode }: MapComponentProps) => {
                   <Popup>
                     <strong>{store.name}</strong>
                     <br />
-                    {store.address}, {store.cityName}, {store.stateAbbr} {store.zip}
+                    {store.address}, {store.cityName}, {store.stateAbbr}{" "}
+                    {store.zip}
                     <br />
                     📞 {store.phone}
                   </Popup>
@@ -175,7 +153,6 @@ const MapComponent = ({ zipcode }: MapComponentProps) => {
               ))}
               <ChangeMapCenter center={mapCenter} />
             </MapContainer>
-          </div>
         </div>
       ) : (
         <div>No matching providers found for this zip code.</div>

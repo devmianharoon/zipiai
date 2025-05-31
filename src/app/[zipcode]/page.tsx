@@ -13,16 +13,33 @@ import { useParams } from "next/navigation";
 import ZipBreadcrumb from "../../../components/home/Breadcrumb";
 import { useEffect } from "react";
 import { fetchZipData } from "../../../store/slices/zipSlice";
-import InternetTypes from "../../../components/ZipCode/InternetComparison";
 import { fetchProvidersByZip } from "../../../store/slices/chatSlice";
 import ProviderComparison from "../../../components/ProviderComparison";
 import MapComponent from "./component/Map";
 import NearByCities from "../../../components/NeabyCIties";
-import TVProvider from "./component/TvSection";
-import LiveTvData from "../../../data/LiveTvData.json";
-import { Search, ChevronDown, Check } from "lucide-react";
+import { Search, ChevronDown } from "lucide-react";
+import Image from "next/image";
+import NearbyCities from "./component/NearByCities";
 
 export default function Page() {
+  // Sample city data
+  const citiesData = [
+    { name: "Milpitas", state: "CA", id: "milpitas-ca" },
+    { name: "Sunnyvale", state: "CA", id: "sunnyvale-ca" },
+    { name: "Campbell", state: "CA", id: "campbell-ca" },
+    { name: "Alviso", state: "CA", id: "alviso-ca" },
+    { name: "San Jose", state: "CA", id: "san-jose-ca" },
+    { name: "Mountain View", state: "CA", id: "mountain-view-ca" },
+    { name: "Cupertino", state: "CA", id: "cupertino-ca" },
+    { name: "Palo Alto", state: "CA", id: "palo-alto-ca" },
+    { name: "Newark", state: "CA", id: "newark-ca" },
+    { name: "Fremont", state: "CA", id: "fremont-ca" },
+    { name: "Stanford", state: "CA", id: "stanford-ca" },
+    { name: "Los Gatos", state: "CA", id: "los-gatos-ca" },
+    { name: "Portola Valley", state: "CA", id: "portola-valley-ca" },
+    { name: "Menlo Park", state: "CA", id: "menlo-park-ca" },
+  ];
+
   const params = useParams(); // Get dynamic route parameters as per Next.js docs
   console.log("Dynamic Parameters:", params);
   console.log("Zip code from URL:", params.zipcode);
@@ -90,14 +107,14 @@ export default function Page() {
           <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 text-blue-500 h-5 w-5" />
         </div>
         {/* <div className="space-y-3 mb-6"> */}
-          <button className="mb-[10px] lg:mb-0 w-full lg:w-[275px] flex items-center justify-between px-4 py-3 bg-white rounded-full border border-gray-300 text-gray-700 hover:bg-gray-50">
-            <span className="p-light">Filter by</span>
-            <ChevronDown className="h-5 w-5 text-blue-500" />
-          </button>
-          <button className="w-full lg:w-[275px] flex items-center justify-between px-4 py-3 bg-white rounded-full border border-gray-300 text-gray-700 hover:bg-gray-50">
-            <span className="p-light">Sort by</span>
-            <ChevronDown className="h-5 w-5 text-blue-500" />
-          </button>
+        <button className="mb-[10px] lg:mb-0 w-full lg:w-[275px] flex items-center justify-between px-4 py-3 bg-white rounded-full border border-gray-300 text-gray-700 hover:bg-gray-50">
+          <span className="p-light">Filter by</span>
+          <ChevronDown className="h-5 w-5 text-blue-500" />
+        </button>
+        <button className="w-full lg:w-[275px] flex items-center justify-between px-4 py-3 bg-white rounded-full border border-gray-300 text-gray-700 hover:bg-gray-50">
+          <span className="p-light">Sort by</span>
+          <ChevronDown className="h-5 w-5 text-blue-500" />
+        </button>
         {/* </div> */}
       </div>
 
@@ -108,19 +125,45 @@ export default function Page() {
           </div>
         )}
         {data?.providers.map((provider: Provider, index: number) => (
-          <div className="p-2" key={index}>
+          <div
+            className="w-full px-5 py-[15px] lg:max-w-6xl lg:mx-auto lg:pt-[25px]"
+            key={index}
+          >
             <SingleProvider data={provider} />
           </div>
         ))}
-        
+        {/* Call Section */}
+        <div className="w-full h-[372px] mx-auto px-[15px] mt-[60px]">
+          <div className="w-full h-full   bg-[url('/bg-page.png')] bg-cover bg-center bg-no-repeat flex justify-center items-center flex-col ">
+            <h1 className="text-white text-center">
+              Make a quick call to discuss your need, We suggest you the best
+              plan!{" "}
+            </h1>
+            <button
+              onClick={() => window.open(`tel:1800-123-4567`)}
+              className="w-[208px] h-[50px] mx-auto  bg-gray-900 text-white  rounded-full text-base font-medium hover:bg-gray-800 transition-colors"
+            >
+              <div className="flex justify-center items-center gap-2">
+                <Image
+                  src="/call-Icon.svg"
+                  alt="phone"
+                  width={24}
+                  height={24}
+                />
+                <span className="text-lg font-medium"> 888 564 5552</span>
+              </div>
+            </button>
+          </div>
+        </div>
         {/* TV Section */}
         {/* <TVProvider data={LiveTvData[0]} /> */}
 
         {/* Internet Comparison Section */}
-        {/* {data && <InternetComparison data={data} />} */}
+        {data && <InternetComparison data={data} />}
+
         {/* {data && <InternetTypes />} */}
         {/* Other Providers  */}
-        {/* <div>
+        <div>
           <h2 className=" text-[30px] font-bold text-black text-center pt-10 pb-10">
             More Internet Providers Near Me
           </h2>
@@ -129,15 +172,15 @@ export default function Page() {
               <SingleProvider data={provider} />
             </div>
           ))}
-        </div> */}
+        </div>
         {/* Comparison Section */}
-        <div className="p-5">
-          <h2 className=" p-10 text-[30px] font-bold text-black text-center ">
-            Compare Top Providers in Your Area
-          </h2>
+        <div className="">
+          <h1 className=" px-[46px] pt-[60px] pb-[15px]  font-semibold text-black text-center text-[30px] lg:text-[42px] leading-[40px] lg:leading-[52px] mb-[15px] lg:mb[45px]" >
+            Compare Top <br className="hidden lg:block"/> Providers in Your Area
+          </h1>
           <ProviderComparison />
 
-          <div className="w-full max-w-6xl mx-auto px-4  py-3.5">
+          <div className="w-full max-w-6xl mx-auto ">
             <MapComponent zipcode={zipCode} />
           </div>
           <h2 className=" p-10 text-[30px] font-bold text-black text-center ">
@@ -146,19 +189,20 @@ export default function Page() {
           <NearByCities />
         </div>
       </div>
-      {/* Map Section */}
-
-      <section className="footer_one flex justify-center items-center bg-bluish pt-[70px] pb-20">
-        <div className="container ">
-          <div className="row">
-            <Footer />
-          </div>
+      {/* NearBy Cities Section */}
+      <div>
+        <NearbyCities cities={citiesData} />
+      </div>
+      {/* <!-- Our Footer --> */}
+      <section className="footer_one w-full flex justify-center items-center  bg-bluish pt-[270px] bg-[rgba(11,107,221,0.1)]">
+        <div className="container flex justify-center items-center">
+          <Footer />
         </div>
       </section>
 
       {/* <!-- Our Footer Bottom Area --> */}
-      <section className="footer_middle_area flex justify-center items-center bg-bluish py-14">
-        <div className="container ">
+      <section className="footer_middle_area flex justify-center items-center bg-[rgba(11,107,221,0.1)]  py-10">
+        <div className="container flex justify-center items-center">
           <CopyrightFooter />
         </div>
       </section>

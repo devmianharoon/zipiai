@@ -4,11 +4,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchWeather } from "../../store/slices/weatherSlice";
 import Moving from "../home/Moving";
-import { Globe, Search, Cloud, Sun, CloudSun } from "lucide-react";
+import { Globe, Cloud, Sun, CloudSun } from "lucide-react";
 
 export default function HeroDynamic({ zipCode }: { zipCode: string }) {
   const dispatch = useDispatch<AppDispatch>();
-  const zip = useSelector((state: RootState) => state.zip.data);
+  // const zip = useSelector((state: RootState) => state.zip.data);
   useEffect(() => {
     if (zipCode) {
       dispatch(fetchWeather(zipCode));
