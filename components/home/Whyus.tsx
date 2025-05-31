@@ -5,13 +5,13 @@ const Whyus = () => {
   return (
     <section className="w-full flex items-center justify-center py-28 ">
       <div className="container flex justify-center items-center py-4">
-        <div className="w-[850px] h-[470px] text-center py-8">
+        <div className="md:w-[850px] md:h-[470px] text-center py-8">
           <p className="text-[var(--color-blue)]">Why choose Hyper G</p>
-          <h2 className="leading-[48px] pt-3 pb-8">
+          <h2 className="leading-[48px] pt-3 pb-8 ">
             We partner with leading internet providers so you&apos;re guaranteed
             accurate plans and prices.
           </h2>
-          <div className="flex">
+          <div className="flex flex-col md:flex-row justify-center items-center">
             <div className="circle h-[326px] w-[326px] rounded-[50%] border border-[var(--color-silver)] text-center flex justify-center items-center ">
               <div className="flex flex-col justify-center items-center gap-[30px]">
                 <Image

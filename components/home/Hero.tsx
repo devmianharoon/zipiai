@@ -13,15 +13,15 @@ export default function Hero() {
     router.push(`/${zipCode}`);
   };
   return (
-    <section className="w-full h-[720px] box-border relative bg-cover bg-center bg-no-repeat  py-16 bg-[var(--color-blue)] bg-[linear-gradient(to_bottom,#0F2774,#1D49DA)] ">
+    <section className="w-full h-[720px]  box-border relative bg-cover bg-center bg-no-repeat  py-16 bg-[var(--color-blue)] bg-[linear-gradient(to_bottom,#0F2774,#1D49DA)] ">
       <div className="container mx-auto px-4  ">
         <div className=" flex flex-wrap">
           <div className="w-full lg:w-full flex justify-center items-center ">
             <div className="home_content w-[670px] text-center">
-              <h1 className="fz55  text-primary font-bold py-8 text-[var(--color-white)]">
+              <h1 className="text-[38px] md:text-[48px]   text-primary font-bold py-8 text-[var(--color-white)]">
                 We find the best internet provider and plans near you!
               </h1>
-              <p className="inline-block py-4 text-[var(--color-white)]">
+              <p className="inline-block py-2 md:py-4 px-6 md:px-0 text-[var(--color-white)]">
                 Search providers , compare plains and order service in just a
                 few easy clicks
               </p>
@@ -59,8 +59,8 @@ export default function Hero() {
                     />
                   </div>
 
-                  <div className="flex items-center justify-center gap-[30px] py-8 ">
-                    <p className="text-[var(--color-white)] flex justify-center items-center gap-2">
+                  <div className="flex items-center justify-center gap-[30px] py-8 px-6 md:px-0 ">
+                    <span className="text-[var(--color-white)] flex flex-col md:flex-row justify-center items-center gap-2">
                       <Image
                         src={"/assets/images/icons/fast.png"}
                         alt={"icon"}
@@ -68,8 +68,8 @@ export default function Hero() {
                         width={24}
                       />
                       Fast speed
-                    </p>
-                    <p className="text-[var(--color-white)] flex justify-center items-center gap-2">
+                    </span>
+                    <span className="text-[var(--color-white)] flex flex-col md:flex-row justify-center items-center gap-2">
                       <Image
                         src={"/assets/images/icons/buffer-free.png"}
                         alt={"icon"}
@@ -77,8 +77,8 @@ export default function Hero() {
                         width={24}
                       />
                       Buffer-free Streaming
-                    </p>
-                    <p className="text-[var(--color-white)] flex justify-center items-center gap-2">
+                    </span>
+                    <span className="text-[var(--color-white)] flex flex-col md:flex-row justify-center items-center gap-2">
                       <Image
                         src={"/assets/images/icons/gaming.png"}
                         alt={"icon"}
@@ -86,7 +86,7 @@ export default function Hero() {
                         width={24}
                       />
                       Live gaming & sports
-                    </p>
+                    </span>
                   </div>
 
                   <div className="h-[255px] w-full absolute bottom-0 left-0">
@@ -104,16 +104,16 @@ export default function Hero() {
           </div>
         </div>
         {/* moving section absoluted */}
-        <div className="absolute w-full top-36 left-4">
+        <div className="md:absolute w-full md:top-36 md:left-4">
           <Moving
             bgClass={"bg-[var(--color-red)]"}
             bgClassBtn={"bg-[var(--color-black)]"}
           />
         </div>
         {/* test speed section absolute */}
-        <div className="w-[896px] h-[140px] rounded-[12px] bottom-[-65px] py-12 px-8 absolute flex justify-center items-center bg-[#FF0000] z-40 left-1/2 -translate-x-1/2  gap-[131px] bg-[linear-gradient(to_right,#0C0A1D,#FF0000)] ">
+        <div className=" h-[185px] w-[372px] md:w-[896px] md:h-[140px]  rounded-[12px] bottom-[-65px] p-4 md:py-12 md:px-8 absolute flex flex-col md:flex-row justify-center items-center bg-[#FF0000] z-40 left-1/2 -translate-x-1/2  md:gap-[131px] gap-4 bg-[linear-gradient(to_right,#0C0A1D,#FF0000)] text-center md:text-left text-[20px] md:text-[48px]">
           <h3 className="text-[var(--color-white)] leading-[30px]">
-            Time is precious ! Dont let yout internet <br /> slow you down .
+            Time is precious ! Dont let your internet  slow you down .
             Test your speed!
           </h3>
           <Searchbtn

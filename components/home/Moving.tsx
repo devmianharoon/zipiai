@@ -26,16 +26,16 @@ export default function Moving(props: xyz) {
 
   return (
     <div
-      className={`absolute bottom-0 left-0 h-[130px] w-[428px] box-border px-[22px] py-[22px]  ${props.bgClass} rounded-[12px] text-[var(--color-white)]`}>
+      className={`absolute bottom-0 left-0 h-[200px] w-[372px] md:h-[130px] md:w-[428px] box-border px-[22px] py-[22px]  ${props.bgClass} rounded-[12px] text-[var(--color-white)] `}>
       <h1 className="text-[20px] font-[500] text-center pb-[10px] text-[var(--color-white)]">
         Moving ? Check for providers.
       </h1>
-      <div className="flex gap-[15px] justify-between items-center">
-        <div className="relative">
+      <div className="flex flex-col md:flex-row gap-[15px] justify-between items-center">
+        <div className="relative w-full md:w-auto">
           <input
             type="text"
             placeholder="Enter zip code"
-            className="py-[10px] px-[20px] w-[230px] rounded-[80px] outline-none border-none bg-primary placeholder:text-[var(--color-silver)]  bg-[var(--color-white)] text-[var(--color-silver)]"
+            className="py-[10px] px-[20px] md:w-[230px] w-full rounded-[80px] outline-none border-none bg-primary placeholder:text-[var(--color-silver)]  bg-[var(--color-white)] text-[var(--color-silver)]"
             value={zipCode}
             onChange={(e) => setZipCode(e.target.value)}
             onKeyDown={handleKeyDown}
@@ -60,7 +60,7 @@ export default function Moving(props: xyz) {
               Submit
             </span>
           }
-          wclass="w-[140px]"
+          wclass="md:w-[140px] w-full"
           onClick={handleClick}
           bgColor={`${props.bgClassBtn}`}
         />

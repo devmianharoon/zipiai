@@ -2,6 +2,7 @@
 import { useState } from "react";
 import MobileMenuContent from "./MobileMenuContent";
 import Image from "next/image";
+import Button from "../../buttonComp/Button";
 
 const MobileMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,31 +12,36 @@ const MobileMenu = () => {
   };
 
   return (
-    <div className="md:hidden block bg-primary text-navtext py-3.5">
-      <div className="mobile-menu">
-        <div className="header stylehome1 flex items-center justify-between p-4 relative">
-          {/* Left side - Hamburger */}
-          <div className="flex items-center z-50">
-            <button
-              onClick={toggleMenu}
-              className="focus:outline-none cursor-pointer flex flex-col gap-2">
-              <span className="block w-4 h-0.5 bg-background"></span>
-              <span className="block w-8 h-0.5 bg-background"></span>
-              <span className="block w-5 h-0.5 bg-background"></span>
-            </button>
-          </div>
-
-          {/* Center - Logo */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center space-x-2">
+    <div className="md:hidden border-box bg-[var(--color-white)] h-[50px] flex justify-center items-center ">
+      <div className="h-[32px] w-full px-4 flex justify-between items-center">
+        <Image
+          src={"/assets/images/hyperg1.png"}
+          alt={"dd"}
+          height={30}
+          width={84}
+        />
+        <div className="flex justify-center items-center gap-4">
+          <Image
+            src={"/assets/images/headericon.png"}
+            alt={"icon"}
+            height={20}
+            width={20}
+          />
+          <Button
+            href={"/"}
+            text="Speed test"
+            class="h-[32px] w-[100px] bg-[var(--color-blue)] text-[14px] text-white rounded-[90px] py-[10px] px-[13px]"
+          />
+          <button
+            onClick={toggleMenu}
+            className="focus:outline-none cursor-pointer flex flex-col gap-2">
             <Image
-              width={40}
-              height={45}
-              className="object-contain"
-              src="/assets/images/header-logo2.png"
-              alt="FindHouse Logo"
+              src={"/assets/images/icons/menuicon.png"}
+              alt={"icon"}
+              height={24}
+              width={24}
             />
-            <span className="text-lg font-semibold">FindHouse</span>
-          </div>
+          </button>
         </div>
       </div>
 

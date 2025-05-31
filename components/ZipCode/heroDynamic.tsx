@@ -8,14 +8,13 @@ import { Globe, Cloud, Sun, CloudSun } from "lucide-react";
 
 export default function HeroDynamic({ zipCode }: { zipCode: string }) {
   const dispatch = useDispatch<AppDispatch>();
-  const zip = useSelector((state: RootState) => state.zip.data);
+  // const zip = useSelector((state: RootState) => state.zip.data);
   useEffect(() => {
     if (zipCode) {
       dispatch(fetchWeather(zipCode));
     }
   }, [zipCode]);
-//console for error
-  console.log(zip);
+
 
   const weatherState = useSelector((state: RootState) => state.weather);
   console.log("Weather State:", weatherState);
