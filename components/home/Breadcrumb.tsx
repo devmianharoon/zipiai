@@ -25,7 +25,7 @@ export default function ZipBreadcrumb({ zipCode }: ZipBreadcrumbProps) {
   }
 
   return (
-    <nav aria-label="Breadcrumb" className="py-4 px-6   flex justify-center bg-[#992E2E] border-t-1 border-gray-200">
+    <nav aria-label="Breadcrumb" className="py-4 px-6   flex justify-center bg-[#992E2E]">
       <ol className="flex items-center ">
         <p className='text-white  flex items-center'>
         <p className='text-white'>Showing below the results for: </p>{" "}

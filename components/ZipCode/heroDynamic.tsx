@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchWeather } from "../../store/slices/weatherSlice";
 import Moving from "../home/Moving";
-import { Globe, Search, Cloud, Sun, CloudSun } from "lucide-react";
+import { Globe, Cloud, Sun, CloudSun } from "lucide-react";
 
 export default function HeroDynamic({ zipCode }: { zipCode: string }) {
   const dispatch = useDispatch<AppDispatch>();
@@ -14,24 +14,29 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
       dispatch(fetchWeather(zipCode));
     }
   }, [zipCode]);
+//console for error
+  console.log(zip);
 
   const weatherState = useSelector((state: RootState) => state.weather);
   console.log("Weather State:", weatherState);
 
   return (
-    <section className="relative h-[400px] bg-bluish w-full flex justify-center p-4 bg-gradient-to-b from-[#FF4D4D] to-[#992E2E]">
+    <section className="relative h-[500px] bg-bluish w-full flex justify-center p-4 bg-gradient-to-b from-[#FF4D4D] to-[#992E2E]">
       <div className="container mx-auto px-4">
-        <div className="relative flex flex-wrap">
-           <div className="flex gap-12 justify-center items-center mt-6">
-              <h1 className="text-white ">Explore the best internet connections below</h1>
-              <div className="flex ">
-                <button className="bg-black text-white rounded-full py-3 px-8 flex items-center">
-                  <Globe className="w-5 h-5 mr-2" />
-                  Show me other providers
-                </button>
-              </div>
+        <div className=" flex  justify-center items-center">
+          <div className="w-[600px] text-center mt-36 flex flex-col gap-8">
+            <h1 className="text-white ">
+              Explore the best internet connections below
+            </h1>
+            <div className="w-full flex justify-center items-center">
+              <button className="bg-black text-white rounded-full py-3 px-8 flex items-center cursor-pointer">
+                <Globe className="w-5 h-5 mr-2" />
+                Show me other providers
+              </button>
             </div>
-          <div className="w-full lg:w-full">
+          </div>
+
+          <div className="w-[306px]  h-[219px] absolute top-6 right-6">
             {/* Loading and Error states */}
             {weatherState.status === "loading" && (
               <p className="text-white mt-4">Loading weather data...</p>
@@ -46,10 +51,10 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
             {weatherState.status === "succeeded" && weatherState.data ? (
               <>
                 {/* City, State Heading */}
-                <h2 className="text-white text-xl font-semibold mb-3">
+                {/* <h2 className="text-white text-xl font-semibold mb-3">
                   {weatherState.data.location?.name},{" "}
                   {weatherState.data.location?.region}
-                </h2>
+                </h2> */}
 
                 {/* Forecast data */}
                 {weatherState.data.forecast?.forecastday?.length > 0 ? (
@@ -95,8 +100,9 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
                       </tbody>
                     </table> */}
                     <div className="bg-red-400/30 backdrop-blur-sm rounded-xl p-5 mb-8">
-                      <h2 className="text-2xl font-bold mb-2">
-                        Denver, Colorado
+                      <h2 className="text-white text-xl font-semibold mb-3">
+                        {weatherState.data.location?.name},{" "}
+                        {weatherState.data.location?.region}
                       </h2>
 
                       <div className="border-b border-white/20 py-3 flex items-center justify-between">
@@ -129,11 +135,15 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
             )}
 
             {/* Static Section Below */}
-           
           </div>
         </div>
       </div>
-      <Moving />
+      <div className="absolute w-full top-36 left-4">
+        <Moving
+          bgClass="bg-[var(--color-black)]"
+          bgClassBtn="bg-[var(--color-red)]"
+        />
+      </div>
     </section>
   );
 }

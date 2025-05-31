@@ -7,20 +7,20 @@ import HeroDynamic from "../../../components/ZipCode/heroDynamic";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../../store/store";
 import SingleProvider from "../../../components/tileComp/tile";
-import InternetComparison from "../../../components/ZipCode/table";
+
 import { Provider } from "../../../data/types/responsetype";
 import { useParams } from "next/navigation";
 import ZipBreadcrumb from "../../../components/home/Breadcrumb";
 import { useEffect } from "react";
 import { fetchZipData } from "../../../store/slices/zipSlice";
-import InternetTypes from "../../../components/ZipCode/InternetComparison";
+
 import { fetchProvidersByZip } from "../../../store/slices/chatSlice";
 import ProviderComparison from "../../../components/ProviderComparison";
 import MapComponent from "./component/Map";
 import NearByCities from "../../../components/NeabyCIties";
-import TVProvider from "./component/TvSection";
-import LiveTvData from "../../../data/LiveTvData.json";
-import { Search, ChevronDown, Check } from "lucide-react";
+
+import { Search, ChevronDown} from "lucide-react";
+import Recommendation from "./component/Recommendation";
 
 export default function Page() {
   const params = useParams(); // Get dynamic route parameters as per Next.js docs
@@ -113,6 +113,12 @@ export default function Page() {
           </div>
         ))}
         
+
+
+<Recommendation/>
+
+
+
         {/* TV Section */}
         {/* <TVProvider data={LiveTvData[0]} /> */}
 

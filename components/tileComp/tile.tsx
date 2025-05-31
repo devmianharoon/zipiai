@@ -10,10 +10,12 @@ export default function SingleProvider({ data }: { data: Provider }) {
     setIsAccordionOpen(!isAccordionOpen);
     setSelectedPlan(null);
   };
+  //console for usage
+  console.log(selectedPlan);
 
-  const handlePlanClick = (index: number) => {
-    setSelectedPlan(selectedPlan === index ? null : index);
-  };
+  // const handlePlanClick = (index: number) => {
+  //   setSelectedPlan(selectedPlan === index ? null : index);
+  // };
 
   return (
     // <div className="max-w-6xl mx-auto p-6 rounded-xl border border-gray-200 bg-white">
@@ -53,12 +55,12 @@ export default function SingleProvider({ data }: { data: Provider }) {
     //       </p>
     //       <h3 className="text-xs font-bold text-gray-600">Speeds Up To</h3>
     //       <div className="flex items-baseline gap-1">
-            // <span className="text-2xl font-bold">
-            //   {data.Speeds_Up_To.split(" ")[0]}
-            // </span>
-            // <span className="text-[20px] font-bold">
-            //   {data.Speeds_Up_To.split(" ")[1]}
-            // </span>
+    // <span className="text-2xl font-bold">
+    //   {data.Speeds_Up_To.split(" ")[0]}
+    // </span>
+    // <span className="text-[20px] font-bold">
+    //   {data.Speeds_Up_To.split(" ")[1]}
+    // </span>
     //       </div>
     //       <div className="space-y-2">
     //         <div className="flex align-center gap-2.5 mt-3">
@@ -148,17 +150,23 @@ export default function SingleProvider({ data }: { data: Provider }) {
         <div className="grid grid-cols-2 gap-4 px-[25px] py-[30px] border-b border-t border-[var(--color-silver)]">
           <div>
             <div className="p-light">Speed up to</div>
-            <h3><span className="text-2xl font-bold">
-              {data.Speeds_Up_To.split(" ")[0]}
-            </span>
-            <span className="text-[20px] font-bold">
-              {data.Speeds_Up_To.split(" ")[1]}
-            </span></h3>
+            <h3>
+              <span className="text-2xl font-bold">
+                {data.Speeds_Up_To.split(" ")[0]}
+              </span>
+              <span className="text-[20px] font-bold">
+                {data.Speeds_Up_To.split(" ")[1]}
+              </span>
+            </h3>
             <div className="p-light">
-              Connection: <span className="p-light font-semibold">{data.Connection_Type}</span>
+              Connection:{" "}
+              <span className="p-light font-semibold">
+                {data.Connection_Type}
+              </span>
             </div>
             <div className="p-light">
-              Availability: <span className="p-light font-semibold">{data.available}</span>
+              Availability:{" "}
+              <span className="p-light font-semibold">{data.available}</span>
             </div>
           </div>
           <div>
@@ -177,7 +185,15 @@ export default function SingleProvider({ data }: { data: Provider }) {
           <p>Overview</p>
           <div className="list-disc list-inside text-black space-y-1">
             {data.features.map((feature, index) => (
-              <div key={index} className="flex  gap-[10px]"><Image src={"/assets/verified.svg"} alt="verified" width={22} height={22}/>{feature}</div>
+              <div key={index} className="flex  gap-[10px]">
+                <Image
+                  src={"/assets/verified.svg"}
+                  alt="verified"
+                  width={22}
+                  height={22}
+                />
+                {feature}
+              </div>
             ))}
           </div>
         </div>
@@ -185,8 +201,7 @@ export default function SingleProvider({ data }: { data: Provider }) {
         <div className="space-y-3 px-[25px] py-[30px]">
           <button
             onClick={toggleAccordion}
-            className="w-full bg-gray-900 text-white py-4 rounded-full text-base font-medium hover:bg-gray-800 transition-colors"
-          >
+            className="w-full bg-gray-900 text-white py-4 rounded-full text-base font-medium hover:bg-gray-800 transition-colors">
             View plans
           </button>
           <button className="w-full bg-[var(--color-red)] text-white py-4 rounded-full text-base font-medium hover:bg-[var(--color-red)]transition-colors">

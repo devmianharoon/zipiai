@@ -105,7 +105,10 @@ export default function Hero() {
         </div>
         {/* moving section absoluted */}
         <div className="absolute w-full top-36 left-4">
-          <Moving />
+          <Moving
+            bgClass={"bg-[var(--color-red)]"}
+            bgClassBtn={"bg-[var(--color-black)]"}
+          />
         </div>
         {/* test speed section absolute */}
         <div className="w-[896px] h-[140px] rounded-[12px] bottom-[-65px] py-12 px-8 absolute flex justify-center items-center bg-[#FF0000] z-40 left-1/2 -translate-x-1/2  gap-[131px] bg-[linear-gradient(to_right,#0C0A1D,#FF0000)] ">
