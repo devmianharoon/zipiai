@@ -20,6 +20,8 @@ import MapComponent from "./component/Map";
 import NearByCities from "../../../components/NeabyCIties";
 import TVProvider from "./component/TvSection";
 import LiveTvData from "../../../data/LiveTvData.json";
+import { Search, ChevronDown, Check } from "lucide-react";
+
 export default function Page() {
   const params = useParams(); // Get dynamic route parameters as per Next.js docs
   console.log("Dynamic Parameters:", params);
@@ -70,6 +72,34 @@ export default function Page() {
       {/* <!-- Breadcrumb --> */}
       {zipCode && <ZipBreadcrumb zipCode={zipCode} />}
       {/* Heading  */}
+      <p className="p-tight text-center text-[var(--color-blue)] mt-[90px]">
+        Search Result
+      </p>
+      <h1 className="text-center mt-[20px] mb-[40px]">
+        Top 5 Internet service provider in{" "}
+        <span className="text-[var(--color-blue)]">{zipCode}</span>{" "}
+      </h1>
+      {/* Search Bar  */}
+      <div className="w-full max-w-6xl mx-auto px-4  lg:flex gap-5 justify-center items-center">
+        <div className="flex justify-center relative mb-[10px] lg:mb-0 w-full lg:w-[575px]">
+          <input
+            type="text"
+            placeholder="Search by name, size, speed or feature"
+            className="p-light w-full pl-4 pr-12 py-3 rounded-full border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 text-blue-500 h-5 w-5" />
+        </div>
+        {/* <div className="space-y-3 mb-6"> */}
+          <button className="mb-[10px] lg:mb-0 w-full lg:w-[275px] flex items-center justify-between px-4 py-3 bg-white rounded-full border border-gray-300 text-gray-700 hover:bg-gray-50">
+            <span className="p-light">Filter by</span>
+            <ChevronDown className="h-5 w-5 text-blue-500" />
+          </button>
+          <button className="w-full lg:w-[275px] flex items-center justify-between px-4 py-3 bg-white rounded-full border border-gray-300 text-gray-700 hover:bg-gray-50">
+            <span className="p-light">Sort by</span>
+            <ChevronDown className="h-5 w-5 text-blue-500" />
+          </button>
+        {/* </div> */}
+      </div>
 
       <div className="bg-white">
         {loading && (
@@ -82,14 +112,15 @@ export default function Page() {
             <SingleProvider data={provider} />
           </div>
         ))}
+        
         {/* TV Section */}
-       <TVProvider data={LiveTvData[0]} />
+        {/* <TVProvider data={LiveTvData[0]} /> */}
 
         {/* Internet Comparison Section */}
-        {data && <InternetComparison data={data} />}
-        {data && <InternetTypes />}
+        {/* {data && <InternetComparison data={data} />} */}
+        {/* {data && <InternetTypes />} */}
         {/* Other Providers  */}
-        <div>
+        {/* <div>
           <h2 className=" text-[30px] font-bold text-black text-center pt-10 pb-10">
             More Internet Providers Near Me
           </h2>
@@ -98,7 +129,7 @@ export default function Page() {
               <SingleProvider data={provider} />
             </div>
           ))}
-        </div>
+        </div> */}
         {/* Comparison Section */}
         <div className="p-5">
           <h2 className=" p-10 text-[30px] font-bold text-black text-center ">

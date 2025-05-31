@@ -1,11 +1,10 @@
 "use client";
 import { AppDispatch, RootState } from "../../store/store";
 import { useDispatch, useSelector } from "react-redux";
-import Searchbtn from "../buttonComp/Searchbtn";
 import { useEffect } from "react";
 import { fetchWeather } from "../../store/slices/weatherSlice";
-import Image from "next/image";
 import Moving from "../home/Moving";
+import { Globe, Search, Cloud, Sun, CloudSun } from "lucide-react";
 
 export default function HeroDynamic({ zipCode }: { zipCode: string }) {
   const dispatch = useDispatch<AppDispatch>();
@@ -20,9 +19,18 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
   console.log("Weather State:", weatherState);
 
   return (
-    <section className="relative h-[400px] bg-bluish w-full flex justify-center p-4">
+    <section className="relative h-[400px] bg-bluish w-full flex justify-center p-4 bg-gradient-to-b from-[#FF4D4D] to-[#992E2E]">
       <div className="container mx-auto px-4">
         <div className="relative flex flex-wrap">
+           <div className="flex gap-12 justify-center items-center mt-6">
+              <h1 className="text-white ">Explore the best internet connections below</h1>
+              <div className="flex ">
+                <button className="bg-black text-white rounded-full py-3 px-8 flex items-center">
+                  <Globe className="w-5 h-5 mr-2" />
+                  Show me other providers
+                </button>
+              </div>
+            </div>
           <div className="w-full lg:w-full">
             {/* Loading and Error states */}
             {weatherState.status === "loading" && (
@@ -46,14 +54,8 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
                 {/* Forecast data */}
                 {weatherState.data.forecast?.forecastday?.length > 0 ? (
                   <div className="overflow-x-auto">
-                    <table className="w-auto border-collapse text-white">
-                      {/* <thead>
-                      <tr>
-                        <th className="py-1 px-2 text-center">Day</th>
-                        <th className="py-1 px-2 text-center">Weather</th>
-                        <th className="py-1 px-2 text-center">Temp</th>
-                      </tr>
-                    </thead> */}
+                    {/* <table className="w-auto border-collapse text-white">
+              
                       <tbody>
                         {weatherState.data.forecast.forecastday.map(
                           (day, index) => (
@@ -63,7 +65,6 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
                                 index < 2 ? "border-b  border-gray-300" : ""
                               }`}
                             >
-                              {/* Day */}
                               <td className="py-1 px-2 text-center">
                                 {new Date(day.date).toLocaleDateString(
                                   "en-US",
@@ -73,7 +74,6 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
                                 )}
                               </td>
 
-                              {/* Weather Icon */}
                               <td className="py-1 px-2 text-center flex justify-center">
                                 {day.day.condition.icon && (
                                   <Image
@@ -85,7 +85,6 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
                                 )}
                               </td>
 
-                              {/* Temperature */}
                               <td className="py-1 px-2 text-center text-sm">
                                 <span>{day.day.maxtemp_f}°</span> |{" "}
                                 <span>{day.day.mintemp_f}°</span>
@@ -94,7 +93,30 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
                           )
                         )}
                       </tbody>
-                    </table>
+                    </table> */}
+                    <div className="bg-red-400/30 backdrop-blur-sm rounded-xl p-5 mb-8">
+                      <h2 className="text-2xl font-bold mb-2">
+                        Denver, Colorado
+                      </h2>
+
+                      <div className="border-b border-white/20 py-3 flex items-center justify-between">
+                        <span className="font-medium">Thu</span>
+                        <Cloud className="w-6 h-6 text-white" />
+                        <span className="font-medium">76.3° | 76.3°</span>
+                      </div>
+
+                      <div className="border-b border-white/20 py-3 flex items-center justify-between">
+                        <span className="font-medium">Fri</span>
+                        <Sun className="w-6 h-6 text-yellow-300" />
+                        <span className="font-medium">48.7° | 71.4°</span>
+                      </div>
+
+                      <div className="py-3 flex items-center justify-between">
+                        <span className="font-medium">Sat</span>
+                        <CloudSun className="w-6 h-6 text-white" />
+                        <span className="font-medium">47.8° | 72.9°</span>
+                      </div>
+                    </div>
                   </div>
                 ) : (
                   <p className="text-white mt-4">No forecast data available</p>
@@ -107,16 +129,7 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
             )}
 
             {/* Static Section Below */}
-            <div className="flex gap-12 justify-center items-center mt-6">
-              <h2 className="fz55 text-[30px] font-bold text-white ">
-                Internet Providers in {zip?.city} {zip?.state} {zipCode}
-              </h2>
-              <div className="rightSection">
-                <div className="flex justify-center">
-                  <Searchbtn text="Submit" wclass="w-46" />
-                </div>
-              </div>
-            </div>
+           
           </div>
         </div>
       </div>
@@ -124,34 +137,3 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
     </section>
   );
 }
-
-// weatherState.data.forecast?.forecastday?.length > 0 ? (
-//   <div className=" text-white flex flex-col gap-2.5 mb-6 ">
-//     {weatherState.data.forecast.forecastday.map((day, index) => (
-//       <div key={day.date_epoch || index} className="flex ">
-//         <div className="flex justify-between border-b  items-center text-center w-[220px]">
-//           {/* Date at the top */}
-//           <h3 className=" mb-1">
-//             {day.date.split("-").slice(1).join("-")}
-//           </h3>
-//           {/* Weather icon below date */}
-//           {day.day.condition.icon && (
-//             <Image
-//               src={`https:${day.day.condition.icon}`}
-//               alt={day.day.condition.text}
-//               width={48}
-//               height={48}
-//               className="mb-1"
-//             />
-//           )}
-//           {/* Condition text below icon */}
-//           {/* <p className="text-sm mb-1 text-white">
-//             {day.day.condition.text}
-//           </p> */}
-//           {/* Max and min temperatures below condition */}
-//           <p className="text-sm text-white">
-//             {day.day.maxtemp_f}°F : {day.day.mintemp_f}°F
-//           </p>
-//         </div>
-//       </div>
-//     ))}

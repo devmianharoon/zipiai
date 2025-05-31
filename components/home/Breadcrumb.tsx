@@ -25,44 +25,38 @@ export default function ZipBreadcrumb({ zipCode }: ZipBreadcrumbProps) {
   }
 
   return (
-    <nav aria-label="Breadcrumb" className="py-4 px-6  rounded-lg ">
-      <ol className="flex items-center space-x-2 text-sm text-gray-700">
+    <nav aria-label="Breadcrumb" className="py-4 px-6   flex justify-center bg-[#992E2E] border-t-1 border-gray-200">
+      <ol className="flex items-center ">
+        <p className='text-white  flex items-center'>
+        <p className='text-white'>Showing below the results for: </p>{" "}
+        <br  className='lg:block'/>
         <li>
           <Link
             href={`/state/${data.state_abbr}`}
-            className="hover:text-blue-600 transition-colors duration-200"
+            className=""
           >
             {data.state}
           </Link>
         </li>
         <li>
-          <span className="text-gray-400 mx-2">/</span>
+          <span className=" mx-2">/</span>
         </li>
-        {/* <li>
-          <Link
-            href={`/county/${encodeURIComponent(data.county)}`}
-            className="hover:text-blue-600 transition-colors duration-200"
-          >
-            {data.county}
-          </Link>
-        </li>
-        <li>
-          <span className="text-gray-400 mx-2">/</span>
-        </li> */}
+        
         <li>
           <Link
             href={`/city/${encodeURIComponent(data.city)}`}
-            className="hover:text-blue-600 transition-colors duration-200"
+            className=""
           >
             {data.city}
           </Link>
         </li>
         <li>
-          <span className="text-gray-400 mx-2">/</span>
+          <span className=" mx-2">/</span>
         </li>
-        <li className="text-gray-900 font-medium" aria-current="page">
+        <li className="" aria-current="page">
           {data.zip}
         </li>
+        </p>
       </ol>
     </nav>
   );

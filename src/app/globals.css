@@ -4,12 +4,16 @@
 :root {
   --color-black: #0C0A1D;
   --color-white: #FFFFFF;
-  --color-red: #FF4140;
+  --color-red: #FF4D4D;
+  --color-red--rgb: 255, 77, 77;
+
   --color-blue: #0B8BDD;
+  
   --color-silver: #BAB0B8;
   --color-gradient-start: #0B8BDD;
   --color-gradient-end: #065A77;
 }
+
 @font-face {
 font-family: "SF UI Display";
 src: url('/assets/fonts/SF-UI-Display-Regular.ttf') format('truetype');}
