@@ -23,9 +23,9 @@ const Footer = () => {
         <ul className="flex gap-x-4 ">
           <Social />
         </ul>
-      </div>
+      </div>  
 
-      <div className="flex justify-between py-6">
+      <div className="flex flex-col justify-center md:flex-row items-center md:justify-between  md:py-6">
         <div className="footer_qlink_widget leading-[2.6] text-[14px] ">
           <h4 className="text-[20px] font-semibold text-[var(--color-blue)]">
             Quick Links
@@ -103,38 +103,52 @@ const Footer = () => {
           </h4>
           <ul className="list-unstyled">
             <li>
-              <a href="tel:+4733378901">
+              <a
+                href="tel:+4733378901"
+                className="flex justify-start items-center">
                 <FontAwesomeIcon
                   icon={faPhone}
                   className="text-[var(--color-blue)] pr-2"
+                  height={24}
+                  width={24}
                 />
                 <span> +1 246-345-0699</span>
               </a>
             </li>
             <li>
-              <a href="tel:+4733378901">
+              <a
+                href="tel:+4733378901"
+                className="flex justify-start items-center">
                 <FontAwesomeIcon
                   icon={faPhone}
                   className="text-[var(--color-blue)] pr-2"
+                  height={24}
+                  width={24}
                 />{" "}
                 <span> +1 246-345-0695</span>
               </a>
             </li>
             <li>
-              <a href="mailto:info@findhouse.com">
+              <a
+                href="mailto:info@findhouse.com"
+                className="flex justify-start items-center">
                 <FontAwesomeIcon
                   icon={faEnvelope}
                   className="text-[var(--color-blue)] pr-2"
+                  height={24}
+                  width={24}
                 />{" "}
                 <span>info@findhouse.com</span>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#" className="flex justify-start items-center">
                 {" "}
                 <FontAwesomeIcon
                   icon={faLocationDot}
                   className="text-[var(--color-blue)] pr-2"
+                  height={24}
+                  width={24}
                 />{" "}
                 <span>Collins Street West, Victoria</span>
               </a>
@@ -160,8 +174,8 @@ const Footer = () => {
                 placeholder="Enter email adress"
                 className="w-full rounded-[32px] h-[60px] box-border placeholder:text-[var(--color-silver)] border border-[var(--color-silver)] px-6"
               />
-              <button className="absolute right-2 bg-[var(--color-blue)] h-[44px] w-[44px] text-[var(--color-white)] rounded-[50%] top-8 cursor-pointer">
-                <FontAwesomeIcon icon={faChevronRight} />
+              <button className="absolute right-2 bg-[var(--color-blue)] h-[44px] w-[44px] text-[var(--color-white)] rounded-[50%] top-8 cursor-pointer flex justify-center items-center ">
+                <FontAwesomeIcon icon={faChevronRight} height={24} width={24} />
               </button>
             </li>
           </ul>

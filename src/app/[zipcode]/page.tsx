@@ -78,7 +78,7 @@ export default function Page() {
   // }
 
   return (
-    <>
+    <main className="overflow-hidden">
       {/* <!-- Main Header Nav --> */}
       <Header />
 
@@ -215,6 +215,6 @@ export default function Page() {
           <CopyrightFooter />
         </div>
       </section>
-    </>
+    </main>
   );
 }

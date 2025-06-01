@@ -1,14 +1,14 @@
 import Image from "next/image";
 import React from "react";
-import Searchbtn from "../buttonComp/Searchbtn";
+
 
 const SectionOne = () => {
   return (
     <section className="w-full  bg-primary flex justify-center items-center py-14">
-      <div className="container flex justify-center items-center h-[70vh] gap-14">
-        <div className="img-sec w-[50%] relative h-full">
+      <div className="container flex justify-center items-center h-[440px] gap-14">
+        <div className="img-sec w-[65%] relative h-full">
           <Image
-            src="/assets/images/directv/banner1.jpeg"
+            src="/assets/images/directv/movies.jpeg"
             alt="cover image"
             fill
             style={{ objectFit: "cover" }}
@@ -16,20 +16,18 @@ const SectionOne = () => {
           />
         </div>
 
-        <div className="text-sec w-[50%]">
+        <div className="text-sec w-[35%]">
           <div className="pb-12">
-            <h1 className="text-[30px] text-black font-[600]">
-              Stream. Chill. Repeat.{" "}
+            <h1 className="text-[30px] text-black font-[600] py-6">
+              Movies & Entertainment{" "}
             </h1>
             <p className="text-black text-[18px]">
-              Enjoy cinematic experiences from the comfort of your couch. Our
-              reliable and buffer-free streaming services bring your favorite
-              movies, shows, and live sports to life—perfect for family nights
-              and weekend marathons.
+              Enjoy the cinematic experience and the magic of movies in your own
+              home. From thrilling blockbusters and heartwarming family
+              favorites to unforgettable adventures and timeless classics, every
+              night can feel like movie night. Sit back, press play, and let the
+              wonder unfold—right from your couch.  
             </p>
-          </div>
-          <div className="text-right">
-            <Searchbtn text={"Read More"} wclass="w-46" />
           </div>
         </div>
       </div>

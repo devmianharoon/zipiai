@@ -14,8 +14,7 @@ export default function HeroBanner({ data }: { data: HeroBannerProps }) {
           backgroundBlendMode: "overlay",
         }}
       >
-        {/* Overlay with stadium light effect */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50"></div>
+        
       </div>
 
       {/* Content */}
