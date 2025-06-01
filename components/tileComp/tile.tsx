@@ -3,8 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Provider } from "../../data/types/responsetype";
-export default function SingleProvider({ data }: { data: Provider }) {
-  const [isAccordionOpen, setIsAccordionOpen] = useState(false);
+export default function SingleProvider({ data, index }: { data: Provider; index: number }) {  const [isAccordionOpen, setIsAccordionOpen] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState<number | null>(null);
   const toggleAccordion = () => {
     setIsAccordionOpen(!isAccordionOpen);
@@ -15,12 +14,24 @@ console.log("selectedPlan", selectedPlan);
   // const handlePlanClick = (index: number) => {
   //   setSelectedPlan(selectedPlan === index ? null : index);
   // };
+  // Define the background color sequence
+  const backgroundColors = [
+    "rgba(3, 10, 19, 0.15)",
+    "rgba(255, 255, 255, 1)",
+    "rgba(255, 77, 77, 0.15)",
+  ];
+
+  // Select background color based on index (cyclic)
+  const backgroundColor = backgroundColors[index % backgroundColors.length];
 
   return (
     <>
-      <div className="mx-auto w-full  rounded-xl border border-gray-200 lg:max-w-6xl   shadow-md bg-gradient-to-b from-[rgba(var(--color-red--rgb),0.15)] to-[rgba(var(--color-red--rgb),0.05)] lg:flex">
+      <div
+        className="mx-auto w-full rounded-xl border border-gray-200 lg:max-w-6xl  lg:flex"
+        style={{ backgroundColor }}
+      >
         {/* Image Section */}
-        <div className="flex justify-center items-center py-[25px] lg:py-[45px] lg:pl-[45px] lg:pr-[39px]">
+        <div className="flex justify-center items-center py-[25px] lg:py-[45px] lg:pl-[45px] lg:pr-[39px] lg:flex lg:flex-wrap">
           <Image
             src={`/assets/logos/${data.logo}`}
             alt={data.ProviderName}

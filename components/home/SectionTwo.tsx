@@ -24,7 +24,7 @@ const SectionTwo = () => {
 
         <div className="img-sec w-[65%] relative h-full">
           <Image
-            src="/assets/images/directv/banner1.jpeg"
+            src="/assets/images/directv/sports.jpeg"
             alt="cover image"
             fill
             style={{ objectFit: "cover" }}

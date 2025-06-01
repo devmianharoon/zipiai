@@ -3,8 +3,9 @@ import { RootState } from "../../store/store";
 import { useSelector } from "react-redux";
 import { useRouter } from "next/navigation";
 import Searchbtn from "../buttonComp/Searchbtn";
-import Moving from "./Moving";
+
 import Image from "next/image";
+import MovingH from "./movingH";
 
 export default function Hero() {
   const router = useRouter();
@@ -104,12 +105,12 @@ export default function Hero() {
           </div>
         </div>
         {/* moving section absoluted */}
-        <div className="md:absolute w-full md:top-36 md:left-4">
-          <Moving
+        
+          <MovingH
             bgClass={"bg-[var(--color-red)]"}
             bgClassBtn={"bg-[var(--color-black)]"}
           />
-        </div>
+       
         {/* test speed section absolute */}
         <div className=" h-[185px] w-[372px] md:w-[896px] md:h-[140px]  rounded-[12px] md:-bottom-[65px] -bottom-[295px] p-4 md:py-12 md:px-8 absolute flex flex-col md:flex-row justify-center items-center bg-[#FF0000] z-40 left-1/2 -translate-x-1/2  md:gap-[131px] gap-4 bg-[linear-gradient(to_right,#0C0A1D,#FF0000)] text-center md:text-left text-[20px] md:text-[48px]">
           <h3 className="text-[var(--color-white)] leading-[30px]">

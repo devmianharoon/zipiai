@@ -33,7 +33,7 @@ const items = [
   },
 ];
 
-const Recommendation = () => {
+export default function  Recommendation  () {
   return (
     <section className="w-full py-8">
       <div className="container mx-auto text-center">
@@ -102,5 +102,4 @@ const Recommendation = () => {
     </section>
   );
 };
-
-export default Recommendation;
+;

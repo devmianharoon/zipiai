@@ -3,7 +3,7 @@ import React from "react";
 
 const Whyus = () => {
   return (
-    <section className="w-full flex items-center justify-center pt-28 md:py-28  ">
+    <section className="w-full flex items-center justify-center pt-68 md:py-28  ">
       <div className="container flex justify-center items-center py-4">
         <div className="md:w-[850px] md:h-[470px] text-center py-8">
           <p className="text-[var(--color-blue)]">Why choose Hyper G</p>

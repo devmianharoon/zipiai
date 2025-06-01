@@ -24,7 +24,7 @@ export default function ProviderComparison() {
   );
 
   return (
-    <div className="w-full  mx-auto  lg:max-w-6xl mb-[25px] lg:mb-[35]">
+    <div className="w-full  mx-auto  lg:max-w-6xl mb-[25px] lg:mb-[35]  px-[21px] lg:px-0">
       <div className="">
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-6 gap-4 lg:gap-5">
           {comparisons.map((comparison,index:number) => (

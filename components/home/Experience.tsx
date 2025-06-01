@@ -4,8 +4,8 @@ import Image from "next/image";
 
 const Experience = () => {
   return (
-    <section className="relative flex justify-center items-center h-[460px] lg:h-[300px] box-border ">
-      <div className="container">
+    <section className="relative flex justify-center items-center h-[200px] lg:h-[300px] box-border ">
+      <div className="container mb-[-180px] md:mb-[0]">
         <div className="w-full flex justify-center items-center">
           <div className="w-[372px] h-[460px] lg:w-[1381px] lg:h-[376px] bg-[url('/assets/images/background.png')] bg-cover bg-[var(--color-blue)] rounded-[22px] flex flex-col lg:flex-row justify-center items-center relative mt-0 lg:mt-54 gap-5 px-4 text-center lg:text-left">
             {/* Logo Image First */}

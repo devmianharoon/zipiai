@@ -8,7 +8,7 @@ const SectionOne = () => {
       <div className="container flex justify-center items-center h-[440px] gap-14">
         <div className="img-sec w-[65%] relative h-full">
           <Image
-            src="/assets/images/directv/banner1.jpeg"
+            src="/assets/images/directv/movies.jpeg"
             alt="cover image"
             fill
             style={{ objectFit: "cover" }}

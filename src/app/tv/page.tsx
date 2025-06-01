@@ -94,7 +94,7 @@ export default function Page() {
           <div
             className="w-full px-5 py-[15px] lg:max-w-6xl lg:mx-auto lg:pt-[25px]"
             key={index}>
-            <SingleProvider data={provider} />
+            <SingleProvider data={provider} index={0} />
           </div>
         ))}
       </div>
