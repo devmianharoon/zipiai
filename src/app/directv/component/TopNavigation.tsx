@@ -17,16 +17,16 @@ export default function TopNavigation() {
   ];
 
   return (
-    <section className="w-full md:flex justify-center items-center py-6 hidden bg-bluish">
+    <section className="w-full  md:flex justify-center items-center py-6 px-[17px] bg-[var(--color-blue)]">
       <div className="container">
-        <ul className="flex justify-center items-center gap-14 text-[14px]">
+        <ul className="flex justify-around items-center text-[14px]  lg:max-w-6xl lg:mx-auto">
           {data.map((e, index) => {
             return (
               <li
                 className="flex flex-col justify-center items-center gap-1.5 text-white cursor-pointer"
                 key={index}>
-                <Image src={e.image} alt={"directv"} height={34} width={34} />
-                <Link href={"/"}>{e.text}</Link>
+                <Image src={e.image} alt={"directv"} height={30} width={38} />
+                <Link href={"/"}><p className="text-white text-base text-[14px] lg:text-base font-semibold">{e.text}</p></Link>
               </li>
             );
           })}

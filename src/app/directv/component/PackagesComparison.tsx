@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-// import jsondata from "./../../../../data/directv.json";
 import channeldata from "./../../../../data/channels_data_via_internet.json";
 import full_channel_guide from "./../../../../data/full_channel_guide.json";
 import ChannelTable from "./ChannelTable";
@@ -9,7 +8,8 @@ import Cookies from "js-cookie";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../../../store/store";
 import { fetchZipData } from "../../../../store/slices/zipSlice";
-import ZipBreadcrumb from "../../../../components/home/Breadcrumb";
+import Image from "next/image";
+import { ChevronDown } from "lucide-react";
 
 const packagesData = {
   toggle: {
@@ -44,7 +44,7 @@ const packagesData = {
       ],
       compareLink: "Compare packages",
       color: "bg-blue-800",
-      bgColor: "bg-blue-50",
+      bgColor: "bg-[rgba(11,107,221,0.1)]",
     },
     {
       id: "choice",
@@ -73,7 +73,7 @@ const packagesData = {
         { icon: "check", text: "Special offer for premium networks" },
       ],
       compareLink: "Compare packages",
-      color: "bg-orange-700",
+      color: "bg-[rgba(3, 10, 19, 0.15)]",
       bgColor: "bg-orange-50",
     },
     {
@@ -103,7 +103,7 @@ const packagesData = {
         { icon: "check", text: "Special offer for premium networks" },
       ],
       compareLink: "Compare packages",
-      color: "bg-blue-900",
+      color: "bg-[rgba(255, 77, 77, 0.15)]",
       bgColor: "bg-blue-50",
     },
     {
@@ -137,13 +137,15 @@ const packagesData = {
         },
       ],
       compareLink: "Compare packages",
-      color: "bg-purple-800",
+      color: "bg-[rgba(3, 10, 19, 0.15)]",
       bgColor: "bg-purple-50",
     },
   ],
 };
 const packageNames = ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"];
 export default function PackageComparison() {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
   const dispatch = useDispatch<AppDispatch>();
 
   const savedZipCode = Cookies.get("user_zipcode");
@@ -163,9 +165,8 @@ export default function PackageComparison() {
   return (
     <>
       {/* BreadCrum */}
-      {savedZipCode && <ZipBreadcrumb zipCode={savedZipCode} />}
       {/* Heading Section */}
-      <div className="p-5">
+      <div className="p-5 w-full lg:max-w-6xl lg:mx-auto">
         <h2 className="text-[30px] font-bold text-black text-center">
           {withLocalChannels === 1
             ? "Packages"
@@ -182,15 +183,16 @@ export default function PackageComparison() {
       {/* Comparison Table */}
       <div className="w-full max-w-7xl mx-auto px-4 py-12">
         {/* Toggle Buttons */}
-        <div className="flex flex-col items-center mb-8">
-          <div className="flex rounded-full border border-gray-300 overflow-hidden mb-2">
+        <>
+          {/* Desktop Button Group */}
+          <div className="hidden mx-auto lg:justify-evenly lg:w-[735px] lg:flex jus rounded-full border border-gray-300 overflow-hidden mb-2 p-[10px] ">
             {[1, 2, 3, 4].map((val) => (
               <button
                 key={val}
-                className={`px-6 py-2 text-sm font-medium ${
+                className={`px-6 py-2 text-sm font-medium rounded-full ${
                   withLocalChannels === val
-                    ? "bg-blue-700 text-white"
-                    : "bg-white text-gray-700"
+                    ? "bg-[var(--color-blue)] text-white"
+                    : "bg-white text-black"
                 }`}
                 onClick={() => setWithLocalChannels(val)}
               >
@@ -198,18 +200,52 @@ export default function PackageComparison() {
               </button>
             ))}
           </div>
-          {withLocalChannels === 1 && (
-            <div className="text-sm text-gray-700 flex items-center gap-2">
-              <span>{packagesData.toggle.toggleText}</span>
-              <a href="#" className="text-blue-700 font-medium">
-                {packagesData.toggle.checkLink}
-              </a>
-              <span className="inline-block w-5 h-5 rounded-full border border-gray-400 text-center text-gray-500">
-                i
-              </span>
-            </div>
-          )}
-        </div>
+
+          {/* Mobile Button */}
+          <div className="block lg:hidden">
+            <button
+              className="mb-[10px] w-full flex items-center justify-between px-4 py-3 bg-white rounded-full border border-gray-300 text-gray-700 hover:bg-gray-50"
+              onClick={() => setIsDropdownOpen((prev) => !prev)}
+            >
+              <span className="p-light">Packages</span>
+              <ChevronDown className="h-5 w-5 text-blue-500" />
+            </button>
+
+            {/* Dropdown list */}
+            {isDropdownOpen && (
+              <ul className="border border-gray-300 rounded-lg bg-white shadow-md">
+                {[1, 2, 3, 4].map((val) => (
+                  <li
+                    key={val}
+                    className={`px-4 py-2 cursor-pointer hover:bg-gray-100 ${
+                      withLocalChannels === val
+                        ? "bg-[var(--color-blue)] text-white"
+                        : "text-black"
+                    }`}
+                    onClick={() => {
+                      setWithLocalChannels(val);
+                      setIsDropdownOpen(false);
+                    }}
+                  >
+                    {Object.values(packagesData.toggle)[val - 1]}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </>
+        {withLocalChannels === 1 && (
+          <div className="text-sm text-gray-700 flex items-center gap-2 justify-center pt-[20px] pb-[50px]">
+            <span>{packagesData.toggle.toggleText}</span>
+            <a href="#" className="text-blue-700 font-medium">
+              {packagesData.toggle.checkLink}
+            </a>
+            <span className="inline-block w-5 h-5 rounded-full border border-gray-400 text-center text-gray-500">
+              i
+            </span>
+          </div>
+        )}
+        {/* </div> */}
 
         {/* Channel Guide (ChannelTable) or Regional Sports (Grid) */}
         {(withLocalChannels === 2 ||
@@ -255,7 +291,7 @@ export default function PackageComparison() {
               >
                 <h2 className="text-lg font-bold mb-2">{pkg.name}</h2>
                 <p className="text-sm text-gray-700 mb-2">{pkg.tagline}</p>
-                <div className="text-2xl font-bold mb-1">
+                <div className="text-2xl font-bold mb-1 text-[var(--color-red)]">
                   {pkg.price}
                   <span className="text-sm align-top">{pkg.cents}</span>
                 </div>
@@ -264,10 +300,18 @@ export default function PackageComparison() {
                 <p className="text-xs text-gray-400 italic mb-4">
                   {pkg.fullPrice}
                 </p>
-                <ul className="text-sm mb-4 list-disc list-inside">
+                <ol className="text-sm mb-4 list-disc list-inside">
                   {pkg.features.map((feature, idx) => (
-                    <li key={idx}>
-                      {feature.text}
+                    <div key={idx}>
+                      <div className="flex gap-[10px]">
+                        <Image
+                          src={"/assets/verified.svg"}
+                          alt="verified"
+                          width={22}
+                          height={22}
+                        />
+                        {feature.text}
+                      </div>
                       {feature.link && (
                         <a
                           href="#"
@@ -276,11 +320,11 @@ export default function PackageComparison() {
                           {feature.link}
                         </a>
                       )}
-                    </li>
+                    </div>
                   ))}
-                </ul>
+                </ol>
                 <button
-                  className={`w-full py-2 rounded text-white font-semibold ${pkg.color}`}
+                  className={`w-full py-2 rounded-full text-white font-semibold bg-black `}
                 >
                   {pkg.buttonText}
                 </button>

@@ -1,5 +1,7 @@
 import CopyrightFooter from "../../../components/common/footer/CopyrightFooter";
 import Footer from "../../../components/common/footer/Footer";
+import MobileMenu from "../../../components/common/header/MobileMenu";
+import Experience from "../../../components/home/Experience";
 import Header from "../../../components/home/Header";
 import HeroBanner from "./component/HeroBanner";
 import PackagesComparison from "./component/PackagesComparison";
@@ -11,20 +13,21 @@ export default function page() {
   const data = {
     title: "Bundle and Save, DirecTV Now",
     subtitle: "Beam it or Stream it",
-    description:
-      "Choose a DirecTV Package, Call Now for Special Offers",
+    description: "Choose a DirecTV Package, Call Now for Special Offers",
   };
   return (
     <>
       <main className="bg-white">
         {/* <!-- Main Header Nav --> */}
         <Header />
-        {/* <!--Top Buttom --> */}
+
+        {/* <!-- Mobile Menu --> */}
+        <MobileMenu />
         <TopNavigation />
         {/* <!-- Hero Banner --> */}
-        <HeroBanner data={data}/>
+        <HeroBanner data={data} />
         {/* <!-- Service Tiles --> */}
-        <div className="w-full max-w-7xl mx-auto px-4 py-12">
+        <div className="w-full max-w-6xl mx-auto ">
           <ServiceTiles />
         </div>
 
@@ -32,25 +35,24 @@ export default function page() {
         <PackagesComparison />
 
         {/* <!-- Service Tiles --> */}
-        <div className="w-full max-w-7xl mx-auto px-4 py-12">
+        <div className="w-full max-w-6xl mx-auto px-[17px] lg:px-0">
           <ServiceTylesTop />
           <ServiceTiles />
         </div>
       </main>
 
-      {/*  */}
-      {/* Footer */}
-      <section className="footer_one flex justify-center items-center bg-bluish pt-[70px] pb-20">
-        <div className="container ">
-          <div className="row">
-            <Footer />
-          </div>
+      <Experience />
+
+      {/* <!-- Our Footer --> */}
+      <section className="footer_one w-full flex justify-center items-center  bg-bluish pt-[270px] bg-[rgba(11,107,221,0.1)]">
+        <div className="container flex justify-center items-center">
+          <Footer />
         </div>
       </section>
 
       {/* <!-- Our Footer Bottom Area --> */}
-      <section className="footer_middle_area flex justify-center items-center bg-bluish py-14">
-        <div className="container ">
+      <section className="footer_middle_area flex justify-center items-center bg-[rgba(11,107,221,0.1)]  py-10">
+        <div className="container flex justify-center items-center">
           <CopyrightFooter />
         </div>
       </section>
