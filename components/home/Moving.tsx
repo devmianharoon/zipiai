@@ -26,7 +26,7 @@ export default function Moving(props: xyz) {
 
   return (
     <div
-      className={`absolute bottom-0 left-0 h-[200px] w-[372px] md:h-[130px] md:w-[428px] box-border px-[22px] py-[22px]  ${props.bgClass} rounded-[12px] text-[var(--color-white)] `}>
+      className={`absolute -bottom-[90px] md:bottom-0 left-1/2 -translate-x-1/2 md:-translate-0 md:left-0 h-[200px] w-[372px] md:h-[130px] md:w-[428px] box-border px-[22px] py-[22px]  ${props.bgClass} rounded-[12px] text-[var(--color-white)] `}>
       <h1 className="text-[20px] font-[500] text-center pb-[10px] text-[var(--color-white)]">
         Moving ? Check for providers.
       </h1>

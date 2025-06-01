@@ -20,7 +20,7 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
   console.log("Weather State:", weatherState);
 
   return (
-    <section className="relative h-[500px] bg-bluish w-full flex justify-center p-4 bg-gradient-to-b from-[#FF4D4D] to-[#992E2E]">
+    <section className="relative h-[500px] bg-bluish w-full flex justify-center p-4 bg-gradient-to-b from-[#FF4D4D] to-[#992E2E] overflow-hidden">
       <div className="container mx-auto px-4">
         <div className=" flex  justify-center items-center">
           <div className="w-[600px] text-center mt-36 flex flex-col gap-8">

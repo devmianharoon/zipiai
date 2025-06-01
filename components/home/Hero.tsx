@@ -89,7 +89,7 @@ export default function Hero() {
                     </span>
                   </div>
 
-                  <div className="h-[255px] w-full absolute bottom-0 left-0">
+                  <div className="md:h-[255px] h-[200px] w-full absolute bottom-0 left-0">
                     <Image
                       src={"/assets/images/herowaves.png"}
                       alt={"dd"}
@@ -111,7 +111,7 @@ export default function Hero() {
           />
         </div>
         {/* test speed section absolute */}
-        <div className=" h-[185px] w-[372px] md:w-[896px] md:h-[140px]  rounded-[12px] bottom-[-65px] p-4 md:py-12 md:px-8 absolute flex flex-col md:flex-row justify-center items-center bg-[#FF0000] z-40 left-1/2 -translate-x-1/2  md:gap-[131px] gap-4 bg-[linear-gradient(to_right,#0C0A1D,#FF0000)] text-center md:text-left text-[20px] md:text-[48px]">
+        <div className=" h-[185px] w-[372px] md:w-[896px] md:h-[140px]  rounded-[12px] md:-bottom-[65px] -bottom-[295px] p-4 md:py-12 md:px-8 absolute flex flex-col md:flex-row justify-center items-center bg-[#FF0000] z-40 left-1/2 -translate-x-1/2  md:gap-[131px] gap-4 bg-[linear-gradient(to_right,#0C0A1D,#FF0000)] text-center md:text-left text-[20px] md:text-[48px]">
           <h3 className="text-[var(--color-white)] leading-[30px]">
             Time is precious ! Dont let your internet  slow you down .
             Test your speed!
