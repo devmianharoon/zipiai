@@ -4,20 +4,23 @@ import React from "react";
 const Blogs = () => {
   return (
     <section className="w-full flex justify-center items-center py-26">
-      <div className="container">
+      <div className="container mx-auto">
         <div className="text-center">
           <p className="text-[var(--color-blue)] py-2.5">Blogs & Articles</p>
           <h1 className="text-[42px] py-2">Building trust by our services</h1>
         </div>
+
+        {/* Cards Container */}
         <div className="w-full flex justify-center items-center">
-          <div className="w-[1120px] py-10 flex justify-center items-center gap-5">
-            <div className="w-[360px] h-[421px]">
-              <div className="relative">
+          <div className="py-10 flex flex-col lg:flex-row justify-center items-center gap-5">
+            {/* Card 1 */}
+            <div className="w-[360px] h-[417px]">
+              <div className="relative w-[360px] h-[351px]">
                 <Image
                   src={"/assets/images/b1.png"}
                   alt={"dd"}
-                  height={351}
-                  width={360}
+                  layout="fill"
+                  objectFit="cover"
                   className="rounded-[12px]"
                 />
                 <span className="tag bg-[var(--color-red)] rounded-[16px] py-1 px-2.5 text-white absolute top-4 right-4">
@@ -31,13 +34,14 @@ const Blogs = () => {
               </div>
             </div>
 
-            <div className="w-[360px] h-[421px]">
-              <div className="relative">
+            {/* Card 2 */}
+            <div className="w-[360px] h-[417px]">
+              <div className="relative w-[360px] h-[351px]">
                 <Image
                   src={"/assets/images/b2.png"}
                   alt={"dd"}
-                  height={351}
-                  width={360}
+                  layout="fill"
+                  objectFit="cover"
                   className="rounded-[12px]"
                 />
                 <span className="tag bg-[var(--color-red)] rounded-[16px] py-1 px-2.5 text-white absolute top-4 right-4">
@@ -51,13 +55,14 @@ const Blogs = () => {
               </div>
             </div>
 
-            <div className="w-[360px] h-[421px]">
-              <div className="relative">
+            {/* Card 3 */}
+            <div className="w-[360px] h-[417px]">
+              <div className="relative w-[360px] h-[351px]">
                 <Image
                   src={"/assets/images/b3.png"}
                   alt={"dd"}
-                  height={351}
-                  width={360}
+                  layout="fill"
+                  objectFit="cover"
                   className="rounded-[12px]"
                 />
                 <span className="tag bg-[var(--color-red)] rounded-[16px] py-1 px-2.5 text-white absolute top-4 right-4">

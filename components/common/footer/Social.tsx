@@ -31,7 +31,7 @@ const Social = () => {
             target="_blank"
             rel="noopener noreferrer "
             className="flex justify-center items-center rounded-[50%] h-[56px] w-[56px] box-border bg-white">
-            <i className={`${item.icon} bg-white `}></i>
+            <i className={`${item.icon} bg-white`}></i>
           </a>
         </li>
       ))}

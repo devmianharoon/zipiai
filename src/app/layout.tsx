@@ -7,6 +7,8 @@ import { Provider } from "react-redux";
 import { store } from "../../store/store";
 import { Poppins } from 'next/font/google';
 // import localFont from 'next/font/local';
+
+
 interface RootLayoutProps {
   children: ReactNode;
 }

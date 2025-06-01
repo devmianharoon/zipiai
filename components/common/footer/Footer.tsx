@@ -20,7 +20,7 @@ const Footer = () => {
           height={57}
           width={160}
         />
-        <ul className="flex gap-x-4 text-primary">
+        <ul className="flex gap-x-4 ">
           <Social />
         </ul>
       </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import Slider from "react-slick";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 const imgData2 = [
@@ -20,6 +20,12 @@ const imgData2 = [
 ];
 
 const Crusal = () => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true); // ensures window is defined
+  }, []);
+
   const settings = {
     autoplay: true,
     autoplaySpeed: 0,
@@ -30,30 +36,49 @@ const Crusal = () => {
     slidesToScroll: 1,
     arrows: false,
     pauseOnHover: false,
+    responsive: [
+      {
+        breakpoint: 1024, // tablets
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 768, // phones
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
   };
 
   return (
-    <div className="w-full bg-white  text-center py-4">
-      <p className="py-8 p-large">
-        Hundreds of awards and 8,000+ satisfied customers
-      </p>
+    <div className="w-full bg-white text-center py-4">
+      <div className="flex justify-center">
+        <p className="py-8 p-large w-[90%] md:w-full">
+          Hundreds of awards and 8,000+ satisfied customers
+        </p>
+      </div>
 
-      <Slider {...settings} className="w-full mx-auto bg-white">
-        {imgData2.map((item) => (
-          <div
-            key={item.id}
-            className="h-[80px] flex justify-center items-center px-2">
-            <div className="relative h-[40px] w-auto">
-              <Image
-                src={item.img}
-                alt="logo"
-                fill
-                style={{ objectFit: "contain" }}
-              />
+      {isClient && (
+        <Slider {...settings} className="w-full mx-auto bg-white overflow-hidden">
+          {imgData2.map((item) => (
+            <div
+              key={item.id}
+              className="h-[80px] flex justify-center items-center px-2"
+            >
+              <div className="relative h-[40px] w-auto">
+                <Image
+                  src={item.img}
+                  alt="logo"
+                  fill
+                  style={{ objectFit: "contain" }}
+                />
+              </div>
             </div>
-          </div>
-        ))}
-      </Slider>
+          ))}
+        </Slider>
+      )}
     </div>
   );
 };

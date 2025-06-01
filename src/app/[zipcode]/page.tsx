@@ -22,6 +22,7 @@ import Image from "next/image";
 import NearbyCities from "./component/NearByCities";
 import InternetComparison from "../../../components/ZipCode/table";
 import Recommendation from "./component/Recommendation";
+import Experience from "../../../components/home/Experience";
 
 export default function Page() {
   // Sample city data
@@ -134,36 +135,38 @@ export default function Page() {
           </div>
         ))}
         {/* Call Section */}
-        <div className="w-full h-[372px] mx-auto px-[15px] mt-[60px]">
-          <div className="w-full h-full   bg-[url('/bg-page.png')] bg-cover bg-center bg-no-repeat flex justify-center items-center flex-col ">
-            <h1 className="text-white text-center">
+        <div className="w-full h-[372px] md:h-[222px] md:w-[1144px] mx-auto px-[15px] mt-[60px] ">
+          <div className="w-full h-full   bg-[url('/bg-page.png')] bg-cover bg-center bg-no-repeat flex justify-center items-center flex-col md:flex-row md:justify-between md:items-center gap-8 rounded-[18px] px-4 md:px-10">
+            <h1 className="text-white text-center md:text-left text-[30px] md:text-[32px] leading-[38px] w-[60%]">
               Make a quick call to discuss your need, We suggest you the best
               plan!{" "}
             </h1>
-            <button
-              onClick={() => window.open(`tel:1800-123-4567`)}
-              className="w-[208px] h-[50px] mx-auto  bg-gray-900 text-white  rounded-full text-base font-medium hover:bg-gray-800 transition-colors">
-              <div className="flex justify-center items-center gap-2">
-                <Image
-                  src="/call-Icon.svg"
-                  alt="phone"
-                  width={24}
-                  height={24}
-                />
-                <span className="text-lg font-medium"> 888 564 5552</span>
-              </div>
-            </button>
+            <div>
+              <button
+                onClick={() => window.open(`tel:1800-123-4567`)}
+                className="w-[208px] h-[50px] mx-auto  bg-gray-900 text-white  rounded-full text-base font-medium hover:bg-gray-800 transition-colors">
+                <div className="flex justify-center items-center gap-2">
+                  <Image
+                    src="/call-Icon.svg"
+                    alt="phone"
+                    width={24}
+                    height={24}
+                  />
+                  <span className="text-lg font-medium"> 888 564 5552</span>
+                </div>
+              </button>
+            </div>
           </div>
         </div>
 
-        {/*recommendation seactionn */}
-        <Recommendation />
         {/* TV Section */}
         {/* <TVProvider data={LiveTvData[0]} /> */}
 
         {/* Internet Comparison Section */}
         {data && <InternetComparison data={data} />}
 
+        {/*recommendation seactionn */}
+        <Recommendation />
         {/* {data && <InternetTypes />} */}
         {/* Other Providers  */}
         <div>
@@ -197,6 +200,9 @@ export default function Page() {
       <div>
         <NearbyCities cities={citiesData} />
       </div>
+
+      <Experience />
+
       {/* <!-- Our Footer --> */}
       <section className="footer_one w-full flex justify-center items-center  bg-bluish pt-[270px] bg-[rgba(11,107,221,0.1)]">
         <div className="container flex justify-center items-center">
