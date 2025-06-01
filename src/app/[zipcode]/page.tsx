@@ -7,7 +7,6 @@ import HeroDynamic from "../../../components/ZipCode/heroDynamic";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../../store/store";
 import SingleProvider from "../../../components/tileComp/tile";
-
 import { Provider } from "../../../data/types/responsetype";
 import { useParams } from "next/navigation";
 import ZipBreadcrumb from "../../../components/home/Breadcrumb";
@@ -16,13 +15,12 @@ import { fetchZipData } from "../../../store/slices/zipSlice";
 import { fetchProvidersByZip } from "../../../store/slices/chatSlice";
 import ProviderComparison from "../../../components/ProviderComparison";
 import MapComponent from "./component/Map";
-import NearByCities from "../../../components/NeabyCIties";
 import { Search, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import NearbyCities from "./component/NearByCities";
 import InternetComparison from "../../../components/ZipCode/table";
-import Recommendation from "./component/Recommendation";
 import Experience from "../../../components/home/Experience";
+import OtherProvider from "./component/OthersProviders";
 
 export default function Page() {
   // Sample city data
@@ -129,9 +127,10 @@ export default function Page() {
         )}
         {data?.providers.map((provider: Provider, index: number) => (
           <div
-            className="w-full px-5 py-[15px] lg:max-w-6xl lg:mx-auto lg:pt-[25px]"
-            key={index}>
-            <SingleProvider data={provider} />
+            className="w-full px-5 py-[15px] lg:max-w-6xl lg:mx-auto lg:pt-[25px]  "
+            key={index}
+          >
+            <SingleProvider data={provider} index={index} />
           </div>
         ))}
         {/* Call Section */}
@@ -144,7 +143,8 @@ export default function Page() {
             <div>
               <button
                 onClick={() => window.open(`tel:1800-123-4567`)}
-                className="w-[208px] h-[50px] mx-auto  bg-gray-900 text-white  rounded-full text-base font-medium hover:bg-gray-800 transition-colors">
+                className="w-[208px] h-[50px] mx-auto  bg-gray-900 text-white  rounded-full text-base font-medium hover:bg-gray-800 transition-colors"
+              >
                 <div className="flex justify-center items-center gap-2">
                   <Image
                     src="/call-Icon.svg"
@@ -165,19 +165,22 @@ export default function Page() {
         {/* Internet Comparison Section */}
         {data && <InternetComparison data={data} />}
 
-        {/*recommendation seactionn */}
-        <Recommendation />
-        {/* {data && <InternetTypes />} */}
-        {/* Other Providers  */}
         <div>
-          <h2 className=" text-[30px] font-bold text-black text-center pt-10 pb-10">
-            More Internet Providers Near Me
-          </h2>
-          {data?.other_providers.map((provider: Provider, index: number) => (
-            <div className="p-2" key={index}>
-              <SingleProvider data={provider} />
-            </div>
-          ))}
+          <div>
+            <p className="text-[var(--color-blue)] text-center">
+              You may also like to explore
+            </p>
+            <h2 className=" text-[30px] font-bold text-black text-center pt-10 pb-10 px-[69px]">
+              More Internet Providers Near Me
+            </h2>
+          </div>
+          <div className="flex flex-wrap  lg:max-w-6xl lg:mx-auto lg:gap-[20px]">
+            {data?.other_providers.map((provider: Provider, index: number) => (
+              <div key={index} className=" lg:w-1/4 px-[15px] mb-[20px] lg:p-0 lg:mb-0">
+                <OtherProvider data={provider} index={index} />
+              </div>
+            ))}
+          </div>
         </div>
         {/* Comparison Section */}
         <div className="">
@@ -190,10 +193,6 @@ export default function Page() {
           <div className="w-full max-w-6xl mx-auto ">
             <MapComponent zipcode={zipCode} />
           </div>
-          <h2 className=" p-10 text-[30px] font-bold text-black text-center ">
-            Internet Providers in NearBy Cities
-          </h2>
-          <NearByCities />
         </div>
       </div>
       {/* NearBy Cities Section */}
