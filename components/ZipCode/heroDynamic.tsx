@@ -125,7 +125,7 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
         {/* Heading Section */}
         <div className=" flex  justify-center items-center">
           <div className="w-[600px] text-center lg:mt-36 flex flex-col gap-8 mt-0 px-[15px] lg:mb-[120px] ">
-            <h1 className="text-white ">
+            <h1 className="text-white font-[var(--font-sf)] font-[var(--font-poppins)]">
               Compare the top internet providers near you
             </h1>
             <div className="w-full flex justify-center items-center gap-2">

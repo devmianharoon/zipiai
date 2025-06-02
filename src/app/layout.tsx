@@ -5,9 +5,8 @@ import "slick-carousel/slick/slick-theme.css";
 import "./globals.css";
 import { Provider } from "react-redux";
 import { store } from "../../store/store";
-import { Poppins } from 'next/font/google';
-// import localFont from 'next/font/local';
-
+import { Poppins } from "next/font/google";
+import localFont from "next/font/local";
 
 interface RootLayoutProps {
   children: ReactNode;
@@ -19,58 +18,54 @@ interface RootLayoutProps {
 // };
 // Initialize Poppins
 const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400',"500",'600', '700', '800'],
-  display: 'swap',
-  style: ['normal', 'italic'],
-  variable: '--font-poppins', // For Tailwind or CSS
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+  style: ["normal", "italic"],
+  variable: "--font-poppins", // For Tailwind or CSS
 });
 // Initialize SF UI Display with all weights
-// const sf = localFont({
-//   src: [
-//     {
-//       path: '/assets/fonts/sf-ui-display/sf-ui-display-ultralight.otf',
-//       weight: '100',
-//       style: 'normal',
-//     },
-//     {
-//       path: '/assets/fonts/sf-ui-display/sf-ui-display-light.otf',
-//       weight: '300',
-//       style: 'normal',
-//     },
-//     {
-//       path: '/assets/fonts/sf-ui-display/sf-ui-display-regular.otf',
-//       weight: '400',
-//       style: 'normal',
-//     },
-//     {
-//       path: '/assets/fonts/sf-ui-display/sf-ui-display-medium.otf',
-//       weight: '500',
-//       style: 'normal',
-//     },
-//     {
-//       path: '/assets/fonts/sf-ui-display/sf-ui-display-semibold.otf',
-//       weight: '600',
-//       style: 'normal',
-//     },
-//     {
-//       path: '/assets/fonts/sf-ui-display/sf-ui-display-bold.otf',
-//       weight: '700',
-//       style: 'normal',
-//     },
-//     {
-//       path: '/assets/fonts/sf-ui-display/sf-ui-display-heavy.otf',
-//       weight: '800',
-//       style: 'normal',
-//     },
-//     {
-//       path: '/assets/fonts/sf-ui-display/sf-ui-display-black.otf',
-//       weight: '900',
-//       style: 'normal',
-//     },
-//   ],
-//   variable: '--font-sf',
-// });
+const sf = localFont({
+  src: [
+    {
+      path: "../fonts/sf-ui-display/sf-ui-display-ultralight.woff",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "../fonts/sf-ui-display/sf-ui-display-light.woff",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../fonts/sf-ui-display/sf-ui-display-thin.woff",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../fonts/sf-ui-display/sf-ui-display-medium.woff",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../fonts/sf-ui-display/sf-ui-display-semibold.woff",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../fonts/sf-ui-display/sf-ui-display-bold.woff", // ✅ Fixed path
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../fonts/sf-ui-display/sf-ui-display-heavy-586470160b9e5.woff",
+      weight: "800",
+      style: "normal",
+    },
+  ],
+  variable: "--font-sf",
+});
+
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
@@ -81,7 +76,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         />
         {/* <link rel="icon" href="./favicon.ico" /> */}
       </head>
-      <body className={`${poppins.variable} `}>
+      <body className={`${poppins.variable} ${sf.variable}`}>
         <Provider store={store}>{children}</Provider>
       </body>
     </html>

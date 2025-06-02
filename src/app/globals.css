@@ -12,6 +12,10 @@
   --color-silver: #BAB0B8;
   --color-gradient-start: #0B8BDD;
   --color-gradient-end: #065A77;
+  --font-poppins: 'Poppins', sans-serif;
+  --font-sf-ui-display: 'SF UI Display', sans-serif;
+
+  
 }
 
 @font-face {
