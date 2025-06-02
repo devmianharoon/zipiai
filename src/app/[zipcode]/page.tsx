@@ -54,6 +54,7 @@ export default function Page() {
   const { data, loading, error } = useSelector(
     (state: RootState) => state.chat
   );
+  const zipdata = useSelector((state: RootState) => state.zip.data);
 
   console.log("Messages from data in page :", data);
   console.log("Loading from Redux:", loading);
@@ -93,10 +94,10 @@ export default function Page() {
       <p className="p-tight text-center text-[var(--color-blue)] mt-[90px]">
         Search Result
       </p>
-      <h1 className="text-center mt-[20px] mb-[40px]">
+      <h1 className="text-center mt-[20px] mb-[40px] text-[30px]  leading-[40px] lg:text-[42px] lg:leading-[52px]   ">
         The Top Internet Providers in{" "}
-        <span className="text-[var(--color-blue)]">{`Campbell`} /</span>
-        <span className="text-[var(--color-blue)]"> {`CA`} /</span>
+        <span className="text-[var(--color-blue)]">{zipdata?.city} </span>
+        <span className="text-[var(--color-blue)]"> {zipdata?.state} </span>
         <span className="text-[var(--color-blue)]"> {zipCode}</span>
       </h1>
       {/* Search Bar  */}
@@ -120,17 +121,22 @@ export default function Page() {
         </button>
         {/* </div> */}
       </div>
+      {/* Providers */}
+      <div className="bg-white relative">
+        <div className="hidden lg:block w-[753px] h-[753px] rounded-full opacity-50 bg-[#FFB200] blur-[250px] shrink-0 absolute  left-[-550px]  z-10" />
+        <div className="hidden lg:block w-[753px] h-[753px] rounded-full opacity-50 bg-[#FFB200] blur-[250px] shrink-0 absolute  right-[-550px] bottom-0 top-[18px] z-10" />
 
-      <div className="bg-white">
         {loading && (
           <div className="flex justify-center items-center py-10">
             <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
           </div>
         )}
+
         {data?.providers.map((provider: Provider, index: number) => (
           <div
             className="w-full px-5 py-[15px] lg:max-w-6xl lg:mx-auto lg:pt-[25px]  "
-            key={index}>
+            key={index}
+          >
             <SingleProvider data={provider} index={index} />
           </div>
         ))}
@@ -144,7 +150,8 @@ export default function Page() {
             <div>
               <button
                 onClick={() => window.open(`tel:1800-123-4567`)}
-                className="w-[208px] h-[50px] mx-auto  bg-gray-900 text-white  rounded-full text-base font-medium hover:bg-gray-800 transition-colors">
+                className="w-[208px] h-[50px] mx-auto  bg-gray-900 text-white  rounded-full text-base font-medium hover:bg-gray-800 transition-colors"
+              >
                 <div className="flex justify-center items-center gap-2">
                   <Image
                     src="/call-Icon.svg"
@@ -159,13 +166,10 @@ export default function Page() {
           </div>
         </div>
 
-        {/* TV Section */}
-        {/* <TVProvider data={LiveTvData[0]} /> */}
-
         {/* Internet Comparison Section */}
         {data && <InternetComparison data={data} />}
-
-        <div>
+        {/* More Providers  */}
+        <div id="more-providers" className="relative ">
           <div>
             <p className="text-[var(--color-blue)] text-center">
               You may also like to explore
@@ -175,21 +179,25 @@ export default function Page() {
             </h2>
           </div>
           <div className="flex flex-wrap  lg:max-w-6xl lg:mx-auto lg:gap-[20px]">
+            <div className="hidden lg:block w-[753px] h-[753px] rounded-full opacity-50 bg-[#FFB200] blur-[250px] shrink-0 absolute  left-[-550px]  z-10" />
             {data?.other_providers.map((provider: Provider, index: number) => (
               <div
                 key={index}
-                className=" lg:w-1/4 px-[15px] mb-[20px] lg:p-0 lg:mb-0">
+                className=" lg:w-1/4 px-[15px] mb-[20px] lg:p-0 lg:mb-0 lg:flex-1"
+              >
                 <OtherProvider data={provider} index={index} />
               </div>
             ))}
           </div>
         </div>
         {/* Comparison Section */}
-        <div className="">
+        <div className="relative ">
           <h1 className=" px-[46px] pt-[60px] pb-[15px]  font-semibold text-black text-center text-[30px] lg:text-[42px] leading-[40px] lg:leading-[52px] mb-[15px] lg:mb[45px]">
             Compare Top <br className="hidden lg:block" /> Providers in Your
             Area
           </h1>
+          <div className="hidden lg:block w-[753px] h-[753px] rounded-full opacity-50 bg-[#FFB200] blur-[250px] shrink-0 absolute  right-[-550px] bottom-0 top-[18px] z-10" />
+
           <ProviderComparison />
 
           <div className="w-full max-w-6xl mx-auto ">

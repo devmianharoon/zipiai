@@ -4,11 +4,8 @@ import Searchbtn from "../buttonComp/Searchbtn";
 import { useState } from "react";
 
 import Image from "next/image";
-interface xyz {
-  bgClass: string;
-  bgClassBtn: string;
-}
-export default function Moving(props: xyz) {
+
+export default function Moving() {
   const router = useRouter();
   const [zipCode, setZipCode] = useState("");
 
@@ -26,7 +23,7 @@ export default function Moving(props: xyz) {
 
   return (
     <div
-      className={`lg:absolute absolute h-[185px] w-[372px] -bottom-[135px] md:top-8 left-1/7  lg:bottom-0 md:left-4  md:h-[130px] md:w-[428px] box-border px-[22px] py-[22px]  ${props.bgClass} rounded-[12px] text-[var(--color-white)] mb-[50px] md:mb-0 ml-[7px]`}>
+      className={`lg:absolute absolute h-[185px] w-[372px] -bottom-[135px] md:top-8 left-1/7  lg:bottom-0 md:left-4  md:h-[130px] md:w-[428px] box-border px-[22px] py-[22px]  bg-black rounded-[12px] text-[var(--color-white)] mb-[50px] md:mb-0 ml-[7px]`}>
       <h1 className="text-[20px] font-[500] px-2 pb-[10px] text-[var(--color-white)]">
         Moving ? Check for providers.
       </h1>
@@ -62,7 +59,7 @@ export default function Moving(props: xyz) {
           }
           wclass="md:w-[140px] w-full"
           onClick={handleClick}
-          bgColor={`${props.bgClassBtn}`}
+          bgColor={`bg-[var(--color-red)]`}
           hpclass="h-[48px]"
         />
       </div>
