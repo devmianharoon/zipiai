@@ -14,19 +14,19 @@ export default function Hero() {
     router.push(`/${zipCode}`);
   };
   return (
-    <section className="w-full h-[720px]  box-border relative bg-cover bg-center bg-no-repeat  pt-26 bg-[var(--color-blue)] bg-[linear-gradient(to_bottom,#0F2774,#1D49DA)] ">
+    <section className="w-full md:h-[720px] h-[660px]  box-border relative bg-cover bg-center bg-no-repeat  pt-26 bg-[var(--color-blue)] bg-[linear-gradient(to_bottom,#0F2774,#1D49DA)] ">
       <div className="container mx-auto px-4  ">
         <div className=" flex flex-wrap">
           <div className="w-full lg:w-full flex justify-center items-center ">
             <div className="home_content w-[670px] text-center">
-              <h1 className="text-[38px] md:text-[48px]   text-primary font-[600] pt-16 pb-4 text-[var(--color-white)]">
+              <h1 className="text-[38px] md:text-[48px]   text-primary font-[600] md:pt-16 pb-4 text-[var(--color-white)] md:leading-[56px] leading-[48px]">
                 Find The Best Internet Providers Near Me! 
               </h1>
-              <p className="inline-block py-2 md:py-4 px-6 md:px-26 text-[var(--color-white)]  text-[18px] font-[400] ">
+              <p className="inline-block py-2 md:py-4 text-[var(--color-white)]  md:text-[18px] font-[400] text-[16px] w-[352px] md:w-[480px]  ">
                 Search providers , compare plains and order service in just a
                 few easy clicks
               </p>
-              <p className="font-medium py-4 text-[var(--color-white)] text-[16px] ">
+              <p className="py-4 text-[var(--color-white)] font-[500]">
                 Search your current location
               </p>
               <div>
@@ -61,7 +61,7 @@ export default function Hero() {
                     />
                   </div>
 
-                  <div className="flex items-center justify-center gap-[30px] py-8 md:pt-12 px-6 md:px-0 text-[18px] font-medium">
+                  <div className="flex items-center justify-center gap-[30px] py-8 md:pt-12 px-6 md:px-0 text-[14px] font-[500] md:text-[18px] ">
                     <span className="text-[var(--color-white)] flex flex-col md:flex-row justify-center items-center gap-2">
                       <Image
                         src={"/assets/images/icons/fast.png"}
@@ -91,7 +91,7 @@ export default function Hero() {
                     </span>
                   </div>
 
-                  <div className="md:h-[180px] h-[200px] w-full absolute bottom-0 left-0">
+                  <div className="md:h-[180px] h-[190px] w-full absolute bottom-0 left-0">
                     <Image
                       src={"/assets/images/herowaves.png"}
                       alt={"dd"}
@@ -113,15 +113,15 @@ export default function Hero() {
         />
 
         {/* test speed section absolute */}
-        <div className=" h-[185px] w-[372px] md:w-[896px] md:h-[140px]  rounded-[12px] md:-bottom-[65px] -bottom-[295px] p-4 md:py-12 md:px-4 absolute flex flex-col md:flex-row justify-center items-center bg-[#FF0000] z-40 left-1/2 -translate-x-1/2  md:gap-4  bg-[linear-gradient(to_right,#0C0A1D,#FF0000)] text-center md:text-left text-[20px] md:text-[48px]">
-          <h3 className="text-[var(--color-white)] leading-[30px]">
+        <div className=" h-[185px] w-[372px] md:w-[896px] md:h-[140px]  rounded-[12px] md:-bottom-[65px] -bottom-[295px] p-4 md:py-12 md:px-4 absolute flex flex-col md:flex-row justify-center items-center bg-[#FF0000] z-40 left-1/2 -translate-x-1/2  md:gap-8 gap-4 bg-[linear-gradient(to_right,#0C0A1D,#FF0000)] text-center md:text-left text-[20px] md:text-[48px]">
+          <p className="text-[var(--color-white)] md:text-[24] text-[20px] md:leading-[32px] leading-[28px] font-[600]">
             Don&apos;t let your internet slow you down. Test Your Speed!
-          </h3>
+          </p>
           <Searchbtn
             text="Check my speed"
             onClick={handleClick}
-            wclass="w-[203px]"
-            hpclass="h-[57px] text-[18px] font-medium"
+            wclass=""
+            hpclass="py-[12px] px-[24px] text-[18px] font-medium"
             bgColor="bg-[var(--color-black)]"
           />
         </div>

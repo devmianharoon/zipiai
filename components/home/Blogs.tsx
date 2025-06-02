@@ -7,7 +7,11 @@ const Blogs = () => {
       <div className="container mx-auto">
         <div className="text-center">
           <p className="text-[var(--color-blue)] py-2.5">Blogs & Articles</p>
-          <h1 className="text-[42px] py-2">Building trust by our services</h1>
+          <div className="flex justify-center items-center">
+            <h1 className="text-[30px] font-[600] leading-[38px] py-2 w-[264px] md:w-full md:text-[42px] md:leading-[52px]">
+              Building trust by our services
+            </h1>
+          </div>
         </div>
 
         {/* Cards Container */}
@@ -23,12 +27,12 @@ const Blogs = () => {
                   objectFit="cover"
                   className="rounded-[12px]"
                 />
-                <span className="tag bg-[var(--color-red)] rounded-[16px] py-1 px-2.5 text-white absolute top-4 right-4">
+                <span className="tag bg-[var(--color-red)] rounded-[20px] py-[5px] px-[12px] inline-flex justify-center items-center  text-white absolute top-4 right-4">
                   Support
                 </span>
               </div>
               <div className="text-center py-4">
-                <p className="text-[18px] px-3">
+                <p className="md:text-[18px] text-[16px] font-[500] leading-[24px] md:leading-[28px] px-3">
                   Hyper G available and reply instantly to your queries
                 </p>
               </div>
@@ -44,12 +48,12 @@ const Blogs = () => {
                   objectFit="cover"
                   className="rounded-[12px]"
                 />
-                <span className="tag bg-[var(--color-red)] rounded-[16px] py-1 px-2.5 text-white absolute top-4 right-4">
+                <span className="tag bg-[var(--color-red)] rounded-[20px] py-[5px] px-[12px] inline-flex justify-center items-center  text-white absolute top-4 right-4">
                   Blog
                 </span>
               </div>
               <div className="text-center py-4">
-                <p className="text-[18px] px-3">
+                <p className="md:text-[18px] text-[16px] font-[500] leading-[24px] md:leading-[28px] px-3">
                   Internet world is switching on 5G satellite data speeds
                 </p>
               </div>
@@ -65,12 +69,12 @@ const Blogs = () => {
                   objectFit="cover"
                   className="rounded-[12px]"
                 />
-                <span className="tag bg-[var(--color-red)] rounded-[16px] py-1 px-2.5 text-white absolute top-4 right-4">
+                <span className="tag bg-[var(--color-red)] rounded-[20px] py-[5px] px-[12px] inline-flex justify-center items-center  text-white absolute top-4 right-4">
                   Article
                 </span>
               </div>
               <div className="text-center py-4">
-                <p className="text-[18px] px-3">
+                <p className="md:text-[18px] text-[16px] font-[500] leading-[24px] md:leading-[28px] px-3">
                   Search top 10 internet connections in your area with single
                   click
                 </p>

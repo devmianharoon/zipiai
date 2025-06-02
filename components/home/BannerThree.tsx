@@ -22,11 +22,11 @@ export default function BannerThree({ data }: { data: HeroBannerProps }) {
 
       {/* Content */}
       <div className="absolute left-1/2 top-1/8 -translate-x-1/2 h-full flex flex-col items-center justify-center text-center text-white px-4 z-10 md:w-[887px]  min-w-[373px] w-full">
-        <h1 className=" mb-4 text-[var(--color-white)] md:text-[80px] text-[48px] leading-[90px]">
+        <h2 className=" mb-4 text-[var(--color-white)] md:text-[80px] text-[38px] leading-[48px] md:leading-[90px]">
           {data.title}
-        </h1>
+        </h2>
 
-        <p className=" mb-8 text-[var(--color-white)] text-[16px] md:text-[22px] leading-[32px]">
+        <p className=" mb-8 text-[var(--color-white)] text-[16px] leading-[26px] font-[400] md:text-[22px] md:leading-[32px] w-[373px] md:w-full ">
           {data.description}
         </p>
         <Searchbtn
@@ -42,7 +42,7 @@ export default function BannerThree({ data }: { data: HeroBannerProps }) {
             alt="DirecTV Logo"
             width={60}
             height={20}
-            className="object-contain"
+            className="object-contain hidden md:block"
           />
         </div>
       </div>

@@ -61,7 +61,7 @@ const Header = () => {
             text="Speed test"
             bgColor="bg-[var(--color-blue)]"
             wclass=""
-            hpclass="py-[13px] px-[16px]"
+            hpclass="py-[13px]  px-[16px]"
           />
           <Image src={"/assets/images/headericon.png"} alt={"header icon"} height={20} width={20}/>
         </div>

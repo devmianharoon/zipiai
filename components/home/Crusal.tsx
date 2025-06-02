@@ -53,20 +53,21 @@ const Crusal = () => {
   };
 
   return (
-    <div className="w-full bg-white text-center py-4">
+    <div className="w-full bg-white text-center ">
       <div className="flex justify-center">
-        <p className="py-8 p-large w-[90%] md:w-full">
+        <p className="py-10 md:text-[20px] text-[16px] leading-[22px] md:leading-[24px] font-[500] w-[244px] md:w-full ">
           Hundreds of awards and 8,000+ satisfied customers
         </p>
       </div>
 
       {isClient && (
-        <Slider {...settings} className="w-full mx-auto bg-white overflow-hidden">
+        <Slider
+          {...settings}
+          className="w-full mx-auto bg-white overflow-hidden">
           {imgData2.map((item) => (
             <div
               key={item.id}
-              className="h-[80px] flex justify-center items-center px-2"
-            >
+              className="h-[80px] flex justify-center items-center px-2">
               <div className="relative h-[40px] w-auto">
                 <Image
                   src={item.img}

@@ -58,7 +58,7 @@ export default function MobileFooterMenu() {
           <div key={index} className="border-b border-gray-300 py-[15px]">
             <button
               onClick={() => toggleSection(index)}
-              className="w-full text-left flex justify-between items-center text-[var(--color-blue)] font-medium">
+              className="w-full text-left flex justify-between items-center text-[var(--color-blue)] text-[18px] font-[500] leading-[22px] py-[10px]">
               {typeof section === "string" ? section : section.heading}
               {hasLinks && <span>{openIndex === index ? "⌃" : "⌄"}</span>}
             </button>
@@ -68,7 +68,7 @@ export default function MobileFooterMenu() {
                 {section.links.map((link, linkIdx) => (
                   <p
                     key={linkIdx}
-                    className="hover:underline cursor-pointer py-2">
+                    className="text-[16px] font-[400] leading-[22px] cursor-pointer py-[10px]">
                     {link}
                   </p>
                 ))}

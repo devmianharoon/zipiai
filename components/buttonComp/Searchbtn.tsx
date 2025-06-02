@@ -13,7 +13,7 @@ const Searchbtn = (props: btn) => {
       onClick={props.onClick}
       type="submit"
       style={{ borderRadius: "90px" }}
-      className={` text-white  font-[500] text-[16px]   cursor-pointer ${props.wclass} ${props.bgColor} ${props.hpclass} justify-center items-center inline-flex gap-[10px]`}>
+      className={` text-white  font-[500] text-[16px]   cursor-pointer ${props.wclass} ${props.bgColor} ${props.hpclass} justify-center items-center box-border gap-[10px]`}>
       {props.text}
     </button>
   );

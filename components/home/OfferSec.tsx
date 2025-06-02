@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { HiOutlineChevronRight } from "react-icons/hi"; // Heroicons Outline
 
 const OfferSec = () => {
   const cardData = [
@@ -36,9 +37,9 @@ const OfferSec = () => {
 
   return (
     <>
-      <section className="w-full text-center py-12">
+      <section className="w-full text-center py-12 px-2 md:px-0">
         {/* <p className="text-[var(--color-blue)]">What we offer</p> */}
-        <h1 className="py-10 text-[38px] md:text-[48px] md:leading-[62px]">
+        <h1 className="py-10 text-[38px] leading-[48px] font-[600] md:text-[48px] md:leading-[62px]">
           Fast, Reliable. <br /> Internet Available Everywhere
         </h1>
         <div className="w-full flex justify-center items-center">
@@ -47,7 +48,7 @@ const OfferSec = () => {
               <div
                 key={index}
                 className="Blog box-border flex flex-col justify-between items-center 
-        h-auto w-[372px] md:h-auto md:w-[675px] mx-auto">
+        h-auto w-[402px] md:h-auto md:w-[675px] mx-auto">
                 <h2 className="text-center py-6">{card.title}</h2>
 
                 <Image
@@ -55,17 +56,20 @@ const OfferSec = () => {
                   alt={`blog-${index}`}
                   width={372}
                   height={260}
-                  className="rounded-[10px] md:w-[675px] md:h-[475px] object-cover"
+                  className="rounded-[10px] md:w-[675px] md:h-[470px] object-cover"
                 />
                 <div className="w-[90%] md:w-[560px]">
                   <h3 className="py-4 text-[18px] leading-[26px] md:text-[20px] md:leading-[32px] text-center md:text-center">
                     {card.heading}
                   </h3>
-                  <Link
-                    href={card.link}
-                    className="text-[var(--color-blue)] py-2 hover:border-b hover:border-[var(--color-red)]">
-                    Learn More
-                  </Link>
+                  <div className="flex justify-center items-center gap-2">
+                    <Link
+                      href={card.link}
+                      className="text-[var(--color-blue)] py-2 hover:border-b hover:border-[#FF4D4D] text-[16px] md:text-[18px] font-[500]">
+                      Learn More
+                    </Link>
+                    <HiOutlineChevronRight className="text-[16px] md:text-[18px] text-[var(--color-blue)]" />
+                  </div>
                 </div>
               </div>
             ))}

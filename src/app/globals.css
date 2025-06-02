@@ -1,58 +1,66 @@
- @import "tailwindcss";
- @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 :root {
-  --color-black: #0C0A1D;
-  --color-white: #FFFFFF;
-  --color-red: #FF4D4D;
+  --color-black: #0c0a1d;
+  --color-white: #ffffff;
+  --color-red: #ff4d4d;
   --color-red--rgb: 255, 77, 77;
 
-  --color-blue: #0B8BDD;
-  
-  --color-silver: #BAB0B8;
-  --color-gradient-start: #0B8BDD;
-  --color-gradient-end: #065A77;
+  --color-blue: #0b8bdd;
+
+  --color-silver: #bab0b8;
+  --color-gradient-start: #0b8bdd;
+  --color-gradient-end: #065a77;
 }
 
 @font-face {
-font-family: "SF UI Display";
-src: url('/assets/fonts/SF-UI-Display-Regular.ttf') format('truetype');}
+  font-family: "SF UI Display";
+  src: url("/assets/fonts/SF-UI-Display-Regular.ttf") format("truetype");
+}
 @layer base {
   h1 {
-    @apply  font-semibold;
+    @apply font-semibold;
     font-size: 48px;
     line-height: 100%;
     letter-spacing: -2%;
     color: var(--color-black);
   }
   h2 {
-    @apply  font-medium;
+    @apply font-medium;
     font-size: 30px;
     line-height: 100%;
     letter-spacing: -2%;
     color: var(--color-black);
   }
   h3 {
-    @apply  font-medium;
+    @apply font-medium;
     font-size: 24px;
     line-height: 100%;
     letter-spacing: -2%;
     color: var(--color-black);
   }
+  h5 {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.2px;
+    line-height: 28px;
+    color: var(--color-black);
+  }
   p {
-    @apply  font-medium;
+    @apply font-medium;
     font-size: 16px;
     line-height: 24px;
     color: var(--color-black);
   }
   .p-tight {
-    @apply  font-medium;
+    @apply font-medium;
     font-size: 14px;
     line-height: 24px;
     color: var(--color-black);
   }
-.p-large {
-    @apply  font-medium;
+  .p-large {
+    @apply font-medium;
     font-size: 20px;
     line-height: 24px;
     color: var(--color-black);
@@ -62,6 +70,19 @@ src: url('/assets/fonts/SF-UI-Display-Regular.ttf') format('truetype');}
   }
 
   .gradient-overlay {
-    background-image: linear-gradient(90deg, var(--color-gradient-start), var(--color-gradient-end));
+    background-image: linear-gradient(
+      90deg,
+      var(--color-gradient-start),
+      var(--color-gradient-end)
+    );
   }
+}
+
+footer .sec p,ul li {
+  color: var(--Black, #030a13);
+  padding: 10px 0px;
+  font-size: 18px;
+
+  font-weight: 400;
+  line-height: 30px;
 }

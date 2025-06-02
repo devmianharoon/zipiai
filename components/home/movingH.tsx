@@ -26,10 +26,18 @@ export default function Moving(props: xyz) {
 
   return (
     <div
-      className={`lg:absolute absolute h-[185px] w-[372px] -bottom-[135px] md:top-8 left-1/7  lg:bottom-0 md:left-4  md:h-[130px] md:w-[428px] box-border px-[22px] py-[22px]  ${props.bgClass} rounded-[12px] text-[var(--color-white)] mb-[50px] md:mb-0 ml-[7px]`}>
-      <h1 className="text-[20px] font-[500] px-2 pb-[10px] text-[var(--color-white)]">
+      className={`absolute h-[200px] w-[372px] -bottom-[135px] 
+  md:top-8 md:left-4 md:translate-x-0 md:bottom-auto 
+  lg:absolute lg:bottom-0 
+  left-1/2 -translate-x-1/2 
+  md:h-[130px] md:w-[428px] 
+  box-border px-[22px] py-[22px] 
+  ${props.bgClass} 
+  rounded-[12px] text-[var(--color-white)] 
+  mb-[60px] md:mb-0 shadow-[0px_4px_50px_rgba(17,17,17,0.05)]`}>
+      <p className="text-[20px] font-[500] px-2 pb-[10px] text-[var(--color-white)]">
         Moving ? Check for providers.
-      </h1>
+      </p>
       <div className="flex flex-col md:flex-row gap-[15px] justify-between items-center">
         <div className="relative w-full md:w-auto">
           <input
