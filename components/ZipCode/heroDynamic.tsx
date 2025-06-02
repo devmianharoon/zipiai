@@ -126,12 +126,12 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
         <div className=" flex  justify-center items-center">
           <div className="w-[600px] text-center lg:mt-36 flex flex-col gap-8 mt-0 px-[15px] lg:mb-[120px] ">
             <h1 className="text-white ">
-              Explore the best internet connections below
+              Compare the top internet providers near you
             </h1>
-            <div className="w-full flex justify-center items-center">
-              <button className="bg-black text-white rounded-full py-3 px-8 flex items-center cursor-pointer">
+            <div className="w-full flex justify-center items-center gap-2">
+              <button className="bg-black text-white rounded-full py-[16px] px-[28px] flex items-center cursor-pointer ">
                 <Globe className="w-5 h-5 mr-2" />
-                Show me other providers
+                Show me more providers
               </button>
             </div>
           </div>
@@ -197,7 +197,7 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
 
           {/* Static Section Below */}
         </div>
-        <div className="lg:absolute w-full lg:top-36 lg:left-4">
+        <div className="lg:absolute w-full lg:top-40 lg:left-4">
           <Moving
             bgClass="bg-[var(--color-black)]"
             bgClassBtn="bg-[var(--color-red)]"

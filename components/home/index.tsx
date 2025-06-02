@@ -100,7 +100,7 @@ const Index = () => {
           title: "Stream. Chill. Repeat.",
 
           description:
-            "Enjoy cinematic experiences from the comfort of your couch. Our reliable and buffer-free streaming services bring your favorite movies, shows, and live sports to life—perfect for family nights and weekend marathons.",
+            "Enjoy cinematic experiences from your couch, with instant access to your favorite movies,shows, sports, and news. Watch on your smart TV, tablet, phone, or laptop—at home or on the go. With on-demand content and cloud DVR, you're in full control. No contracts. No cable clutter. Just the entertainment you love, wherever and whenever you want it. Stream smarter. Live freer. Order today. ",
         }}
       />
 

@@ -1,10 +1,13 @@
+import { useRouter } from "next/navigation";
 import Searchbtn from "../buttonComp/Searchbtn";
+import Image from "next/image";
 
 type HeroBannerProps = {
   title?: string;
   description?: string;
 };
 export default function BannerThree({ data }: { data: HeroBannerProps }) {
+  const router = useRouter();
   return (
     <div className="relative w-full md:h-[1100px] h-[630px] overflow-hidden">
       {/* Background Image */}
@@ -30,7 +33,18 @@ export default function BannerThree({ data }: { data: HeroBannerProps }) {
           text={"Learn more"}
           bgColor="bg-[var(--color-red)] "
           wclass="w-[180px]"
+          hpclass="h-[57px]"
+          onClick={() => router.push("/directv")}
         />
+        <div className="mt-4 flex justify-center">
+          <Image
+            src="/assets/images/directv1.png"
+            alt="DirecTV Logo"
+            width={60}
+            height={20}
+            className="object-contain"
+          />
+        </div>
       </div>
     </div>
   );

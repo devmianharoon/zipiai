@@ -60,7 +60,8 @@ const Header = () => {
           <Searchbtn
             text="Speed test"
             bgColor="bg-[var(--color-blue)]"
-            wclass="120px"
+            wclass=""
+            hpclass="py-[13px] px-[16px]"
           />
           <Image src={"/assets/images/headericon.png"} alt={"header icon"} height={20} width={20}/>
         </div>

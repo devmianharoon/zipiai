@@ -8,8 +8,8 @@ const Whyus = () => {
         <div className="md:w-[850px] md:h-[470px] text-center py-8">
           <p className="text-[var(--color-blue)]">Why choose Hyper G</p>
           <h2 className="leading-[48px] pt-3 pb-8 ">
-            We partner with leading internet providers so you&apos;re guaranteed
-            accurate plans and prices.
+            Search, Compare, and Choose Internet Plans From Top Providers Near
+            You
           </h2>
           <div className="flex flex-col md:flex-row justify-center items-center relative">
             {/* Left (or Top) Circle */}
@@ -22,8 +22,8 @@ const Whyus = () => {
                   height={56}
                   className="md:w-[74px] md:h-[74px]"
                 />
-                <p className="text-sm md:text-base text-center">
-                  Search for best internet <br /> plans nearby
+                <p className="text-sm md:text-base text-center md:px-8 px-6">
+                  Search for trusted internet providers near you
                 </p>
               </div>
             </div>
@@ -38,8 +38,8 @@ const Whyus = () => {
                   height={56}
                   className="md:w-[74px] md:h-[74px]"
                 />
-                <p className="text-sm md:text-base text-center">
-                  Search for best internet <br /> plans nearby
+                <p className="text-sm md:text-base text-center md:px-8 px-6">
+                  Compare top providers, plans, and prices
                 </p>
               </div>
             </div>
@@ -54,8 +54,8 @@ const Whyus = () => {
                   height={56}
                   className="md:w-[74px] md:h-[74px]"
                 />
-                <p className="text-sm md:text-base text-center">
-                  Search for best internet <br /> plans nearby
+                <p className="text-sm md:text-base text-center md:px-8 px-6">
+                  Choose the right plan for you and place your order
                 </p>
               </div>
             </div>

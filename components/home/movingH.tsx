@@ -26,8 +26,8 @@ export default function Moving(props: xyz) {
 
   return (
     <div
-      className={`lg:absolute absolute h-[185px] w-[372px] -bottom-[135px] md:top-4 left-1/7  lg:bottom-0 md:left-4  md:h-[130px] md:w-[428px] box-border px-[22px] py-[22px]  ${props.bgClass} rounded-[12px] text-[var(--color-white)] mb-[50px] md:mb-0 ml-[7px]`}>
-      <h1 className="text-[20px] font-[500] text-center pb-[10px] text-[var(--color-white)]">
+      className={`lg:absolute absolute h-[185px] w-[372px] -bottom-[135px] md:top-8 left-1/7  lg:bottom-0 md:left-4  md:h-[130px] md:w-[428px] box-border px-[22px] py-[22px]  ${props.bgClass} rounded-[12px] text-[var(--color-white)] mb-[50px] md:mb-0 ml-[7px]`}>
+      <h1 className="text-[20px] font-[500] px-2 pb-[10px] text-[var(--color-white)]">
         Moving ? Check for providers.
       </h1>
       <div className="flex flex-col md:flex-row gap-[15px] justify-between items-center">
@@ -63,6 +63,7 @@ export default function Moving(props: xyz) {
           wclass="md:w-[140px] w-full"
           onClick={handleClick}
           bgColor={`${props.bgClassBtn}`}
+          hpclass="h-[48px]"
         />
       </div>
     </div>

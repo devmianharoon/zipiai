@@ -94,8 +94,10 @@ export default function Page() {
         Search Result
       </p>
       <h1 className="text-center mt-[20px] mb-[40px]">
-        Top 5 Internet service provider in{" "}
-        <span className="text-[var(--color-blue)]">{zipCode}</span>{" "}
+        The Top Internet Providers in{" "}
+        <span className="text-[var(--color-blue)]">{`Campbell`} /</span>
+        <span className="text-[var(--color-blue)]"> {`CA`} /</span>
+        <span className="text-[var(--color-blue)]"> {zipCode}</span>
       </h1>
       {/* Search Bar  */}
       <div className="w-full max-w-6xl mx-auto px-4  lg:flex gap-5 justify-center items-center">
@@ -128,8 +130,7 @@ export default function Page() {
         {data?.providers.map((provider: Provider, index: number) => (
           <div
             className="w-full px-5 py-[15px] lg:max-w-6xl lg:mx-auto lg:pt-[25px]  "
-            key={index}
-          >
+            key={index}>
             <SingleProvider data={provider} index={index} />
           </div>
         ))}
@@ -143,8 +144,7 @@ export default function Page() {
             <div>
               <button
                 onClick={() => window.open(`tel:1800-123-4567`)}
-                className="w-[208px] h-[50px] mx-auto  bg-gray-900 text-white  rounded-full text-base font-medium hover:bg-gray-800 transition-colors"
-              >
+                className="w-[208px] h-[50px] mx-auto  bg-gray-900 text-white  rounded-full text-base font-medium hover:bg-gray-800 transition-colors">
                 <div className="flex justify-center items-center gap-2">
                   <Image
                     src="/call-Icon.svg"
@@ -176,7 +176,9 @@ export default function Page() {
           </div>
           <div className="flex flex-wrap  lg:max-w-6xl lg:mx-auto lg:gap-[20px]">
             {data?.other_providers.map((provider: Provider, index: number) => (
-              <div key={index} className=" lg:w-1/4 px-[15px] mb-[20px] lg:p-0 lg:mb-0">
+              <div
+                key={index}
+                className=" lg:w-1/4 px-[15px] mb-[20px] lg:p-0 lg:mb-0">
                 <OtherProvider data={provider} index={index} />
               </div>
             ))}

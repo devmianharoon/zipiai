@@ -3,6 +3,7 @@ interface btn {
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   text: React.ReactNode;
   wclass?: string;
+  hpclass?:string;
   bgColor?: string;
   icon?: string;
 }
@@ -12,7 +13,7 @@ const Searchbtn = (props: btn) => {
       onClick={props.onClick}
       type="submit"
       style={{ borderRadius: "90px" }}
-      className={` text-white py-[13px] px-[16px] font-[500] text-[16px] border-redish   cursor-pointer hover:border-redish  ${props.wclass} ${props.bgColor}`}>
+      className={` text-white  font-[500] text-[16px]   cursor-pointer ${props.wclass} ${props.bgColor} ${props.hpclass} justify-center items-center inline-flex gap-[10px]`}>
       {props.text}
     </button>
   );
