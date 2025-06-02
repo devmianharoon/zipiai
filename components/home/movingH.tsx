@@ -4,11 +4,8 @@ import Searchbtn from "../buttonComp/Searchbtn";
 import { useState } from "react";
 
 import Image from "next/image";
-interface xyz {
-  bgClass: string;
-  bgClassBtn: string;
-}
-export default function Moving(props: xyz) {
+
+export default function Moving() {
   const router = useRouter();
   const [zipCode, setZipCode] = useState("");
 
@@ -32,7 +29,7 @@ export default function Moving(props: xyz) {
   left-1/2 -translate-x-1/2 
   md:h-[130px] md:w-[428px] 
   box-border px-[22px] py-[22px] 
-  ${props.bgClass} 
+  bg-black 
   rounded-[12px] text-[var(--color-white)] 
   mb-[60px] md:mb-0 shadow-[0px_4px_50px_rgba(17,17,17,0.05)]`}>
       <p className="text-[20px] font-[500] px-2 pb-[10px] text-[var(--color-white)]">
@@ -70,7 +67,7 @@ export default function Moving(props: xyz) {
           }
           wclass="md:w-auto w-full"
           onClick={handleClick}
-          bgColor={`${props.bgClassBtn}`}
+          bgColor={`bg-[var(--color-red)]`}
           hpclass="py-[16px] px-[28px] font-[18px] leading-[14.4px] font-[500]"
         />
       </div>

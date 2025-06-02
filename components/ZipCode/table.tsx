@@ -245,11 +245,12 @@ export default function InternetComparison(data: Props) {
                 (p) => p.ProviderName === rank.ProviderName
               );
               const logo = provider?.logo || "default.png"; // Fallback logo if not found
+              const providerType = provider?.Connection_Type || "Unknown";
 
               return (
                 <div
                   key={index}
-                  className="h-[346px] w-[267px] border border-[var(--color-silver)] rounded-[20px] flex flex-col justify-center items-center p-6 relative"
+                  className="h-[346px] w-[267px] border border-[var(--color-silver)] rounded-[20px] flex flex-col  items-center p-6 relative justify-evenly"
                 >
                   <Image
                     src={`/assets/images/coin${rank.Rank}.png`}
@@ -266,6 +267,7 @@ export default function InternetComparison(data: Props) {
                     className="py-6"
                   />
                   <p className="font-[500] text-sm">{rank.Reason}</p>
+                  <h3>{providerType}</h3>
                 </div>
               );
             })}

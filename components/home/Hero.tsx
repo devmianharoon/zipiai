@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import Searchbtn from "../buttonComp/Searchbtn";
 
 import Image from "next/image";
-import MovingH from "./movingH";
+import Moving from "./Moving";
 
 export default function Hero() {
   const router = useRouter();
@@ -20,9 +20,8 @@ export default function Hero() {
         <div className=" flex flex-wrap">
           <div className="w-full lg:w-full flex justify-center items-center ">
             <div className="home_content w-[670px] text-center">
-              <h1 className="text-[38px] md:text-[48px]   text-primary  md:pt-16 pb-4 text-[var(--color-white)] md:leading-[56px] leading-[48px]
-             ">
-                Find The Best Internet Providers Near Me! 
+              <h1 className="text-[38px] md:text-[48px]   text-primary font-[600] pt-16 pb-4 text-[var(--color-white)]">
+                Find The Best Internet Providers Near Me!
               </h1>
               <p className="inline-block py-2 md:py-4 text-[var(--color-white)]  md:text-[18px] font-[400] text-[16px] w-[352px] md:w-[480px]  ">
                 Search providers , compare plains and order service in just a
@@ -34,16 +33,7 @@ export default function Hero() {
               <div>
                 <div className="rightSection">
                   <div className="inputSection">
-                    {/* <Link
-                      href={`/${zipCode}`}
-                      style={{ borderRadius: "40px" }}
-                      
-                      className="bg-redish text-white py-2.5 px-2.5 w-46 font-[900] text-[18px] border-redish border-2 rounded-md cursor-pointer hover:border-redish hover:bg-white hover:text-redish transition-all duration-300 ease-in-out flex items-center justify-center"
-                    >
-                      {"Submit"}
-                    </Link> */}
-                    {/* onClick={handleClick} this was in button causin    error*/}
-
+                
                     <Searchbtn
                       text={
                         <span className="flex items-center justify-center gap-2">
@@ -109,10 +99,12 @@ export default function Hero() {
         </div>
         {/* moving section absoluted */}
 
-        <MovingH
-          bgClass={"bg-[var(--color-red)]"}
-          bgClassBtn={"bg-[var(--color-black)]"}
-        />
+        <div className="lg:absolute w-full lg:top-40 lg:left-4">
+          <Moving
+            bgClass="bg-[var(--color-black)]"
+            bgClassBtn="bg-[var(--color-red)]"
+          />
+        </div>
 
         {/* test speed section absolute */}
         <div className=" h-[185px] w-[372px] md:w-[896px] md:h-[140px]  rounded-[12px] md:-bottom-[65px] -bottom-[295px] p-4 md:py-12 md:px-4 absolute flex flex-col md:flex-row justify-center items-center bg-[#FF0000] z-40 left-1/2 -translate-x-1/2  md:gap-8 gap-4 bg-[linear-gradient(to_right,#0C0A1D,#FF0000)] text-center md:text-left text-[20px] md:text-[48px]">
