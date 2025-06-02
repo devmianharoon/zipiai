@@ -4,8 +4,6 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
-  
-
 const Footer = () => {
   return (
     <footer className="w-[1408px] ">
@@ -100,11 +98,9 @@ const Footer = () => {
           <h5 className=" text-[var(--color-blue)]">Contact</h5>
           <ul className="list-unstyled">
             <li>
-              <a
-                href="tel:+4733378901"
-                className="flex justify-start items-center">
+              <a href="tel:+4733378901" className="flex items-center">
                 <Image
-                  className="text-[var(--color-blue)] pr-2"
+                  className="text-[var(--color-blue)] mr-2"
                   height={24}
                   width={24}
                   src={"/assets/phone.png"}
@@ -118,7 +114,7 @@ const Footer = () => {
                 href="tel:+4733378901"
                 className="flex justify-start items-center">
                 <Image
-                  className="text-[var(--color-blue)] pr-2"
+                  className="text-[var(--color-blue)] mr-2"
                   height={24}
                   width={24}
                   src={"/assets/phone.png"}
@@ -132,7 +128,7 @@ const Footer = () => {
                 href="mailto:info@findhouse.com"
                 className="flex justify-start items-center">
                 <Image
-                  className="text-[var(--color-blue)] pr-2"
+                  className="text-[var(--color-blue)] mr-2"
                   height={24}
                   width={24}
                   src={"/assets/mail.png"}
@@ -145,7 +141,7 @@ const Footer = () => {
               <a href="#" className="flex justify-start items-center">
                 {" "}
                 <Image
-                  className="text-[var(--color-blue)] pr-2"
+                  className="text-[var(--color-blue)] mr-2"
                   height={24}
                   width={24}
                   src={"/assets/location.png"}
@@ -171,7 +167,7 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Enter email adress"
-                className="w-full rounded-[32px] h-[60px] box-border placeholder:text-[var(--color-silver)] border border-[var(--color-silver)] px-6"
+                className="w-full rounded-[32px] h-[60px] box-border placeholder:text-[var(--color-silver)] border border-[var(--color-silver)] px-6 outline-0"
               />
               <button className="absolute right-2 bg-[var(--color-blue)] h-[44px] w-[44px] text-[var(--color-white)] rounded-[50%] top-[18px] cursor-pointer flex justify-center items-center ">
                 <FontAwesomeIcon icon={faChevronRight} height={24} width={24} />

@@ -43,7 +43,7 @@ const OfferSec = () => {
           Fast, Reliable. <br /> Internet Available Everywhere
         </h1>
         <div className="w-full flex justify-center items-center">
-          <div className="w-[1380px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-4">
+          <div className="w-[1380px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-[24px]">
             {cardData.map((card, index) => (
               <div
                 key={index}

@@ -59,11 +59,16 @@ const Header = () => {
         <div className="hidden md:flex md:justify-center md:items-center gap-3">
           <Searchbtn
             text="Speed test"
-            bgColor="bg-[var(--color-blue)]"
+            bgColor="bg-[#0b8bdd]"
             wclass=""
-            hpclass="py-[13px]  px-[16px]"
+            hpclass="py-[13px] leading-[16px] px-[16px]"
           />
-          <Image src={"/assets/images/headericon.png"} alt={"header icon"} height={20} width={20}/>
+          <Image
+            src={"/assets/images/headericon.png"}
+            alt={"header icon"}
+            height={20}
+            width={20}
+          />
         </div>
         {/* End .navbar */}
       </div>

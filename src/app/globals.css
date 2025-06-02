@@ -7,11 +7,15 @@
   --color-red: #ff4d4d;
   --color-red--rgb: 255, 77, 77;
 
-  --color-blue: #0b8bdd;
+  --color-blue: #0B8BDD;
+  
+  --color-silver: #BAB0B8;
+  --color-gradient-start: #0B8BDD;
+  --color-gradient-end: #065A77;
+  --font-poppins: 'Poppins', sans-serif;
+  --font-sf-ui-display: 'SF UI Display', sans-serif;
 
-  --color-silver: #bab0b8;
-  --color-gradient-start: #0b8bdd;
-  --color-gradient-end: #065a77;
+  
 }
 
 @font-face {

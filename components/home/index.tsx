@@ -133,7 +133,7 @@ const Index = () => {
       </section>
 
       {/* <!-- Our Footer Bottom Area --> */}
-      <section className="hidden  footer_middle_area md:flex justify-center items-center bg-[rgba(11,107,221,0.1)]  py-4">
+      <section className="hidden  footer_middle_area md:flex justify-center items-center bg-[rgba(11,107,221,0.1)]  ">
         <div className="container flex justify-center items-center">
           <CopyrightFooter />
         </div>

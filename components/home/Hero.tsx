@@ -15,11 +15,13 @@ export default function Hero() {
   };
   return (
     <section className="w-full md:h-[720px] h-[660px]  box-border relative bg-cover bg-center bg-no-repeat  pt-26 bg-[var(--color-blue)] bg-[linear-gradient(to_bottom,#0F2774,#1D49DA)] ">
+     
       <div className="container mx-auto px-4  ">
         <div className=" flex flex-wrap">
           <div className="w-full lg:w-full flex justify-center items-center ">
             <div className="home_content w-[670px] text-center">
-              <h1 className="text-[38px] md:text-[48px]   text-primary font-[600] md:pt-16 pb-4 text-[var(--color-white)] md:leading-[56px] leading-[48px]">
+              <h1 className="text-[38px] md:text-[48px]   text-primary  md:pt-16 pb-4 text-[var(--color-white)] md:leading-[56px] leading-[48px]
+             ">
                 Find The Best Internet Providers Near Me! 
               </h1>
               <p className="inline-block py-2 md:py-4 text-[var(--color-white)]  md:text-[18px] font-[400] text-[16px] w-[352px] md:w-[480px]  ">
@@ -121,7 +123,7 @@ export default function Hero() {
             text="Check my speed"
             onClick={handleClick}
             wclass=""
-            hpclass="py-[12px] px-[24px] text-[18px] font-medium"
+            hpclass="py-[22px] px-[24px] text-[18px] font-[500] text-[18px] leading-[18px] tracking-[.18px]"
             bgColor="bg-[var(--color-black)]"
           />
         </div>

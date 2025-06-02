@@ -35,7 +35,7 @@ const Experience = () => {
               <Button
                 href={"/"}
                 text={"Learn more"}
-                class="bg-white w-[180px] md:py-[16px] py-[12px] px-[28px] md:px-[28px] rounded-[70px] md:text-[18px] md:font-[500] md:leading-[14px]"
+                class="bg-white  md:py-[21px] py-[12px] px-[28px] md:px-[28px] rounded-[80px] md:text-[18px] md:font-[500] md:leading-[14.4px]"
               />
             </div>
           </div>

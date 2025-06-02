@@ -68,10 +68,10 @@ export default function Moving(props: xyz) {
               Submit
             </span>
           }
-          wclass="md:w-[140px] w-full"
+          wclass="md:w-auto w-full"
           onClick={handleClick}
           bgColor={`${props.bgClassBtn}`}
-          hpclass="h-[48px]"
+          hpclass="py-[16px] px-[28px] font-[18px] leading-[14.4px] font-[500]"
         />
       </div>
     </div>

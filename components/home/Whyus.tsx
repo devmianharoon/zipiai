@@ -4,6 +4,7 @@ import React from "react";
 const Whyus = () => {
   return (
     <section className="w-full flex items-center justify-center pt-72 md:py-28  ">
+       <div className="w-[753px] h-[753px] rounded-full opacity-50 bg-[#FFB200] blur-[250px] shrink-0 absolute -left-[600px] z-10 " />
       <div className="container flex justify-center items-center py-4">
         <div className="md:w-[850px] md:h-[470px] text-center py-8">
           <p className="text-[var(--color-blue)]">Why choose Hyper G</p>

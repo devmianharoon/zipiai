@@ -32,8 +32,8 @@ export default function BannerThree({ data }: { data: HeroBannerProps }) {
         <Searchbtn
           text={"Learn more"}
           bgColor="bg-[var(--color-red)] "
-          wclass="w-[180px]"
-          hpclass="h-[57px]"
+          wclass=""
+          hpclass="py-[21px] px-[28px] text-[18px] font-[500] leading-[14.4px]"
           onClick={() => router.push("/directv")}
         />
         <div className="mt-4 flex justify-center">

@@ -1,11 +1,11 @@
 "use client";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+
 
 // import Searchbtn from "../../buttonComp/Searchbtn";
 
 const HeaderMenuContent = () => {
-  const pathname = usePathname();
+  // const pathname = usePathname();
 
   const menuItems = [
     { name: "About us", path: "/home-internet" },
@@ -17,13 +17,13 @@ const HeaderMenuContent = () => {
   return (
     <ul
       id="respMenu"
-      className="hidden md:flex gap-10 text-navtext text-[16px] justify-center items-center font-[500]"
+      className="hidden md:flex gap-10 text-navtext  justify-center items-center  "
       data-menu-style="horizontal">
       {menuItems.map((item, index) => (
         <li key={index}>
           <Link
             href={item.path}
-            className={pathname === item.path ? "ui-active" : undefined}>
+            className={`text-[16px]  font-[500] leading-[100%] tracking-[.16px]`}>
             {item.name}
           </Link>
         </li>
