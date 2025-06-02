@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import channeldata from "./../../../../data/channels_data_via_internet.json";
 import full_channel_guide from "./../../../../data/full_channel_guide.json";
 import ChannelTable from "./ChannelTable";
 import Cookies from "js-cookie";
@@ -10,6 +9,8 @@ import { AppDispatch, RootState } from "../../../../store/store";
 import { fetchZipData } from "../../../../store/slices/zipSlice";
 import Image from "next/image";
 import { ChevronDown } from "lucide-react";
+import { clearDirectvData, fetchDirectvByZip } from "../../../../store/slices/directvSlice";
+import { Channel } from "../../../../data/types/channelsTypes";
 
 const packagesData = {
   toggle: {
@@ -151,14 +152,19 @@ export default function PackageComparison() {
   const savedZipCode = Cookies.get("user_zipcode");
   console.log("Saved Zip Code from Cookies:", savedZipCode);
   useEffect(() => {
-    const savedZipCode = Cookies.get("user_zipcode");
     if (savedZipCode) {
-      console.log("Zip code from cookie:", savedZipCode);
-      // Dispatch saved zip code to Redux
+      dispatch(fetchDirectvByZip(savedZipCode));
       dispatch(fetchZipData(savedZipCode));
+
     }
-  }, [dispatch]);
+    return () => {
+      dispatch(clearDirectvData());
+    };
+  }, [dispatch, savedZipCode]);
   const zip = useSelector((state: RootState) => state.zip.data);
+  const directv = useSelector((state: RootState) => state.directv);
+  console.log("Directv Data from Redux:", directv);
+  
 
   const [withLocalChannels, setWithLocalChannels] = useState(1);
 
@@ -257,23 +263,39 @@ export default function PackageComparison() {
                 {withLocalChannels === 2
                   ? "Local Channels"
                   : withLocalChannels === 3
-                    ? "Reginal Sports Networks"
+                    ? "Regional Sports Networks"
                     : "Full Channel Guide"}
               </h3>
               {withLocalChannels === 3 && (
                 <h3 className="text-lg font-bold mb-4">
-                  Price <span>17/$</span>
+                  Price <span>{directv.data?.RSN_Price}</span>
                 </h3>
               )}
             </div>
             <div className="h-[700px] w-auto overflow-x-auto">
+              {/* <ChannelTable
+                channels={
+                  // withLocalChannels === 4
+                  //   ? full_channel_guide
+                  //   : 
+                    withLocalChannels === 2
+                      ? directv.data?.RSNs
+                      : withLocalChannels === 3
+                        ? directv.data?.RSNs
+                        : directv.data?.RSNs ?? []
+                }
+                packages={packageNames}
+              /> */}
               <ChannelTable
                 channels={
+                  withLocalChannels === 2
+                    ? (directv.data?.localChnl as Channel[])
+                    : withLocalChannels === 3
+                      ? (directv.data?.RSNs as Channel[])
+                      :
                   withLocalChannels === 4
-                    ? full_channel_guide
-                    : withLocalChannels === 2
-                      ? channeldata
-                      : channeldata
+                    ? (full_channel_guide as Channel[])
+                    : (full_channel_guide as Channel[]) ?? []
                 }
                 packages={packageNames}
               />

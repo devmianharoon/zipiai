@@ -1,643 +1,878 @@
 [
-  { "name": "5StarMAX", "channelNumber": "520", "packages": ["PREMIER"] },
   {
-    "name": "A&E",
-    "channelNumber": "265",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "5StarMAX",
+    "chnlNumber": "520",
+    "logo": "https://www.example.com/channel-icons/5StarMAX.svg",
+    "inPackags": [0, 0, 0, 1]
   },
   {
-    "name": "ACC Digital Network",
-    "channelNumber": "4151",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "A&E",
+    "chnlNumber": "265",
+    "logo": "https://www.example.com/channel-icons/A&E.svg",
+    "inPackags": [1, 1, 1, 1]
   },
   {
-    "name": "ACC Network",
-    "channelNumber": "612",
-    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "ACC Digital Network",
+    "chnlNumber": "4151",
+    "logo": "https://www.example.com/channel-icons/ACC_Digital_Network.svg",
+    "inPackags": [1, 1, 1, 1]
   },
   {
-    "name": "AccuWeather",
-    "channelNumber": "361",
-    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "ACC Network",
+    "chnlNumber": "612",
+    "logo": "https://www.example.com/channel-icons/ACC_Network.svg",
+    "inPackags": [0, 1, 1, 1]
   },
-  { "name": "ActionMAX", "channelNumber": "519", "packages": ["PREMIER"] },
-  { "name": "Alien Nation", "channelNumber": "4490", "packages": ["PREMIER"] },
   {
-    "name": "AMC",
-    "channelNumber": "254",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "AccuWeather",
+    "chnlNumber": "361",
+    "logo": "https://www.example.com/channel-icons/AccuWeather.svg",
+    "inPackags": [0, 1, 1, 1]
   },
   {
-    "name": "American Heroes name",
-    "channelNumber": "287",
-    "packages": ["ULTIMATE", "PREMIER"]
+    "chnlname": "ActionMAX",
+    "chnlNumber": "519",
+    "logo": "https://www.example.com/channel-icons/ActionMAX.svg",
+    "inPackags": [0, 0, 0, 1]
   },
   {
-    "name": "America's Test Kitchen",
-    "channelNumber": "4357",
-    "packages": ["PREMIER"]
+    "chnlname": "Alien Nation",
+    "chnlNumber": "4490",
+    "logo": "https://www.example.com/channel-icons/Alien_Nation.svg",
+    "inPackags": [0, 0, 0, 1]
   },
   {
-    "name": "Anger Management",
-    "channelNumber": "4321",
-    "packages": ["PREMIER"]
+    "chnlname": "AMC",
+    "chnlNumber": "254",
+    "logo": "https://www.example.com/channel-icons/AMC.svg",
+    "inPackags": [1, 1, 1, 1]
   },
   {
-    "name": "Animal Planet",
-    "channelNumber": "282",
-    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "American Heroes name",
+    "chnlNumber": "287",
+    "logo": "https://www.example.com/channel-icons/American_Heroes_name.svg",
+    "inPackags": [0, 0, 1, 1]
   },
   {
-    "name": "Are We There Yet",
-    "channelNumber": "4322",
-    "packages": ["PREMIER"]
+    "chnlname": "America's Test Kitchen",
+    "chnlNumber": "4357",
+    "logo": "https://www.example.com/channel-icons/Americas_Test_Kitchen.svg",
+    "inPackags": [0, 0, 0, 1]
   },
   {
-    "name": "Aspire",
-    "channelNumber": "381",
-    "packages": ["ULTIMATE", "PREMIER"]
+    "chnlname": "Anger Management",
+    "chnlNumber": "4321",
+    "logo": "https://www.example.com/channel-icons/Anger_Management.svg",
+    "inPackags": [0, 0, 0, 1]
   },
-  { "name": "Ax Men", "channelNumber": "4264", "packages": ["PREMIER"] },
   {
-    "name": "AXS TV",
-    "channelNumber": "340",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "Animal Planet",
+    "chnlNumber": "282",
+    "logo": "https://www.example.com/channel-icons/Animal_Planet.svg",
+    "inPackags": [0, 1, 1, 1]
   },
   {
-    "name": "BabyFirst HD",
-    "channelNumber": "293",
-    "packages": ["ULTIMATE", "PREMIER"]
+    "chnlname": "Are We There Yet",
+    "chnlNumber": "4322",
+    "logo": "https://www.example.com/channel-icons/Are_We_There_Yet.svg",
+    "inPackags": [0, 0, 0, 1]
   },
   {
-    "name": "BBC America",
-    "channelNumber": "264",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "Aspire",
+    "chnlNumber": "381",
+    "logo": "https://www.example.com/channel-icons/Aspire.svg",
+    "inPackags": [0, 0, 1, 1]
   },
   {
-    "name": "BBC News",
-    "channelNumber": "346",
-    "packages": ["ULTIMATE", "PREMIER"]
+    "chnlname": "Ax Men",
+    "chnlNumber": "4264",
+    "logo": "https://www.example.com/channel-icons/Ax_Men.svg",
+    "inPackags": [0, 0, 0, 1]
   },
   {
-    "name": "BET",
-    "channelNumber": "329",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "AXS TV",
+    "chnlNumber": "340",
+    "logo": "https://www.example.com/channel-icons/AXS_TV.svg",
+    "inPackags": [1, 1, 1, 1]
   },
   {
-    "name": "BET Her",
-    "channelNumber": "330",
-    "packages": ["ULTIMATE", "PREMIER"]
+    "chnlname": "BabyFirst HD",
+    "chnlNumber": "293",
+    "logo": "https://www.example.com/channel-icons/BabyFirst_HD.svg",
+    "inPackags": [0, 0, 1, 1]
   },
   {
-    "name": "Big Ten Network",
-    "channelNumber": "610",
-    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "BBC America",
+    "chnlNumber": "264",
+    "logo": "https://www.example.com/channel-icons/BBC_America.svg",
+    "inPackags": [1, 1, 1, 1]
   },
   {
-    "name": "Big 12",
-    "channelNumber": "4152",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "BBC News",
+    "chnlNumber": "346",
+    "logo": "https://www.example.com/channel-icons/BBC_News.svg",
+    "inPackags": [0, 0, 1, 1]
   },
   {
-    "name": "Bloomberg TV",
-    "channelNumber": "353",
-    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "BET",
+    "chnlNumber": "329",
+    "logo": "https://www.example.com/channel-icons/BET.svg",
+    "inPackags": [1, 1, 1, 1]
   },
-  { "name": "Bob Ross name", "channelNumber": "4219", "packages": ["PREMIER"] },
   {
-    "name": "Boomerang",
-    "channelNumber": "298",
-    "packages": ["ULTIMATE", "PREMIER"]
+    "chnlname": "BET Her",
+    "chnlNumber": "330",
+    "logo": "https://www.example.com/channel-icons/BET_Her.svg",
+    "inPackags": [0, 0, 1, 1]
   },
   {
-    "name": "BOUNCE TV",
-    "channelNumber": "82",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "Big Ten Network",
+    "chnlNumber": "610",
+    "logo": "https://www.example.com/channel-icons/Big_Ten_Network.svg",
+    "inPackags": [0, 1, 1, 1]
   },
   {
-    "name": "Bravo",
-    "channelNumber": "237",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "Big 12",
+    "chnlNumber": "4152",
+    "logo": "https://www.example.com/channel-icons/Big_12.svg",
+    "inPackags": [1, 1, 1, 1]
   },
-  { "name": "Buzzr", "channelNumber": "4335", "packages": ["PREMIER"] },
   {
-    "name": "Cartoon Network East",
-    "channelNumber": "296",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "Bloomberg TV",
+    "chnlNumber": "353",
+    "logo": "https://www.example.com/channel-icons/Bloomberg_TV.svg",
+    "inPackags": [0, 1, 1, 1]
   },
   {
-    "name": "CBS Sports Network",
-    "channelNumber": "221",
-    "packages": ["ULTIMATE", "PREMIER"]
+    "chnlname": "Bob Ross name",
+    "chnlNumber": "4219",
+    "logo": "https://www.example.com/channel-icons/Bob_Ross_name.svg",
+    "inPackags": [0, 0, 0, 1]
   },
   {
-    "name": "Cheddar News",
-    "channelNumber": "354",
-    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "Boomerang",
+    "chnlNumber": "298",
+    "logo": "https://www.example.com/channel-icons/Boomerang.svg",
+    "inPackags": [0, 0, 1, 1]
   },
-  { "name": "Cinemax East", "channelNumber": "515", "packages": ["PREMIER"] },
   {
-    "name": "CleoTV",
-    "channelNumber": "341",
-    "packages": ["ULTIMATE", "PREMIER"]
+    "chnlname": "BOUNCE TV",
+    "chnlNumber": "82",
+    "logo": "https://www.example.com/channel-icons/BOUNCE_TV.svg",
+    "inPackags": [1, 1, 1, 1]
   },
   {
-    "name": "CMT",
-    "channelNumber": "327",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "Bravo",
+    "chnlNumber": "237",
+    "logo": "https://www.example.com/channel-icons/Bravo.svg",
+    "inPackags": [1, 1, 1, 1]
   },
   {
-    "name": "CNBC",
-    "channelNumber": "355",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "Buzzr",
+    "chnlNumber": "4335",
+    "logo": "https://www.example.com/channel-icons/Buzzr.svg",
+    "inPackags": [0, 0, 0, 1]
   },
   {
-    "name": "CNBC World",
-    "channelNumber": "357",
-    "packages": ["ULTIMATE", "PREMIER"]
+    "chnlname": "Cartoon Network East",
+    "chnlNumber": "296",
+    "logo": "https://www.example.com/channel-icons/Cartoon_Network_East.svg",
+    "inPackags": [1, 1, 1, 1]
   },
   {
-    "name": "CNN",
-    "channelNumber": "202",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "CBS Sports Network",
+    "chnlNumber": "221",
+    "logo": "https://www.example.com/channel-icons/CBS_Sports_Network.svg",
+    "inPackags": [0, 0, 1, 1]
   },
   {
-    "name": "CNN En Español",
-    "channelNumber": "419",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "Cheddar News",
+    "chnlNumber": "354",
+    "logo": "https://www.example.com/channel-icons/Cheddar_News.svg",
+    "inPackags": [0, 1, 1, 1]
   },
   {
-    "name": "CNNi",
-    "channelNumber": "358",
-    "packages": ["ULTIMATE", "PREMIER"]
+    "chnlname": "Cinemax East",
+    "chnlNumber": "515",
+    "logo": "https://www.example.com/channel-icons/Cinemax_East.svg",
+    "inPackags": [0, 0, 0, 1]
   },
   {
-    "name": "Cold Case Files",
-    "channelNumber": "4271",
-    "packages": ["PREMIER"]
+    "chnlname": "CleoTV",
+    "chnlNumber": "341",
+    "logo": "https://www.example.com/channel-icons/CleoTV.svg",
+    "inPackags": [0, 0, 1, 1]
   },
   {
-    "name": "Comedy Central",
-    "channelNumber": "249",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "CMT",
+    "chnlNumber": "327",
+    "logo": "https://www.example.com/channel-icons/CMT.svg",
+    "inPackags": [1, 1, 1, 1]
   },
   {
-    "name": "Comedy Dynamics",
-    "channelNumber": "4305",
-    "packages": ["PREMIER"]
+    "chnlname": "CNBC",
+    "chnlNumber": "355",
+    "logo": "https://www.example.com/channel-icons/CNBC.svg",
+    "inPackags": [1, 1, 1, 1]
   },
-
   {
-    "name": "FOX Business Network",
-    "channelNumber": "359",
-    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "CNBC World",
+    "chnlNumber": "357",
+    "logo": "https://www.example.com/channel-icons/CNBC_World.svg",
+    "inPackags": [0, 0, 1, 1]
   },
   {
-    "name": "FOX News Channel",
-    "channelNumber": "360",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "CNN",
+    "chnlNumber": "202",
+    "logo": "https://www.example.com/channel-icons/CNN.svg",
+    "inPackags": [1, 1, 1, 1]
   },
-  { "name": "FOX Soul", "channelNumber": "4401", "packages": ["PREMIER"] },
   {
-    "name": "FOX Sports 1",
-    "channelNumber": "219",
-    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "CNN En Español",
+    "chnlNumber": "419",
+    "logo": "https://www.example.com/channel-icons/CNN_En_Español.svg",
+    "inPackags": [1, 1, 1, 1]
   },
   {
-    "name": "FOX Sports 2",
-    "channelNumber": "618",
-    "packages": ["ULTIMATE", "PREMIER"]
+    "chnlname": "CNNi",
+    "chnlNumber": "358",
+    "logo": "https://www.example.com/channel-icons/CNNi.svg",
+    "inPackags": [0, 0, 1, 1]
   },
   {
-    "name": "FOX Weather",
-    "channelNumber": "363",
-    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "Cold Case Files",
+    "chnlNumber": "4271",
+    "logo": "https://www.example.com/channel-icons/Cold_Case_Files.svg",
+    "inPackags": [0, 0, 0, 1]
   },
   {
-    "name": "Freeform",
-    "channelNumber": "311",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "Comedy Central",
+    "chnlNumber": "249",
+    "logo": "https://www.example.com/channel-icons/Comedy_Central.svg",
+    "inPackags": [1, 1, 1, 1]
   },
-  { "name": "FUEL TV", "channelNumber": "4110", "packages": ["PREMIER"] },
   {
-    "name": "Fuse",
-    "channelNumber": "339",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "Comedy Dynamics",
+    "chnlNumber": "4305",
+    "logo": "https://www.example.com/channel-icons/Comedy_Dynamics.svg",
+    "inPackags": [0, 0, 0, 1]
   },
   {
-    "name": "FX",
-    "channelNumber": "248",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "FOX Business Network",
+    "chnlNumber": "359",
+    "logo": "https://www.example.com/channel-icons/FOX_Business_Network.svg",
+    "inPackags": [0, 1, 1, 1]
   },
   {
-    "name": "FX Movie Channel",
-    "channelNumber": "258",
-    "packages": ["ULTIMATE", "PREMIER"]
+    "chnlname": "FOX News Channel",
+    "chnlNumber": "360",
+    "logo": "https://www.example.com/channel-icons/FOX_News_Channel.svg",
+    "inPackags": [1, 1, 1, 1]
   },
   {
-    "name": "FXX",
-    "channelNumber": "259",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "FOX Soul",
+    "chnlNumber": "4401",
+    "logo": "https://www.example.com/channel-icons/FOX_Soul.svg",
+    "inPackags": [0, 0, 0, 1]
   },
   {
-    "name": "fyi,",
-    "channelNumber": "266",
-    "packages": ["ULTIMATE", "PREMIER"]
+    "chnlname": "FOX Sports 1",
+    "chnlNumber": "219",
+    "logo": "https://www.example.com/channel-icons/FOX_Sports_1.svg",
+    "inPackags": [0, 1, 1, 1]
   },
   {
-    "name": "Galavisión",
-    "channelNumber": "404",
-    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "FOX Sports 2",
+    "chnlNumber": "618",
+    "logo": "https://www.example.com/channel-icons/FOX_Sports_2.svg",
+    "inPackags": [0, 0, 1, 1]
   },
   {
-    "name": "Game Show Network",
-    "channelNumber": "233",
-    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "FOX Weather",
+    "chnlNumber": "363",
+    "logo": "https://www.example.com/channel-icons/FOX_Weather.svg",
+    "inPackags": [0, 1, 1, 1]
   },
   {
-    "name": "GET",
-    "channelNumber": "83",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "Freeform",
+    "chnlNumber": "311",
+    "logo": "https://www.example.com/channel-icons/Freeform.svg",
+    "inPackags": [1, 1, 1, 1]
   },
   {
-    "name": "Golf Channel",
-    "channelNumber": "218",
-    "packages": ["ULTIMATE", "PREMIER"]
+    "chnlname": "FUEL TV",
+    "chnlNumber": "4110",
+    "logo": "https://www.example.com/channel-icons/FUEL_TV.svg",
+    "inPackags": [0, 0, 0, 1]
   },
-  { "name": "GoTraveler", "channelNumber": "4388", "packages": ["PREMIER"] },
   {
-    "name": "Great American Adventures",
-    "channelNumber": "4388",
-    "packages": ["PREMIER"]
+    "chnlname": "Fuse",
+    "chnlNumber": "339",
+    "logo": "https://www.example.com/channel-icons/Fuse.svg",
+    "inPackags": [1, 1, 1, 1]
   },
   {
-    "name": "Great American Family",
-    "channelNumber": "326",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "FX",
+    "chnlNumber": "248",
+    "logo": "https://www.example.com/channel-icons/FX.svg",
+    "inPackags": [1, 1, 1, 1]
   },
   {
-    "name": "GRIT",
-    "channelNumber": "81",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "FX Movie Channel",
+    "chnlNumber": "258",
+    "logo": "https://www.example.com/channel-icons/FX_Movie_Channel.svg",
+    "inPackags": [0, 0, 1, 1]
   },
   {
-    "name": "Hallmark Channel",
-    "channelNumber": "312",
-    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "FXX",
+    "chnlNumber": "259",
+    "logo": "https://www.example.com/channel-icons/FXX.svg",
+    "inPackags": [1, 1, 1, 1]
   },
   {
-    "name": "Hallmark Mystery",
-    "channelNumber": "565",
-    "packages": ["ULTIMATE", "PREMIER"]
+    "chnlname": "fyi,",
+    "chnlNumber": "266",
+    "logo": "https://www.example.com/channel-icons/fyi.svg",
+    "inPackags": [0, 0, 1, 1]
   },
-  { "name": "HBO 2 East", "channelNumber": "502", "packages": ["PREMIER"] },
   {
-    "name": "HBO Comedy East HD",
-    "channelNumber": "506",
-    "packages": ["PREMIER"]
+    "chnlname": "Galavisión",
+    "chnlNumber": "404",
+    "logo": "https://www.example.com/channel-icons/Galavisión.svg",
+    "inPackags": [0, 1, 1, 1]
   },
-  { "name": "HBO East", "channelNumber": "501", "packages": ["PREMIER"] },
   {
-    "name": "HBO Family East",
-    "channelNumber": "507",
-    "packages": ["PREMIER"]
+    "chnlname": "Game Show Network",
+    "chnlNumber": "233",
+    "logo": "https://www.example.com/channel-icons/Game_Show_Network.svg",
+    "inPackags": [0, 1, 1, 1]
   },
-  { "name": "HBO Latino", "channelNumber": "511", "packages": ["PREMIER"] },
   {
-    "name": "HBO Signature East HD",
-    "channelNumber": "503",
-    "packages": ["PREMIER"]
+    "chnlname": "GET",
+    "chnlNumber": "83",
+    "logo": "https://www.example.com/channel-icons/GET.svg",
+    "inPackags": [1, 1, 1, 1]
   },
   {
-    "name": "HBO Zone East HD",
-    "channelNumber": "509",
-    "packages": ["PREMIER"]
+    "chnlname": "Golf Channel",
+    "chnlNumber": "218",
+    "logo": "https://www.example.com/channel-icons/Golf_Channel.svg",
+    "inPackags": [0, 0, 1, 1]
   },
   {
-    "name": "HerSphere",
-    "channelNumber": "4209",
-    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "GoTraveler",
+    "chnlNumber": "4388",
+    "logo": "https://www.example.com/channel-icons/GoTraveler.svg",
+    "inPackags": [0, 0, 0, 1]
   },
   {
-    "name": "Heroes & Icons (H&I)",
-    "channelNumber": "385",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "Great American Adventures",
+    "chnlNumber": "4388",
+    "logo": "https://www.example.com/channel-icons/Great_American_Adventures.svg",
+    "inPackags": [0, 0, 0, 1]
   },
   {
-    "name": "HGTV",
-    "channelNumber": "229",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "Great American Family",
+    "chnlNumber": "326",
+    "logo": "https://www.example.com/channel-icons/Great_American_Family.svg",
+    "inPackags": [1, 1, 1, 1]
   },
-  { "name": "Hipstr", "channelNumber": "4545", "packages": ["PREMIER"] },
   {
-    "name": "History Channel",
-    "channelNumber": "269",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "GRIT",
+    "chnlNumber": "81",
+    "logo": "https://www.example.com/channel-icons/GRIT.svg",
+    "inPackags": [1, 1, 1, 1]
   },
   {
-    "name": "History & Warfare Now",
-    "channelNumber": "4486",
-    "packages": ["PREMIER"]
+    "chnlname": "Hallmark Channel",
+    "chnlNumber": "312",
+    "logo": "https://www.example.com/channel-icons/Hallmark_Channel.svg",
+    "inPackags": [0, 1, 1, 1]
   },
   {
-    "name": "HLN",
-    "channelNumber": "204",
-    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "Hallmark Mystery",
+    "chnlNumber": "565",
+    "logo": "https://www.example.com/channel-icons/Hallmark_Mystery.svg",
+    "inPackags": [0, 0, 1, 1]
   },
   {
-    "name": "Horror by Alter",
-    "channelNumber": "4221",
-    "packages": ["PREMIER"]
+    "chnlname": "HBO 2 East",
+    "chnlNumber": "502",
+    "logo": "https://www.example.com/channel-icons/HBO_2_East.svg",
+    "inPackags": [0, 0, 0, 1]
   },
   {
-    "name": "HSN",
-    "channelNumber": "240",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "HBO Comedy East HD",
+    "chnlNumber": "506",
+    "logo": "https://www.example.com/channel-icons/HBO_Comedy_East_HD.svg",
+    "inPackags": [0, 0, 0, 1]
   },
   {
-    "name": "Ice Road Truckers",
-    "channelNumber": "4263",
-    "packages": ["PREMIER"]
+    "chnlname": "HBO East",
+    "chnlNumber": "501",
+    "logo": "https://www.example.com/channel-icons/HBO_East.svg",
+    "inPackags": [0, 0, 0, 1]
   },
   {
-    "name": "IFC",
-    "channelNumber": "333",
-    "packages": ["ULTIMATE", "PREMIER"]
+    "chnlname": "HBO Family East",
+    "chnlNumber": "507",
+    "logo": "https://www.example.com/channel-icons/HBO_Family_East.svg",
+    "inPackags": [0, 0, 0, 1]
   },
-  { "name": "INFAST", "channelNumber": "4382", "packages": ["PREMIER"] },
   {
-    "name": "Investigation Discovery",
-    "channelNumber": "285",
-    "packages": ["ULTIMATE", "PREMIER"]
+    "chnlname": "HBO Latino",
+    "chnlNumber": "511",
+    "logo": "https://www.example.com/channel-icons/HBO_Latino.svg",
+    "inPackags": [0, 0, 0, 1]
   },
-
   {
-    "name": "TV Land",
-    "channelNumber": "304",
-    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "HBO Signature East HD",
+    "chnlNumber": "503",
+    "logo": "https://www.example.com/channel-icons/HBO_Signature_East_HD.svg",
+    "inPackags": [0, 0, 0, 1]
   },
   {
-    "name": "TV One (HD only)",
-    "channelNumber": "328",
-    "packages": ["ENTERTAINMENT", "ULTIMATE", "PREMIER"]
+    "chnlname": "HBO Zone East HD",
+    "chnlNumber": "509",
+    "logo": "https://www.example.com/channel-icons/HBO_Zone_East_HD.svg",
+    "inPackags": [0, 0, 0, 1]
   },
   {
-    "name": "UniMás",
-    "channelNumber": "408",
-    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "HerSphere",
+    "chnlNumber": "4209",
+    "logo": "https://www.example.com/channel-icons/HerSphere.svg",
+    "inPackags": [0, 1, 1, 1]
   },
   {
-    "name": "Universal Kids",
-    "channelNumber": "295",
-    "packages": ["ULTIMATE", "PREMIER"]
+    "chnlname": "Heroes & Icons (H&I)",
+    "chnlNumber": "385",
+    "logo": "https://www.example.com/channel-icons/Heroes_&_Icons_(H&I).svg",
+    "inPackags": [1, 1, 1, 1]
   },
   {
-    "name": "UNIVERSO",
-    "channelNumber": "410",
-    "packages": ["ULTIMATE", "PREMIER"]
+    "chnlname": "HGTV",
+    "chnlNumber": "229",
+    "logo": "https://www.example.com/channel-icons/HGTV.svg",
+    "inPackags": [1, 1, 1, 1]
   },
   {
-    "name": "Univision (Este)",
-    "channelNumber": "402",
-    "packages": ["ENTERTAINMENT", "ULTIMATE", "PREMIER"]
+    "chnlname": "Hipstr",
+    "chnlNumber": "4545",
+    "logo": "https://www.example.com/channel-icons/Hipstr.svg",
+    "inPackags": [0, 0, 0, 1]
   },
   {
-    "name": "UnXplained Zone",
-    "channelNumber": "4491",
-    "packages": ["ULTIMATE", "PREMIER"]
+    "chnlname": "History Channel",
+    "chnlNumber": "269",
+    "logo": "https://www.example.com/channel-icons/History_Channel.svg",
+    "inPackags": [1, 1, 1, 1]
   },
   {
-    "name": "UPTV",
-    "channelNumber": "338",
-    "packages": ["ULTIMATE", "PREMIER"]
+    "chnlname": "History & Warfare Now",
+    "chnlNumber": "4486",
+    "logo": "https://www.example.com/channel-icons/History_&_Warfare_Now.svg",
+    "inPackags": [0, 0, 0, 1]
   },
   {
-    "name": "USA Network",
-    "channelNumber": "242",
-    "packages": ["ENTERTAINMENT", "ULTIMATE", "PREMIER"]
+    "chnlname": "HLN",
+    "chnlNumber": "204",
+    "logo": "https://www.example.com/channel-icons/HLN.svg",
+    "inPackags": [0, 1, 1, 1]
   },
   {
-    "name": "VH1",
-    "channelNumber": "335",
-    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "Horror by Alter",
+    "chnlNumber": "4221",
+    "logo": "https://www.example.com/channel-icons/Horror_by_Alter.svg",
+    "inPackags": [0, 0, 0, 1]
   },
   {
-    "name": "VICE",
-    "channelNumber": "271",
-    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "HSN",
+    "chnlNumber": "240",
+    "logo": "https://www.example.com/channel-icons/HSN.svg",
+    "inPackags": [1, 1, 1, 1]
   },
   {
-    "name": "Waypoint TV",
-    "channelNumber": "4175",
-    "packages": ["ENTERTAINMENT", "ULTIMATE", "PREMIER"]
+    "chnlname": "Ice Road Truckers",
+    "chnlNumber": "4263",
+    "logo": "https://www.example.com/channel-icons/Ice_Road_Truckers.svg",
+    "inPackags": [0, 0, 0, 1]
   },
   {
-    "name": "WE tv",
-    "channelNumber": "260",
-    "packages": ["ENTERTAINMENT", "ULTIMATE", "PREMIER"]
+    "chnlname": "IFC",
+    "chnlNumber": "333",
+    "logo": "https://www.example.com/channel-icons/IFC.svg",
+    "inPackags": [0, 0, 1, 1]
   },
   {
-    "name": "Weather Channel",
-    "channelNumber": "362",
-    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "INFAST",
+    "chnlNumber": "4382",
+    "logo": "https://www.example.com/channel-icons/INFAST.svg",
+    "inPackags": [0, 0, 0, 1]
   },
   {
-    "name": "Women’s Sports Network",
-    "channelNumber": "4125",
-    "packages": ["ENTERTAINMENT", "ULTIMATE", "PREMIER"]
+    "chnlname": "Investigation Discovery",
+    "chnlNumber": "285",
+    "logo": "https://www.example.com/channel-icons/Investigation_Discovery.svg",
+    "inPackags": [0, 0, 1, 1]
   },
   {
-    "name": "Yahoo Finance",
-    "channelNumber": "4021",
-    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "TV Land",
+    "chnlNumber": "304",
+    "logo": "https://www.example.com/channel-icons/TV_Land.svg",
+    "inPackags": [0, 1, 1, 1]
   },
   {
-    "name": "Yu-Gi-Oh!",
-    "channelNumber": "4449",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "TV One (HD only)",
+    "chnlNumber": "328",
+    "logo": "https://www.example.com/channel-icons/TV_One_(HD_only).svg",
+    "inPackags": [1, 0, 1, 1]
   },
-
   {
-    "name": "INWONDER",
-    "channelNumber": "4329",
-    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "UniMás",
+    "chnlNumber": "408",
+    "logo": "https://www.example.com/channel-icons/UniMás.svg",
+    "inPackags": [0, 1, 1, 1]
   },
   {
-    "name": "ION East HD",
-    "channelNumber": "305",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "Universal Kids",
+    "chnlNumber": "295",
+    "logo": "https://www.example.com/channel-icons/Universal_Kids.svg",
+    "inPackags": [0, 0, 1, 1]
   },
-  { "name": "Jamie Oliver", "channelNumber": "4361", "packages": ["PREMIER"] },
   {
-    "name": "Jewelry TV",
-    "channelNumber": "72",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "UNIVERSO",
+    "chnlNumber": "410",
+    "logo": "https://www.example.com/channel-icons/UNIVERSO.svg",
+    "inPackags": [0, 0, 1, 1]
   },
   {
-    "name": "Joel Osteen",
-    "channelNumber": "4418",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "Univision (Este)",
+    "chnlNumber": "402",
+    "logo": "https://www.example.com/channel-icons/Univision_(Este).svg",
+    "inPackags": [1, 0, 1, 1]
   },
   {
-    "name": "Justice Central",
-    "channelNumber": "383",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "UnXplained Zone",
+    "chnlNumber": "4491",
+    "logo": "https://www.example.com/channel-icons/UnXplained_Zone.svg",
+    "inPackags": [0, 0, 1, 1]
   },
   {
-    "name": "Let's Make a Deal",
-    "channelNumber": "4337",
-    "packages": ["PREMIER"]
+    "chnlname": "UPTV",
+    "chnlNumber": "338",
+    "logo": "https://www.example.com/channel-icons/UPTV.svg",
+    "inPackags": [0, 0, 1, 1]
   },
   {
-    "name": "Lifetime",
-    "channelNumber": "252",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "USA Network",
+    "chnlNumber": "242",
+    "logo": "https://www.example.com/channel-icons/USA_Network.svg",
+    "inPackags": [1, 0, 1, 1]
   },
   {
-    "name": "LMN",
-    "channelNumber": "253",
-    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "VH1",
+    "chnlNumber": "335",
+    "logo": "https://www.example.com/channel-icons/VH1.svg",
+    "inPackags": [0, 1, 1, 1]
   },
   {
-    "name": "Logo HD",
-    "channelNumber": "272",
-    "packages": ["ULTIMATE", "PREMIER"]
+    "chnlname": "VICE",
+    "chnlNumber": "271",
+    "logo": "https://www.example.com/channel-icons/VICE.svg",
+    "inPackags": [0, 1, 1, 1]
   },
   {
-    "name": "Love Nature",
-    "channelNumber": "4470",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "Waypoint TV",
+    "chnlNumber": "4175",
+    "logo": "https://www.example.com/channel-icons/Waypoint_TV.svg",
+    "inPackags": [1, 0, 1, 1]
   },
   {
-    "name": "MagellanTV Now",
-    "channelNumber": "4482",
-    "packages": ["PREMIER"]
+    "chnlname": "WE tv",
+    "chnlNumber": "260",
+    "logo": "https://www.example.com/channel-icons/WE_tv.svg",
+    "inPackags": [1, 0, 1, 1]
   },
   {
-    "name": "Magnolia Network",
-    "channelNumber": "230",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "Weather Channel",
+    "chnlNumber": "362",
+    "logo": "https://www.example.com/channel-icons/Weather_Channel.svg",
+    "inPackags": [0, 1, 1, 1]
   },
   {
-    "name": "MAVTV",
-    "channelNumber": "214",
-    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "Women’s Sports Network",
+    "chnlNumber": "4125",
+    "logo": "https://www.example.com/channel-icons/Womens_Sports_Network.svg",
+    "inPackags": [1, 0, 1, 1]
   },
-  { "name": "MAX Latino", "channelNumber": "523", "packages": ["PREMIER"] },
-  { "name": "MeatEater", "channelNumber": "4370", "packages": ["PREMIER"] },
   {
-    "name": "Merit Street",
-    "channelNumber": "306",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "Yahoo Finance",
+    "chnlNumber": "4021",
+    "logo": "https://www.example.com/channel-icons/Yahoo_Finance.svg",
+    "inPackags": [0, 1, 1, 1]
   },
   {
-    "name": "MeTV",
-    "channelNumber": "77",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "Yu-Gi-Oh!",
+    "chnlNumber": "4449",
+    "logo": "https://www.example.com/channel-icons/Yu-Gi-Oh!.svg",
+    "inPackags": [1, 1, 1, 1]
   },
   {
-    "name": "MLB Network",
-    "channelNumber": "213",
-    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "INWONDER",
+    "chnlNumber": "4329",
+    "logo": "https://www.example.com/channel-icons/INWONDER.svg",
+    "inPackags": [0, 1, 1, 1]
   },
   {
-    "name": "Modern Marvels",
-    "channelNumber": "4480",
-    "packages": ["PREMIER"]
+    "chnlname": "ION East HD",
+    "chnlNumber": "305",
+    "logo": "https://www.example.com/channel-icons/ION_East_HD.svg",
+    "inPackags": [1, 1, 1, 1]
   },
-  { "name": "MoreMAX", "channelNumber": "517", "packages": ["PREMIER"] },
   {
-    "name": "MotorTrend",
-    "channelNumber": "281",
-    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "Jamie Oliver",
+    "chnlNumber": "4361",
+    "logo": "https://www.example.com/channel-icons/Jamie_Oliver.svg",
+    "inPackags": [0, 0, 0, 1]
   },
   {
-    "name": "Movie Favorites by Lifetime",
-    "channelNumber": "4504",
-    "packages": ["PREMIER"]
+    "chnlname": "Jewelry TV",
+    "chnlNumber": "72",
+    "logo": "https://www.example.com/channel-icons/Jewelry_TV.svg",
+    "inPackags": [1, 1, 1, 1]
   },
-  { "name": "MovieMAX", "channelNumber": "521", "packages": ["PREMIER"] },
-  { "name": "MovieSphere", "channelNumber": "4501", "packages": ["PREMIER"] },
   {
-    "name": "MSNBC",
-    "channelNumber": "356",
-    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "Joel Osteen",
+    "chnlNumber": "4418",
+    "logo": "https://www.example.com/channel-icons/Joel_Osteen.svg",
+    "inPackags": [1, 1, 1, 1]
   },
   {
-    "name": "MTV",
-    "channelNumber": "331",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "Justice Central",
+    "chnlNumber": "383",
+    "logo": "https://www.example.com/channel-icons/Justice_Central.svg",
+    "inPackags": [1, 1, 1, 1]
   },
   {
-    "name": "MTV2",
-    "channelNumber": "332",
-    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "Let's Make a Deal",
+    "chnlNumber": "4337",
+    "logo": "https://www.example.com/channel-icons/Lets_Make_a_Deal.svg",
+    "inPackags": [0, 0, 0, 1]
   },
   {
-    "name": "MTV Classic",
-    "channelNumber": "336",
-    "packages": ["ULTIMATE", "PREMIER"]
+    "chnlname": "Lifetime",
+    "chnlNumber": "252",
+    "logo": "https://www.example.com/channel-icons/Lifetime.svg",
+    "inPackags": [1, 1, 1, 1]
   },
   {
-    "name": "Nat Geo WILD",
-    "channelNumber": "283",
-    "packages": ["ULTIMATE", "PREMIER"]
+    "chnlname": "LMN",
+    "chnlNumber": "253",
+    "logo": "https://www.example.com/channel-icons/LMN.svg",
+    "inPackags": [0, 1, 1, 1]
   },
   {
-    "name": "National Geographic Channel",
-    "channelNumber": "276",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "Logo HD",
+    "chnlNumber": "272",
+    "logo": "https://www.example.com/channel-icons/Logo_HD.svg",
+    "inPackags": [0, 0, 1, 1]
   },
   {
-    "name": "NBA TV",
-    "channelNumber": "216",
-    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "Love Nature",
+    "chnlNumber": "4470",
+    "logo": "https://www.example.com/channel-icons/Love_Nature.svg",
+    "inPackags": [1, 1, 1, 1]
   },
   {
-    "name": "Newsmax",
-    "channelNumber": "349",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "MagellanTV Now",
+    "chnlNumber": "4482",
+    "logo": "https://www.example.com/channel-icons/MagellanTV_Now.svg",
+    "inPackags": [0, 0, 0, 1]
   },
   {
-    "name": "NewsNation",
-    "channelNumber": "307",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "Magnolia Network",
+    "chnlNumber": "230",
+    "logo": "https://www.example.com/channel-icons/Magnolia_Network.svg",
+    "inPackags": [1, 1, 1, 1]
   },
   {
-    "name": "NFL Network",
-    "channelNumber": "212",
-    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "MAVTV",
+    "chnlNumber": "214",
+    "logo": "https://www.example.com/channel-icons/MAVTV.svg",
+    "inPackags": [0, 1, 1, 1]
   },
   {
-    "name": "NHL Network",
-    "channelNumber": "215",
-    "packages": ["ULTIMATE", "PREMIER"]
+    "chnlname": "MAX Latino",
+    "chnlNumber": "523",
+    "logo": "https://www.example.com/channel-icons/MAX_Latino.svg",
+    "inPackags": [0, 0, 0, 1]
   },
   {
-    "name": "Nick Jr.",
-    "channelNumber": "301",
-    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "MeatEater",
+    "chnlNumber": "4370",
+    "logo": "https://www.example.com/channel-icons/MeatEater.svg",
+    "inPackags": [0, 0, 0, 1]
   },
   {
-    "name": "Nickelodeon East",
-    "channelNumber": "299",
-    "packages": ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "Merit Street",
+    "chnlNumber": "306",
+    "logo": "https://www.example.com/channel-icons/Merit_Street.svg",
+    "inPackags": [1, 1, 1, 1]
   },
   {
-    "name": "Nicktoons",
-    "channelNumber": "302",
-    "packages": ["ULTIMATE", "PREMIER"]
+    "chnlname": "MeTV",
+    "chnlNumber": "77",
+    "logo": "https://www.example.com/channel-icons/MeTV.svg",
+    "inPackags": [1, 1, 1, 1]
   },
-  { "name": "Nosey", "channelNumber": "4255", "packages": ["PREMIER"] },
-  { "name": "Origin Sports", "channelNumber": "4120", "packages": ["PREMIER"] },
   {
-    "name": "Ovation",
-    "channelNumber": "274",
-    "packages": ["ULTIMATE", "PREMIER"]
+    "chnlname": "MLB Network",
+    "chnlNumber": "213",
+    "logo": "https://www.example.com/channel-icons/MLB_Network.svg",
+    "inPackags": [0, 1, 1, 1]
   },
   {
-    "name": "OWN",
-    "channelNumber": "279",
-    "packages": ["CHOICE", "ULTIMATE", "PREMIER"]
+    "chnlname": "Modern Marvels",
+    "chnlNumber": "4480",
+    "logo": "https://www.example.com/channel-icons/Modern_Marvels.svg",
+    "inPackags": [0, 0, 0, 1]
+  },
+  {
+    "chnlname": "MoreMAX",
+    "chnlNumber": "517",
+    "logo": "https://www.example.com/channel-icons/MoreMAX.svg",
+    "inPackags": [0, 0, 0, 1]
+  },
+  {
+    "chnlname": "MotorTrend",
+    "chnlNumber": "281",
+    "logo": "https://www.example.com/channel-icons/MotorTrend.svg",
+    "inPackags": [0, 1, 1, 1]
+  },
+  {
+    "chnlname": "Movie Favorites by Lifetime",
+    "chnlNumber": "4504",
+    "logo": "https://www.example.com/channel-icons/Movie_Favorites_by_Lifetime.svg",
+    "inPackags": [0, 0, 0, 1]
+  },
+  {
+    "chnlname": "MovieMAX",
+    "chnlNumber": "521",
+    "logo": "https://www.example.com/channel-icons/MovieMAX.svg",
+    "inPackags": [0, 0, 0, 1]
+  },
+  {
+    "chnlname": "MovieSphere",
+    "chnlNumber": "4501",
+    "logo": "https://www.example.com/channel-icons/MovieSphere.svg",
+    "inPackags": [0, 0, 0, 1]
+  },
+  {
+    "chnlname": "MSNBC",
+    "chnlNumber": "356",
+    "logo": "https://www.example.com/channel-icons/MSNBC.svg",
+    "inPackags": [0, 1, 1, 1]
+  },
+  {
+    "chnlname": "MTV",
+    "chnlNumber": "331",
+    "logo": "https://www.example.com/channel-icons/MTV.svg",
+    "inPackags": [1, 1, 1, 1]
+  },
+  {
+    "chnlname": "MTV2",
+    "chnlNumber": "332",
+    "logo": "https://www.example.com/channel-icons/MTV2.svg",
+    "inPackags": [0, 1, 1, 1]
+  },
+  {
+    "chnlname": "MTV Classic",
+    "chnlNumber": "336",
+    "logo": "https://www.example.com/channel-icons/MTV_Classic.svg",
+    "inPackags": [0, 0, 1, 1]
+  },
+  {
+    "chnlname": "Nat Geo WILD",
+    "chnlNumber": "283",
+    "logo": "https://www.example.com/channel-icons/Nat_Geo_WILD.svg",
+    "inPackags": [0, 0, 1, 1]
+  },
+  {
+    "chnlname": "National Geographic Channel",
+    "chnlNumber": "276",
+    "logo": "https://www.example.com/channel-icons/National_Geographic_Channel.svg",
+    "inPackags": [1, 1, 1, 1]
+  },
+  {
+    "chnlname": "NBA TV",
+    "chnlNumber": "216",
+    "logo": "https://www.example.com/channel-icons/NBA_TV.svg",
+    "inPackags": [0, 1, 1, 1]
+  },
+  {
+    "chnlname": "Newsmax",
+    "chnlNumber": "349",
+    "logo": "https://www.example.com/channel-icons/Newsmax.svg",
+    "inPackags": [1, 1, 1, 1]
+  },
+  {
+    "chnlname": "NewsNation",
+    "chnlNumber": "307",
+    "logo": "https://www.example.com/channel-icons/NewsNation.svg",
+    "inPackags": [1, 1, 1, 1]
+  },
+  {
+    "chnlname": "NFL Network",
+    "chnlNumber": "212",
+    "logo": "https://www.example.com/channel-icons/NFL_Network.svg",
+    "inPackags": [0, 1, 1, 1]
+  },
+  {
+    "chnlname": "NHL Network",
+    "chnlNumber": "215",
+    "logo": "https://www.example.com/channel-icons/NHL_Network.svg",
+    "inPackags": [0, 0, 1, 1]
+  },
+  {
+    "chnlname": "Nick Jr.",
+    "chnlNumber": "301",
+    "logo": "https://www.example.com/channel-icons/Nick_Jr.svg",
+    "inPackags": [0, 1, 1, 1]
+  },
+  {
+    "chnlname": "Nickelodeon East",
+    "chnlNumber": "299",
+    "logo": "https://www.example.com/channel-icons/Nickelodeon_East.svg",
+    "inPackags": [1, 1, 1, 1]
+  },
+  {
+    "chnlname": "Nicktoons",
+    "chnlNumber": "302",
+    "logo": "https://www.example.com/channel-icons/Nicktoons.svg",
+    "inPackags": [0, 0, 1, 1]
+  },
+  {
+    "chnlname": "Nosey",
+    "chnlNumber": "4255",
+    "logo": "https://www.example.com/channel-icons/Nosey.svg",
+    "inPackags": [0, 0, 0, 1]
+  },
+  {
+    "chnlname": "Origin Sports",
+    "chnlNumber": "4120",
+    "logo": "https://www.example.com/channel-icons/Origin_Sports.svg",
+    "inPackags": [0, 0, 0, 1]
+  },
+  {
+    "chnlname": "Ovation",
+    "chnlNumber": "274",
+    "logo": "https://www.example.com/channel-icons/Ovation.svg",
+    "inPackags": [0, 0, 1, 1]
+  },
+  {
+    "chnlname": "OWN",
+    "chnlNumber": "279",
+    "logo": "https://www.example.com/channel-icons/OWN.svg",
+    "inPackags": [0, 1, 1, 1]
   }
 ]
