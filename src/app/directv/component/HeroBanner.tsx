@@ -5,23 +5,21 @@ type HeroBannerProps = {
 };
 export default function HeroBanner({ data }: { data: HeroBannerProps }) {
   return (
-    <div className="relative w-full h-[500px] overflow-hidden">
+    <div className="relative w-full h-[600px] overflow-hidden">
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat "
+        className="absolute inset-0 bg-cover bg-top bg-no-repeat "
         style={{
-          backgroundImage: "url('/assets/images/directv/tvHeader.png')",
+          backgroundImage: "url('/assets/images/directv/bg-directv-page.webp')",
         }}></div>
-          <div className="absolute inset-0 bg-black opacity-50"></div>
+      <div className="absolute inset-0 bg-black opacity-30"></div>
 
       {/* Content */}
       <div className="relative h-full flex flex-col items-center justify-center text-center text-white px-4 z-10">
-        <h1 className="text-xl md:text-[48px] font-[600] leading-[56px] tracking-[-1.44px] mb-4 text-white">
+        <h2 className="text-xl md:text-[48px] font-[600] leading-[56px] tracking-[-1.44px] mb-4 text-white">
           {data.title}
-        </h1>
-        <h2 className="  font-[600] mb-8  text-white ">
-          {data.subtitle}
         </h2>
+        <h1 className="  font-[600] mb-8  text-white ">{data.subtitle}</h1>
         <p className="text-base font-medium lg:text-[22px] md:text-2xl mb-8 text-white">
           {data.description}
         </p>
