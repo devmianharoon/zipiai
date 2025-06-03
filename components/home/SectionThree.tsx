@@ -11,16 +11,16 @@ const SectionThree = () => {
             alt="cover image"
             fill
             style={{ objectFit: "cover" }}
-            className="rounded-2xl"
+            className="rounded-[6px]"
           />
         </div>
 
         <div className="text-sec w-[35%]">
           <div className="pb-12">
-            <h1 className="text-[30px] text-black font-[600] py-6">
+            <h2 className="text-[30px] font-[600] py-6 text-[var(--color-silver)]">
               Streaming TV{" "}
-            </h1>
-            <p className="text-black text-[18px] ">
+            </h2>
+            <p className="text-[18px] font-[400]">
               Watch Anytime, Anywhere. Your favorite entertainment is ready when
               you are—no cords, no limits. Stream live TV, on-demand movies, and
               binge-worthy shows on any device, whether you&apos;re at home or on the

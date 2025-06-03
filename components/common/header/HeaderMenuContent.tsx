@@ -17,13 +17,13 @@ const HeaderMenuContent = () => {
   return (
     <ul
       id="respMenu"
-      className="hidden md:flex gap-10 text-navtext  justify-center items-center  "
+      className="hidden md:flex gap-10 justify-center items-center  "
       data-menu-style="horizontal">
       {menuItems.map((item, index) => (
         <li key={index}>
           <Link
             href={item.path}
-            className={`text-[16px]  font-[500] leading-[100%] tracking-[.16px]`}>
+            className={`text-[16px] font-[400] leading-[100%] tracking-[.16px]`}>
             {item.name}
           </Link>
         </li>

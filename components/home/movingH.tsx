@@ -24,12 +24,12 @@ export default function Moving() {
   return (
     <div
       className={`absolute h-[200px] w-[372px] -bottom-[135px] 
-  md:top-8 md:left-4 md:translate-x-0 md:bottom-auto 
+  md:top-[24px] md:left-[16px] md:translate-x-0 md:bottom-auto 
   lg:absolute lg:bottom-0 
   left-1/2 -translate-x-1/2 
-  md:h-[130px] md:w-[428px] 
+  md:h-[130px] md:w-[400px] 
   box-border px-[22px] py-[22px] 
-  bg-black 
+  bg-[var(--color-black)]
   rounded-[12px] text-[var(--color-white)] 
   mb-[60px] md:mb-0 shadow-[0px_4px_50px_rgba(17,17,17,0.05)]`}>
       <p className="text-[20px] font-[500] px-2 pb-[10px] text-[var(--color-white)]">

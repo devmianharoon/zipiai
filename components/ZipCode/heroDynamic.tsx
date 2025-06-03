@@ -99,7 +99,7 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
 
           {/* Static Section Below */}
         </div>
-        <div className="lg:absolute w-full lg:top-40 lg:left-4">
+        <div className="lg:absolute w-full lg:top-30 lg:left-4">
           <Moving
             bgClass="bg-[var(--color-black)]"
             bgClassBtn="bg-[var(--color-red)]"

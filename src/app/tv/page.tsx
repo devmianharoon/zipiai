@@ -56,12 +56,11 @@ export default function Page() {
       <p className="p-tight text-center text-[var(--color-blue)] mt-[90px]">
         Search Result
       </p>
-      <h1 className="text-center mt-[20px] mb-[40px]">
-        The Top TV Providers in{" "}
-        <span className="text-[var(--color-blue)]">{`Campbell`} /</span>
-        <span className="text-[var(--color-blue)]"> {`CA`} /</span>
-        <span className="text-[var(--color-blue)]"> {zipCode}</span>
-      </h1>
+      <h2 className="text-[42px] leading-[52px] font-[600] text-center mt-[20px] mb-[40px]">
+        The Top TV Providers in <span>{`Campbell ,`} </span>
+        <span> {`CA`}</span>
+        <span> {zipCode}</span>
+      </h2>
       {/* search bar */}
       <div className="w-full max-w-6xl mx-auto px-4  lg:flex gap-5 justify-center items-center">
         <div className="flex justify-center relative mb-[10px] lg:mb-0 w-full lg:w-[575px]">

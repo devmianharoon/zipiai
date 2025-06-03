@@ -4,13 +4,14 @@ import React from "react";
 const Whyus = () => {
   return (
     <section className="w-full flex items-center justify-center pt-72 md:py-28  ">
-       <div className="w-[753px] h-[753px] rounded-full opacity-50 bg-[#FFB200] blur-[250px] shrink-0 absolute -left-[600px] z-10 " />
+      <div className="w-[753px] h-[753px] rounded-full opacity-50 bg-[#FFB200] blur-[250px] shrink-0 absolute -left-[600px] z-10 " />
       <div className="container flex justify-center items-center py-4">
         <div className="md:w-[850px] md:h-[470px] text-center py-8">
-          <p className="text-[var(--color-blue)]">Why choose Hyper G</p>
           <h2 className="leading-[38px] pt-3 pb-8 text-[30px] font-[500] md:text-[42px] md:leading-[52px] ">
-            Search, Compare, and Choose Internet Plans From Top Providers Near
-            You
+            <span className="text-[var(--color-blue)]">Search</span>,{" "}
+            <span className="text-[var(--color-red)]">Compare</span>, and{" "}
+            <span className="text-[var(--color-silver)]">Choose</span> Internet
+            Plans From Top Providers Near You
           </h2>
           <div className="flex flex-col md:flex-row justify-center items-center relative">
             {/* Left (or Top) Circle */}
