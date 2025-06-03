@@ -60,15 +60,16 @@ export default function ServiceTiles() {
           </div>
           {/* Text Section */}
           <div className="flex flex-col justify-center px-[20px] py-[30px] md:px-[45px] md:py-[40px] text-center lg:text-start">
-            <p className="text-[14px] lg:text-base lg:text-[16px] font-medium text-[var(--color-blue)]">
+            {/* <p className="text-[14px] lg:text-base lg:text-[16px] font-medium text-[var(--color-blue)]">
               GEMINI AIR
-            </p>
+            </p> */}
             <h2 className="text-3xl lg:text-[42px] font-bold mb-4">
-              Pick the better way to watch it all
+              One Device. Total Control. <br />
+              Endless Entertainment.
             </h2>
             <p className="mb-6 text-[14px] lg:text-base lg:text-[16px]  font-medium">
-              Stream all your content from your favorite apps in one place – no
-              satellite needed.*
+              Where Live TV meets smart streaming. Gemini Air delivers DirecTV
+              in a sleek entertainment powerhouse.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-center">
               <button className="bg-[var(--color-red)] text-white py-2 px-4 rounded-full font-medium transition-colors">
@@ -76,14 +77,11 @@ export default function ServiceTiles() {
               </button>
               <a
                 href="#"
-                className="underline text-lg text-[var(--color-red)] text-center sm:text-left"
-              >
+                className="underline text-lg text-[var(--color-red)] text-center sm:text-left">
                 Have Your Own Device?
               </a>
             </div>
           </div>
-
-          
         </div>
       </div>
     </div>

@@ -19,8 +19,10 @@ export default function HeroBanner({ data }: { data: HeroBannerProps }) {
         <h2 className="text-xl md:text-[48px] font-[600] leading-[56px] tracking-[-1.44px] mb-4 text-white">
           {data.title}
         </h2>
-        <h1 className="  font-[600] mb-8  text-white ">{data.subtitle}</h1>
-        <p className="text-base font-medium lg:text-[22px] md:text-2xl mb-8 text-white">
+        <h1 className="md:text-[120px] md:leading-[120px] tracking-[-3.6px] font-[600] mb-8  text-white ">
+          {data.subtitle}
+        </h1>
+        <p className="text-base font-[500] leading-[28px] tracking-[-0.22px] lg:text-[22px] md:text-2xl mb-8 text-white ">
           {data.description}
         </p>
         <button className="w-46 bg-redish bg-[var(--color-red)] text-white py-2.5 px-2.5  font-[700] text-[16px]   cursor-pointer rounded-full flex items-center justify-center">
@@ -31,7 +33,7 @@ export default function HeroBanner({ data }: { data: HeroBannerProps }) {
             fill="currentColor">
             <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
           </svg>
-          Call Now
+          Shop Now
         </button>
       </div>
     </div>
