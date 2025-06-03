@@ -100,17 +100,16 @@ export default function Hero() {
         <div className="lg:absolute w-full lg:top-4 lg:left-4">
           <MovingH />
         </div>
-
         {/* test speed section absolute */}
         <div className=" h-[185px] w-[372px] md:w-[786px] md:h-[100px]  rounded-[12px] md:-bottom-[48px] -bottom-[295px] p-4 md:py-5 md:px-5 absolute flex flex-col md:flex-row justify-center items-center bg-[#FF0000] z-40 left-1/2 -translate-x-1/2  md:gap-8 gap-4 bg-[linear-gradient(to_right,#0C0A1D,#FF0000)] text-center md:text-left text-[20px] md:text-[48px]">
-          <p className="text-[var(--color-white)] md:text-[24] text-[20px] md:leading-[32px] leading-[28px] font-[600]">
+          <h3 className="text-[var(--color-white)] md:text-[24] text-[20px] md:leading-[32px] leading-[28px] font-[600]">
             Don&apos;t let your internet slow you down. Test Your Speed!
-          </p>
+          </h3>
           <Searchbtn
             text="Check my speed"
-            onClick={handleClick}
-            wclass=""
-            hpclass="py-[22px] px-[24px] text-[18px] font-[500] text-[18px] leading-[18px] tracking-[.18px]"
+            // onClick={handleClick}
+            wclass="w-[203px]"
+            hpclass="h-[57px] text-[18px] font-medium"
             bgColor="bg-[var(--color-black)]"
           />
         </div>

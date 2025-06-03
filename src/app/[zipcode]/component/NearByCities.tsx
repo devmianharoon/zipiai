@@ -22,7 +22,7 @@ export default function NearbyCities({ cities }: NearbyCitiesProps) {
     <div className=" mx-auto bg-white min-h-screen p-[17px] lg:max-w-6xl mb:[60px]  lg:px-[42px]">
       {/* Header */}
       <h2 className=" font-bold text-black text-center mb-[25px] mt-[60px] lg:mb-[40px] lg:mt-[90px] leading-[40px]">
-        Internet providers in near by cities
+        Internet Providers In Near By Cities
       </h2>
 
       {/* Cities Grid */}

@@ -21,6 +21,8 @@ import NearbyCities from "./component/NearByCities";
 import InternetComparison from "../../../components/ZipCode/table";
 import Experience from "../../../components/home/Experience";
 import OtherProvider from "./component/OthersProviders";
+import MobileFooter from "../../../components/home/MobileFooter";
+import { capitalizeWords } from "../../../data/HelperFunction";
 
 export default function Page() {
   // Sample city data
@@ -94,10 +96,10 @@ export default function Page() {
       <p className="p-tight text-center text-[var(--color-blue)] mt-[90px]">
         Search Result
       </p>
-      <h1 className="text-center mt-[20px] mb-[40px] text-[30px]  leading-[40px] lg:text-[42px] lg:leading-[52px]   ">
+      <h1 className="text-center mt-[20px] mb-[40px] text-[30px]  leading-[40px] font-semibold  lg:leading-[52px]   ">
         The Top Internet Providers in{" "}
-        <span className="text-[var(--color-blue)]">{zipdata?.city} </span>
-        <span className="text-[var(--color-blue)]"> {zipdata?.state} </span>
+        <span className="text-[var(--color-blue)]">{capitalizeWords(zipdata?.city ?? "")} / </span>
+        <span className="text-[var(--color-blue)]"> {capitalizeWords(zipdata?.state ?? "")} /</span>
         <span className="text-[var(--color-blue)]"> {zipCode}</span>
       </h1>
       {/* Search Bar  */}
@@ -134,7 +136,7 @@ export default function Page() {
 
         {data?.providers.map((provider: Provider, index: number) => (
           <div
-            className="w-full px-5 py-[15px] lg:max-w-6xl lg:mx-auto lg:pt-[25px]  "
+            className="w-full lg:max-w-6xl lg:mx-auto  lg:py-[12.5px]   "
             key={index}
           >
             <SingleProvider data={provider} index={index} />
@@ -213,18 +215,20 @@ export default function Page() {
       <Experience />
 
       {/* <!-- Our Footer --> */}
-      <section className="footer_one w-full flex justify-center items-center  bg-bluish pt-[270px] bg-[rgba(11,107,221,0.1)]">
+      <section className="footer_one w-full hidden md:flex justify-center items-center  bg-bluish pt-[270px] bg-[rgba(11,107,221,0.1)]">
         <div className="container flex justify-center items-center">
           <Footer />
         </div>
       </section>
 
       {/* <!-- Our Footer Bottom Area --> */}
-      <section className="footer_middle_area flex justify-center items-center bg-[rgba(11,107,221,0.1)]  py-10">
+      <section className="hidden  footer_middle_area md:flex justify-center items-center bg-[rgba(11,107,221,0.1)]  ">
         <div className="container flex justify-center items-center">
           <CopyrightFooter />
         </div>
       </section>
+
+      <MobileFooter/>
     </main>
   );
 }

@@ -63,7 +63,7 @@ export default function ServiceTiles() {
             {/* <p className="text-[14px] lg:text-base lg:text-[16px] font-medium text-[var(--color-blue)]">
               GEMINI AIR
             </p> */}
-            <h2 className="text-3xl lg:text-[42px] font-bold mb-4">
+            <h2 className="text-3xl lg:text-[36px] font-bold mb-4">
               One Device. Total Control. <br />
               Endless Entertainment.
             </h2>
