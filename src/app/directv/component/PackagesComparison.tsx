@@ -9,7 +9,10 @@ import { AppDispatch, RootState } from "../../../../store/store";
 import { fetchZipData } from "../../../../store/slices/zipSlice";
 import Image from "next/image";
 import { ChevronDown } from "lucide-react";
-import { clearDirectvData, fetchDirectvByZip } from "../../../../store/slices/directvSlice";
+import {
+  clearDirectvData,
+  fetchDirectvByZip,
+} from "../../../../store/slices/directvSlice";
 import { Channel } from "../../../../data/types/channelsTypes";
 
 const packagesData = {
@@ -155,7 +158,6 @@ export default function PackageComparison() {
     if (savedZipCode) {
       dispatch(fetchDirectvByZip(savedZipCode));
       dispatch(fetchZipData(savedZipCode));
-
     }
     return () => {
       dispatch(clearDirectvData());
@@ -164,7 +166,6 @@ export default function PackageComparison() {
   const zip = useSelector((state: RootState) => state.zip.data);
   const directv = useSelector((state: RootState) => state.directv);
   console.log("Directv Data from Redux:", directv);
-  
 
   const [withLocalChannels, setWithLocalChannels] = useState(1);
 
@@ -273,32 +274,25 @@ export default function PackageComparison() {
               )}
             </div>
             <div className="h-[700px] w-auto overflow-x-auto">
-              {/* <ChannelTable
-                channels={
-                  // withLocalChannels === 4
-                  //   ? full_channel_guide
-                  //   : 
+              {(withLocalChannels === 2 && !directv.data?.localChnl?.length) ||
+              (withLocalChannels === 3 && !directv.data?.RSNs?.length) ? (
+                <h3 className="text-center text-lg font-semibold mt-4">
+                  No data available
+                </h3>
+              ) : (
+                <ChannelTable
+                  channels={
                     withLocalChannels === 2
-                      ? directv.data?.RSNs
+                      ? (directv.data?.localChnl as Channel[])
                       : withLocalChannels === 3
-                        ? directv.data?.RSNs
-                        : directv.data?.RSNs ?? []
-                }
-                packages={packageNames}
-              /> */}
-              <ChannelTable
-                channels={
-                  withLocalChannels === 2
-                    ? (directv.data?.localChnl as Channel[])
-                    : withLocalChannels === 3
-                      ? (directv.data?.RSNs as Channel[])
-                      :
-                  withLocalChannels === 4
-                    ? (full_channel_guide as Channel[])
-                    : (full_channel_guide as Channel[]) ?? []
-                }
-                packages={packageNames}
-              />
+                        ? (directv.data?.RSNs as Channel[])
+                        : withLocalChannels === 4
+                          ? (full_channel_guide as Channel[])
+                          : ((full_channel_guide as Channel[]) ?? [])
+                  }
+                  packages={packageNames}
+                />
+              )}
             </div>
           </div>
         )}
@@ -309,7 +303,7 @@ export default function PackageComparison() {
             {packagesData.packages.map((pkg) => (
               <div
                 key={pkg.id}
-                className={`p-6 rounded-lg shadow-md ${pkg.bgColor} border`}
+                className={`p-6 rounded-lg ${pkg.bgColor} border border-[rgba(3,10,19,0.15)] flex flex-col`}
               >
                 <h2 className="text-lg font-bold mb-2">{pkg.name}</h2>
                 <p className="text-sm text-gray-700 mb-2">{pkg.tagline}</p>
@@ -345,14 +339,15 @@ export default function PackageComparison() {
                     </div>
                   ))}
                 </ol>
-                <button
-                  className={`w-full py-2 rounded-full text-white font-semibold bg-black `}
-                >
-                  {pkg.buttonText}
-                </button>
+                {/* Push button to bottom */}
+                <div className="mt-auto">
+                  <button className="w-full py-2 rounded-full text-white font-semibold bg-black">
+                    {pkg.buttonText}
+                  </button>
+                </div>
               </div>
             ))}
-          </div>
+          </div> 
         )}
       </div>
     </>

@@ -87,7 +87,7 @@ export default function InternetComparison(data: Props) {
                           ({provider.type})
                         </p>
                       </div>
-                      <p className="font-medium text-black">{provider.value}</p>
+                      <p className="font-normal text-black">{provider.value}</p>
                     </div>
                   ))}
                 </div>
@@ -117,6 +117,7 @@ export default function InternetComparison(data: Props) {
               </th>
               {/* Hardcoding providers as per the image */}
               {data.data.providers.map((provider, index) => (
+                
                 <th
                   key={index}
                   className="p-5 font-bold text-[18px] text-black leading-[20px] text-start"
@@ -129,13 +130,13 @@ export default function InternetComparison(data: Props) {
           <tbody>
             {/* Row for Availability */}
             <tr className="text-center  bg-white rounded-xl">
-              <td className="font-medium text-[16px] text-start px-[19px] py-[22px] ">
+              <td className="font-normal text-[16px] text-start px-[19px] py-[12px] ">
                 Availability
               </td>
               {data.data.providers.map((provider, index) => (
                 <td
                   key={index}
-                  className="font-medium text-[16px] text-start px-[19px] py-[22px]"
+                  className="font-normal text-[16px] text-start px-[19px] py-[12px]"
                 >
                   {provider.available || "N/A"}
                 </td>
@@ -143,13 +144,13 @@ export default function InternetComparison(data: Props) {
             </tr>
             {/* Row for Max Download Speed */}
             <tr className="text-center ">
-              <td className="font-medium text-[16px] text-start px-[19px] py-[22px]">
+              <td className="font-normal text-[16px] text-start px-[19px] py-[12px]">
                 Max Download Speed
               </td>
               {data.data.providers.map((provider, index) => (
                 <td
                   key={index}
-                  className="font-medium text-[16px] text-start px-[19px] py-[22px]"
+                  className="font-normal text-[16px] text-start px-[19px] py-[12px]"
                 >
                   {provider.Speeds_Up_To || "N/A"}
                 </td>
@@ -157,13 +158,13 @@ export default function InternetComparison(data: Props) {
             </tr>
             {/* Row for Max Upload Speed */}
             <tr className="text-center bg-white rounded-xl">
-              <td className="font-medium text-[16px] text-start px-[19px] py-[22px]">
+              <td className="font-normal text-[16px] text-start px-[19px] py-[12px]">
                 Max Upload Speed
               </td>
               {data.data.providers.map((provider, index) => (
                 <td
                   key={index}
-                  className="font-medium text-[16px] text-start px-[19px] py-[22px]"
+                  className="font-normal text-[16px] text-start px-[19px] py-[12px]"
                 >
                   {provider.max_upload_speed || "N/A"}
                 </td>
@@ -171,13 +172,13 @@ export default function InternetComparison(data: Props) {
             </tr>
             {/* Row for Starting Price */}
             <tr className="text-center ">
-              <td className="font-medium text-[16px] text-start px-[19px] py-[22px]">
+              <td className="font-normal text-[16px] text-start px-[19px] py-[12px]">
                 Starting Price
               </td>
               {data.data.providers.map((provider, index) => (
                 <td
                   key={index}
-                  className="font-medium text-[16px] text-start px-[19px] py-[22px]"
+                  className="font-normal text-[16px] text-start px-[19px] py-[12px]"
                 >
                   {provider.Plans_Starting_At || "N/A"}
                 </td>
@@ -185,13 +186,13 @@ export default function InternetComparison(data: Props) {
             </tr>
             {/* Row for Data Caps */}
             <tr className="text-center bg-white rounded-xl">
-              <td className="font-medium text-[16px] text-start px-[19px] py-[22px]">
+              <td className="font-normal text-[16px] text-start px-[19px] py-[12px]">
                 Data Caps
               </td>
               {data.data.providers.map((provider, index) => (
                 <td
                   key={index}
-                  className="font-medium text-[16px] text-start px-[19px] py-[22px]"
+                  className="font-normal text-[16px] text-start px-[19px] py-[12px]"
                 >
                   {provider["Data Caps"] || "N/A"}
                 </td>
@@ -199,13 +200,13 @@ export default function InternetComparison(data: Props) {
             </tr>
             {/* Row for Contracts */}
             <tr className="text-center ">
-              <td className="font-medium text-[16px] text-start px-[19px] py-[22px]">
+              <td className="font-normal text-[16px] text-start px-[19px] py-[12px]">
                 Contracts
               </td>
               {data.data.providers.map((provider, index) => (
                 <td
                   key={index}
-                  className="font-medium text-[16px] text-start px-[19px] py-[22px]"
+                  className="font-normal text-[16px] text-start px-[19px] py-[12px]"
                 >
                   {provider.Contract || "N/A"}
                 </td>
@@ -213,13 +214,13 @@ export default function InternetComparison(data: Props) {
             </tr>
             {/* Row for Best For */}
             <tr className="text-center bg-white rounded-xl">
-              <td className="font-medium text-[16px] text-start px-[19px] py-[22px]">
+              <td className="font-normal text-[16px] text-start px-[19px] py-[12px]">
                 Best For
               </td>
               {data.data.providers.map((provider, index) => (
                 <td
                   key={index}
-                  className="font-medium text-[16px] text-start px-[19px] py-[22px]"
+                  className="font-normal text-[16px] text-start px-[19px] py-[12px]"
                 >
                   {provider["Best For"] || "N/A"}
                 </td>

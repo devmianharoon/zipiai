@@ -28,17 +28,17 @@ export default function ProviderComparison() {
       <div className="">
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-6 gap-4 lg:gap-5">
           {comparisons.map((comparison,index:number) => (
-            <div className="bg-white border-1 border-[var(--color-silver)] rounded-2xl " key={index}>
-              <div className="flex justify-center items-center flex-col pt-[19px] gap-[16px]">
-              <Image src={`/assets/logos/${comparison.logo1}`} alt={comparison.provider1} width={112} height={30} />
-              <Image src={`/assets/logos/${comparison.logo2}`} alt={comparison.provider2} width={112} height={30} />
+            <div className="bg-white border-1 border-[var(--color-silver)] rounded-2xl w-[175px] h-[230px] p-[20px] flex flex-col justify-between" key={index}>
+              <div className="flex justify-center items-start flex-col  gap-[16px]">
+              <Image src={`/assets/logos/${comparison.logo1}`} alt={comparison.provider1} width={80} height={30} />
+              <Image src={`/assets/logos/${comparison.logo2}`} alt={comparison.provider2} width={80} height={30} />
             </div>
-              <div className="text-center  pt-[50px] pb-[35px]">
+              <div className="text-center  ">
                 <Link
                 key={comparison.id}
                 href={`/compare/${comparison.id}`}
               >
-                <p className="text-center text-black text-lg font-semibold">{comparison.provider1} vs. <br /> {comparison.provider2}</p>
+                <p className="text-center text-black text-lg font-semibold">{comparison.provider1} <br />vs. <br /> {comparison.provider2?.split(" ")[0]}</p>
               </Link>
               </div>
             </div>

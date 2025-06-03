@@ -43,7 +43,7 @@ export default function OtherProvider({
         style={{ backgroundColor: getBackgroundColor() }}
       >
         {/* Logo */}
-        <div className="mb-6 h-8 relative">
+        <div className="mb-6 h-8 relative max-w-[100px] ">
           <Image
             src={`/assets/logos/${data.logo}`}
             alt={data.ProviderName}
@@ -54,33 +54,53 @@ export default function OtherProvider({
 
         {/* Speed & Pricing Info */}
         <div className="flex justify-between items-start lg:block">
-          <div className="mb-4">
-            <p className="text-sm lg:text-[16px] text-black mb-1">Speed up to</p>
-            <p className="text-2xl lg:text-[32px] font-semibold text-black lg:mb-[30px] lg:leading-[52px] tracking-[-7%]">
+          <div className="mb-4 lg:flex lg:flex-col  lg:mb-0">
+            <p className="text-sm lg:text-[16px] text-[var-(--black)]  font-medium">
+              Speed up to
+            </p>
+            <p className="text-2xl lg:text-[32px] font-semibold text-[var-(--black)] lg:mb-[15px] lg:leading-[52px] tracking-[-7%]">
               {data.Speeds_Up_To}
             </p>
             <div className="lg:hidden">
-              <span className="text-sm text-black font-normal lg:text-base">Connection: </span>
-              <span className="text-sm font-semibold text-black lg:text-base">
+              <span className="text-sm text-[var-(--black)] font-normal lg:text-base">
+                Connection:
+              </span>
+              <span className="text-sm font-semibold text-[var-(--black)] lg:text-base">
                 {data.Connection_Type}
               </span>
             </div>
           </div>
 
-          <div className="mb-6">
-            <p className="text-sm lg:text-[16px] text-black mb-1">Plans starting at</p>
-            <p className="text-2xl lg:text-[32px] font-semibold text-black lg:leading-[52px] tracking-[-7%]">
+          <div className="mb-6 lg:flex lg:flex-col  lg:mb-0">
+            <p className="text-sm lg:text-[16px] text-[var-(--black)] font-medium ">
+              Plans starting at
+            </p>
+            <p className="text-2xl lg:text-[32px] font-semibold text-[var-(--black)] lg:leading-[52px] tracking-[-7%] mb-[15px]">
               {data.Plans_Starting_At}
             </p>
-            <div className="lg:flex">
-              <span className="text-sm text-gray-500">Availability: </span>
+            <div className="lg:hidden">
+              <span className=" text-sm text-[var-(--black)]">
+                Availability:
+              </span>
               <span className="text-sm font-semibold text-gray-900 lg:mb-[40px] ">
                 {data.available}
               </span>
             </div>
-            <div className="hidden lg:flex">
-              <span className="text-sm text-black font-normal lg:text-base">Connection: </span>
-              <span className="text-sm font-semibold text-black lg:text-base lg:max-h-3.5">
+          </div>
+          <div className="hidden lg:flex lg:flex-col   lg:mb-[30px]">
+            <div>
+              <span className=" text-sm text-[var-(--black)]">
+                Availability:
+              </span>
+              <span className="text-sm font-semibold text-gray-900 lg:mb-[40px] ">
+                {data.available}
+              </span>
+            </div>
+            <div>
+              <span className="text-base text-[var-(--black)] font-normal lg:text-base">
+                Connection:
+              </span>
+              <span className="text-base font-semibold text-[var-(--black)] lg:text-base lg:max-h-3.5">
                 {data.Connection_Type}
               </span>
             </div>
@@ -97,36 +117,49 @@ export default function OtherProvider({
 
         {/* Accordion Plans Section */}
         {isAccordionOpen && (
-          <div className="mt-4 space-y-3">
-            {data.plans.map((plan, i) => (
-              <div
-                key={i}
-                className={`border p-4 rounded-lg cursor-pointer ${
-                  selectedPlan === i ? "bg-gray-100 border-gray-400" : "border-gray-200"
-                }`}
-                onClick={() => setSelectedPlan(selectedPlan === i ? null : i)}
-              >
-                <div className="font-semibold">{plan.plan_name}</div>
-                <div className="text-sm text-gray-600">{plan.Price}</div>
+          <>
+            <div className="mt-4 space-y-3  rounded  ">
+              {data.plans.map((plan, i) => (
+                <div
+                  key={i}
+                  className={`border p-4 rounded-lg cursor-pointer mb-[10px] bg-[rgba(11,107,221,0.1)] ${
+                    selectedPlan === i
+                      ? " border border-[rgba(3,10,19,0.15)] bg-[rgba(11,107,221,0.1)]"
+                      : "border-[rgba(3,10,19,0.15)]"
+                  }`}
+                  onClick={() => setSelectedPlan(selectedPlan === i ? null : i)}
+                >
+                  <div className="font-semibold">{plan.plan_name}</div>
+                  {/* <div className="text-sm text-gray-600">{plan.Price}</div> */}
 
-                {selectedPlan === i && (
-                  <div className="mt-2 text-sm text-gray-700">
-                    <div>
-                      <strong>Speed:</strong> {plan.Speeds}
+                  {/* Show Plan Details if selected */}
+                  {selectedPlan === i && (
+                    <div className="mt-2 text-sm text-black ">
+                      <div>
+                        <div className="flex">
+                          <p>Speed:</p>
+                          <p> {plan.Speeds}</p>
+                        </div>
+                        <div className="flex">
+                          <p>Price:</p>
+                          <p> {plan.Price}</p>
+                        </div>
+                      </div>
+                      {/* <div><strong>Description:</strong> {plan.description}</div> */}
                     </div>
-                    {/* You can add more details if needed */}
-                  </div>
-                )}
-              </div>
-            ))}
+                  )}
+                </div>
+              ))}
+              {/* Call Now Button */}
+            </div>
             <button
               onClick={() => window.open(`tel:${data.contact}`)}
-              className="w-full flex justify-evenly items-center bg-[var(--color-red)] text-white py-4 rounded-full text-base font-medium hover:bg-gray-800 transition-colors"
+              className="mt-4 w-full flex justify-center lg:gap-[10px] items-center bg-[var(--color-red)]  text-white py-4 rounded-full text-base font-medium"
             >
               <Image src="/call-w.svg" alt="phone" width={24} height={24} />
               Shop Now
             </button>
-          </div>
+          </>
         )}
       </div>
     </div>

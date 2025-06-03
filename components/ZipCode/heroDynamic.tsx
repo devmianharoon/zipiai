@@ -1,11 +1,10 @@
-
 "use client";
 import { AppDispatch, RootState } from "../../store/store";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchWeather } from "../../store/slices/weatherSlice";
 import Moving from "../home/Moving";
-import { Globe} from "lucide-react";
+import { Globe } from "lucide-react";
 import Image from "next/image";
 
 export default function HeroDynamic({ zipCode }: { zipCode: string }) {
@@ -44,7 +43,7 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
           </div>
         </div>
         {/* Weather Section */}
-        <div className="lg:w-[220px]  lg:h-[219px] lg:absolute lg:top-6 lg:right-6">
+        <div className="lg:w-[220px]  lg:h-[219px] lg:absolute lg:top-[39px] lg:right-6">
           {/* Loading and Error states */}
           {weatherState.status === "loading" && (
             <p className="text-white mt-4">Loading weather data...</p>
@@ -61,8 +60,14 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
               {/* Forecast data */}
 
               <div className="overflow-x-auto">
-                <div className="bg-red-400/30 backdrop-blur-sm rounded-xl p-5 my-8 ">
-                  <h2 className="text-white text-xl font-semibold mb-3">
+                <div
+                  className=" backdrop-blur-sm rounded-xl p-5 my-8  border"
+                  style={{
+                    borderColor: "rgba(255, 255, 255, 0.15)",
+                    backgroundColor: "rgba(255, 255, 255, 0.01)",
+                  }}
+                >
+                  <h2 className="text-white text-base font-semibold mb-1">
                     {weatherState.data.location?.name},{" "}
                     {weatherState.data.location?.region}
                   </h2>
@@ -70,19 +75,19 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
                     <div
                       key={index}
                       className={`flex items-center justify-between ${
-                        index !== 2 ? "border-b border-white/20 py-3" : ""
+                        index !== 2 ? "border-b border-white/20 py-0.5" : ""
                       }`}
                     >
-                      <span className="font-medium text-white">Thu</span>
+                      <span className="font-medium text-[14px] text-white">{new Date(day.date).toLocaleDateString("en-US", { weekday: "short" })}</span>
                       {day.day.condition.icon && (
                         <Image
                           src={`https:${day.day.condition.icon}`}
                           alt={day.day.condition.text}
-                          width={40}
-                          height={40}
+                          width={30}
+                          height={30}
                         />
                       )}
-                      <span className="font-medium text-white">
+                      <span className="font-medium text-[14px] text-white">
                         <span>{day.day.maxtemp_f}°</span> |{" "}
                         <span>{day.day.mintemp_f}°</span>
                       </span>

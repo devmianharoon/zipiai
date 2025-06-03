@@ -2,6 +2,7 @@
 import { useSelector } from "react-redux";
 import Link from "next/link";
 import { RootState } from "../../store/store";
+import { capitalizeWords } from "../../data/HelperFunction";
 
 interface ZipBreadcrumbProps {
   zipCode: string;
@@ -31,16 +32,19 @@ export default function ZipBreadcrumb({ zipCode }: ZipBreadcrumbProps) {
   return (
     <nav
       aria-label="Breadcrumb"
-      className="py-4 px-6   flex justify-center bg-[#992E2E] border-t-1 border-gray-200"
+      className="py-4 px-6   flex justify-center bg-[#992E2E] border-t-1 "
+      style={{
+        borderColor: "rgba(3, 10, 19, 0.05)",
+      }}
     >
       <ol className="flex items-center ">
-        <p className="text-white  flex items-center flex-col lg:flex-row">
-          <p className="text-white">Showing below the results for: </p>{" "}
+        <p className="text-white  flex items-center flex-col lg:flex-row gap-0.5">
+          <span className="text-white">Results for</span>
           <br className="lg:block" />
           <p className="text-white flex">
             <div>
               <Link href={`/state/${data.state_abbr}`} className="">
-                {data.state}
+                {capitalizeWords(data.state)}
               </Link>
 
               <span className=" mx-2">/</span>
@@ -49,7 +53,7 @@ export default function ZipBreadcrumb({ zipCode }: ZipBreadcrumbProps) {
                 href={`/city/${encodeURIComponent(data.city)}`}
                 className=""
               >
-                {data.city}
+                {capitalizeWords(data.city)}
               </Link>
 
               <span className=" mx-2">/</span>
