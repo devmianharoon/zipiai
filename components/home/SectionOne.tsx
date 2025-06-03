@@ -12,16 +12,16 @@ const SectionOne = () => {
             alt="cover image"
             fill
             style={{ objectFit: "cover" }}
-            className="rounded-2xl"
+            className="rounded-[6px]"
           />
         </div>
 
         <div className="text-sec w-[35%]">
           <div className="pb-12">
-            <h1 className="text-[30px] text-black font-[600] py-6">
+            <h4 className="text-[30px] text-[var(--color-red)] font-[600] py-6 ">
               Movies & Entertainment{" "}
-            </h1>
-            <p className="text-black text-[18px]">
+            </h4>
+            <p className=" text-[18px] font-[400]">
               Enjoy the cinematic experience and the magic of movies in your own
               home. From thrilling blockbusters and heartwarming family
               favorites to unforgettable adventures and timeless classics, every

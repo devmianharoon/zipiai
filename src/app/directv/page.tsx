@@ -12,9 +12,9 @@ import TopNavigation from "./component/TopNavigation";
 
 export default function page() {
   const data = {
-    title: "Bundle and Save, DirecTV Now",
-    subtitle: "Beam it or Stream it",
-    description: "Choose a DirecTV Package, Call Now for Special Offers",
+    title: "Entertainment Your Way",
+    subtitle: "DirecTV via Internet",
+    description: "Choose a DirecTV package. Call Now for Special Offers",
   };
   return (
     <>

@@ -30,7 +30,7 @@ const Header = () => {
       className={
         "w-full md:flex justify-center items-center bg-white h-[60px] hidden "
       }>
-      <div className="container  lg:px-12 flex justify-between items-center ">
+      <div className="w-[1920px]  lg:px-[138px] flex justify-between items-center ">
         {/* <!-- Ace Responsive Menu --> */}
 
         <Link href="/" className="navbar_brand float-left hidden md:block">
@@ -52,13 +52,13 @@ const Header = () => {
         </Link>
         {/* site logo brand */}
 
-        <nav>
+        
           <HeaderMenuContent />
-        </nav>
+        
 
         <div className="hidden md:flex md:justify-center md:items-center gap-3">
           <Searchbtn
-            text="Speed test"
+            text="Speed Test"
             bgColor="bg-[#0b8bdd]"
             wclass=""
             hpclass="py-[13px] leading-[16px] px-[16px]"

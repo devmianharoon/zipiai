@@ -9,7 +9,7 @@ const Blogs = () => {
           <p className="text-[var(--color-blue)] py-2.5">Blogs & Articles</p>
           <div className="flex justify-center items-center">
             <h1 className="text-[30px] font-[600] leading-[38px] py-2 w-[264px] md:w-full md:text-[42px] md:leading-[52px]">
-              Building trust by our services
+              Our commitment to helping you <br /> and earning your trust.
             </h1>
           </div>
         </div>
@@ -32,8 +32,10 @@ const Blogs = () => {
                 </span>
               </div>
               <div className="text-center py-4">
-                <p className="md:text-[18px] text-[16px] font-[500] leading-[24px] md:leading-[28px] px-3">
-                  Hyper G available and reply instantly to your queries
+                <p className="md:text-[18px] text-[16px] font-[400] leading-[24px] md:leading-[28px] px-3">
+                  Friendly support agents are always here to help, ready to
+                  answer your questions and guide you with care and confidence
+                  every step of the way
                 </p>
               </div>
             </div>
@@ -53,8 +55,9 @@ const Blogs = () => {
                 </span>
               </div>
               <div className="text-center py-4">
-                <p className="md:text-[18px] text-[16px] font-[500] leading-[24px] md:leading-[28px] px-3">
-                  Internet world is switching on 5G satellite data speeds
+                <p className="md:text-[18px] text-[16px] font-[400] leading-[24px] md:leading-[28px] px-3">
+                  Our blog keeps you informed with the latest updates, insights,
+                  and tips—so you&apos;re always one step ahead.
                 </p>
               </div>
             </div>
@@ -74,9 +77,9 @@ const Blogs = () => {
                 </span>
               </div>
               <div className="text-center py-4">
-                <p className="md:text-[18px] text-[16px] font-[500] leading-[24px] md:leading-[28px] px-3">
-                  Search top 10 internet connections in your area with single
-                  click
+                <p className="md:text-[18px] text-[16px] font-[400] leading-[24px] md:leading-[28px] px-3">
+                  From quick tips to in-depth guides, our articles give you the
+                  tools to make better, smarter decisions
                 </p>
               </div>
             </div>

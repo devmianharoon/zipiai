@@ -80,16 +80,12 @@ const Index = () => {
       {/* <!--  Mobile Menu --> */}
       <MobileMenu />
 
-      {/* <!-- Modal --> */}
-      {/* <PopupSignInUp /> */}
 
       {/* <!-- Home Design --> */}
       <Hero />
-      {/* <SingleProvider data={data} /> */}
 
       <Whyus />
 
-      {/* <TestSpeed /> */}
       {/*logos crusal */}
       <Crusal />
 
@@ -107,24 +103,7 @@ const Index = () => {
       <Blogs />
       <Experience />
 
-      {/*show case cards */}
-      {/* <Showcase /> */}
-      {/* <BannerOne /> */}
-      {/* section one with left image right text  */}
-      {/* <SectionOne /> */}
-      {/* <BannerTwo /> */}
-
-      {/* section two with left text right image  */}
-      {/* <!-- Placeholder Section --> */}
-      {/* <div className="w-full max-w-6xl mx-auto px-4 mb-10 ">
-        <div className="bg-blue-50 rounded-lg p-6 w-auto h-[300px] ">
-          <div className="flex flex-col items-center justify-center h-full">
-            <h2 className="text-2xl font-semibold text-black">Placeholder</h2>
-          </div>
-        </div>
-      </div> */}
-      {/* <SectionTwo /> */}
-      {/* <NewsLetter /> */}
+    
       {/* <!-- Our Footer --> */}
       <section className="footer_one w-full hidden md:flex justify-center items-center  bg-bluish pt-[270px] bg-[rgba(11,107,221,0.1)]">
         <div className="container flex justify-center items-center">
