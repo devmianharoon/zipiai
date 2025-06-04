@@ -10,8 +10,20 @@ import MovingH from "./movingH";
 
 export default function Hero() {
   const router = useRouter();
-  const { zipCode } = useSelector((state: RootState) => state.location);
+  const { zipCode, loading } = useSelector(
+    (state: RootState) => state.location
+  );
   const handleClick = () => {
+    if (loading) {
+      alert("Please wait, fetching your location...");
+      return;
+    }
+    if (!zipCode) {
+      alert(
+        "No zip code available. Please enter a zip code or allow location access."
+      );
+      return;
+    }
     router.push(`/${zipCode}`);
   };
   return (

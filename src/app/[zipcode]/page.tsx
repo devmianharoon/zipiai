@@ -98,9 +98,9 @@ export default function Page() {
       </p>
       <h1 className="text-center mt-[20px] mb-[40px] text-[30px]  leading-[40px] font-semibold  lg:leading-[52px]   ">
         The Top Internet Providers in{" "}
-        <span className="text-[var(--color-blue)]">{capitalizeWords(zipdata?.city ?? "")} / </span>
-        <span className="text-[var(--color-blue)]"> {capitalizeWords(zipdata?.state ?? "")} /</span>
-        <span className="text-[var(--color-blue)]"> {zipCode}</span>
+        <span className="">{capitalizeWords(zipdata?.city ?? "")} / </span>
+        <span className=""> {capitalizeWords(zipdata?.state ?? "")} /</span>
+        <span className=""> {zipCode}</span>
       </h1>
       {/* Search Bar  */}
       <div className="w-full max-w-6xl mx-auto px-4  lg:flex gap-5 justify-center items-center">

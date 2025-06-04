@@ -25,7 +25,7 @@ const Experience = () => {
                 Get Started Today
               </p>
               <h3 className="text-[var(--color-white)] text-[30px] leading-[38px] md:text-[42px] font-[600] lg:leading-[42px] md:leading-[52px] px-4 md:px-0 py-4 md:pt-10 md:w-[572px]">
-                Experience how Hyper G simplifies the fast and reliable internet
+                Experience how HyperG simplifies the fast and reliable internet
                 provider.
               </h3>
             </div>

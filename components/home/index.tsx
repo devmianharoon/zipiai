@@ -80,7 +80,6 @@ const Index = () => {
       {/* <!--  Mobile Menu --> */}
       <MobileMenu />
 
-
       {/* <!-- Home Design --> */}
       <Hero />
 
@@ -103,7 +102,6 @@ const Index = () => {
       <Blogs />
       <Experience />
 
-    
       {/* <!-- Our Footer --> */}
       <section className="footer_one w-full hidden md:flex justify-center items-center  bg-bluish pt-[270px] bg-[rgba(11,107,221,0.1)]">
         <div className="container flex justify-center items-center">

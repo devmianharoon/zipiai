@@ -2,8 +2,8 @@ import Index from "../../components/home";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 export const metadata = {
-  title: "Home-1 || FindHouse - Real Estate React Template",
-  description: "FindHouse - Real Estate React Template",
+  title: "HyperG Media",
+  description: "Experience how HyperG simplifies the fast and reliable internet provider.",
 };
 export default function Home() {
   return (
