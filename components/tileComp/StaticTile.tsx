@@ -45,7 +45,7 @@ const StaticTile = ({ data , border}: { data: Provider , border :string}) => {
         {/* Image Section */}
         <div className="flex items-center p-[10px] lg:px-[15px] flex-col gap-6 min-w-[230px]">
           <Image
-            src={`/assets/logos/${data.logo}`}
+            src={`/assets/${data.logo}`}
             alt={data.ProviderName}
             width={100}
             height={30}
@@ -60,8 +60,8 @@ const StaticTile = ({ data , border}: { data: Provider , border :string}) => {
         </div>
 
         {/* Speed and Pricing Section */}
-        <div className="min-w-[400px] grid grid-cols-2 gap-4 px-[25px] py-[30px] border-b border-t border-[var(--color-silver)] lg:border-l lg:border-t-0 lg:border-b-0 lg:gap-[10px]">
-          {data.category === "internet" ? (
+        <div className="min-w-[260px] grid grid-cols-1 gap-4 px-[25px] py-[30px] border-b border-t border-[var(--color-silver)] lg:border-l lg:border-t-0 lg:border-b-0 lg:gap-[10px]">
+          {/* {data.category === "internet" ? (
             <>
               <div className="flex flex-col">
                 <div className="text-base font-[400]">Speed up to</div>
@@ -80,9 +80,9 @@ const StaticTile = ({ data , border}: { data: Provider , border :string}) => {
             </>
           ) : (
             ""
-          )}
+          )} */}
           <div className="flex flex-col">
-            <div className="font-[400] text-base mb-1">Plans starting at</div>
+            <div className="font-[260] text-base mb-1">Plans starting at</div>
             <h3 className="text-[32px] font-semibold pb-[23px] pt-[14px]">
               {data.Plans_Starting_At}
             </h3>
@@ -145,7 +145,7 @@ const StaticTile = ({ data , border}: { data: Provider , border :string}) => {
                       <div className="mt-2 text-sm text-black ">
                         <div>
                           <div className="flex">
-                            <p>Speed:</p>
+                            <p>Channels:</p>
                             <p> {plan.Speeds}</p>
                           </div>
                           <div className="flex">
