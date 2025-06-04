@@ -23,6 +23,7 @@ import Experience from "../../../components/home/Experience";
 import OtherProvider from "./component/OthersProviders";
 import MobileFooter from "../../../components/home/MobileFooter";
 import { capitalizeWords } from "../../../data/HelperFunction";
+import StaticTile from "../../../components/tileComp/StaticTile";
 
 export default function Page() {
   // Sample city data
@@ -142,6 +143,7 @@ export default function Page() {
             <SingleProvider data={provider} index={index} />
           </div>
         ))}
+         <StaticTile/>
         {/* Call Section */}
         <div className="w-full h-[372px] md:h-[222px] md:w-[1144px] mx-auto px-[15px] mt-[60px] ">
           <div className="w-full h-full   bg-[url('/bg-page.png')] bg-cover bg-center bg-no-repeat flex justify-center items-center flex-col md:flex-row md:justify-between md:items-center gap-8 rounded-[18px] px-4 md:px-10">
