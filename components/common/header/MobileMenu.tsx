@@ -28,7 +28,7 @@ const MobileMenu = () => {
             width={20}
           />
           <Button
-            href={"/"}
+            href={"/speed-test"}
             text="Speed test"
             class="h-[32px] w-[100px] bg-[var(--color-blue)] text-[14px] text-white rounded-[90px] py-[10px] px-[13px]"
           />

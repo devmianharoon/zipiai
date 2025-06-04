@@ -1,12 +1,14 @@
 "use client";
 
 import Link from "next/link";
-// import { useState } from "react";
+import { useRouter } from "next/navigation";
 import HeaderMenuContent from "../common/header/HeaderMenuContent";
 import Image from "next/image";
 import Searchbtn from "../buttonComp/Searchbtn";
 
 const Header = () => {
+    const router = useRouter();
+
   // const [navbar, setNavbar] = useState(true);
   // const navbar = true;
   //dummy usage of setnavbar
@@ -62,6 +64,7 @@ const Header = () => {
             bgColor="bg-[#0b6bdd]"
             wclass=""
             hpclass="py-[13px] leading-[16px] px-[16px]"
+      onClick={() => router.push("/speed-test")}
           />
           <Image
             src={"/assets/images/headericon.png"}

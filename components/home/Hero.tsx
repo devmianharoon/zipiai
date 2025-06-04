@@ -1,8 +1,9 @@
 "use client";
 import { RootState } from "../../store/store";
 import { useSelector } from "react-redux";
-import { useRouter } from "next/navigation";
 import Searchbtn from "../buttonComp/Searchbtn";
+import { usePathname, useRouter } from "next/navigation";
+
 
 import Image from "next/image";
 
@@ -10,6 +11,19 @@ import MovingH from "./movingH";
 
 export default function Hero() {
   const router = useRouter();
+  const pathname = usePathname();
+
+  const handleSpeedTestClick = () => {
+    if (pathname === "/speed-test") {
+      // We're already on the speed-test page, scroll to the section
+      const section = document.getElementById("speed-test");
+      section?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // Go to the speed-test page, and scroll after it loads
+      router.push("/speed-test#speed-test");
+    }
+  };
+
   const { zipCode, loading } = useSelector(
     (state: RootState) => state.location
   );
@@ -119,7 +133,8 @@ export default function Hero() {
           </h3>
           <Searchbtn
             text="Check my speed"
-            // onClick={handleClick}
+                  onClick={handleSpeedTestClick}
+
             wclass="w-[203px]"
             hpclass="h-[57px] text-[18px] font-medium"
             bgColor="bg-[var(--color-black)]"
