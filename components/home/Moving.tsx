@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { useRouter } from "next/navigation";
 import Searchbtn from "../buttonComp/Searchbtn";
 import { useState } from "react";
