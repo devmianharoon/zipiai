@@ -130,32 +130,43 @@ const MapComponent = ({ zipcode }: MapComponentProps) => {
       {providers.length > 0 ? (
         <div className="w-full px-[21px] rounded-xl lg:max-w-6xl">
           {/* Right Side: Map */}
-            <MapContainer
-              center={mapCenter}
-              zoom={12}
-              style={{ height: "500px", width: "100%" }}
-            >
-              <TileLayer
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                attribution="© OpenStreetMap contributors"
-              />
-              {selectedProvider?.stores.map((store, index) => (
-                <Marker key={index} position={[store.lat, store.lon]}>
-                  <Popup>
-                    <strong>{store.name}</strong>
-                    <br />
-                    {store.address}, {store.cityName}, {store.stateAbbr}{" "}
-                    {store.zip}
-                    <br />
-                    📞 {store.phone}
-                  </Popup>
-                </Marker>
-              ))}
-              <ChangeMapCenter center={mapCenter} />
-            </MapContainer>
+          <MapContainer
+            center={mapCenter}
+            zoom={12}
+            style={{ height: "500px", width: "100%" }}
+          >
+            <TileLayer
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              attribution="© OpenStreetMap contributors"
+            />
+            {selectedProvider?.stores.map((store, index) => (
+              <Marker key={index} position={[store.lat, store.lon]}>
+                <Popup>
+                  <strong>{store.name}</strong>
+                  <br />
+                  {store.address}, {store.cityName}, {store.stateAbbr}{" "}
+                  {store.zip}
+                  <br />
+                  📞 {store.phone}
+                </Popup>
+              </Marker>
+            ))}
+            <ChangeMapCenter center={mapCenter} />
+          </MapContainer>
         </div>
       ) : (
-        <div>No matching providers found for this zip code.</div>
+        <div className="w-full px-[21px] rounded-xl lg:max-w-6xl">
+          <MapContainer
+            center={[36.7783, -119.4179]} // California's approximate center
+            zoom={6}
+            style={{ height: "500px", width: "100%" }}
+          >
+            <TileLayer
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              attribution="© OpenStreetMap contributors"
+            />
+          </MapContainer>
+        </div>
       )}
     </div>
   );
