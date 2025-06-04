@@ -135,15 +135,61 @@ export default function Page() {
           </div>
         )}
 
-        {data?.providers.map((provider: Provider, index: number) => (
+        {/* {data?.providers.map((provider: Provider, index: number) => (
           <div
             className="w-full lg:max-w-6xl lg:mx-auto  lg:py-[12.5px]   "
             key={index}
           >
             <SingleProvider data={provider} index={index} />
           </div>
-        ))}
-         <StaticTile/>
+        ))} */}
+        {data?.providers
+          .slice() // Create a copy to avoid mutating the original array
+          .sort((a: Provider, b: Provider) => {
+            const order = ["Fiber", "Cable", "5G Wireless", "Satellite"];
+
+            // Normalize Connection_Type values
+            const normalizeType = (type: string | undefined) => {
+              if (!type) return "Unknown"; // Handle missing or undefined values
+              const lowerType = type.toLowerCase();
+              if (lowerType.includes("fibre") || lowerType.includes("fiber"))
+                return "Fiber";
+              if (lowerType.includes("cable")) return "Cable";
+              if (
+                lowerType.includes("5g wireless") ||
+                lowerType.includes("5g internet")
+              )
+                return "5G Wireless";
+              if (
+                lowerType.includes("sattelite") ||
+                lowerType.includes("satellite")
+              )
+                return "Satellite";
+              return type; // Return original if no match
+            };
+
+            const typeA = normalizeType(a.Connection_Type);
+            const typeB = normalizeType(b.Connection_Type);
+
+            // Use order index for sorting, place unknown types at the end
+            const indexA = order.includes(typeA)
+              ? order.indexOf(typeA)
+              : order.length;
+            const indexB = order.includes(typeB)
+              ? order.indexOf(typeB)
+              : order.length;
+
+            return indexA - indexB;
+          })
+          .map((provider: Provider, index: number) => (
+            <div
+              className="w-full lg:max-w-6xl lg:mx-auto lg:py-[12.5px]"
+              key={index}
+            >
+              <SingleProvider data={provider} index={index} />
+            </div>
+          ))}
+          <StaticTile/>
         {/* Call Section */}
         <div className="w-full h-[372px] md:h-[222px] md:w-[1144px] mx-auto px-[15px] mt-[60px] ">
           <div className="w-full h-full   bg-[url('/bg-page.png')] bg-cover bg-center bg-no-repeat flex justify-center items-center flex-col md:flex-row md:justify-between md:items-center gap-8 rounded-[18px] px-4 md:px-10">
@@ -182,13 +228,10 @@ export default function Page() {
               More Internet Providers Near Me
             </h2>
           </div>
-          <div className="flex flex-wrap  lg:max-w-6xl lg:mx-auto lg:gap-[20px]">
-            <div className="hidden lg:block w-[753px] h-[753px] rounded-full opacity-50 bg-[#FFB200] blur-[250px] shrink-0 absolute  left-[-550px]  z-10" />
+          <div className="grid lg:grid-cols-4 lg:max-w-6xl lg:mx-auto lg:gap-[20px]">
+            <div className="hidden lg:block w-[753px] h-[753px] rounded-full opacity-50 bg-[#FFB200] blur-[250px] shrink-0 absolute left-[-550px] z-10" />
             {data?.other_providers.map((provider: Provider, index: number) => (
-              <div
-                key={index}
-                className=" lg:w-1/4 px-[15px] mb-[20px] lg:p-0 lg:mb-0 lg:flex-1"
-              >
+              <div key={index} className="px-[15px] mb-[20px] lg:p-0 lg:mb-0">
                 <OtherProvider data={provider} index={index} />
               </div>
             ))}
@@ -230,7 +273,7 @@ export default function Page() {
         </div>
       </section>
 
-      <MobileFooter/>
+      <MobileFooter />
     </main>
   );
 }

@@ -61,11 +61,7 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
 
               <div className="overflow-x-auto">
                 <div
-                  className=" backdrop-blur-sm rounded-xl p-5 my-8  border"
-                  style={{
-                    borderColor: "rgba(255, 255, 255, 0.15)",
-                    backgroundColor: "rgba(255, 255, 255, 0.01)",
-                  }}
+                  className=" backdrop-blur-sm rounded-xl p-5 my-8  "
                 >
                   <h2 className="text-white text-base font-semibold mb-1">
                     {weatherState.data.location?.name},{" "}

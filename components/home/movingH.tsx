@@ -31,7 +31,8 @@ export default function Moving() {
   box-border px-[22px] py-[22px] 
   bg-[var(--color-black)]
   rounded-[12px] text-[var(--color-white)] 
-  mb-[60px] md:mb-0 shadow-[0px_4px_50px_rgba(17,17,17,0.05)]`}>
+  mb-[60px] md:mb-0 shadow-[0px_4px_50px_rgba(17,17,17,0.05)]`}
+    >
       <p className="text-[20px] font-[500] px-2 pb-[10px] text-[var(--color-white)]">
         Moving ? Check for providers.
       </p>
