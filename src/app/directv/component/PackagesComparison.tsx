@@ -14,6 +14,7 @@ import {
   fetchDirectvByZip,
 } from "../../../../store/slices/directvSlice";
 import { Channel } from "../../../../data/types/channelsTypes";
+import { capitalizeWords } from "../../../../data/HelperFunction";
 
 const packagesData = {
   toggle: {
@@ -184,7 +185,7 @@ export default function PackageComparison() {
                 : withLocalChannels === 4
                   ? "Full Channel Guide"
                   : "Full Channel Guide"}
-          {withLocalChannels !== 4 && ` in ${zip?.city} ZipCode ${zip?.zip}`}
+          {withLocalChannels !== 4 && ` in ${capitalizeWords(zip?.city ?? "")}, ${capitalizeWords(zip?.state ?? "")}  ${zip?.zip}`}
         </h2>
       </div>
       {/* Comparison Table */}
