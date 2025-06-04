@@ -59,7 +59,7 @@ const Header = () => {
         <div className="hidden md:flex md:justify-center md:items-center gap-3">
           <Searchbtn
             text="Speed Test"
-            bgColor="bg-[#0b8bdd]"
+            bgColor="bg-[#0b6bdd]"
             wclass=""
             hpclass="py-[13px] leading-[16px] px-[16px]"
           />

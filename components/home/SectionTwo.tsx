@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const SectionTwo = () => {
   return (
-    <section className="w-full  bg-primary flex justify-center items-center py-14">
+    <section className="w-full  bg-primary flex justify-center items-center py-6">
       <div className="container flex justify-center items-center h-[440px] gap-14">
         <div className="text-sec w-[35%]">
           <div className="pb-12">

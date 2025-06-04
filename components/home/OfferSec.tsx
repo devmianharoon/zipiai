@@ -11,7 +11,7 @@ const OfferSec = () => {
         "Best for high-performance tasks like compeitive gaming, 4K streaming, cloud work, and powering smart homes.  ",
       link: "/",
       title: "Fiber Internet",
-      colorC: "text-[var(--color-red)]",
+      colorC: "text-[var(--color-black)]",
     },
     {
       img: "/assets/images/blog1.png",
@@ -19,7 +19,7 @@ const OfferSec = () => {
         "Best for streaming, gaming, and everyday browsing for homes with moderate to heavy internet use",
       link: "/",
       title: "Cable Internet",
-      colorC: "text-[var(--color-red)]",
+      colorC: "text-[var(--color-black)]",
     },
     {
       img: "/assets/images/blog4.png",
@@ -27,7 +27,7 @@ const OfferSec = () => {
         "Best for streaming, working from home, and everyday browsing without the need for wired cable or fiber lines",
       link: "/",
       title: "Wireless 5G Internet ",
-      colorC: "text-[var(--color-blue)]",
+      colorC: "text-[var(--color-black)]",
     },
     {
       img: "/assets/images/blog2.png",
@@ -35,7 +35,7 @@ const OfferSec = () => {
         "Best for basic browsing, email, and social media in rural or remote areas where wired internet isn't available",
       link: "/",
       title: "Satellite Internet ",
-      colorC: "text-[var(--color-blue)]",
+      colorC: "text-[var(--color-black)]",
     },
   ];
 
@@ -44,7 +44,7 @@ const OfferSec = () => {
       <section className="w-full text-center py-12 px-2 md:px-0">
         {/* <p className="text-[var(--color-blue)]">What we offer</p> */}
         <h1 className="py-10 text-[38px] leading-[48px] font-[600] md:text-[48px] md:leading-[62px]">
-          Fast. Reliable. <br /> Internet Available Everywhere.
+          <span className="text-[var(--color-blue)]">Fast.</span> <span className="text-[var(--color-red)]">Reliable.</span> <br /> Internet Available Everywhere.
         </h1>
         <div className="w-full flex justify-center items-center">
           <div className="w-[1380px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-[24px]">

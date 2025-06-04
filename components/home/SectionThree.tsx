@@ -3,7 +3,7 @@ import React from "react";
 
 const SectionThree = () => {
   return (
-    <section className="w-full  bg-primary flex justify-center items-center py-14">
+    <section className="w-full  bg-primary flex justify-center items-center py-6">
       <div className="container flex justify-center items-center h-[440px] gap-14">
         <div className="img-sec w-[65%] relative h-full">
           <Image
