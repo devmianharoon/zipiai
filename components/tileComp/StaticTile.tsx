@@ -20,6 +20,7 @@ type Provider = {
   plans: Plan[];
 };
 
+
 const StaticTile = ({ data , border}: { data: Provider , border :string}) => {
   const [isAccordionOpen, setIsAccordionOpen] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState<number | null>(null);

@@ -16,10 +16,10 @@ export default function HeroBanner({ data }: { data: HeroBannerProps }) {
 
       {/* Content */}
       <div className="relative h-full flex flex-col items-center justify-center text-center text-white px-4 z-10">
-        <h2 className="text-xl md:text-[48px] font-[400] leading-[56px] tracking-[-1.44px] mb-4 text-white">
+        <h2 className="text-xl md:text-[100px] font-[500] leading-[120px] tracking-[-1.44px] mb-4 text-white">
           {data.title}
         </h2>
-        <h1 className="md:text-[100px] md:leading-[120px] tracking-[-3.6px] font-[400] mb-8  text-white ">
+        <h1 className="md:text-[48px] md:leading-[58px] tracking-[-3.6px] font-[500] mb-8  text-white ">
           {data.subtitle}
         </h1>
         <p className="text-base font-[500] leading-[28px] tracking-[-0.22px] lg:text-[22px] md:text-2xl mb-8 text-white ">

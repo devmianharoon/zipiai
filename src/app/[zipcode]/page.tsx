@@ -53,26 +53,32 @@ export default function Page() {
     Speeds_Up_To: "150 Mbps",
     Connection_Type: "Satellite",
     available: "100%",
-    Plans_Starting_At: "$99.99/mo",
+    Plans_Starting_At: "$84.99/mo",
     features: [
-      "Unlimited standard data",
-      "No annual contracts",
-      "Free professional installation",
+      "Unlimited cloud DVR",
+      "3 simultaneous streams (unlimited on home network)",
+      "Local channels included",
+      "Premier plan includes HBO, STARZ, SHOWTIME, etc",
     ],
     plans: [
       {
-        plan_name: "Unlimited Bronze 12",
-        Speeds: "12 Mbps",
-        Price: "$99.99/mo",
+        plan_name: "Entertainment",
+        Speeds: "90+",
+        Price: "$84.99/mo",
       },
       {
-        plan_name: "Unlimited Bronze 25",
-        Speeds: "12 Mbps",
-        Price: "$99.99/mo",
+        plan_name: "Choice",
+        Speeds: "125+",
+        Price: "$89.99/mo",
       },
-      { plan_name: "Unlimited Gold 50", Speeds: "12 Mbps", Price: "$99.99/mo" },
+      { plan_name: "Ultimate", Speeds: "160+", Price: "$119.99/mo" },
+      {
+        plan_name: "Premier",
+        Speeds: "185+",
+        Price: "$164.99/mo",
+      },
     ],
-  };
+  }
   const router = useRouter();
 
   const params = useParams(); // Get dynamic route parameters as per Next.js docs
