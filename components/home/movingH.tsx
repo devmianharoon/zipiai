@@ -27,7 +27,7 @@ export default function Moving() {
   md:top-[24px] md:left-[16px] md:translate-x-0 md:bottom-auto 
   lg:absolute lg:bottom-0 
   left-1/2 -translate-x-1/2 
-  md:h-[130px] md:w-[400px] 
+  md:h-[122px] md:w-[340px] 
   box-border px-[22px] py-[22px] 
   bg-[var(--color-black)]
   rounded-[12px] text-[var(--color-white)] 
@@ -41,7 +41,7 @@ export default function Moving() {
           <input
             type="text"
             placeholder="Enter zip code"
-            className="py-[10px] px-[20px] md:w-[230px] w-full rounded-[80px] outline-none border-none bg-primary placeholder:text-[var(--color-silver)]  bg-[var(--color-white)] text-[var(--color-silver)]"
+            className="py-[10px] px-[20px] md:w-[170px] w-full rounded-[80px] outline-none border-none bg-primary placeholder:text-[var(--color-silver)]  bg-[var(--color-white)] text-[var(--color-silver)]"
             value={zipCode}
             onChange={(e) => setZipCode(e.target.value)}
             onKeyDown={handleKeyDown}
@@ -69,7 +69,7 @@ export default function Moving() {
           wclass="md:w-auto w-full"
           onClick={handleClick}
           bgColor={`bg-[var(--color-red)]`}
-          hpclass="py-[16px] px-[28px] font-[18px] leading-[14.4px] font-[500]"
+          hpclass="py-[14px] px-[28px] font-[18px] leading-[14.4px] font-[500]"
         />
       </div>
     </div>

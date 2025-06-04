@@ -58,7 +58,7 @@ export default function Page() {
       <p className="p-tight text-center text-[var(--color-blue)] mt-[90px]">
         Search Result
       </p>
-      <h2 className="text-[42px] leading-[52px] font-[600] text-center mt-[20px] mb-[40px]">
+      <h2 className="text-[30px] leading-[52px] font-[600] text-center mt-[20px] mb-[40px]">
         The Top TV Providers in <span>{`Campbell ,`} </span>
         <span> {`CA`}</span>
         <span> {zipCode}</span>

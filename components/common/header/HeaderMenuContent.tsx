@@ -8,16 +8,17 @@ const HeaderMenuContent = () => {
   // const pathname = usePathname();
 
   const menuItems = [
-    { name: "About us", path: "/home-internet" },
+    { name: "Home", path: "/" },
     { name: "Personal Internet", path: "/business-internet" },
-    { name: "Commercial Internet", path: "/contact" },
+    { name: "Business Internet", path: "/contact" },
+    { name: "TV", path: "/tv" },
     { name: "Direct TV", path: "/directv" },
   ];
 
   return (
     <ul
       id="respMenu"
-      className="hidden md:flex gap-10 justify-center items-center  "
+      className="hidden md:flex gap-8 justify-center items-center  "
       data-menu-style="horizontal">
       {menuItems.map((item, index) => (
         <li key={index}>

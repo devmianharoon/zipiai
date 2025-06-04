@@ -4,7 +4,8 @@ import MobileMenu from "../../../components/common/header/MobileMenu";
 import Experience from "../../../components/home/Experience";
 import Header from "../../../components/home/Header";
 import MobileFooter from "../../../components/home/MobileFooter";
-import HeroBanner from "./component/HeroBanner";
+// import HeroBanner from "./component/HeroBanner";
+import HeroBannerDirecTv from "./component/HeroBannerDirecTv";
 import PackagesComparison from "./component/PackagesComparison";
 import ServiceTiles from "./component/ServiceTiles";
 import ServiceTylesTop from "./component/ServiceTylesTop";
@@ -26,7 +27,7 @@ export default function page() {
         <MobileMenu />
         <TopNavigation />
         {/* <!-- Hero Banner --> */}
-        <HeroBanner data={data} />
+        <HeroBannerDirecTv data={data} />
         {/* <!-- Service Tiles --> */}
         <div className="w-full max-w-6xl mx-auto ">
           <ServiceTiles />
