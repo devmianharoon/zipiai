@@ -38,7 +38,211 @@ export default function Page() {
     }
   }, [dispatch, zipCode]);
   // const { data, loading } = useSelector((state: RootState) => state.chat);
-
+const data2 = [
+  {
+    category: "tv",
+    backgroundColor: "bg-[#030A130D]",
+    logo: "sling_tv.png",
+    ProviderName: "xyz",
+    contact: "888 564 5552",
+    Speeds_Up_To: "150 Mbps",
+    Connection_Type: "Satellite",
+    available: "100%",
+    Plans_Starting_At: "$99.99/mo",
+    features: [
+      "Unlimited standard data",
+      "No annual contracts",
+      "Free professional installation",
+    ],
+    plans: [
+      {
+        plan_name: "Unlimited Bronze 12",
+        Speeds: "12 Mbps",
+        Price: "$99.99/mo",
+      },
+      {
+        plan_name: "Unlimited Bronze 25",
+        Speeds: "12 Mbps",
+        Price: "$99.99/mo",
+      },
+      { plan_name: "Unlimited Gold 50", Speeds: "12 Mbps", Price: "$99.99/mo" },
+    ],
+  },
+  {
+    category: "tv",
+    backgroundColor: "bg-[#FF4D4D0D]",
+    logo: "hulu_tv.png",
+    ProviderName: "xyz",
+    contact: "888 564 5552",
+    Speeds_Up_To: "245 Mbps",
+    Connection_Type: "Satellite",
+    available: "100%",
+    Plans_Starting_At: "$50.00/mo",
+    features: [
+      "Unlimited standard data",
+      "No annual contracts",
+      "Free professional installation",
+    ],
+    plans: [
+      {
+        plan_name: "Hulu (With Ads) + Live TV",
+        Speeds: "12 Mbps",
+        Price: "$82.99/mo",
+      },
+      {
+        plan_name: "Unlimited Bronze 25",
+        Speeds: "12 Mbps",
+        Price: "$99.99/mo",
+      },
+      { plan_name: "Unlimited Gold 50", Speeds: "12 Mbps", Price: "$99.99/mo" },
+    ],
+  },
+  {
+    category: "tv",
+    backgroundColor: "bg-[#030A130D]",
+    logo: "fubo_tv.png",
+    ProviderName: "xyz",
+    contact: "888 564 5552",
+    Speeds_Up_To: "2.3 Gbps",
+    Connection_Type: "Satellite",
+    available: "100%",
+    Plans_Starting_At: "$49.99/mo",
+    features: [
+      "Unlimited standard data",
+      "No annual contracts",
+      "Free professional installation",
+    ],
+    plans: [
+      {
+        plan_name: "Unlimited Bronze 12",
+        Speeds: "12 Mbps",
+        Price: "$99.99/mo",
+      },
+      {
+        plan_name: "Unlimited Bronze 25",
+        Speeds: "12 Mbps",
+        Price: "$99.99/mo",
+      },
+      { plan_name: "Unlimited Gold 50", Speeds: "12 Mbps", Price: "$99.99/mo" },
+    ],
+  },
+  {
+    category: "tv",
+    backgroundColor: "",
+    logo: "youtube_tv.jpeg",
+    ProviderName: "xyz",
+    contact: "888 564 5552",
+    Speeds_Up_To: "1 Gbps",
+    Connection_Type: "Satellite",
+    available: "100%",
+    Plans_Starting_At: "$49.99/mo",
+    features: [
+      "Unlimited standard data",
+      "No annual contracts",
+      "Free professional installation",
+    ],
+    plans: [
+      {
+        plan_name: "Unlimited Bronze 12",
+        Speeds: "12 Mbps",
+        Price: "$99.99/mo",
+      },
+      {
+        plan_name: "Unlimited Bronze 25",
+        Speeds: "12 Mbps",
+        Price: "$99.99/mo",
+      },
+      { plan_name: "Unlimited Gold 50", Speeds: "12 Mbps", Price: "$99.99/mo" },
+    ],
+  },
+  {
+    category: "tv",
+    backgroundColor: "bg-[#030A130D]",
+    logo: "DirecTV-Logo.png",
+    ProviderName: "xyz",
+    contact: "888 564 5552",
+    Speeds_Up_To: "150 Mbps",
+    Connection_Type: "Satellite",
+    available: "100%",
+    Plans_Starting_At: "$99.99/mo",
+    features: [
+      "Unlimited standard data",
+      "No annual contracts",
+      "Free professional installation",
+    ],
+    plans: [
+      {
+        plan_name: "Unlimited Bronze 12",
+        Speeds: "12 Mbps",
+        Price: "$99.99/mo",
+      },
+      {
+        plan_name: "Unlimited Bronze 25",
+        Speeds: "12 Mbps",
+        Price: "$99.99/mo",
+      },
+      { plan_name: "Unlimited Gold 50", Speeds: "12 Mbps", Price: "$99.99/mo" },
+    ],
+  },
+  {
+    category:"internet",
+    backgroundColor: "bg-[#FF4D4D0D]",
+    logo: "Xfinity-Logo-2010.png",
+    ProviderName: "xyz",
+    contact: "888 564 5552",
+    Speeds_Up_To: "245 Mbps",
+    Connection_Type: "Satellite",
+    available: "100%",
+    Plans_Starting_At: "$89.99/mo",
+    features: [
+      "Unlimited standard data",
+      "No annual contracts",
+      "Free professional installation",
+    ],
+    plans: [
+      {
+        plan_name: "Unlimited Bronze 12",
+        Speeds: "12 Mbps",
+        Price: "$99.99/mo",
+      },
+      {
+        plan_name: "Unlimited Bronze 25",
+        Speeds: "12 Mbps",
+        Price: "$99.99/mo",
+      },
+      { plan_name: "Unlimited Gold 50", Speeds: "12 Mbps", Price: "$99.99/mo" },
+    ],
+  },
+  {
+    category:"internet",
+    backgroundColor: "bg-[#030A130D]",
+    logo: "spectrum-tv.png",
+    ProviderName: "xyz",
+    contact: "888 564 5552",
+    Speeds_Up_To: "150 Mbps",
+    Connection_Type: "Satellite",
+    available: "100%",
+    Plans_Starting_At: "$99.99/mo",
+    features: [
+      "Unlimited standard data",
+      "No annual contracts",
+      "Free professional installation",
+    ],
+    plans: [
+      {
+        plan_name: "Unlimited Bronze 12",
+        Speeds: "12 Mbps",
+        Price: "$99.99/mo",
+      },
+      {
+        plan_name: "Unlimited Bronze 25",
+        Speeds: "12 Mbps",
+        Price: "$99.99/mo",
+      },
+      { plan_name: "Unlimited Gold 50", Speeds: "12 Mbps", Price: "$99.99/mo" },
+    ],
+  },
+];
   return (
     <>
       {/* <!-- Main Header Nav --> */}
@@ -100,7 +304,14 @@ export default function Page() {
         ))}
       </div> */}
       
-      <StaticTile/>
+       {data2?.map((data, index: number) => (
+          <div
+            className="w-full lg:max-w-6xl lg:mx-auto  lg:py-[12.5px]   "
+            key={index}
+          >
+            <StaticTile data={data} border="border-gray-200" />
+          </div>
+        ))} 
       {/* search results */}
 
       <TextSec />

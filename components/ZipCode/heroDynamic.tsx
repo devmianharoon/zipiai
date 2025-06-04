@@ -3,9 +3,9 @@ import { AppDispatch, RootState } from "../../store/store";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchWeather } from "../../store/slices/weatherSlice";
-import Moving from "../home/Moving";
 import { Globe } from "lucide-react";
 import Image from "next/image";
+import MovingH from "../home/movingH";
 
 export default function HeroDynamic({ zipCode }: { zipCode: string }) {
   const dispatch = useDispatch<AppDispatch>();
@@ -61,7 +61,7 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
 
               <div className="overflow-x-auto">
                 <div
-                  className=" backdrop-blur-sm rounded-xl p-5 my-8  "
+                  className=" backdrop-blur-sm rounded-xl p-5 my-8 lg:my-0 "
                 >
                   <h2 className="text-white text-base font-semibold mb-1">
                     {weatherState.data.location?.name},{" "}
@@ -100,11 +100,12 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
 
           {/* Static Section Below */}
         </div>
-        <div className="lg:absolute w-full lg:top-30 lg:left-4">
-          <Moving
+        <div className="lg:absolute w-full lg:top-[30px] lg:left-4">
+          {/* <Moving
             bgClass="bg-[var(--color-black)]"
             bgClassBtn="bg-[var(--color-red)]"
-          />
+          /> */}
+          <MovingH/>
         </div>
       </div>
     </section>

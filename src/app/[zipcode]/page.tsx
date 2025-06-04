@@ -23,6 +23,8 @@ import Experience from "../../../components/home/Experience";
 import OtherProvider from "./component/OthersProviders";
 import MobileFooter from "../../../components/home/MobileFooter";
 import { capitalizeWords } from "../../../data/HelperFunction";
+import StaticTile from "../../../components/tileComp/StaticTile";
+import { useRouter } from "next/navigation";
 
 export default function Page() {
   // Sample city data
@@ -42,6 +44,36 @@ export default function Page() {
     { name: "Portola Valley", state: "CA", id: "portola-valley-ca" },
     { name: "Menlo Park", state: "CA", id: "menlo-park-ca" },
   ];
+  const directv = {
+    category: "tv",
+    backgroundColor: "bg-[#030A130D]",
+    logo: "DirecTV-Logo.png",
+    ProviderName: "xyz",
+    contact: "888 564 5552",
+    Speeds_Up_To: "150 Mbps",
+    Connection_Type: "Satellite",
+    available: "100%",
+    Plans_Starting_At: "$99.99/mo",
+    features: [
+      "Unlimited standard data",
+      "No annual contracts",
+      "Free professional installation",
+    ],
+    plans: [
+      {
+        plan_name: "Unlimited Bronze 12",
+        Speeds: "12 Mbps",
+        Price: "$99.99/mo",
+      },
+      {
+        plan_name: "Unlimited Bronze 25",
+        Speeds: "12 Mbps",
+        Price: "$99.99/mo",
+      },
+      { plan_name: "Unlimited Gold 50", Speeds: "12 Mbps", Price: "$99.99/mo" },
+    ],
+  };
+  const router = useRouter();
 
   const params = useParams(); // Get dynamic route parameters as per Next.js docs
   console.log("Dynamic Parameters:", params);
@@ -188,6 +220,23 @@ export default function Page() {
               <SingleProvider data={provider} index={index} />
             </div>
           ))}
+        {/* Direct Tv Componat  */}
+        <div className="w-full max-w-6xl mx-auto mt-[60px] ">
+          <div>
+            <button
+              onClick={() => router.push(`/directv`)}
+              className="w-[208px] h-[50px] mx-auto  bg-[var(--color-blue)]  text-black  rounded-full text-base font-medium"
+            >
+              <div className="flex justify-center items-center gap-2">
+                <span className="text-lg font-medium">Bundle Streaming TV</span>
+              </div>
+            </button>
+          </div>
+          <div>
+            <StaticTile data={directv} border="border-[var(--color-blue)]"/>
+          </div>
+        </div>
+
         {/* Call Section */}
         <div className="w-full h-[372px] md:h-[222px] md:w-[1144px] mx-auto px-[15px] mt-[60px] ">
           <div className="w-full h-full   bg-[url('/bg-page.png')] bg-cover bg-center bg-no-repeat flex justify-center items-center flex-col md:flex-row md:justify-between md:items-center gap-8 rounded-[18px] px-4 md:px-10">
