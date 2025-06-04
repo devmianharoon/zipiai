@@ -43,17 +43,15 @@ const serviceTilesData = [
   },
 ];
 
-export default function ServiceTilesTop  () {
+export default function ServiceTilesTop() {
   return (
     <>
       <div className="text-center mb-12">
         <h1 className="text-3xl md:text-4xl font-bold text-[#0a2540] mb-4">
-          Stream your way. No annual contract.
-          <br />
-          Cancel anytime.
+          DirecTV Extras. Stream Your Way. <br /> Freedom to Choose.
         </h1>
         <p className="text-lg text-[#0a2540]">
-          Choose which DIRECTV service works best for you.
+          Get more with DirecTV add-ons and build your perfect line-up.
         </p>
       </div>
 
@@ -61,8 +59,7 @@ export default function ServiceTilesTop  () {
         {serviceTilesData.map((tile) => (
           <div
             key={tile.id}
-            className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200 flex flex-col"
-          >
+            className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200 flex flex-col">
             <div className="h-48 bg-blue-500 relative">
               <Image
                 src={tile.image}
@@ -113,4 +110,4 @@ export default function ServiceTilesTop  () {
       </div>
     </>
   );
-};
+}

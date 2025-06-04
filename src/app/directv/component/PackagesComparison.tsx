@@ -176,7 +176,7 @@ export default function PackageComparison() {
       <div className="p-5 w-full lg:max-w-6xl lg:mx-auto">
         <h2 className="text-[30px] font-bold text-black text-center">
           {withLocalChannels === 1
-            ? "Packages"
+            ? "DirecTV Packages"
             : withLocalChannels === 2
               ? "Local Channels"
               : withLocalChannels === 3
@@ -303,9 +303,11 @@ export default function PackageComparison() {
             {packagesData.packages.map((pkg) => (
               <div
                 key={pkg.id}
+               
                 className={`p-6 rounded-lg ${pkg.bgColor} border border-[rgba(3,10,19,0.15)] flex flex-col`}
               >
-                <h2 className="text-lg font-bold mb-2">{pkg.name}</h2>
+                <div>
+                  <h2 className="text-lg font-bold mb-2">{pkg.name}</h2>
                 <p className="text-sm text-gray-700 mb-2">{pkg.tagline}</p>
                 <div className="text-2xl font-bold mb-1 text-[var(--color-red)]">
                   {pkg.price}
@@ -339,12 +341,12 @@ export default function PackageComparison() {
                     </div>
                   ))}
                 </ol>
-                {/* Push button to bottom */}
-                <div className="mt-auto">
-                  <button className="w-full py-2 rounded-full text-white font-semibold bg-black">
-                    {pkg.buttonText}
-                  </button>
                 </div>
+                <button
+                  className={`w-full py-2 rounded-full text-white font-semibold bg-black mt-auto`}
+                >
+                  {pkg.buttonText}
+                </button>
               </div>
             ))}
           </div> 

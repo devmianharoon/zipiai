@@ -35,10 +35,9 @@ export default function SingleProvider({
     <>
       <div
         className="mx-auto w-full rounded-xl border border-gray-200 lg:max-w-6xl  lg:flex  px-5 lg:pt-[25px] py-[15px]"
-        style={{ backgroundColor }}
-      >
+        style={{ backgroundColor }}>
         {/* Image Section */}
-        <div className="flex justify-around items-start p-[10px] lg:px-[15px]  lg:flex flex-col gap-3 min-w-[230px]  ">
+        <div className="flex  items-center p-[10px] lg:px-[15px]  lg:flex flex-col gap-6 min-w-[230px]  ">
           <Image
             src={`/assets/logos/${data.logo}`}
             alt={data.ProviderName}
@@ -47,18 +46,17 @@ export default function SingleProvider({
           />
           <button
             onClick={toggleAccordion}
-            className="w-full bg-[var(--color-red)] text-white p-[13px] flex justify-around px-[10px] rounded-full text-base font-medium hover:bg-[var(--color-red)]transition-colors"
-          >
+            className="w-full bg-[var(--color-red)] text-white py-[12px] flex justify-around px-[10px] rounded-full text-base font-medium hover:bg-[var(--color-red)]transition-colors">
             <Image src="/call-w.svg" alt="phone" width={20} height={20} />
-            <span className="text-[15px] font-bold"> {data.contact}</span>
+            <span className="text-[17px] font-[500]"> {data.contact}</span>
           </button>
         </div>
         {/* Speed and Pricing Section */}
         <div className="min-w-[400px] grid grid-cols-2 gap-4 px-[25px] py-[30px] border-b border-t border-[var(--color-silver)] lg:border-l lg:border-t-0 lg:border-b-0 lg:gap-[10px]">
-          <div className="flex flex-col justify-between">
-            <div className="p-light text-base font-medium ">Speed up to</div>
-            <h3>
-              <span className="text-[32px] font-semibold">
+          <div className="flex flex-col">
+            <div className="p-light text-base font-[400] ">Speed up to</div>
+            <h3 className="pb-[23px] pt-[17px]">
+              <span className="text-[32px]  font-semibold">
                 {data.Speeds_Up_To}
               </span>
             </h3>
@@ -73,9 +71,9 @@ export default function SingleProvider({
               <span className="text-base font-semibold">{data.available}</span>
             </div>
           </div>
-          <div className="flex flex-col justify-between">
-            <div className="font-bold text-base mb-1">Plans starting at</div>
-            <h3 className="text-[32px] font-semibold">
+          <div className="flex flex-col ">
+            <div className="font-[400] text-base mb-1">Plans starting at</div>
+            <h3 className="text-[32px] font-semibold pb-[23px] pt-[14px]">
               {data.Plans_Starting_At}
             </h3>
             <div className=" text-base font-normal ">
@@ -107,8 +105,7 @@ export default function SingleProvider({
         <div className=" lg:w-[226px] lg:my-auto">
           <button
             onClick={toggleAccordion}
-            className="w-full lg:min-w-[226px] lg:min-h-[49px]  bg-gray-900 text-white py-[10px] rounded-full text-[15px] font-medium hover:bg-gray-800 transition-colors"
-          >
+            className="w-full lg:min-w-[226px] lg:min-h-[49px]  bg-gray-900 text-white py-[10px] rounded-full text-[15px] font-medium hover:bg-gray-800 transition-colors">
             View Plans
           </button>
 
@@ -126,8 +123,7 @@ export default function SingleProvider({
                     }`}
                     onClick={() =>
                       setSelectedPlan(selectedPlan === i ? null : i)
-                    }
-                  >
+                    }>
                     <div className="font-semibold">{plan.plan_name}</div>
                     {/* <div className="text-sm text-gray-600">{plan.Price}</div> */}
 
@@ -153,8 +149,7 @@ export default function SingleProvider({
               </div>
               <button
                 onClick={() => window.open(`tel:${data.contact}`)}
-                className="mt-4 w-full flex justify-center lg:gap-[10px] items-center bg-[var(--color-red)]  text-white py-4 rounded-full text-base font-medium hover:bg-gray-800 transition-colors"
-              >
+                className="mt-4 w-full flex justify-center lg:gap-[10px] items-center bg-[var(--color-red)]  text-white py-4 rounded-full text-base font-medium hover:bg-gray-800 transition-colors">
                 <Image src="/call-w.svg" alt="phone" width={24} height={24} />
                 Shop Now
               </button>

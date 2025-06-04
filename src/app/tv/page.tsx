@@ -8,10 +8,11 @@ import Header from "../../../components/home/Header";
 import HeroBanner from "../directv/component/HeroBanner";
 import Experience from "../../../components/home/Experience";
 import { Search, ChevronDown } from "lucide-react";
-import { useSelector } from "react-redux";
-import { AppDispatch, RootState } from "../../../store/store";
-import { Provider } from "../../../data/types/responsetype";
-import SingleProvider from "../../../components/tileComp/tile";
+// import { useSelector } from "react-redux";
+//, RootState
+import { AppDispatch } from "../../../store/store";
+// import { Provider } from "../../../data/types/responsetype";
+// import SingleProvider from "../../../components/tileComp/tile";
 import { useEffect } from "react";
 import { fetchProvidersByZip } from "../../../store/slices/chatSlice";
 import { fetchZipData } from "../../../store/slices/zipSlice";
@@ -20,6 +21,7 @@ import TextSec from "./comp/TextSec";
 import SectionOne from "../../../components/home/SectionOne";
 import SectionTwo from "../../../components/home/SectionTwo";
 import SectionThree from "../../../components/home/SectionThree";
+import StaticTile from "../../../components/tileComp/StaticTile";
 
 export default function Page() {
   const data1 = {
@@ -35,7 +37,7 @@ export default function Page() {
       // dispatch(fetchProviders("The Best Internet Near Me " + zipCode));
     }
   }, [dispatch, zipCode]);
-  const { data, loading } = useSelector((state: RootState) => state.chat);
+  // const { data, loading } = useSelector((state: RootState) => state.chat);
 
   return (
     <>
@@ -83,7 +85,7 @@ export default function Page() {
         {/* </div> */}
       </div>
       {/*providers */}
-      <div className="bg-white">
+      {/* <div className="bg-white">
         {loading && (
           <div className="flex justify-center items-center py-10">
             <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
@@ -96,7 +98,9 @@ export default function Page() {
             <SingleProvider data={provider} index={0} />
           </div>
         ))}
-      </div>
+      </div> */}
+      
+      <StaticTile/>
       {/* search results */}
 
       <TextSec />
