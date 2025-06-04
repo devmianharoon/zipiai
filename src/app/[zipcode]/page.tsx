@@ -231,7 +231,7 @@ export default function Page() {
           <div>
             <button
               onClick={() => router.push(`/directv`)}
-              className="w-[208px] h-[50px] mx-auto  bg-[var(--color-blue)]  text-black  rounded-full text-base font-medium"
+              className="w-[208px] h-[50px] mx-auto  bg-[#0b6bdd]  text-white  rounded-full text-base font-medium"
             >
               <div className="flex justify-center items-center gap-2">
                 <span className="text-lg font-medium">Bundle Streaming TV</span>
