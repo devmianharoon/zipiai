@@ -1,0 +1,101 @@
+
+   [ {
+      "chnlname": "ABC",
+      "chnlNumber": "13",
+      "logo": "https://www.directv.com//dtvassets/global/channel-icons/local-channels/Channel_Icon_ABC.svg",
+      "inPackags": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "chnlname": "CBS",
+      "chnlNumber": "8",
+      "logo": "https://www.directv.com//dtvassets/global/channel-icons/local-channels/Channel_Icon_CBS.svg",
+      "inPackags": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "chnlname": "CW",
+      "chnlNumber": "33",
+      "logo": "https://www.directv.com//dtvassets/global/channel-icons/local-channels/Channel_Icon_TheCW.svg",
+      "inPackags": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "chnlname": "FOX",
+      "chnlNumber": "5",
+      "logo": "https://www.directv.com//dtvassets/global/channel-icons/local-channels/Channel_Icon_FOX.svg",
+      "inPackags": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "chnlname": "Independent",
+      "chnlNumber": "34",
+      "logo": "https://www.directv.com//dtvassets/global/channel-icons/local-channels/Channel_Icon_No-Logo.svg",
+      "inPackags": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "chnlname": "MyNetworkTV",
+      "chnlNumber": "21",
+      "logo": "https://www.directv.com//dtvassets/global/channel-icons/local-channels/Channel_Icon_MNT.svg",
+      "inPackags": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "chnlname": "NBC",
+      "chnlNumber": "3",
+      "logo": "https://www.directv.com//dtvassets/global/channel-icons/local-channels/Channel_Icon_NBC.svg",
+      "inPackags": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "chnlname": "PBS",
+      "chnlNumber": "10",
+      "logo": "https://www.directv.com//dtvassets/global/channel-icons/local-channels/Channel_Icon_PBS.svg",
+      "inPackags": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "chnlname": "Telemundo",
+      "chnlNumber": "39",
+      "logo": "https://www.directv.com//dtvassets/global/channel-icons/local-channels/Channel_Icon_TELEMUNDO.svg",
+      "inPackags": [
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+]

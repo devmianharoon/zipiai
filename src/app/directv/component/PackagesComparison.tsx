@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import full_channel_guide from "./../../../../data/full_channel_guide.json";
+import rsn from "./../../../../data/rsn.json";
+import localchannel from "./../../../../data/localchannel.json";
 import ChannelTable from "./ChannelTable";
 import Cookies from "js-cookie";
 import { useDispatch, useSelector } from "react-redux";
@@ -185,7 +187,8 @@ export default function PackageComparison() {
                 : withLocalChannels === 4
                   ? "Full Channel Guide"
                   : "Full Channel Guide"}
-          {withLocalChannels !== 4 && ` in ${capitalizeWords(zip?.city ?? "")}, ${capitalizeWords(zip?.state ?? "")}  ${zip?.zip}`}
+          {withLocalChannels !== 4 &&
+            ` in ${capitalizeWords(zip?.city ?? "")}, ${capitalizeWords(zip?.state ?? "")}  ${zip?.zip}`}
         </h2>
       </div>
       {/* Comparison Table */}
@@ -270,30 +273,26 @@ export default function PackageComparison() {
               </h3>
               {withLocalChannels === 3 && (
                 <h3 className="text-lg font-bold mb-4">
-                  Price <span>{directv.data?.RSN_Price}</span>
+                  Price <span>{"$17.99/mo."}</span>
+                  {/* <span>{directv.data?.RSN_Price}</span> */}
                 </h3>
               )}
             </div>
             <div className="h-[700px] w-auto overflow-x-auto">
-              {(withLocalChannels === 2 && !directv.data?.localChnl?.length) ||
-              (withLocalChannels === 3 && !directv.data?.RSNs?.length) ? (
-                <h3 className="text-center text-lg font-semibold mt-4">
-                  No data available
-                </h3>
-              ) : (
+              {(withLocalChannels === 2 && localchannel?.length > 0) ||
+              (withLocalChannels === 3 && rsn?.length > 0) ||
+              (withLocalChannels === 4 && full_channel_guide?.length > 0) ? (
                 <ChannelTable
                   channels={
                     withLocalChannels === 2
-                      ? (directv.data?.localChnl as Channel[])
+                      ? (localchannel as Channel[])
                       : withLocalChannels === 3
-                        ? (directv.data?.RSNs as Channel[])
-                        : withLocalChannels === 4
-                          ? (full_channel_guide as Channel[])
-                          : ((full_channel_guide as Channel[]) ?? [])
+                        ? (rsn as Channel[])
+                        : (full_channel_guide as Channel[])
                   }
                   packages={packageNames}
                 />
-              )}
+              ) : null}
             </div>
           </div>
         )}
@@ -304,44 +303,43 @@ export default function PackageComparison() {
             {packagesData.packages.map((pkg) => (
               <div
                 key={pkg.id}
-               
                 className={`p-6 rounded-lg ${pkg.bgColor} border border-[rgba(3,10,19,0.15)] flex flex-col`}
               >
                 <div>
                   <h2 className="text-lg font-bold mb-2">{pkg.name}</h2>
-                <p className="text-sm text-gray-700 mb-2">{pkg.tagline}</p>
-                <div className="text-2xl font-bold mb-1 text-[var(--color-red)]">
-                  {pkg.price}
-                  <span className="text-sm align-top">{pkg.cents}</span>
-                </div>
-                <p className="text-xs text-gray-600 mb-1">{pkg.period}</p>
-                <p className="text-xs text-gray-500 mb-2">{pkg.details}</p>
-                <p className="text-xs text-gray-400 italic mb-4">
-                  {pkg.fullPrice}
-                </p>
-                <ol className="text-sm mb-4 list-disc list-inside">
-                  {pkg.features.map((feature, idx) => (
-                    <div key={idx}>
-                      <div className="flex gap-[10px]">
-                        <Image
-                          src={"/assets/verified.svg"}
-                          alt="verified"
-                          width={22}
-                          height={22}
-                        />
-                        {feature.text}
+                  <p className="text-sm text-gray-700 mb-2">{pkg.tagline}</p>
+                  <div className="text-2xl font-bold mb-1 text-[var(--color-red)]">
+                    {pkg.price}
+                    <span className="text-sm align-top">{pkg.cents}</span>
+                  </div>
+                  <p className="text-xs text-gray-600 mb-1">{pkg.period}</p>
+                  <p className="text-xs text-gray-500 mb-2">{pkg.details}</p>
+                  <p className="text-xs text-gray-400 italic mb-4">
+                    {pkg.fullPrice}
+                  </p>
+                  <ol className="text-sm mb-4 list-disc list-inside">
+                    {pkg.features.map((feature, idx) => (
+                      <div key={idx}>
+                        <div className="flex gap-[10px]">
+                          <Image
+                            src={"/assets/verified.svg"}
+                            alt="verified"
+                            width={22}
+                            height={22}
+                          />
+                          {feature.text}
+                        </div>
+                        {feature.link && (
+                          <a
+                            href="#"
+                            className="ml-1 text-blue-600 underline text-xs"
+                          >
+                            {feature.link}
+                          </a>
+                        )}
                       </div>
-                      {feature.link && (
-                        <a
-                          href="#"
-                          className="ml-1 text-blue-600 underline text-xs"
-                        >
-                          {feature.link}
-                        </a>
-                      )}
-                    </div>
-                  ))}
-                </ol>
+                    ))}
+                  </ol>
                 </div>
                 <button
                   className={`w-full py-2 rounded-full text-white font-semibold bg-black mt-auto`}
@@ -350,7 +348,7 @@ export default function PackageComparison() {
                 </button>
               </div>
             ))}
-          </div> 
+          </div>
         )}
       </div>
     </>

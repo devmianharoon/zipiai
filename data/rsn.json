@@ -1,0 +1,50 @@
+[
+  {
+    "chnlname": "FanDuel Sports Network SoCal",
+    "chnlNumber": "693",
+    "logo": "https://www.directv.com//dtvassets/global/channel-icons/rsn-channels/Channel_Icon_RSN_FanDuel_SoCal.svg",
+    "inPackags": [0, 1, 1, 1]
+  },
+  {
+    "chnlname": "FanDuel Sports Network West",
+    "chnlNumber": "692",
+    "logo": "https://www.directv.com//dtvassets/global/channel-icons/rsn-channels/Channel_Icon_RSN_FanDuel_West.svg",
+    "inPackags": [0, 1, 1, 1]
+  },
+  {
+    "chnlname": "MLB Arizona Diamondbacks",
+    "chnlNumber": "686",
+    "logo": "https://www.directv.com//dtvassets/global/channel-icons/rsn-channels/Channel_Icon_Arizona_Diamondbacks%20.svg",
+    "inPackags": [0, 1, 1, 1]
+  },
+  {
+    "chnlname": "MLB San Diego Padres",
+    "chnlNumber": "694",
+    "logo": "https://www.directv.com//dtvassets/global/channel-icons/rsn-channels/Channel_Icon_RSN_MLB_SD_Padres.svg",
+    "inPackags": [0, 1, 1, 1]
+  },
+  {
+    "chnlname": "NBC Sports Bay Area",
+    "chnlNumber": "696",
+    "logo": "https://www.directv.com//dtvassets/global/channel-icons/rsn-channels/Channel_Icon_RSN_NBCSports_BayArea.svg",
+    "inPackags": [0, 1, 1, 1]
+  },
+  {
+    "chnlname": "NBC Sports California",
+    "chnlNumber": "698",
+    "logo": "https://www.directv.com//dtvassets/global/channel-icons/rsn-channels/Channel_Icon_RSN_NBCSports_California.svg",
+    "inPackags": [0, 1, 1, 1]
+  },
+  {
+    "chnlname": "Spectrum SportsNet",
+    "chnlNumber": "691",
+    "logo": "https://www.directv.com//dtvassets/global/channel-icons/rsn-channels/Channel_Icon_RSN_SpectrumSportsNet.svg",
+    "inPackags": [0, 1, 1, 1]
+  },
+  {
+    "chnlname": "SportsNet LA",
+    "chnlNumber": "690",
+    "logo": "https://www.directv.com//dtvassets/global/channel-icons/rsn-channels/Channel_Icon_RSN_SpectrumSportsNetLA.svg",
+    "inPackags": [0, 1, 1, 1]
+  }
+]
