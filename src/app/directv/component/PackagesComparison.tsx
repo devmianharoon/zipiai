@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 import full_channel_guide from "./../../../../data/full_channel_guide.json";
-import rsn from "./../../../../data/rsn.json";
-import localchannel from "./../../../../data/localchannel.json";
+// import rsn from "./../../../../data/rsn.json";
+// import localchannel from "./../../../../data/localchannel.json";
 import ChannelTable from "./ChannelTable";
 import Cookies from "js-cookie";
 import { useDispatch, useSelector } from "react-redux";
@@ -152,31 +152,41 @@ const packagesData = {
 const packageNames = ["ENTERTAINMENT", "CHOICE", "ULTIMATE", "PREMIER"];
 export default function PackageComparison() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
+  const [zipCode, setZipCode] = useState(Cookies.get("user_zipcode") || "");
   const dispatch = useDispatch<AppDispatch>();
-
-  const savedZipCode = Cookies.get("user_zipcode");
-  console.log("Saved Zip Code from Cookies:", savedZipCode);
+  // Function to check and update zip code from cookies
   useEffect(() => {
-    if (savedZipCode) {
-      dispatch(fetchDirectvByZip(savedZipCode));
-      dispatch(fetchZipData(savedZipCode));
+    // Poll for cookie changes (optional, if needed)
+    const interval = setInterval(() => {
+      const newZipCode = Cookies.get("user_zipcode") || "";
+      if (newZipCode !== zipCode) {
+        setZipCode(newZipCode);
+      }
+    }, 1000); // Check every 1 second (adjust as needed)
+
+    return () => clearInterval(interval); // Cleanup interval on unmount
+  }, [zipCode]);
+
+  // Fetch data when zipCode changes
+  useEffect(() => {
+    if (zipCode) {
+      dispatch(fetchDirectvByZip(zipCode));
+      dispatch(fetchZipData(zipCode));
     }
     return () => {
       dispatch(clearDirectvData());
     };
-  }, [dispatch, savedZipCode]);
-  const zip = useSelector((state: RootState) => state.zip.data);
-  const directv = useSelector((state: RootState) => state.directv);
-  console.log("Directv Data from Redux:", directv);
+  }, [dispatch, zipCode]);
 
   const [withLocalChannels, setWithLocalChannels] = useState(1);
+  const zip = useSelector((state: RootState) => state.zip.data);
+  const directv = useSelector((state: RootState) => state.directv);
 
   return (
     <>
       {/* BreadCrum */}
       {/* Heading Section */}
-      <div className="p-5 w-full lg:max-w-6xl lg:mx-auto">
+      <div className="p-5 w-full lg:max-w-6xl lg:mx-auto" id="comparison">
         <h2 className="text-[30px] font-bold text-black text-center">
           {withLocalChannels === 1
             ? "DirecTV Packages"
@@ -273,26 +283,30 @@ export default function PackageComparison() {
               </h3>
               {withLocalChannels === 3 && (
                 <h3 className="text-lg font-bold mb-4">
-                  Price <span>{"$17.99/mo."}</span>
-                  {/* <span>{directv.data?.RSN_Price}</span> */}
+                  <span>{directv.data?.RSN_Price}</span>
                 </h3>
               )}
             </div>
             <div className="h-[700px] w-auto overflow-x-auto">
-              {(withLocalChannels === 2 && localchannel?.length > 0) ||
-              (withLocalChannels === 3 && rsn?.length > 0) ||
-              (withLocalChannels === 4 && full_channel_guide?.length > 0) ? (
+              {(withLocalChannels === 2 && !directv.data?.localChnl?.length) ||
+              (withLocalChannels === 3 && !directv.data?.RSNs?.length) ? (
+                <h3 className="text-center text-lg font-semibold mt-4">
+                  No data available
+                </h3>
+              ) : (
                 <ChannelTable
                   channels={
                     withLocalChannels === 2
-                      ? (localchannel as Channel[])
+                      ? (directv.data?.localChnl as Channel[])
                       : withLocalChannels === 3
-                        ? (rsn as Channel[])
-                        : (full_channel_guide as Channel[])
+                        ? (directv.data?.RSNs as Channel[])
+                        : withLocalChannels === 4
+                          ? (full_channel_guide as Channel[])
+                          : ((full_channel_guide as Channel[]) ?? [])
                   }
                   packages={packageNames}
                 />
-              ) : null}
+              )}
             </div>
           </div>
         )}
