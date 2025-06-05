@@ -11,7 +11,7 @@ export default function ChannelTable({
 }: ChannelTableProps) {
   return (
     <div className="w-auto h-auto mx-auto p-4">
-      <div className=" ">
+      <div style={{ maxHeight: "540px", overflowY: "auto" }}>
         <table className="min-w-full border-collapse border border-gray-300">
           <thead>
             <tr className="bg-gray-100">
