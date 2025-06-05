@@ -273,8 +273,8 @@ export default function PackageComparison() {
           withLocalChannels === 3 ||
           withLocalChannels === 4) && (
           <div className="mb-8">
-            <div className="flex gap-20 items-center mb-4">
-              <h3 className="text-lg font-bold mb-4">
+            <div className="flex gap-20 items-center  pt-[20px]">
+              <h3 className="text-lg font-bold mb-4 pl-[20px]">
                 {withLocalChannels === 2
                   ? "Local Channels"
                   : withLocalChannels === 3
@@ -282,12 +282,12 @@ export default function PackageComparison() {
                     : "Full Channel Guide"}
               </h3>
               {withLocalChannels === 3 && (
-                <h3 className="text-lg font-bold mb-4">
+                <h3 className="text-[24px] font-bold mb-4 text-[var(--color-blue)]">
                   <span>{directv.data?.RSN_Price}</span>
                 </h3>
               )}
             </div>
-            <div className="h-[700px] w-auto overflow-x-auto">
+            <div className="h-auto w-auto overflow-x-auto">
               {(withLocalChannels === 2 && !directv.data?.localChnl?.length) ||
               (withLocalChannels === 3 && !directv.data?.RSNs?.length) ? (
                 <h3 className="text-center text-lg font-semibold mt-4">

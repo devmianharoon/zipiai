@@ -20,14 +20,14 @@ export default function HeroBannerDirecTv({ data }: { data: HeroBannerProps }) {
 
       {/* Content */}
       <div className="relative h-full flex flex-col items-center justify-center text-center text-white px-4  md:pt-[160px]">
-        <h2 className="text-xl md:text-[48px] font-[400] leading-[56px] tracking-[-1.44px] mb-4 text-white">
+         <h1 className="md:text-[100px] md:leading-[120px] tracking-[-3.6px]  mb-[12px] font-[500] text-white ">
+          {/* {data.subtitle} */}
+          DirecTV Stream 
+        </h1>
+        <h2 className="text-xl md:text-[48px] font-[400] leading-[56px] tracking-[-1.44px] mb-[45px] text-white">
           {data.title}
         </h2>
-        <h1 className="md:text-[100px] md:leading-[120px] tracking-[-3.6px]  mb-6 font-[500] text-white ">
-          {/* {data.subtitle} */}
-          DirecTV <span className="md:text-[70px] font-[400]">via</span>{" "}
-          Internet
-        </h1>
+       
         <p className="text-base font-[500] leading-[28px] tracking-[-0.22px] lg:text-[22px] md:text-2xl mb-3 text-white ">
           {data.description}
         </p>
