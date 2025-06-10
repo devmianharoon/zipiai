@@ -1,14 +1,25 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import HeaderMenuContent from "../common/header/HeaderMenuContent";
 import Image from "next/image";
 import Searchbtn from "../buttonComp/Searchbtn";
 
 const Header = () => {
     const router = useRouter();
-
+    const pathname = usePathname();
+    
+const handleSpeedTestClick = () => {
+    if (pathname === "/speed-test") {
+      // We're already on the speed-test page, scroll to the section
+      const section = document.getElementById("speed-test");
+      section?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // Go to the speed-test page, and scroll after it loads
+      router.push("/speed-test#speed-test");
+    }
+  };  
   // const [navbar, setNavbar] = useState(true);
   // const navbar = true;
   //dummy usage of setnavbar
@@ -64,7 +75,7 @@ const Header = () => {
             bgColor="bg-[#0b6bdd]"
             wclass=""
             hpclass="py-[13px] leading-[16px] px-[16px]"
-      onClick={() => router.push("/speed-test")}
+            onClick={handleSpeedTestClick}
           />
           <Image
             src={"/assets/images/headericon.png"}
