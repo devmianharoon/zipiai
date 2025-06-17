@@ -3,11 +3,9 @@ import { RootState } from "../../store/store";
 import { useSelector } from "react-redux";
 import Searchbtn from "../buttonComp/Searchbtn";
 import { usePathname, useRouter } from "next/navigation";
-
-
 import Image from "next/image";
-
 import MovingH from "./movingH";
+// import MovingH from "./movingH";
 
 export default function Hero() {
   const router = useRouter();
@@ -41,18 +39,18 @@ export default function Hero() {
     router.push(`/${zipCode}`);
   };
   return (
-    <section className="w-full md:h-[660px] h-[660px]  box-border relative bg-cover bg-center bg-no-repeat   bg-[var(--color-blue)] bg-[linear-gradient(to_bottom,#0F2774,#1D49DA)] md:pt-[55px] ">
+    <section className="w-full md:h-[660px] h-[660px]  box-border relative bg-cover bg-center bg-no-repeat   bg-[var(--color-bg-primary)]  md:pt-[55px] ">
       <div className="container mx-auto px-4  ">
         <div className="w-full lg:w-full flex justify-center items-center ">
           <div className="home_content w-[670px] text-center">
-            <h1 className="text-[38px] md:text-[48px]   text-primary font-[600] pt-16 pb-4 text-[var(--color-white)]">
+            <h1 className="text-[38px] md:text-[50px]   text-primary font-[600] pt-16 pb-4 text-[var(--color-black)]">
               Find The Best Internet Providers Near Me!
             </h1>
-            <p className="inline-block py-2 md:py-4 text-[var(--color-white)]  md:text-[18px] font-[400] text-[16px] w-[352px] md:w-[480px]  ">
+            <p className="inline-block py-2 md:py-4 text-[var(--color-black)]  md:text-[18px] font-[400] text-[16px] w-[352px] md:w-[480px]  ">
               Search providers , compare plains and order service in just a few
               easy clicks
             </p>
-            <p className="py-4 text-[var(--color-white)] font-[500]">
+            <p className="py-4 text-[var(--color-black)] font-[500]">
               Search your current location
             </p>
             <div>
@@ -78,7 +76,7 @@ export default function Hero() {
                 </div>
 
                 <div className="flex items-center justify-center gap-[30px] py-8 md:pt-12 px-6 md:px-0 text-[14px] font-[500] md:text-[18px] ">
-                  <span className="text-[var(--color-white)] flex flex-col md:flex-row justify-center items-center gap-2">
+                  <span className="text-[var(--color-black)] flex flex-col md:flex-row justify-center items-center gap-2">
                     <Image
                       src={"/assets/images/icons/fast.png"}
                       alt={"icon"}
@@ -87,7 +85,7 @@ export default function Hero() {
                     />
                     Fast speed
                   </span>
-                  <span className="text-[var(--color-white)] flex flex-col md:flex-row justify-center items-center gap-2">
+                  <span className="text-[var(--color-black)] flex flex-col md:flex-row justify-center items-center gap-2">
                     <Image
                       src={"/assets/images/icons/buffer-free.png"}
                       alt={"icon"}
@@ -96,7 +94,7 @@ export default function Hero() {
                     />
                     Buffer-free Streaming
                   </span>
-                  <span className="text-[var(--color-white)] flex flex-col md:flex-row justify-center items-center gap-2">
+                  <span className="text-[var(--color-black)] flex flex-col md:flex-row justify-center items-center gap-2">
                     <Image
                       src={"/assets/images/icons/gaming.png"}
                       alt={"icon"}
@@ -107,7 +105,7 @@ export default function Hero() {
                   </span>
                 </div>
 
-                <div className="md:h-[220px] h-[190px] w-full absolute bottom-0 left-0">
+                <div className="hidden md:block  md:h-[220px] h-[190px] w-full absolute bottom-0 left-0">
                   <Image
                     src={"/assets/images/Bg.png"}
                     alt={"dd"}
@@ -123,8 +121,9 @@ export default function Hero() {
 
         {/* moving section absoluted */}
 
-        <div className="lg:absolute w-full lg:top-4 lg:left-4">
-          <MovingH />
+        <div className="lg:absolute w-full lg:top-4 lg:left-4 ">
+          {/* <MovingH /> */}
+          <MovingH theme ={"light"} />
         </div>
         {/* test speed section absolute */}
         <div className=" h-[185px] w-[372px] md:w-[786px] md:h-[100px]  rounded-[12px] md:-bottom-[48px] -bottom-[295px] p-4 md:py-5 md:px-5 absolute flex flex-col md:flex-row justify-center items-center bg-[#FF0000] z-40 left-1/2 -translate-x-1/2  md:gap-8 gap-4 bg-[linear-gradient(to_right,#0C0A1D,#FF0000)] text-center md:text-left text-[20px] md:text-[48px]">
@@ -133,11 +132,20 @@ export default function Hero() {
           </h3>
           <Searchbtn
             text="Check my speed"
-                  onClick={handleSpeedTestClick}
-
+            onClick={handleSpeedTestClick}
             wclass="w-[203px]"
             hpclass="h-[57px] text-[18px] font-medium"
-            bgColor="bg-[var(--color-black)]"
+            // bgColor="bg-[var(--color-black)]"
+            style={{
+              borderRadius: "40px",
+              backgroundImage:
+                "linear-gradient(0deg, #FFF 0%, #FFF 100%), url(/bg-b-b.png)",
+              backgroundColor: "lightgray",
+              backgroundPosition: "-55.172px -311px",
+              backgroundSize: "341.77% 882.456%",
+              backgroundRepeat: "no-repeat",
+              backgroundBlendMode: "darken, normal",
+            }}
           />
         </div>
       </div>

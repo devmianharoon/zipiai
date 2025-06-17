@@ -1,24 +1,26 @@
+import Image from "next/image";
+
 const Social = () => {
   const socialContent = [
     {
       id: 1,
       liveLink: "https://www.linkedin.com/",
-      icon: "fa-brands fa-linkedin-in",
+      icon: "/linkd-logo.svg",
     },
     {
       id: 2,
       liveLink: "https://www.facebook.com/",
-      icon: "fa-brands fa-facebook-f",
+      icon: "/fb-logo.svg",
     },
     {
       id: 3,
       liveLink: "https://www.instagram.com/",
-      icon: "fa-brands fa-instagram",
+      icon: "/insta-logo.svg",
     },
     {
       id: 4,
       liveLink: "https://www.youtube.com/",
-      icon: "fa-brands fa-youtube",
+      icon: "/you-logo.svg",
     },
   ];
 
@@ -31,7 +33,7 @@ const Social = () => {
             target="_blank"
             rel="noopener noreferrer "
             className="flex justify-center items-center rounded-[50%] h-[56px] w-[56px] box-border bg-white  ">
-            <i className={`${item.icon} bg-white `}></i>
+            <Image className={`  bg-white `}alt="social Icon "src={`${item.icon}`} width={18} height={18} />
           </a>
         </li>
       ))}

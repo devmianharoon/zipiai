@@ -32,7 +32,7 @@ export default function MovingDirect() {
 
   return (
     <div
-      className={`absolute h-[200px] w-[372px] -bottom-[135px] 
+      className={`absolute h-[200px] w-[372px] bottom-0 
         md:top-[24px] md:left-[16px] md:translate-x-0 md:bottom-auto 
         lg:absolute lg:bottom-0 
         left-1/2 -translate-x-1/2 

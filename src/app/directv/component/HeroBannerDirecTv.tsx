@@ -19,15 +19,15 @@ export default function HeroBannerDirecTv({ data }: { data: HeroBannerProps }) {
       <div className="absolute inset-0 bg-black opacity-40"></div>
 
       {/* Content */}
-      <div className="relative h-full flex flex-col items-center justify-center text-center text-white px-4  md:pt-[160px]">
-         <h1 className="md:text-[100px] md:leading-[120px] tracking-[-3.6px]  mb-[12px] font-[500] text-white ">
+      <div className="relative min-h-[216px] lg:h-full top-[65px] lg:top-0 flex flex-col items-center justify-center text-center text-white px-4  md:pt-[160px]">
+        <h1 className="md:text-[100px] md:leading-[120px] tracking-[-3.6px]  mb-[12px] font-[500] text-white ">
           {/* {data.subtitle} */}
-          DirecTV Stream 
+          DirecTV Stream
         </h1>
         <h2 className="text-xl md:text-[48px] font-[400] leading-[56px] tracking-[-1.44px] mb-[45px] text-white">
           {data.title}
         </h2>
-       
+
         <p className="text-base font-[500] leading-[28px] tracking-[-0.22px] lg:text-[22px] md:text-2xl mb-3 text-white ">
           {data.description}
         </p>
@@ -43,9 +43,9 @@ export default function HeroBannerDirecTv({ data }: { data: HeroBannerProps }) {
           Shop Now
         </button>
       </div>
-      <div className="lg:absolute w-full lg:top-[30px] lg:left-4">
+      {/* <div className="lg:absolute w-full lg:top-[30px] lg:left-4"> */}
         <MovingDirect />
-      </div>
+      {/* </div> */}
     </div>
   );
 }

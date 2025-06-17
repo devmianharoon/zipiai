@@ -32,16 +32,17 @@ export default function ZipBreadcrumb({ zipCode }: ZipBreadcrumbProps) {
   return (
     <nav
       aria-label="Breadcrumb"
-      className="py-4 px-6   flex justify-center bg-[#992E2E] border-t-1 "
+      className="py-4 px-6   flex justify-center   backdrop-blur-[22.5px] bg-[rgba(3,10,19,0.05)]"
       style={{
-        borderColor: "rgba(3, 10, 19, 0.05)",
+           boxShadow: "0px -1px 0px 0px rgba(255, 255, 255, 0.10)",
+
       }}
     >
       <ol className="flex items-center ">
-        <p className="text-white  flex items-center flex-col lg:flex-row gap-0.5">
-          <span className="text-white">Results for</span>
+        <p className="text-[var(--color-black)]  flex items-center flex-col lg:flex-row gap-0.5">
+          <span className="text-[var(--color-black)]">Results for</span>
           <br className="lg:block" />
-          <p className="text-white flex">
+          <p className="text-[var(--color-black)] flex">
             <div>
               <Link href={`/state/${data.state_abbr}`} className="">
                 {capitalizeWords(data.state)}

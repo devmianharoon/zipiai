@@ -16,9 +16,9 @@ const Blogs = () => {
 
         {/* Cards Container */}
         <div className="w-full flex justify-center items-center">
-          <div className="py-10 flex flex-col lg:flex-row justify-center items-center gap-5">
+          <div className="py-10 flex flex-col lg:flex-row justify-center items-center gap-8">
             {/* Card 1 */}
-            <div className="w-[360px] h-[417px]">
+            <div className="w-[360px] h-[450px]">
               <div className="relative w-[360px] h-[351px]">
                 <Image
                   src={"/assets/images/b1.png"}
@@ -41,7 +41,7 @@ const Blogs = () => {
             </div>
 
             {/* Card 2 */}
-            <div className="w-[360px] h-[417px]">
+            <div className="w-[360px] h-[470px]">
               <div className="relative w-[360px] h-[351px]">
                 <Image
                   src={"/assets/images/b2.png"}
@@ -63,7 +63,7 @@ const Blogs = () => {
             </div>
 
             {/* Card 3 */}
-            <div className="w-[360px] h-[417px]">
+            <div className="w-[360px] h-[450px]">
               <div className="relative w-[360px] h-[351px]">
                 <Image
                   src={"/assets/images/b3.png"}

@@ -162,7 +162,7 @@ export default function Page() {
         {/* </div> */}
       </div>
       {/* Providers */}
-      <div className="bg-white relative">
+      <div className="bg-white relative  ">
         <div className="hidden lg:block w-[753px] h-[753px] rounded-full opacity-50 bg-[#FFB200] blur-[250px] shrink-0 absolute  left-[-550px]  z-10" />
         <div className="hidden lg:block w-[753px] h-[753px] rounded-full opacity-50 bg-[#FFB200] blur-[250px] shrink-0 absolute  right-[-550px] bottom-0 top-[18px] z-10" />
 
@@ -220,14 +220,14 @@ export default function Page() {
           })
           .map((provider: Provider, index: number) => (
             <div
-              className="w-full lg:max-w-6xl lg:mx-auto lg:py-[12.5px]"
+              className="  w-full lg:max-w-6xl lg:mx-auto lg:py-[12.5px] px-[15px] lg:px-0"
               key={index}
             >
               <SingleProvider data={provider} index={index} />
             </div>
           ))}
         {/* Direct Tv Componat  */}
-        <div className="w-full max-w-6xl mx-auto mt-[60px] ">
+        <div className="w-full max-w-6xl mx-auto mt-[60px] px-[15px] lg:px-0">
           <div>
             <button
               onClick={() => router.push(`/directv`)}

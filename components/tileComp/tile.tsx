@@ -34,7 +34,7 @@ export default function SingleProvider({
   return (
     <>
       <div
-        className="mx-auto w-full rounded-xl border border-gray-200 lg:max-w-6xl  lg:flex  px-5 lg:pt-[25px] py-[15px]"
+        className=" mx-auto mb-[20px] lg:mb-0 mt-[30px] lg:mt-0  w-full rounded-xl border border-gray-200 lg:max-w-6xl  lg:flex px-[15px] lg:px-5 lg:pt-[25px] py-[15px]"
         style={{ backgroundColor }}>
         {/* Image Section */}
         <div className="flex  items-center p-[10px] lg:px-[15px]  lg:flex flex-col gap-6 min-w-[230px]  ">
@@ -46,13 +46,13 @@ export default function SingleProvider({
           />
           <button
             onClick={toggleAccordion}
-            className="w-full bg-[var(--color-red)] text-white py-[12px] flex justify-around px-[10px] rounded-full text-base font-medium hover:bg-[var(--color-red)]transition-colors">
+            className="w-full justify-center gap-3.5 lg:gap-0 bg-[var(--color-red)] text-white py-[12px] flex lg:justify-around px-[10px] rounded-full text-base font-medium hover:bg-[var(--color-red)]transition-colors">
             <Image src="/call-w.svg" alt="phone" width={20} height={20} />
             <span className="text-[17px] font-[500]"> {data.contact}</span>
           </button>
         </div>
         {/* Speed and Pricing Section */}
-        <div className="min-w-[400px] grid grid-cols-2 gap-4 px-[25px] py-[30px] border-b border-t border-[var(--color-silver)] lg:border-l lg:border-t-0 lg:border-b-0 lg:gap-[10px]">
+        <div className="min-w-[400px] grid grid-cols-2 gap-4 lg:px-[25px] py-[30px] border-b border-t border-[var(--color-silver)] lg:border-l lg:border-t-0 lg:border-b-0 lg:gap-[10px]">
           <div className="flex flex-col">
             <div className="p-light text-base font-[400] ">Speed up to</div>
             <h3 className="pb-[23px] pt-[17px]">

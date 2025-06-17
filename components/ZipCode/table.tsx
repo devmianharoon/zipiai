@@ -56,7 +56,7 @@ export default function InternetComparison(data: Props) {
         </h2>
 
         {/* Sections for Mobile */}
-        <div className="space-y-4 lg:hidden">
+        <div className="space-y-4 lg:hidden px-[15px] lg:px-0">
           {sections.map((section) => (
             <div key={section.key}>
               {expandedSection === section.key ? (
@@ -112,143 +112,154 @@ export default function InternetComparison(data: Props) {
         </div>
         {/* section for desktop */}
         {/* Section for Desktop */}
-<div className="overflow-x-auto hidden lg:block">
-  {/* Sort providers once */}
-  {(() => {
-    const sortedProviders = data.data.providers
-      .slice()
-      .sort((a, b) => {
-        const order = ['Fiber', 'Cable', '5G Wireless', 'Satellite'];
-        const normalizeType = (type :string) => {
-          if (!type) return 'Unknown';
-          const lowerType = type.toLowerCase();
-          if (lowerType.includes('fibre') || lowerType.includes('fiber')) return 'Fiber';
-          if (lowerType.includes('cable')) return 'Cable';
-          if (lowerType.includes('5g wireless') || lowerType.includes('5g internet')) return '5G Wireless';
-          if (lowerType.includes('sattelite') || lowerType.includes('satellite')) return 'Satellite';
-          return type;
-        };
-        const typeA = normalizeType(a.Connection_Type);
-        const typeB = normalizeType(b.Connection_Type);
-        const indexA = order.includes(typeA) ? order.indexOf(typeA) : order.length;
-        const indexB = order.includes(typeB) ? order.indexOf(typeB) : order.length;
-        return indexA - indexB;
-      });
+        <div className="overflow-x-auto hidden lg:block">
+          {/* Sort providers once */}
+          {(() => {
+            const sortedProviders = data.data.providers.slice().sort((a, b) => {
+              const order = ["Fiber", "Cable", "5G Wireless", "Satellite"];
+              const normalizeType = (type: string) => {
+                if (!type) return "Unknown";
+                const lowerType = type.toLowerCase();
+                if (lowerType.includes("fibre") || lowerType.includes("fiber"))
+                  return "Fiber";
+                if (lowerType.includes("cable")) return "Cable";
+                if (
+                  lowerType.includes("5g wireless") ||
+                  lowerType.includes("5g internet")
+                )
+                  return "5G Wireless";
+                if (
+                  lowerType.includes("sattelite") ||
+                  lowerType.includes("satellite")
+                )
+                  return "Satellite";
+                return type;
+              };
+              const typeA = normalizeType(a.Connection_Type);
+              const typeB = normalizeType(b.Connection_Type);
+              const indexA = order.includes(typeA)
+                ? order.indexOf(typeA)
+                : order.length;
+              const indexB = order.includes(typeB)
+                ? order.indexOf(typeB)
+                : order.length;
+              return indexA - indexB;
+            });
 
-    return (
-      <table className="w-full text-sm">
-        <thead className="text-black font-bold">
-          <tr>
-            <th className="p-2 font-bold text-[18px] text-black leading-[20px] text-start min-w-[200px]">
-              Feature
-            </th>
-            {sortedProviders.map((provider, index) => (
-              <th
-                key={index}
-                className="p-5 font-bold text-[18px] text-black leading-[20px] text-start"
-              >
-                {`${provider.ProviderName} (${provider.Connection_Type.split(',')[0]})`}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          <tr className="text-center bg-white rounded-xl">
-            <td className="font-normal text-[16px] text-start px-[19px] py-[12px]">
-              Availability
-            </td>
-            {sortedProviders.map((provider, index) => (
-              <td
-                key={index}
-                className="font-normal text-[16px] text-start px-[19px] py-[12px]"
-              >
-                {provider.available || 'N/A'}
-              </td>
-            ))}
-          </tr>
-          <tr className="text-center">
-            <td className="font-normal text-[16px] text-start px-[19px] py-[12px]">
-              Max Download Speed
-            </td>
-            {sortedProviders.map((provider, index) => (
-              <td
-                key={index}
-                className="font-normal text-[16px] text-start px-[19px] py-[12px]"
-              >
-                {provider.Speeds_Up_To || 'N/A'}
-              </td>
-            ))}
-          </tr>
-          <tr className="text-center bg-white rounded-xl">
-            <td className="font-normal text-[16px] text-start px-[19px] py-[12px]">
-              Max Upload Speed
-            </td>
-            {sortedProviders.map((provider, index) => (
-              <td
-                key={index}
-                className="font-normal text-[16px] text-start px-[19px] py-[12px]"
-              >
-                {provider.max_upload_speed || 'N/A'}
-              </td>
-            ))}
-          </tr>
-          <tr className="text-center">
-            <td className="font-normal text-[16px] text-start px-[19px] py-[12px]">
-              Starting Price
-            </td>
-            {sortedProviders.map((provider, index) => (
-              <td
-                key={index}
-                className="font-normal text-[16px] text-start px-[19px] py-[12px]"
-              >
-                {provider.Plans_Starting_At || 'N/A'}
-              </td>
-            ))}
-          </tr>
-          <tr className="text-center bg-white rounded-xl">
-            <td className="font-normal text-[16px] text-start px-[19px] py-[12px]">
-              Data Caps
-            </td>
-            {sortedProviders.map((provider, index) => (
-              <td
-                key={index}
-                className="font-normal text-[16px] text-start px-[19px] py-[12px]"
-              >
-                {provider['Data Caps'] || 'N/A'}
-              </td>
-            ))}
-          </tr>
-          <tr className="text-center">
-            <td className="font-normal text-[16px] text-start px-[19px] py-[12px]">
-              Contracts
-            </td>
-            {sortedProviders.map((provider, index) => (
-              <td
-                key={index}
-                className="font-normal text-[16px] text-start px-[19px] py-[12px]"
-              >
-                {provider.Contract || 'N/A'}
-              </td>
-            ))}
-          </tr>
-          <tr className="text-center bg-white rounded-xl">
-            <td className="font-normal text-[16px] text-start px-[19px] py-[12px]">
-              Best For
-            </td>
-            {sortedProviders.map((provider, index) => (
-              <td
-                key={index}
-                className="font-normal text-[16px] text-start px-[19px] py-[12px]"
-              >
-                {provider['Best For'] || 'N/A'}
-              </td>
-            ))}
-          </tr>
-        </tbody>
-      </table>
-    );
-  })()}
-</div>
+            return (
+              <table className="w-full text-sm">
+                <thead className="text-black font-bold">
+                  <tr>
+                    <th className="p-2 font-bold text-[18px] text-black leading-[20px] text-start min-w-[200px]">
+                      Feature
+                    </th>
+                    {sortedProviders.map((provider, index) => (
+                      <th
+                        key={index}
+                        className="p-5 font-bold text-[18px] text-black leading-[20px] text-start"
+                      >
+                        {`${provider.ProviderName} (${provider.Connection_Type.split(",")[0]})`}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="text-center bg-white rounded-xl">
+                    <td className="font-normal text-[16px] text-start px-[19px] py-[12px]">
+                      Availability
+                    </td>
+                    {sortedProviders.map((provider, index) => (
+                      <td
+                        key={index}
+                        className="font-normal text-[16px] text-start px-[19px] py-[12px]"
+                      >
+                        {provider.available || "N/A"}
+                      </td>
+                    ))}
+                  </tr>
+                  <tr className="text-center">
+                    <td className="font-normal text-[16px] text-start px-[19px] py-[12px]">
+                      Max Download Speed
+                    </td>
+                    {sortedProviders.map((provider, index) => (
+                      <td
+                        key={index}
+                        className="font-normal text-[16px] text-start px-[19px] py-[12px]"
+                      >
+                        {provider.Speeds_Up_To || "N/A"}
+                      </td>
+                    ))}
+                  </tr>
+                  <tr className="text-center bg-white rounded-xl">
+                    <td className="font-normal text-[16px] text-start px-[19px] py-[12px]">
+                      Max Upload Speed
+                    </td>
+                    {sortedProviders.map((provider, index) => (
+                      <td
+                        key={index}
+                        className="font-normal text-[16px] text-start px-[19px] py-[12px]"
+                      >
+                        {provider.max_upload_speed || "N/A"}
+                      </td>
+                    ))}
+                  </tr>
+                  <tr className="text-center">
+                    <td className="font-normal text-[16px] text-start px-[19px] py-[12px]">
+                      Starting Price
+                    </td>
+                    {sortedProviders.map((provider, index) => (
+                      <td
+                        key={index}
+                        className="font-normal text-[16px] text-start px-[19px] py-[12px]"
+                      >
+                        {provider.Plans_Starting_At || "N/A"}
+                      </td>
+                    ))}
+                  </tr>
+                  <tr className="text-center bg-white rounded-xl">
+                    <td className="font-normal text-[16px] text-start px-[19px] py-[12px]">
+                      Data Caps
+                    </td>
+                    {sortedProviders.map((provider, index) => (
+                      <td
+                        key={index}
+                        className="font-normal text-[16px] text-start px-[19px] py-[12px]"
+                      >
+                        {provider["Data Caps"] || "N/A"}
+                      </td>
+                    ))}
+                  </tr>
+                  <tr className="text-center">
+                    <td className="font-normal text-[16px] text-start px-[19px] py-[12px]">
+                      Contracts
+                    </td>
+                    {sortedProviders.map((provider, index) => (
+                      <td
+                        key={index}
+                        className="font-normal text-[16px] text-start px-[19px] py-[12px]"
+                      >
+                        {provider.Contract || "N/A"}
+                      </td>
+                    ))}
+                  </tr>
+                  <tr className="text-center bg-white rounded-xl">
+                    <td className="font-normal text-[16px] text-start px-[19px] py-[12px]">
+                      Best For
+                    </td>
+                    {sortedProviders.map((provider, index) => (
+                      <td
+                        key={index}
+                        className="font-normal text-[16px] text-start px-[19px] py-[12px]"
+                      >
+                        {provider["Best For"] || "N/A"}
+                      </td>
+                    ))}
+                  </tr>
+                </tbody>
+              </table>
+            );
+          })()}
+        </div>
       </div>
       {/* Recoumandtion */}
       <section className="w-full py-8 mt-[60px] lg:mt-[140px] bg-white">
