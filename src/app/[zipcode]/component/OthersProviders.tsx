@@ -105,6 +105,7 @@ export default function OtherProvider({
               </span>
             </div>
           </div>
+        
         </div>
 
         {/* View Plans Button */}

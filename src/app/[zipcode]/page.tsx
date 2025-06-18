@@ -78,7 +78,7 @@ export default function Page() {
         Price: "$164.99/mo",
       },
     ],
-  }
+  };
   const router = useRouter();
 
   const params = useParams(); // Get dynamic route parameters as per Next.js docs
@@ -221,8 +221,7 @@ export default function Page() {
           .map((provider: Provider, index: number) => (
             <div
               className="  w-full lg:max-w-6xl lg:mx-auto lg:py-[12.5px] px-[15px] lg:px-0"
-              key={index}
-            >
+              key={index}>
               <SingleProvider data={provider} index={index} />
             </div>
           ))}
@@ -231,15 +230,14 @@ export default function Page() {
           <div>
             <button
               onClick={() => router.push(`/directv`)}
-              className="w-[208px] h-[50px] mx-auto  bg-[#0b6bdd]  text-white  rounded-full text-base font-medium"
-            >
+              className="w-[208px] h-[50px] mx-auto  bg-[#0b6bdd]  text-white  rounded-full text-base font-medium">
               <div className="flex justify-center items-center gap-2">
                 <span className="text-lg font-medium">Bundle Streaming TV</span>
               </div>
             </button>
           </div>
           <div>
-            <StaticTile data={directv} border="border-[var(--color-blue)]"/>
+            <StaticTile data={directv} border="border-[var(--color-blue)]" />
           </div>
         </div>
 
@@ -253,8 +251,7 @@ export default function Page() {
             <div>
               <button
                 onClick={() => window.open(`tel:1800-123-4567`)}
-                className="w-[208px] h-[50px] mx-auto  bg-gray-900 text-white  rounded-full text-base font-medium hover:bg-gray-800 transition-colors"
-              >
+                className="w-[208px] h-[50px] mx-auto  bg-gray-900 text-white  rounded-full text-base font-medium hover:bg-gray-800 transition-colors">
                 <div className="flex justify-center items-center gap-2">
                   <Image
                     src="/call-Icon.svg"

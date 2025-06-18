@@ -62,7 +62,7 @@ export default function InternetComparison(data: Props) {
               {expandedSection === section.key ? (
                 /* Expanded Section */
                 <div className="bg-white rounded-2xl  ">
-                  <div className="flex items-center justify-between px-[10px] py-[20px] border-b border-gray-200">
+                  <div className="flex items-center justify-between px-[25px] py-[20px] border-b border-gray-200">
                     <h2 className="text-xl font-semibold text-gray-900">
                       {section.title}
                     </h2>
@@ -74,7 +74,7 @@ export default function InternetComparison(data: Props) {
                     </button>
                   </div>
 
-                  <div className="space-y-4 pl-[19px] pt-[21px] pr-[22px] pb-[27px]">
+                  <div className="space-y-4 pl-[25px] pt-[21px] pr-[25px] pb-[27px]">
                     {getSectionData(section.field).map((provider, index) => (
                       <div
                         key={index}

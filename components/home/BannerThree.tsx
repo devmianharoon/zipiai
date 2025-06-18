@@ -21,7 +21,7 @@ export default function BannerThree({ data }: { data: HeroBannerProps }) {
       </div>
 
       {/* Content */}
-      <div className="absolute left-1/2 top-1/5 -translate-x-1/2 h-full flex flex-col items-center justify-center text-center text-white px-4 z-10 md:w-[887px]  min-w-[373px] w-full">
+      <div className="absolute left-1/2 top-1/9 -translate-x-1/2 md:left-1/2 md:top-1/5 md:not-last-of-type:-translate-x-1/2 h-full flex flex-col items-center justify-center text-center text-white px-4 z-10 md:w-[887px]  min-w-[373px] w-full">
         <h2 className=" mb-4 text-[var(--color-white)] md:text-[80px] text-[38px] leading-[48px] md:leading-[90px]">
           {data.title}
         </h2>

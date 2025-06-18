@@ -52,7 +52,7 @@ const OfferSec = () => {
               <div
                 key={index}
                 className="Blog box-border flex flex-col justify-between items-center 
-        h-auto w-[402px] md:h-auto md:w-[675px] mx-auto">
+        h-auto min-w-[280px] md:h-auto md:w-[675px] mx-auto">
                 <h2 className={`text-center py-6 ${card.colorC}  `}>
                   {card.title}
                 </h2>

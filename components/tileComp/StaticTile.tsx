@@ -95,7 +95,7 @@ const StaticTile = ({ data , border}: { data: Provider , border :string}) => {
         </div>
 
         {/* Overview Section */}
-        <div className="py-[30px] border-b border-[var(--color-silver)] lg:border-b-0 lg:flex-1">
+        <div className="py-[20px] my-[10px] border-b border-[var(--color-silver)] lg:border-b-0 lg:flex-1">
           <p className="text-base font-medium mb-[15px]">Overview</p>
           <div className="space-y-1 text-base font-normal">
             {data.features.map((feature, i) => (

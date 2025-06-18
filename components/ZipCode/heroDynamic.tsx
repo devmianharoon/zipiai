@@ -25,7 +25,7 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
         {/* Heading Section */}
         <div className=" flex  justify-center items-center">
           <div className="w-[600px] text-center lg:mt-36 flex flex-col gap-8 mt-0 px-[15px] lg:mb-[120px] ">
-            <h1 className="text-[var(--color-black)] font-[var(--font-sf)] lg:font-semibold ">
+            <h1 className="text-[var(--color-black)] md:font-[var(--font-sf)] lg:font-bold text-[38px] leading-[48px]  font-semibold">
               Compare the top internet providers near you
             </h1>
             <div className="w-full flex justify-center items-center gap-2">
@@ -108,6 +108,15 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
           <MovingH theme="dark" />
         </div>
       </div>
+      <div className="hidden md:block  md:h-[220px] h-[190px] w-full absolute bottom-0 left-0">
+                  <Image
+                    src={"/assets/images/Bg.png"}
+                    alt={"dd"}
+                    fill
+                    objectFit="cover"
+                    className="opacity-[.4]"
+                  />
+                </div>
     </section>
   );
 }

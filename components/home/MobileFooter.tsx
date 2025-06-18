@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 import Social from "../common/footer/Social";
 import CopyrightFooter from "../common/footer/CopyrightFooter";
+import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 
 const sections = [
   {
@@ -40,17 +41,17 @@ export default function MobileFooterMenu() {
 
   return (
     <div className="block md:hidden bg-[rgba(11,107,221,0.1)] px-4 pt-62">
-        <div className="w-full flex flex-col justify-between items-center gap-8  border-b border-[var(--color-silver)]">
+      <div className="w-full flex flex-col justify-between items-center gap-8  border-b border-[var(--color-silver)]">
         <Image
           src={"/assets/images/hyperg1.png"}
           alt={"image"}
           height={57}
           width={160}
         />
-        <ul className="flex gap-x-4 pb-6">
+        <ul className="flex gap-x-4 pb-6 ">
           <Social />
         </ul>
-      </div>  
+      </div>
       {sections.map((section, index) => {
         const hasLinks = typeof section === "object" && section.links;
 
@@ -60,7 +61,15 @@ export default function MobileFooterMenu() {
               onClick={() => toggleSection(index)}
               className="w-full text-left flex justify-between items-center text-[var(--color-blue)] text-[18px] font-[500] leading-[22px] py-[10px]">
               {typeof section === "string" ? section : section.heading}
-              {hasLinks && <span>{openIndex === index ? "⌃" : "⌄"}</span>}
+              {hasLinks && (
+                <span>
+                  {openIndex === index ? (
+                    <FiChevronUp className="text-[20px] text-[var(--color-blue)]" />
+                  ) : (
+                    <FiChevronDown className="text-[20px] text-[var(--color-blue)]" />
+                  )}
+                </span>
+              )}
             </button>
 
             {hasLinks && openIndex === index && (
@@ -68,7 +77,7 @@ export default function MobileFooterMenu() {
                 {section.links.map((link, linkIdx) => (
                   <p
                     key={linkIdx}
-                    className="text-[16px] font-[400] leading-[22px] cursor-pointer py-[10px]">
+                    className="text-[16px] font-[400] leading-[24px] cursor-pointer py-[10px]">
                     {link}
                   </p>
                 ))}
@@ -78,9 +87,9 @@ export default function MobileFooterMenu() {
         );
       })}
 
-   <div className="py-4">
-       <CopyrightFooter />
-   </div>
+      <div className="py-4">
+        <CopyrightFooter />
+      </div>
     </div>
   );
 }

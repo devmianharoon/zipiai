@@ -52,7 +52,7 @@ export default function SingleProvider({
           </button>
         </div>
         {/* Speed and Pricing Section */}
-        <div className="min-w-[400px] grid grid-cols-2 gap-4 lg:px-[25px] py-[30px] border-b border-t border-[var(--color-silver)] lg:border-l lg:border-t-0 lg:border-b-0 lg:gap-[10px]">
+        <div className="min-w-[280px] grid grid-cols-2 gap-4 lg:px-[25px] py-[20px] border-b border-t border-[var(--color-silver)] lg:border-l lg:border-t-0 lg:border-b-0 lg:gap-[10px]">
           <div className="flex flex-col">
             <div className="p-light text-base font-[400] ">Speed up to</div>
             <h3 className="pb-[23px] pt-[17px]">
@@ -85,7 +85,7 @@ export default function SingleProvider({
         </div>
 
         {/* overview Section */}
-        <div className=" py-[30px] border-b border-[var(--color-silver)] lg:border-b-0 lg:flex-1">
+        <div className=" py-[20px] my-[10px] border-b border-[var(--color-silver)] lg:border-b-0 lg:flex-1">
           <p className="text-base font-medium mb-[15px]">Overview</p>
           <div className="list-disc list-inside text-black space-y-1 text-base font-normal">
             {data.features.map((feature, index) => (
