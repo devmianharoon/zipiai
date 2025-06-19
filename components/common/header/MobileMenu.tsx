@@ -30,7 +30,7 @@ const MobileMenu = () => {
           <Button
             href={"/speed-test"}
             text="Speed test"
-            class="h-[32px] w-[100px] bg-[var(--color-blue)] text-[14px] text-white rounded-[90px] py-[10px] px-[13px]"
+            className="h-[32px] w-[100px] bg-[var(--color-blue)] text-[14px] text-white rounded-[90px] py-[10px] px-[13px]"
           />
           <button
             onClick={toggleMenu}

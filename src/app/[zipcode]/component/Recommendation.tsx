@@ -37,7 +37,7 @@ export default function  Recommendation  () {
   return (
     <section className="w-full py-8">
       <div className="container mx-auto text-center">
-        <h1 className="md:py-8 py-2 text-2xl font-bold">Our Recommendations</h1>
+        <h1 className="md:py-8 py-2 text-[30px] font-bold text-black">Our Recommendations</h1>
 
         {/* Desktop Flex Cards */}
         <div className="hidden md:flex flex-wrap justify-center items-center gap-6 py-10">

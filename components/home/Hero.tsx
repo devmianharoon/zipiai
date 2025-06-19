@@ -42,16 +42,15 @@ export default function Hero() {
     <section className="w-full md:h-[660px] h-[660px]  box-border relative bg-cover bg-center bg-no-repeat   bg-[var(--color-bg-primary)]  md:pt-[55px] ">
       <div className="container mx-auto px-4  ">
         <div className="w-full lg:w-full flex justify-center items-center ">
-          <div className="home_content w-[670px] text-center">
+          <div className="home_content w-[600px] text-center">
             <h1 className="text-[38px] md:text-[50px]   text-primary font-[600] pt-16 pb-4 text-[var(--color-black)]">
-              Find The Best Internet Providers Near Me!
+              We Find the Best Internet Providers and Plans Near You
             </h1>
             <p className="inline-block py-2 md:py-4 text-[var(--color-black)]  md:text-[18px] font-[400] text-[16px] w-[352px] md:w-[480px]  ">
-              Search providers , compare plains and order service in just a few
-              easy clicks
+              Explore internet providers, compare options, and choose the perfect plan in a few easy clicks
             </p>
-            <p className="py-4 text-[var(--color-black)] font-[500]">
-              Search your current location
+            <p className="py-4 text-[var(--color-black)] font-[600] text-[20px]">
+              Search Your Current Location 
             </p>
             <div>
               <div className="rightSection">
@@ -65,7 +64,7 @@ export default function Hero() {
                           height={18}
                           width={18}
                         />
-                        Search now
+                        Search Now
                       </span>
                     }
                     onClick={handleClick}
@@ -131,7 +130,7 @@ export default function Hero() {
             Don&apos;t let your internet slow you down. Test Your Speed!
           </h3>
           <Searchbtn
-            text="Check my speed"
+            text="Check My Speed"
             onClick={handleSpeedTestClick}
             wclass="w-[203px]"
             hpclass="h-[57px] text-[18px] font-medium"

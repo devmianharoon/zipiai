@@ -9,7 +9,7 @@ const Blogs = () => {
           <p className="text-[var(--color-blue)] py-2.5">Blogs & Articles</p>
           <div className="flex justify-center items-center">
             <h1 className="text-[30px] font-[600] leading-[38px] py-2 w-[264px] md:w-full md:text-[42px] md:leading-[52px]">
-              Our commitment to helping you <br /> and earning your trust.
+              Our Commitment to Helping You. <br /> Support You Can Trust.
             </h1>
           </div>
         </div>
@@ -33,9 +33,7 @@ const Blogs = () => {
               </div>
               <div className="text-center py-4">
                 <p className="md:text-[18px] text-[16px] font-[400] leading-[24px] md:leading-[28px] px-3">
-                  Friendly support agents are always here to help, ready to
-                  answer your questions and guide you with care and confidence
-                  every step of the way
+                  Friendly support agents are here to help you compare internet providers, answer questions, and find the best plans near you.
                 </p>
               </div>
             </div>
@@ -56,8 +54,7 @@ const Blogs = () => {
               </div>
               <div className="text-center py-4">
                 <p className="md:text-[18px] text-[16px] font-[400] leading-[24px] md:leading-[28px] px-3">
-                  Our blog keeps you informed with the latest updates, insights,
-                  and tips—so you&apos;re always one step ahead.
+                  Our blog keeps you informed with the latest tips, provider news, and updates to help you choose the best internet plans in your area.
                 </p>
               </div>
             </div>
@@ -78,8 +75,7 @@ const Blogs = () => {
               </div>
               <div className="text-center py-4">
                 <p className="md:text-[18px] text-[16px] font-[400] leading-[24px] md:leading-[28px] px-3">
-                  From quick tips to in-depth guides, our articles give you the
-                  tools to make better, smarter decisions
+                  Learn more. Find answers fast with step-by-step guides, understanding plans, and tips to choose the right internet provider near you
                 </p>
               </div>
             </div>

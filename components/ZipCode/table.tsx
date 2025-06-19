@@ -52,7 +52,7 @@ export default function InternetComparison(data: Props) {
     <div className="  min-h-screen  mt-[60px] bg-gradient-to-b from-[rgba(var(--color-red--rgb),0.15)] to-[rgba(var(--color-red--rgb),0.05)]">
       <div className=" py-[41px] lg:py-[135px] lg:max-w-6xl lg:mx-auto ">
         <h2 className=" pt-[25px] pb-[41px] text-center ">
-          Side By Side Comparison
+          Side-by-Side Comparison
         </h2>
 
         {/* Sections for Mobile */}
@@ -68,8 +68,7 @@ export default function InternetComparison(data: Props) {
                     </h2>
                     <button
                       onClick={() => toggleSection(section.key)}
-                      className="text-red-500 hover:text-red-600"
-                    >
+                      className="text-red-500 hover:text-red-600">
                       <X className="h-6 w-6" />
                     </button>
                   </div>
@@ -78,8 +77,7 @@ export default function InternetComparison(data: Props) {
                     {getSectionData(section.field).map((provider, index) => (
                       <div
                         key={index}
-                        className="flex items-center justify-between  mb-5"
-                      >
+                        className="flex items-center justify-between  mb-5">
                         <div className="flex items-center">
                           <p className="font-bold text-black">
                             {provider.name}
@@ -99,8 +97,7 @@ export default function InternetComparison(data: Props) {
                 /* Collapsed Section */
                 <button
                   onClick={() => toggleSection(section.key)}
-                  className="w-full bg-white rounded-2xl p-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
-                >
+                  className="w-full bg-white rounded-2xl p-6 flex items-center justify-between hover:bg-gray-50 transition-colors">
                   <h2 className="text-xl font-semibold text-gray-900">
                     {section.title}
                   </h2>
@@ -156,9 +153,10 @@ export default function InternetComparison(data: Props) {
                     {sortedProviders.map((provider, index) => (
                       <th
                         key={index}
-                        className="p-5 font-bold text-[18px] text-black leading-[20px] text-start"
-                      >
-                        {`${provider.ProviderName} (${provider.Connection_Type.split(",")[0]})`}
+                        className="p-5 font-bold text-[18px] text-black leading-[20px] text-start">
+                        {`${provider.ProviderName} (${
+                          provider.Connection_Type.split(",")[0]
+                        })`}
                       </th>
                     ))}
                   </tr>
@@ -171,8 +169,7 @@ export default function InternetComparison(data: Props) {
                     {sortedProviders.map((provider, index) => (
                       <td
                         key={index}
-                        className="font-normal text-[16px] text-start px-[19px] py-[12px]"
-                      >
+                        className="font-normal text-[16px] text-start px-[19px] py-[12px]">
                         {provider.available || "N/A"}
                       </td>
                     ))}
@@ -184,8 +181,7 @@ export default function InternetComparison(data: Props) {
                     {sortedProviders.map((provider, index) => (
                       <td
                         key={index}
-                        className="font-normal text-[16px] text-start px-[19px] py-[12px]"
-                      >
+                        className="font-normal text-[16px] text-start px-[19px] py-[12px]">
                         {provider.Speeds_Up_To || "N/A"}
                       </td>
                     ))}
@@ -197,8 +193,7 @@ export default function InternetComparison(data: Props) {
                     {sortedProviders.map((provider, index) => (
                       <td
                         key={index}
-                        className="font-normal text-[16px] text-start px-[19px] py-[12px]"
-                      >
+                        className="font-normal text-[16px] text-start px-[19px] py-[12px]">
                         {provider.max_upload_speed || "N/A"}
                       </td>
                     ))}
@@ -210,8 +205,7 @@ export default function InternetComparison(data: Props) {
                     {sortedProviders.map((provider, index) => (
                       <td
                         key={index}
-                        className="font-normal text-[16px] text-start px-[19px] py-[12px]"
-                      >
+                        className="font-normal text-[16px] text-start px-[19px] py-[12px]">
                         {provider.Plans_Starting_At || "N/A"}
                       </td>
                     ))}
@@ -223,8 +217,7 @@ export default function InternetComparison(data: Props) {
                     {sortedProviders.map((provider, index) => (
                       <td
                         key={index}
-                        className="font-normal text-[16px] text-start px-[19px] py-[12px]"
-                      >
+                        className="font-normal text-[16px] text-start px-[19px] py-[12px]">
                         {provider["Data Caps"] || "N/A"}
                       </td>
                     ))}
@@ -236,8 +229,7 @@ export default function InternetComparison(data: Props) {
                     {sortedProviders.map((provider, index) => (
                       <td
                         key={index}
-                        className="font-normal text-[16px] text-start px-[19px] py-[12px]"
-                      >
+                        className="font-normal text-[16px] text-start px-[19px] py-[12px]">
                         {provider.Contract || "N/A"}
                       </td>
                     ))}
@@ -249,8 +241,7 @@ export default function InternetComparison(data: Props) {
                     {sortedProviders.map((provider, index) => (
                       <td
                         key={index}
-                        className="font-normal text-[16px] text-start px-[19px] py-[12px]"
-                      >
+                        className="font-normal text-[16px] text-start px-[19px] py-[12px]">
                         {provider["Best For"] || "N/A"}
                       </td>
                     ))}
@@ -281,8 +272,7 @@ export default function InternetComparison(data: Props) {
               return (
                 <div
                   key={index}
-                  className="h-[346px] w-[267px] border border-[var(--color-silver)] rounded-[20px] flex flex-col  items-center p-6 relative justify-evenly"
-                >
+                  className="h-[346px] w-[267px] border border-[var(--color-silver)] rounded-[20px] flex flex-col  items-center p-6 relative justify-evenly">
                   <Image
                     src={`/assets/images/coin${rank.Rank}.png`}
                     alt={`Rank ${rank.Rank}`}
@@ -299,6 +289,19 @@ export default function InternetComparison(data: Props) {
                   />
                   <p className="font-[500] text-sm">{rank.Reason}</p>
                   <h3>{providerType}</h3>
+                  <button
+                    onClick={() => window.open(`tel:1800-123-4567`)}
+                    className="w-[158px] h-[50px] mx-auto  bg-[var(--color-red)] text-white  rounded-full text-base font-medium  transition-colors">
+                    <div className="flex justify-center items-center gap-2">
+                      <Image
+                        src="/call-w.svg"
+                        alt="phone"
+                        width={24}
+                        height={24}
+                      />
+                      <span className="text-lg font-medium"> Show Now</span>
+                    </div>
+                  </button>
                 </div>
               );
             })}
@@ -310,8 +313,7 @@ export default function InternetComparison(data: Props) {
               modules={[Pagination]}
               pagination={{ clickable: true }}
               spaceBetween={20}
-              slidesPerView={1}
-            >
+              slidesPerView={1}>
               {data.data.Ranks.map((rank, index) => {
                 // Find the provider in data.data.providers to get the logo
                 const provider = data.data.providers.find(

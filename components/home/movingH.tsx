@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { useRouter } from "next/navigation";
 import Searchbtn from "../buttonComp/Searchbtn";
 import { useState } from "react";
@@ -9,7 +9,7 @@ interface MovingProps {
   theme: "light" | "dark";
 }
 
-export default function MovingH( props : MovingProps) {
+export default function MovingH(props: MovingProps) {
   const router = useRouter();
   const [zipCode, setZipCode] = useState("");
 
@@ -28,21 +28,27 @@ export default function MovingH( props : MovingProps) {
 
   const isDark = props.theme === "dark";
 
-
   return (
     <div
       className={`
         absolute h-[200px]  top-[545px] left-auto right-auto w-[92%] 
         md:top-[24px] md:left-[16px] md:translate-x-0 md:bottom-auto 
         lg:absolute lg:bottom-0 
-        md:h-[122px] md:w-[340px] 
+        md:h-[122px] md:w-[350px] border border-black/20
         box-border px-[22px] py-[22px] 
         rounded-[12px] mb-[60px] md:mb-0 
-        ${isDark ? "bg-[var(--color-black)] text-[var(--color-white)] shadow-[0px_4px_50px_rgba(17,17,17,0.05)]" : "bg-[var(--color-bg-primary)] text-[var(--color-black)]"}
-      `}
-    >
-      <p className={`text-[20px] font-[500] px-2 pb-[10px] ${isDark ? "text-[var(--color-white)]" : "text-[var(--color-black)]"}`}>
-        <span className="font-semibold">Moving ?</span> Check for Providers.
+        ${
+          isDark
+            ? "bg-[var(--color-black)] text-[var(--color-white)] shadow-[0px_4px_50px_rgba(17,17,17,0.05)]"
+            : "bg-[var(--color-bg-primary)] text-[var(--color-black)]"
+        }
+      `}>
+      <p
+        className={`text-[20px] font-[500] px-2 pb-[10px] ${
+          isDark ? "text-[var(--color-white)]" : "text-[var(--color-black)]"
+        }`}>
+        <span className="font-semibold uppercase">Moving ?</span> Check for
+        Providers.
       </p>
       <div className="flex flex-col md:flex-row gap-[15px] justify-between items-center">
         <div className="relative w-full md:w-auto">

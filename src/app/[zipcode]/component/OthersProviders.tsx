@@ -40,8 +40,7 @@ export default function OtherProvider({
     <div className="w-full">
       <div
         className="rounded-2xl border border-gray-200 p-6"
-        style={{ backgroundColor: getBackgroundColor() }}
-      >
+        style={{ backgroundColor: getBackgroundColor() }}>
         {/* Logo */}
         <div className="mb-6 h-8 relative max-w-[100px] ">
           <Image
@@ -105,15 +104,17 @@ export default function OtherProvider({
               </span>
             </div>
           </div>
-        
         </div>
 
         {/* View Plans Button */}
         <button
           onClick={toggleAccordion}
-          className="w-full bg-[var(--color-red)] text-white py-3 rounded-full font-medium transition-colors"
-        >
+          className="w-full bg-[var(--color-red)] text-white py-3 rounded-full font-medium transition-colors">
           View plans
+        </button>
+        <button className="w-full bg-[var(--color-red)] text-white py-3 rounded-full font-medium transition-colors flex justify-center items-center gap-2 mt-[10px]">
+          <img src="/call-w.svg" alt="icon" height={16} width={16} />
+          <span>Shop Now</span>
         </button>
 
         {/* Accordion Plans Section */}
@@ -128,8 +129,9 @@ export default function OtherProvider({
                       ? " border border-[rgba(3,10,19,0.15)] bg-[rgba(11,107,221,0.1)]"
                       : "border-[rgba(3,10,19,0.15)]"
                   }`}
-                  onClick={() => setSelectedPlan(selectedPlan === i ? null : i)}
-                >
+                  onClick={() =>
+                    setSelectedPlan(selectedPlan === i ? null : i)
+                  }>
                   <div className="font-semibold">{plan.plan_name}</div>
                   {/* <div className="text-sm text-gray-600">{plan.Price}</div> */}
 
@@ -155,8 +157,7 @@ export default function OtherProvider({
             </div>
             <button
               onClick={() => window.open(`tel:${data.contact}`)}
-              className="mt-4 w-full flex justify-center lg:gap-[10px] items-center bg-[var(--color-red)]  text-white py-4 rounded-full text-base font-medium"
-            >
+              className="mt-4 w-full flex justify-center lg:gap-[10px] items-center bg-[var(--color-red)]  text-white py-4 rounded-full text-base font-medium">
               <Image src="/call-w.svg" alt="phone" width={24} height={24} />
               Shop Now
             </button>

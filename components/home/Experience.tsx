@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../buttonComp/Button";
 import Image from "next/image";
-
+import { FaPhoneAlt } from "react-icons/fa";
 const Experience = () => {
   return (
     <section className="relative flex justify-center items-center h-[200px] lg:h-[300px] box-border ">
@@ -21,21 +21,22 @@ const Experience = () => {
 
             {/* Text Section */}
             <div className="flex flex-col justify-center items-center lg:items-start w-full lg:w-[65%] md:px-14">
-              <p className="text-[var(--color-white)] text-[14px] font-[500]  lg:text-base">
+              <p className="text-[var(--color-white)]  lg:text-[18px] font-[500]  lg:text-base">
                 Get Started Today
               </p>
-              <h3 className="text-[var(--color-white)] text-[30px] leading-[38px] md:text-[42px] font-[600] lg:leading-[42px] md:leading-[52px] px-4 md:px-0 py-4 md:pt-10 md:w-[572px]">
-                Experience how HyperG simplifies the fast and reliable internet
-                provider.
+              <h3 className="text-[var(--color-white)] text-[30px] leading-[38px] md:text-[42px] font-[600] lg:leading-[52px] md:leading-[52px] px-4 md:px-0 py-4 md:pt-10 md:w-[642px]">
+                Experience how HyperG makes finding fast, reliable high-speed
+                internet internet easy.
               </h3>
             </div>
 
             {/* Button Section */}
             <div className="w-full lg:w-[35%] flex justify-center md:justify-end md:pt-[132px] md:px-20">
               <Button
+                icon={<FaPhoneAlt />}
                 href={"/"}
-                text={"Learn more"}
-                class="bg-white  md:py-[21px] py-[12px] px-[28px] md:px-[28px] rounded-[80px] md:text-[18px] md:font-[500] md:leading-[14.4px]"
+                text={"Call "}
+                className="bg-white  md:py-[21px] py-[12px] px-[28px] md:px-[28px] rounded-[80px] md:text-[18px] md:font-[500] md:leading-[14.4px]"
               />
             </div>
           </div>

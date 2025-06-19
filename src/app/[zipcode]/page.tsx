@@ -26,6 +26,7 @@ import { capitalizeWords } from "../../../data/HelperFunction";
 import StaticTile from "../../../components/tileComp/StaticTile";
 import { useRouter } from "next/navigation";
 
+
 export default function Page() {
   // Sample city data
   const citiesData = [
@@ -251,10 +252,10 @@ export default function Page() {
             <div>
               <button
                 onClick={() => window.open(`tel:1800-123-4567`)}
-                className="w-[208px] h-[50px] mx-auto  bg-gray-900 text-white  rounded-full text-base font-medium hover:bg-gray-800 transition-colors">
+                className="w-[208px] h-[50px] mx-auto  bg-[var(--color-red)] text-white  rounded-full text-base font-medium  transition-colors">
                 <div className="flex justify-center items-center gap-2">
                   <Image
-                    src="/call-Icon.svg"
+                    src="/call-w.svg"
                     alt="phone"
                     width={24}
                     height={24}
@@ -296,7 +297,7 @@ export default function Page() {
           <div className="hidden lg:block w-[753px] h-[753px] rounded-full opacity-50 bg-[#FFB200] blur-[250px] shrink-0 absolute  right-[-550px] bottom-0 top-[18px] z-10" />
 
           <ProviderComparison />
-
+          {/* <Recommendation /> */}
           <div className="w-full max-w-6xl mx-auto ">
             <MapComponent zipcode={zipCode} />
           </div>

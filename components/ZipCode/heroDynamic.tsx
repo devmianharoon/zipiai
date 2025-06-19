@@ -26,7 +26,7 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
         <div className=" flex  justify-center items-center">
           <div className="w-[600px] text-center lg:mt-36 flex flex-col gap-8 mt-0 px-[15px] lg:mb-[120px] ">
             <h1 className="text-[var(--color-black)] md:font-[var(--font-sf)] lg:font-bold text-[38px] leading-[48px]  font-semibold">
-              Compare the top internet providers near you
+              Compare and Choose the Top Internet Providers Near You  
             </h1>
             <div className="w-full flex justify-center items-center gap-2">
               <button
@@ -37,7 +37,7 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
                 }}
               >
                 <Globe className="w-5 h-5 mr-2" />
-                Show me more providers
+                Show Me More Providers
               </button>
             </div>
           </div>
@@ -105,7 +105,7 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
           {/* Static Section Below */}
         </div>
         <div className="lg:absolute w-full lg:top-[30px] lg:left-4 mt-[30px] lg:mt-0">
-          <MovingH theme="dark" />
+          <MovingH theme="light" />
         </div>
       </div>
       <div className="hidden md:block  md:h-[220px] h-[190px] w-full absolute bottom-0 left-0">
