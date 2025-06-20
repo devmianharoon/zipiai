@@ -28,9 +28,9 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
             <h1 className="text-[var(--color-black)] md:font-[var(--font-sf)] lg:font-bold text-[38px] leading-[48px]  font-semibold">
               Compare and Choose the Top Internet Providers Near You  
             </h1>
-            <div className="w-full flex justify-center items-center gap-2">
+            <div className="w-full flex justify-center items-center gap-2 ">
               <button
-                className="bg-[var(--color-red)] text-white rounded-full py-[16px] px-[28px] flex items-center cursor-pointer "
+                className="bg-[var(--color-red)] text-white rounded-full py-[16px] px-[28px] flex items-center cursor-pointer z-50"
                 onClick={() => {
                   const section = document.getElementById("more-providers");
                   section?.scrollIntoView({ behavior: "smooth" });
@@ -108,15 +108,15 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
           <MovingH theme="light" />
         </div>
       </div>
-      <div className="hidden md:block  md:h-[220px] h-[190px] w-full absolute bottom-0 left-0">
-                  <Image
-                    src={"/assets/images/Bg.png"}
-                    alt={"dd"}
-                    fill
-                    objectFit="cover"
-                    className="opacity-[.4]"
-                  />
-                </div>
+        <div className="hidden md:block  md:h-[220px] h-[190px] w-full absolute bottom-0 left-0">
+                    <Image
+                      src={"/assets/images/Bg.png"}
+                      alt={"dd"}
+                      fill
+                      objectFit="cover"
+                      className="opacity-[.4]"
+                    />
+                  </div>
     </section>
   );
 }

@@ -10,10 +10,10 @@ interface BtnProps {
 
 const Button = ({ href, text, className, icon }: BtnProps) => {
   return (
-    <Link href={href} className={`inline-flex items-center gap-2 ${className}`}>
+    <Link href={href} className={`inline-flex items-center gap-4 ${className}`}>
       <>
         {icon && <span>{icon}</span>}
-        <span>{text}</span>
+        {text && <span>{text}</span>}
       </>
     </Link>
   );

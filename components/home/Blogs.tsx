@@ -39,7 +39,7 @@ const Blogs = () => {
             </div>
 
             {/* Card 2 */}
-            <div className="w-[360px] h-[470px]">
+            <div className="w-[360px] h-[450px]">
               <div className="relative w-[360px] h-[351px]">
                 <Image
                   src={"/assets/images/blog.png"}

@@ -42,7 +42,7 @@ export default function Hero() {
     <section className="w-full md:h-[660px] h-[660px]  box-border relative bg-cover bg-center bg-no-repeat   bg-[var(--color-bg-primary)]  md:pt-[55px] ">
       <div className="container mx-auto px-4  ">
         <div className="w-full lg:w-full flex justify-center items-center ">
-          <div className="home_content w-[600px] text-center">
+          <div className="home_content w-[690px] text-center">
             <h1 className="text-[38px] md:text-[50px]   text-primary font-[600] pt-16 pb-4 text-[var(--color-black)]">
               We Find the Best Internet Providers and Plans Near You
             </h1>
@@ -50,7 +50,7 @@ export default function Hero() {
               Explore internet providers, compare options, and choose the
               perfect plan in a few easy clicks
             </p>
-            <p className="py-4 text-[var(--color-black)] font-[600] text-[20px]">
+            <p className="py-4 text-[var(--color-black)] font-[600] text-[24px]">
               Search Your Current Location
             </p>
             <div>
@@ -126,7 +126,7 @@ export default function Hero() {
           <MovingH theme={"light"} />
         </div>
         {/* test speed section absolute */}
-        <div className=" h-[185px] w-[372px] md:w-[786px] md:h-[100px]  rounded-[12px] md:-bottom-[48px] -bottom-[295px] p-4 md:py-5 md:px-5 absolute flex flex-col md:flex-row justify-center items-center z-40 left-1/2 -translate-x-1/2  md:gap-8 gap-4 bg-[url('/assets/testspeed.png')] bg-cover bg-left  text-center md:text-left text-[20px] md:text-[48px]">
+        <div className=" h-[185px] w-[372px] md:w-[786px] md:h-[90px]  rounded-[12px] md:-bottom-[48px] -bottom-[295px] p-4 md:py-5 md:px-5 absolute flex flex-col md:flex-row justify-center items-center z-40 left-1/2 -translate-x-1/2  md:gap-8 gap-4 bg-[url('/assets/testspeed.png')] bg-cover bg-left  text-center md:text-left text-[20px] md:text-[48px]">
           <h3 className="text-[var(--color-white)] md:text-[24] text-[20px] md:leading-[32px] leading-[28px] font-[600]">
             Don&apos;t let your internet slow you down. Test Your Speed!
           </h3>
@@ -134,7 +134,7 @@ export default function Hero() {
             text="Check My Speed"
             onClick={handleSpeedTestClick}
             wclass="w-[203px]"
-            hpclass="h-[57px] text-[18px] font-medium"
+            hpclass="h-[52px] text-[18px] font-medium"
             // bgColor="bg-[var(--color-black)]"
             style={{
               borderRadius: "40px",

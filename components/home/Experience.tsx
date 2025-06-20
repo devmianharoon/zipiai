@@ -21,7 +21,7 @@ const Experience = () => {
 
             {/* Text Section */}
             <div className="flex flex-col justify-center items-center lg:items-start w-full lg:w-[65%] md:px-14">
-              <p className="text-[var(--color-white)]  lg:text-[18px] font-[500]  lg:text-base">
+              <p className="text-[var(--color-white)]  lg:text-[28px] font-[500]  lg:text-base">
                 Get Started Today
               </p>
               <h3 className="text-[var(--color-white)] text-[30px] leading-[38px] md:text-[42px] font-[600] lg:leading-[52px] md:leading-[52px] px-4 md:px-0 py-4 md:pt-10 md:w-[642px]">
@@ -35,8 +35,8 @@ const Experience = () => {
               <Button
                 icon={<FaPhoneAlt />}
                 href={"/"}
-                text={"Call "}
-                className="bg-white  md:py-[21px] py-[12px] px-[28px] md:px-[28px] rounded-[80px] md:text-[18px] md:font-[500] md:leading-[14.4px]"
+                text={"Call"}
+                className="bg-white  md:py-[21px] py-[12px] px-[28px] md:px-[48px] rounded-[80px] md:text-[28px] md:font-[500] md:leading-[14.4px] "
               />
             </div>
           </div>

@@ -63,7 +63,7 @@ export default function InternetComparison(data: Props) {
                 /* Expanded Section */
                 <div className="bg-white rounded-2xl  ">
                   <div className="flex items-center justify-between px-[25px] py-[20px] border-b border-gray-200">
-                    <h2 className="text-xl font-semibold text-gray-900">
+                    <h2 className=" text-[30px] font-bold text-gray-900">
                       {section.title}
                     </h2>
                     <button
@@ -255,9 +255,9 @@ export default function InternetComparison(data: Props) {
       {/* Recoumandtion */}
       <section className="w-full py-8 mt-[60px] lg:mt-[140px] bg-white">
         <div className="container mx-auto text-center">
-          <h1 className="md:py-8 py-2 text-2xl font-bold">
+          <h2 className="md:py-8 py-2 text-[30px] font-bold">
             Our Recommendations
-          </h1>
+          </h2>
 
           {/* Desktop Flex Cards */}
           <div className="hidden md:flex flex-wrap justify-center items-center gap-6 py-10">
@@ -289,18 +289,9 @@ export default function InternetComparison(data: Props) {
                   />
                   <p className="font-[500] text-sm">{rank.Reason}</p>
                   <h3>{providerType}</h3>
-                  <button
-                    onClick={() => window.open(`tel:1800-123-4567`)}
-                    className="w-[158px] h-[50px] mx-auto  bg-[var(--color-red)] text-white  rounded-full text-base font-medium  transition-colors">
-                    <div className="flex justify-center items-center gap-2">
-                      <Image
-                        src="/call-w.svg"
-                        alt="phone"
-                        width={24}
-                        height={24}
-                      />
-                      <span className="text-lg font-medium"> Show Now</span>
-                    </div>
+                  <button className="w-full bg-[var(--color-red)] text-white py-3 rounded-full font-medium transition-colors flex justify-center items-center gap-2 mt-[3px]">
+                    <img src="/call-w.svg" alt="icon" height={16} width={16} />
+                    <span>Shop Now</span>
                   </button>
                 </div>
               );

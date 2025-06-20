@@ -43,7 +43,7 @@ const StaticTile = ({ data , border}: { data: Provider , border :string}) => {
         className={`mx-auto w-full rounded-xl border ${border} lg:max-w-6xl lg:flex px-5 lg:pt-[25px] py-[15px] ${data.backgroundColor} mt-[25px]`}
       >
         {/* Image Section */}
-        <div className="flex items-center p-[10px] lg:px-[15px] flex-col gap-6 min-w-[230px]">
+        <div className="flex items-center justify-center p-[10px] lg:px-[15px] flex-col gap-6 min-w-[230px]">
           <Image
             src={`/assets/${data.logo}`}
             alt={data.ProviderName}

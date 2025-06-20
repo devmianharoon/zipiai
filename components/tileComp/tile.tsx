@@ -37,7 +37,7 @@ export default function SingleProvider({
         className=" mx-auto mb-[20px] lg:mb-0 mt-[30px] lg:mt-0  w-full rounded-xl border border-gray-200 lg:max-w-6xl  lg:flex px-[15px] lg:px-5 lg:pt-[25px] py-[15px]"
         style={{ backgroundColor }}>
         {/* Image Section */}
-        <div className="flex  items-center p-[10px] lg:px-[15px]  lg:flex flex-col gap-6 min-w-[230px]  ">
+        <div className="flex  items-center justify-center p-[10px] lg:px-[15px]  lg:flex flex-col gap-6 min-w-[230px]  ">
           <Image
             src={`/assets/logos/${data.logo}`}
             alt={data.ProviderName}

@@ -47,7 +47,7 @@ export default function MovingH(props: MovingProps) {
         className={`text-[20px] font-[500] px-2 pb-[10px] ${
           isDark ? "text-[var(--color-white)]" : "text-[var(--color-black)]"
         }`}>
-        <span className="font-semibold uppercase">Moving ?</span> Check for
+        <span className="font-semibold uppercase">Moving?</span> Check for
         Providers.
       </p>
       <div className="flex flex-col md:flex-row gap-[15px] justify-between items-center">
