@@ -21,7 +21,7 @@ const Blogs = () => {
             <div className="w-[360px] h-[450px]">
               <div className="relative w-[360px] h-[351px]">
                 <Image
-                  src={"/assets/images/b1.png"}
+                  src={"/assets/images/support.png"}
                   alt={"dd"}
                   layout="fill"
                   objectFit="cover"
@@ -42,7 +42,7 @@ const Blogs = () => {
             <div className="w-[360px] h-[470px]">
               <div className="relative w-[360px] h-[351px]">
                 <Image
-                  src={"/assets/images/b2.png"}
+                  src={"/assets/images/blog.png"}
                   alt={"dd"}
                   layout="fill"
                   objectFit="cover"
@@ -63,7 +63,7 @@ const Blogs = () => {
             <div className="w-[360px] h-[450px]">
               <div className="relative w-[360px] h-[351px]">
                 <Image
-                  src={"/assets/images/b3.png"}
+                  src={"/assets/images/articles.png"}
                   alt={"dd"}
                   layout="fill"
                   objectFit="cover"

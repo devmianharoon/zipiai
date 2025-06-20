@@ -47,10 +47,11 @@ export default function Hero() {
               We Find the Best Internet Providers and Plans Near You
             </h1>
             <p className="inline-block py-2 md:py-4 text-[var(--color-black)]  md:text-[18px] font-[400] text-[16px] w-[352px] md:w-[480px]  ">
-              Explore internet providers, compare options, and choose the perfect plan in a few easy clicks
+              Explore internet providers, compare options, and choose the
+              perfect plan in a few easy clicks
             </p>
             <p className="py-4 text-[var(--color-black)] font-[600] text-[20px]">
-              Search Your Current Location 
+              Search Your Current Location
             </p>
             <div>
               <div className="rightSection">
@@ -122,10 +123,10 @@ export default function Hero() {
 
         <div className="lg:absolute w-full lg:top-4 lg:left-4 ">
           {/* <MovingH /> */}
-          <MovingH theme ={"light"} />
+          <MovingH theme={"light"} />
         </div>
         {/* test speed section absolute */}
-        <div className=" h-[185px] w-[372px] md:w-[786px] md:h-[100px]  rounded-[12px] md:-bottom-[48px] -bottom-[295px] p-4 md:py-5 md:px-5 absolute flex flex-col md:flex-row justify-center items-center bg-[#FF0000] z-40 left-1/2 -translate-x-1/2  md:gap-8 gap-4 bg-[linear-gradient(to_right,#0C0A1D,#FF0000)] text-center md:text-left text-[20px] md:text-[48px]">
+        <div className=" h-[185px] w-[372px] md:w-[786px] md:h-[100px]  rounded-[12px] md:-bottom-[48px] -bottom-[295px] p-4 md:py-5 md:px-5 absolute flex flex-col md:flex-row justify-center items-center z-40 left-1/2 -translate-x-1/2  md:gap-8 gap-4 bg-[url('/assets/testspeed.png')] bg-cover bg-left  text-center md:text-left text-[20px] md:text-[48px]">
           <h3 className="text-[var(--color-white)] md:text-[24] text-[20px] md:leading-[32px] leading-[28px] font-[600]">
             Don&apos;t let your internet slow you down. Test Your Speed!
           </h3>

@@ -26,7 +26,6 @@ import { capitalizeWords } from "../../../data/HelperFunction";
 import StaticTile from "../../../components/tileComp/StaticTile";
 import { useRouter } from "next/navigation";
 
-
 export default function Page() {
   // Sample city data
   const citiesData = [
@@ -245,21 +244,22 @@ export default function Page() {
         {/* Call Section */}
         <div className="w-full h-[372px] md:h-[222px] md:w-[1144px] mx-auto px-[15px] mt-[60px] ">
           <div className="w-full h-full   bg-[url('/bg-page.png')] bg-cover bg-center bg-no-repeat flex justify-center items-center flex-col md:flex-row md:justify-between md:items-center gap-8 rounded-[18px] px-4 md:px-10">
-            <h1 className="text-white text-center md:text-left text-[30px] md:text-[32px] leading-[38px] w-[60%]">
-              Make a quick call to discuss your need, We suggest you the best
-              plan!{" "}
-            </h1>
+            <div className="w-[60%] ">
+              <p className="text-white">Need More Help?</p>
+              <h1 className="text-white text-center md:text-left text-[30px] md:text-[32px] leading-[38px] py-[10px]">
+                Not Sure Which Plan to Choose? Call and We’ll Help You Decide{" "}
+              </h1>
+              <p className="text-white">
+                Our team will guide you to the best internet options available
+                near you.
+              </p>
+            </div>
             <div>
               <button
                 onClick={() => window.open(`tel:1800-123-4567`)}
                 className="w-[208px] h-[50px] mx-auto  bg-[var(--color-red)] text-white  rounded-full text-base font-medium  transition-colors">
                 <div className="flex justify-center items-center gap-2">
-                  <Image
-                    src="/call-w.svg"
-                    alt="phone"
-                    width={24}
-                    height={24}
-                  />
+                  <Image src="/call-w.svg" alt="phone" width={24} height={24} />
                   <span className="text-lg font-medium"> 888 564 5552</span>
                 </div>
               </button>
