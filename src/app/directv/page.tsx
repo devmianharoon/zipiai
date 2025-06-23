@@ -15,7 +15,7 @@ export default function page() {
   const data = {
     title: "Entertainment Your Way",
     subtitle: "DirecTV via Internet",
-    description: "Choose a DirecTV package. Call Now for Special Offers",
+    description: "Stream Your Way!",
   };
   return (
     <>
@@ -25,7 +25,7 @@ export default function page() {
 
         {/* <!-- Mobile Menu --> */}
         <MobileMenu />
-        <TopNavigation />
+        {/* <TopNavigation /> */}
         {/* <!-- Hero Banner --> */}
         <HeroBannerDirecTv data={data} />
         {/* <!-- Service Tiles --> */}

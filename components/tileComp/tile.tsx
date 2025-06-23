@@ -37,20 +37,31 @@ export default function SingleProvider({
         className=" mx-auto mb-[20px] lg:mb-0 mt-[30px] lg:mt-0  w-full rounded-xl border border-gray-200 lg:max-w-6xl  lg:flex px-[15px] lg:px-5 lg:pt-[25px] py-[15px]"
         style={{ backgroundColor }}>
         {/* Image Section */}
-        <div className="flex  items-center justify-center p-[10px] lg:px-[15px]  lg:flex flex-col gap-6 min-w-[230px]  ">
+        <div className="flex items-center justify-center p-[10px] lg:px-[15px] lg:flex flex-col gap-6 min-w-[230px]">
+          {/* Label above the image */}
+          <div className="w-full flex justify-center">
+            <span className="text-center text-sm font-semibold text-gray-700 bg-white px-3 py-1 rounded-full shadow">
+              {data.Connection_Type}
+            </span>
+          </div>
+
+          {/* Logo */}
           <Image
             src={`/assets/logos/${data.logo}`}
             alt={data.ProviderName}
             width={100}
             height={30}
           />
+
+          {/* Contact Button */}
           <button
             onClick={toggleAccordion}
-            className="w-full justify-center gap-3.5 lg:gap-0 bg-[var(--color-red)] text-white py-[12px] flex lg:justify-around px-[10px] rounded-full text-base font-medium hover:bg-[var(--color-red)]transition-colors">
+            className="w-full justify-center gap-3.5 lg:gap-0 bg-[var(--color-red)] text-white py-[12px] flex lg:justify-around px-[10px] rounded-full text-base font-medium hover:bg-[var(--color-red)] transition-colors">
             <Image src="/call-w.svg" alt="phone" width={20} height={20} />
-            <span className="text-[17px] font-[500]"> {data.contact}</span>
+            <span className="text-[17px] font-[500]">{data.contact}</span>
           </button>
         </div>
+
         {/* Speed and Pricing Section */}
         <div className="min-w-[280px] grid grid-cols-2 gap-4 lg:px-[25px] py-[20px] border-b border-t border-[var(--color-silver)] lg:border-l lg:border-t-0 lg:border-b-0 lg:gap-[10px]">
           <div className="flex flex-col">

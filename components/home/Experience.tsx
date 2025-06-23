@@ -21,23 +21,26 @@ const Experience = () => {
 
             {/* Text Section */}
             <div className="flex flex-col justify-center items-center lg:items-start w-full lg:w-[65%] md:px-14">
-              <p className="text-[var(--color-white)]  lg:text-[28px] font-[500]  lg:text-base">
+              <p className="text-[var(--color-white)]  lg:text-[56px] font-[500]  lg:text-base">
                 Get Started Today
               </p>
               <h3 className="text-[var(--color-white)] text-[30px] leading-[38px] md:text-[42px] font-[600] lg:leading-[52px] md:leading-[52px] px-4 md:px-0 py-4 md:pt-10 md:w-[642px]">
                 Experience how HyperG makes finding fast, reliable high-speed
-                internet internet easy.
+                internet & TV easy.
               </h3>
             </div>
 
             {/* Button Section */}
-            <div className="w-full lg:w-[35%] flex justify-center md:justify-end md:pt-[132px] md:px-20">
+            <div className="w-full lg:w-[35%] flex flex-col items-center md:items-end justify-center md:pt-[132px] md:px-20">
               <Button
                 icon={<FaPhoneAlt />}
                 href={"/"}
-                text={"Call"}
-                className="bg-white  md:py-[21px] py-[12px] px-[28px] md:px-[48px] rounded-[80px] md:text-[28px] md:font-[500] md:leading-[14.4px] "
+                text={"Call Now"}
+                className="bg-white md:py-[21px] py-[12px] px-[28px] md:px-[48px] rounded-[80px] md:text-[28px] md:font-[500] md:leading-[14.4px]"
               />
+              <p className="text-sm md:text-base text-[var(--color-white)] font-medium mb-3 text-center md:text-right">
+                Speak with an authorized DirecTV Representative
+              </p>
             </div>
           </div>
         </div>

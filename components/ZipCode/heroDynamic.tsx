@@ -23,10 +23,10 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
     <section className="relative  bg-bluish w-full flex justify-center p-4 bg-[var(--color-bg-primary)] h-[785px] md:h-auto">
       <div className="container mx-auto ">
         {/* Heading Section */}
-        <div className=" flex  justify-center items-center">
-          <div className="w-[600px] text-center lg:mt-36 flex flex-col gap-8 mt-0 px-[15px] lg:mb-[120px] ">
+        <div className=" flex  justify-center items-center m-5">
+          <div className="w-[600px] text-center lg:mt-[114px] flex flex-col gap-8 mt-0 px-[15px] lg:mb-[150px] ">
             <h1 className="text-[var(--color-black)] md:font-[var(--font-sf)] lg:font-bold text-[38px] leading-[48px]  font-semibold">
-              Compare and Choose the Top Internet Providers Near You  
+              Compare and Choose the Top Internet Providers Near You
             </h1>
             <div className="w-full flex justify-center items-center gap-2 ">
               <button
@@ -34,8 +34,7 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
                 onClick={() => {
                   const section = document.getElementById("more-providers");
                   section?.scrollIntoView({ behavior: "smooth" });
-                }}
-              >
+                }}>
                 <Globe className="w-5 h-5 mr-2" />
                 Show Me More Providers
               </button>
@@ -70,8 +69,7 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
                       key={index}
                       className={`flex items-center justify-between ${
                         index !== 2 ? "border-b border-black/20 py-0.5" : ""
-                      }`}
-                    >
+                      }`}>
                       <span className="font-medium text-[14px] text-[var(--color-black)]">
                         {new Date(day.date).toLocaleDateString("en-US", {
                           weekday: "short",
@@ -108,15 +106,15 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
           <MovingH theme="light" />
         </div>
       </div>
-        <div className="hidden md:block  md:h-[220px] h-[190px] w-full absolute bottom-0 left-0">
-                    <Image
-                      src={"/assets/images/Bg.png"}
-                      alt={"dd"}
-                      fill
-                      objectFit="cover"
-                      className="opacity-[.4]"
-                    />
-                  </div>
+      <div className="hidden md:block  md:h-[220px] h-[190px] w-full absolute bottom-0 left-0">
+        <Image
+          src={"/assets/images/Bg.png"}
+          alt={"dd"}
+          fill
+          objectFit="cover"
+          className="opacity-[.4]"
+        />
+      </div>
     </section>
   );
 }

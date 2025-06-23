@@ -109,7 +109,7 @@ export default function OtherProvider({
         {/* View Plans Button */}
         <button
           onClick={toggleAccordion}
-          className="w-full bg-[var(--color-red)] text-white py-3 rounded-full font-medium transition-colors">
+          className="w-full  bg-gray-900 text-white py-3 rounded-full font-medium transition-colors">
           View plans
         </button>
         <button className="w-full bg-[var(--color-red)] text-white py-3 rounded-full font-medium transition-colors flex justify-center items-center gap-2 mt-[10px]">
