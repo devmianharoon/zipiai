@@ -9,6 +9,8 @@ import HeroBannerDirecTv from "./component/HeroBannerDirecTv";
 import PackagesComparison from "./component/PackagesComparison";
 import ServiceTiles from "./component/ServiceTiles";
 import ServiceTylesTop from "./component/ServiceTylesTop";
+import StreamAnywhere from "./component/StreamAnywhere";
+import StreamYourWay from "./component/StreamYourWay";
 import TopNavigation from "./component/TopNavigation";
 
 export default function page() {
@@ -28,10 +30,17 @@ export default function page() {
         {/* <TopNavigation /> */}
         {/* <!-- Hero Banner --> */}
         <HeroBannerDirecTv data={data} />
+
+        {/* Stream Your Way */}
+        <StreamYourWay />
+
         {/* <!-- Service Tiles --> */}
         <div className="w-full max-w-6xl mx-auto ">
           <ServiceTiles />
         </div>
+
+        {/* Stream Anywhere */}
+        <StreamAnywhere />
 
         {/* <!-- Packages Comaprison --> */}
         <PackagesComparison />
