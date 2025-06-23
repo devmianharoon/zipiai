@@ -9,11 +9,11 @@ import HeroBannerDirecTv from "./component/HeroBannerDirecTv";
 import PackagesComparison from "./component/PackagesComparison";
 import ServiceTiles from "./component/ServiceTiles";
 import ServiceTylesTop from "./component/ServiceTylesTop";
-import TopNavigation from "./component/TopNavigation";
+
 
 export default function page() {
   const data = {
-    title: "Entertainment Your Way",
+    title: "Unleash Your Entertainment",
     subtitle: "DirecTV via Internet",
     description: "Stream Your Way!",
   };

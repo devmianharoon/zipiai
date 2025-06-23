@@ -45,17 +45,17 @@ import Image from "next/image";
 
 export default function ServiceTiles() {
   return (
-    <div className="w-full max-w-6xl mx-auto">
+    <div className="w-full  mx-auto">
       {/* Gemini Air Section */}
       <div className="mt-12 rounded-lg overflow-hidden text-white">
-        <div className="flex flex-col-reverse md:grid md:grid-cols-2 p-8">
+        <div className="flex justify-between ">
           {/* Image Section */}
-          <div className="relative w-full h-64 md:h-auto flex items-center justify-center">
+          <div className="relative min-w-[619px]  h-[480px]   ">
             <Image
-              src="/assets/Mask-group.png"
+              src="/assets/movietime.jpg"
               alt="Gemini Air Device"
               fill
-              className="object-contain"
+              className="object-cover rounded-[24px]"
             />
           </div>
           {/* Text Section */}
@@ -63,16 +63,17 @@ export default function ServiceTiles() {
             {/* <p className="text-[14px] lg:text-base lg:text-[16px] font-medium text-[var(--color-blue)]">
               GEMINI AIR
             </p> */}
-            <h2 className="text-3xl lg:text-[36px] font-bold mb-4">
-              One Device. Total Control. <br />
-              Endless Entertainment.
+            <h2 className="leading-[32px] tracking-[-0.24px] lg:text-[24px] font-[600] mb-4">
+              Whether you’re at home or on the go, DirecTV keeps you connected
+              to the entertainment you love. Stream live TV and on-demand
+              content effortlessly across all your favorite devices
             </h2>
             <p className="mb-6 text-[14px] lg:text-base lg:text-[16px]  font-medium">
               Where Live TV meets smart streaming. Gemini Air delivers DirecTV
               in a sleek entertainment powerhouse.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-center">
-              <button className="bg-[var(--color-red)] text-white py-2 px-4 rounded-full font-medium transition-colors">
+              <button className="bg-[var(--color-red)] text-white w-[202px] rounded-full font-medium transition-colors py-[20px] px-[28px] text-[20px] leading-[100%]">
                 Learn More
               </button>
               <a
