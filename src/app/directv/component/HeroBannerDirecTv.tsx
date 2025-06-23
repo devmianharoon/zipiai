@@ -1,5 +1,5 @@
 "use client";
-import Searchbtn from "../../../../components/buttonComp/Searchbtn";
+
 import MovingDirect from "../../../../components/home/MovingDirect";
 import Image from "next/image";
 
