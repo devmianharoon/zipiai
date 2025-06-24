@@ -24,7 +24,7 @@ export default function HeroDynamic({ zipCode }: { zipCode: string }) {
       <div className="container mx-auto ">
         {/* Heading Section */}
         <div className=" flex  justify-center items-center m-5">
-          <div className="w-[600px] text-center lg:mt-[114px] flex flex-col gap-8 mt-0 px-[15px] lg:mb-[150px] ">
+          <div className="w-[600px] text-center lg:mt-[54px] flex flex-col gap-8 mt-0 px-[15px] lg:mb-[210px] ">
             <h1 className="text-[var(--color-black)] md:font-[var(--font-sf)] lg:font-bold text-[38px] leading-[48px]  font-semibold">
               Compare and Choose the Top Internet Providers Near You
             </h1>

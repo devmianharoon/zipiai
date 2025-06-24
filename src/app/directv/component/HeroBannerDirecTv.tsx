@@ -35,10 +35,6 @@ export default function HeroBannerDirecTv({ data }: { data: HeroBannerProps }) {
         <p className="text-base font-[600] leading-[32px] tracking-[-0.24px] lg:text-[24px] md:text-2xl mb-3 text-white ">
           Anywhere. Anytime. Any Device. 
         </p>
-        <p className="text-base font-[500] leading-[32px] tracking-[-0.24px] lg:text-[16px] md:text-2xl mb-4 text-white ">
-          (No Satellite Dish Needed)
-        </p>
-
         <button className="w-[202px] bg-redish bg-[var(--color-red)] text-white py-[20px] px-[28px]  font-[500] leading-[100%] text-[20px]   cursor-pointer rounded-full flex items-center justify-center capitalize">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -49,6 +45,12 @@ export default function HeroBannerDirecTv({ data }: { data: HeroBannerProps }) {
           </svg>
           Shop Now
         </button>
+
+        <p className="text-base font-[500] leading-[32px] tracking-[-0.24px] lg:text-[16px] md:text-2xl mt-4 text-white ">
+          (No Satellite Dish Needed)
+        </p>
+
+        
         {/* Call Now section absolute */}
         <div className=" h-[185px] w-[372px] md:w-[910px] md:h-[92px]  rounded-r-[12px] rounded-l-[12px] md:-bottom-[0px] -bottom-[295px] p-4 md:py-4 md:px-5 absolute flex flex-col md:flex-row justify-center md:justify-between items-center z-40 left-1/2 -translate-x-1/2  md:gap-14 gap-4 bg-[#030A13] bg-cover bg-left  text-center md:text-left text-[20px] md:text-[48px]">
           <h3 className="text-[var(--color-white)] md:text-[24] text-[20px] md:leading-[32px] leading-[28px] font-[600] w-[60%]">

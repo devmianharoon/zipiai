@@ -37,10 +37,10 @@ export default function SingleProvider({
         className=" mx-auto mb-[20px] lg:mb-0 mt-[30px] lg:mt-0  w-full rounded-xl border border-gray-200 lg:max-w-6xl  lg:flex px-[15px] lg:px-5 lg:pt-[25px] py-[15px]"
         style={{ backgroundColor }}>
         {/* Image Section */}
-        <div className="flex items-center  p-[10px] lg:px-[15px] lg:flex flex-col gap-6 min-w-[230px]">
+        <div className="flex items-center  lg:px-[15px] lg:flex flex-col gap-6 min-w-[230px]">
           {/* Label above the image */}
-          <div className="w-full flex ">
-            <span className="text-center text-sm bg-[#0B6BDD] text-white bg- px-5 py-1 rounded-full shadow">
+          <div className="w-full flex justify-center">
+            <span className="text-center text-sm bg-[#0B6BDD] text-white w-[113px] py-[7px] rounded-full shadow">
               {data.Connection_Type}
             </span>
           </div>

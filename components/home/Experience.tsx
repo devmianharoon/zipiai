@@ -38,7 +38,7 @@ const Experience = () => {
                 text={"Call Now"}
                 className="bg-white md:py-[21px] py-[12px] px-[28px] md:px-[48px] rounded-[80px] md:text-[28px] md:font-[500] md:leading-[14.4px]"
               />
-              <p className="text-sm md:text-base text-[var(--color-white)] font-medium mb-3 text-center md:text-right">
+              <p className="text-sm md:text-base text-[var(--color-white)] font-medium mb-3 w-[365px]">
                 Speak with an authorized DirecTV Representative
               </p>
             </div>

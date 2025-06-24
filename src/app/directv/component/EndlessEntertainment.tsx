@@ -46,7 +46,7 @@ import Image from "next/image";
 
 export default function ServiceTiles() {
   return (
-    <div className="w-full h-[1000px] mx-auto mt-[140px] bg-[url('/assets/endlessentertainment.png')] bg-cover bg-left ">
+    <div className="w-full h-[1000px] mx-auto mt-[160px] bg-[url('/assets/endlessentertainment.png')] bg-cover bg-left ">
       {/* Gemini Air Section */}
       <div className="rounded-lg text-white">
         <div className="flex justify-center items-center gap-[41px] ">
