@@ -46,10 +46,10 @@ import Image from "next/image";
 
 export default function ServiceTiles() {
   return (
-    <div className="w-full  mx-auto">
+    <div className="w-full mx-auto pt-[140px]">
       {/* Gemini Air Section */}
-      <div className="mt-12 rounded-lg overflow-hidden text-white">
-        <div className="flex justify-between ">
+      <div className="rounded-lg text-white">
+        <div className="flex justify-center gap-[41px] ">
           {/* Image Section */}
           <div className="relative min-w-[619px]  h-[480px]   ">
             <Image
@@ -60,7 +60,7 @@ export default function ServiceTiles() {
             />
           </div>
           {/* Text Section */}
-          <div className="flex flex-col justify-center pl-[20px] pb-[30px] md:pl-[45px] md:pb-[40px] text-center lg:text-start ">
+          <div className="flex flex-col min-w-[619px] justify-center   text-center lg:text-start ">
             {/* <p className="text-[14px] lg:text-base lg:text-[16px] font-medium text-[var(--color-blue)]">
               GEMINI AIR
             </p> */}

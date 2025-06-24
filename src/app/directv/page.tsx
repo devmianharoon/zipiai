@@ -5,8 +5,10 @@ import MobileMenu from "../../../components/common/header/MobileMenu";
 import Experience from "../../../components/home/Experience";
 import Header from "../../../components/home/Header";
 import MobileFooter from "../../../components/home/MobileFooter";
+import EndlessEntertainment from "./component/EndlessEntertainment";
 // import HeroBanner from "./component/HeroBanner";
 import HeroBannerDirecTv from "./component/HeroBannerDirecTv";
+import OneDevice from "./component/OneDevice";
 import PackagesComparison from "./component/PackagesComparison";
 import ServiceTiles from "./component/ServiceTiles";
 import ServiceTylesTop from "./component/ServiceTylesTop";
@@ -42,6 +44,9 @@ export default function page() {
         {/* Stream Anywhere */}
         <StreamAnywhere />
 
+        {/* One Device */}
+        <OneDevice />
+
         {/* <!-- Packages Comaprison --> */}
         <PackagesComparison />
         <div className="w-full h-auto flex justify-center items-center pt-[161px]">
@@ -68,8 +73,9 @@ export default function page() {
         {/* <!-- Service Tiles --> */}
         <div className="w-full max-w-6xl mx-auto px-[17px] lg:px-0">
           <ServiceTylesTop />
-          <ServiceTiles />
         </div>
+
+        <EndlessEntertainment />
       </main>
 
       <Experience />

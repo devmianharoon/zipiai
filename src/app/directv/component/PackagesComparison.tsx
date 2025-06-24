@@ -193,7 +193,9 @@ export default function PackageComparison() {
     <>
       {/* BreadCrum */}
       {/* Heading Section */}
-      <div className="p-5 w-full lg:max-w-6xl lg:mx-auto" id="comparison">
+      <div
+        className="p-5 w-full lg:max-w-6xl lg:mx-auto pt-[160px]"
+        id="comparison">
         <h2 className="text-[42px] leading-[52px] tracking-[-0.42px] font-[600] text-[#030A13] text-center">
           {withLocalChannels === 1
             ? "DirecTV Packages"
