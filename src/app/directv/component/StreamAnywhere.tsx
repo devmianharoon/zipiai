@@ -2,9 +2,11 @@
 import React from "react";
 import Image from "next/image";
 
+
 function StreamAnywhere() {
   return (
     <div className="w-full max-w-6xl mx-auto bg-primary">
+
       <div className="mt-[140px] mb-[140px] flex flex-col items-center justify-center text-center">
         <div className="flex flex-col gap-[30px]">
           <h1 className="text-[98px] font-[600] leading-[98px] tracking-[-3.92px] text-center text-[#030A13] font-[SF UI Display] stacked-fractions mb-[45px]">
@@ -29,7 +31,9 @@ function StreamAnywhere() {
             </p>
           </div>
         </div>
+        
       </div>
+       
     </div>
   );
 }
