@@ -35,7 +35,7 @@ const HeaderMenuContent = () => {
           <button
             onClick={() => setIsOpen(!isOpen)}
             aria-expanded={isOpen}
-            className="flex items-center gap-1 px-4 py-2 text-gray-800 hover:text-blue-600 text-[16px] font-[400] leading-[100%] tracking-[0.16px]">
+            className="flex items-center gap-1 px-4 py-2 text-gray-800  text-[16px] font-[400] leading-[100%] tracking-[0.16px]">
             Learn More
             <ChevronDown
               className={`w-4 h-4 transition-transform ${

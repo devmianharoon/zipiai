@@ -27,7 +27,7 @@ function StreamAnywhere() {
             <p className="text-base font-[400] leading-[28px] tracking-[-0.22px] lg:text-[22px] md:text-2xl border-b border-[#030A13]">
               Call now and start watching instantly – no cables required.
             </p>
-          </div>s
+          </div>
         </div>
       </div>
     </div>

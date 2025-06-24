@@ -41,6 +41,7 @@
 //     </div>
 //   );
 // }
+"use client";
 import Image from "next/image";
 
 export default function ServiceTiles() {
@@ -59,22 +60,106 @@ export default function ServiceTiles() {
             />
           </div>
           {/* Text Section */}
-          <div className="flex flex-col justify-center px-[20px] py-[30px] md:px-[45px] md:py-[40px] text-center lg:text-start">
+          <div className="flex flex-col justify-center pl-[20px] pb-[30px] md:pl-[45px] md:pb-[40px] text-center lg:text-start ">
             {/* <p className="text-[14px] lg:text-base lg:text-[16px] font-medium text-[var(--color-blue)]">
               GEMINI AIR
             </p> */}
-            <h2 className="leading-[32px] tracking-[-0.24px] lg:text-[24px] font-[600] mb-4">
+            <h2 className="leading-[32px] tracking-[-0.24px] lg:text-[24px] font-[600] mb-7">
               Whether you’re at home or on the go, DirecTV keeps you connected
               to the entertainment you love. Stream live TV and on-demand
-              content effortlessly across all your favorite devices
+              content effortlessly across all your favorite devices:
             </h2>
-            <p className="mb-6 text-[14px] lg:text-base lg:text-[16px]  font-medium">
-              Where Live TV meets smart streaming. Gemini Air delivers DirecTV
-              in a sleek entertainment powerhouse.
-            </p>
-            <div className="flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-center">
-              <button className="bg-[var(--color-red)] text-white w-[202px] rounded-full font-medium transition-colors py-[20px] px-[28px] text-[20px] leading-[100%]">
-                Learn More
+            <ul className="space-y-2 mb-15 inline-flex flex-col items-start gap-[15px]">
+              <li className="flex items-start !p-0">
+                <div className="flex gap-[10px]">
+                  <Image
+                    src={"/assets/verified.svg"}
+                    alt="verified"
+                    width={22}
+                    height={22}
+                  />
+                  <p className="text-[16px] font-[500] leading-[24px] tracking-[-0.16px] text-[#030A13]">
+                    <span className="text-[16px] font-[700] leading-[24px] tracking-[-0.16px] text-[#030A13] leading-trim text-edge-cap">
+                      Smart TVs –
+                    </span>
+                    Seamlessly integrated streaming for a cinematic experience 
+                  </p>
+                </div>
+              </li>
+              <li className="flex items-start !p-0">
+                <div className="flex gap-[10px]">
+                  <Image
+                    src={"/assets/verified.svg"}
+                    alt="verified"
+                    width={22}
+                    height={22}
+                  />
+                  <p className="text-[16px] font-[500] leading-[24px] tracking-[-0.16px] text-[#030A13]">
+                    <span className="text-[16px] font-[700] leading-[24px] tracking-[-0.16px] text-[#030A13] leading-trim text-edge-cap">
+                      Tablets & Smartphones –
+                    </span>
+                    Take your shows with you, wherever you are
+                  </p>
+                </div>
+              </li>
+              <li className="flex items-start !p-0">
+                <div className="flex gap-[10px]">
+                  <Image
+                    src={"/assets/verified.svg"}
+                    alt="verified"
+                    width={22}
+                    height={22}
+                  />
+                  <p className="text-[16px] font-[500] leading-[24px] tracking-[-0.16px] text-[#030A13]">
+                    <span className="text-[16px] font-[700] leading-[24px] tracking-[-0.16px] text-[#030A13] leading-trim text-edge-cap">
+                      Streaming Devices –
+                    </span>
+                    Compatible with Roku, Amazon Fire Stick, and more
+                  </p>
+                </div>
+              </li>
+              <li className="flex items-start !p-0">
+                <div className="flex gap-[10px]">
+                  <Image
+                    src={"/assets/verified.svg"}
+                    alt="verified"
+                    width={22}
+                    height={22}
+                  />
+                  <p className="text-[16px] font-[500] leading-[24px] tracking-[-0.16px] text-[#030A13]">
+                    <span className="text-[16px] font-[700] leading-[24px] tracking-[-0.16px] text-[#030A13] leading-trim text-edge-cap">
+                      Laptops & Desktops –
+                    </span>
+                    Watch from any browser without missing a beat
+                  </p>
+                </div>
+              </li>
+              <li className="flex items-start !p-0">
+                <div className="flex gap-[10px]">
+                  <Image
+                    src={"/assets/verified.svg"}
+                    alt="verified"
+                    width={22}
+                    height={22}
+                  />
+                  <p className="text-[16px] font-[500] leading-[24px] tracking-[-0.16px] text-[#030A13]">
+                    <span className="text-[16px] font-[700] leading-[24px] tracking-[-0.16px] text-[#030A13] leading-trim text-edge-cap">
+                      Gemini Air -
+                    </span>
+                    The ultimate entertainment powerhouse in one easy to use
+                    device
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <div className="flex self-start items-center gap-[25px] ">
+              <button
+                onClick={() => window.open(`tel:1800-123-4567`)}
+                className="w-[208px] h-[50px] mx-auto  bg-[var(--color-red)] text-white  rounded-full text-base font-medium  transition-colors">
+                <div className="flex justify-center items-center gap-2">
+                  <Image src="/call-w.svg" alt="phone" width={24} height={24} />
+                  <span className="text-lg font-medium">Call Now</span>
+                </div>
               </button>
               <a
                 href="#"
