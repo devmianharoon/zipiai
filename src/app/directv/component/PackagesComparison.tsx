@@ -128,7 +128,7 @@ const packagesData = {
         "($192.98/mo. w/ req'd $10/mo. TV Access Fee & Regional Sports Fee of up to $17.99/mo.)",
       term: "w/24-mo. agmt. Autopay and paperless bill req'd.",
       seeDetails: "See details",
-      buttonText: "Subcribe",
+      buttonText: "Subcribe Now",
       features: [
         {
           icon: "check",

@@ -63,7 +63,12 @@ export default function page() {
             </div>
             <button className="w-[228px] h-[50px]  bg-[var(--color-black)] text-white  rounded-full text-base font-medium  transition-colors">
               <div className="flex justify-center items-center gap-2">
-                <Image src="/call-w.svg" alt="phone" width={24} height={24} />
+                <Image
+                  src="/call-Icon.svg"
+                  alt="phone"
+                  width={24}
+                  height={24}
+                />
                 <span className="text-lg font-medium">888 564 5552 </span>
               </div>
             </button>

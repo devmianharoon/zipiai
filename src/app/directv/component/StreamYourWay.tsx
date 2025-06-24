@@ -16,7 +16,7 @@ function StreamYourWay() {
           </p>
         </div>
         <Image
-          src="/assets/images/directv/streamway.png"
+          src="/assets/images/directv/StreamWay.png"
           alt="phone"
           width={1530}
           height={885}
